@@ -1720,8 +1720,8 @@ window.JL2={
 {
 "name": "NetEase News 网易新闻",
 "file": "media-netease-news.png",
-"ar": 2.183,
-"dn": 0.147,
+"ar": 3.865,
+"dn": 0.440,
 "k": 1.26
 }
 ],

@@ -24,7 +24,7 @@
     LANG = b.dataset.lang; try { localStorage.setItem("jl-lang", LANG); } catch(e) {}
     applyLang();
   });
-  const P = JL.projects || [];
+  const P = (JL.projects || []).map((p, o) => ({ p, o })).sort((a, b) => (parseInt(b.p.year) || 0) - (parseInt(a.p.year) || 0) || a.o - b.o).map(x => x.p); /* newest → oldest everywhere */
   const pTitle = p => ZH() ? (p.title_zh || p.title) : p.title;
   const pRole = p => ZH() ? (p.role_zh || p.role) : p.role;
   const pNote = p => ZH() ? (p.note_zh || p.note) : p.note;
@@ -71,6 +71,19 @@
   const fold = $(".fold");
   if (fold) {
     const ringEl = $(".ring", fold), small = matchMedia("(max-width:760px)").matches;
+    /* backdrop: sharp full-bleed still of the front work, dimmed by .bgx .shade (never blurred) */
+    const bgx = $(".bgx", fold), bgSeen = {};
+    const BGPICK = { chanel: "frames/cf_23_tarsem-system_chanel-spec_chanel-20.jpg", goldfish: "bg/goldfish-2.jpg", zhengxie: "bg/zhengxie-1.jpg", euler: "bg/euler-1.jpg", void: "bg/void-2.jpg", mother: "bg/mother-1.jpg", thermal: "bg/thermal-1.jpg" };   /* chanel-15 has motion blur in the source */
+    const bgFr = w => BGPICK[w.p.id] || ((JL.frames || []).filter(f => f.pid === w.p.id).map(f => f.img)[1]) || ((JL.frames || []).find(f => f.pid === w.p.id) || {}).img;
+    const bgSrc = w => BASE + (bgFr(w) || w.p.img);   /* works with no stills fall back to their own cover */
+    const bgLoad = src => { if (!bgSeen[src]) { bgSeen[src] = 1; new Image().src = src; } };
+    const BGX = w => {
+      if (!bgx) return;
+      const src = bgSrc(w); bgLoad(src);
+      fold.style.setProperty("--fimg", 'url("' + new URL(src, location.href).href + '")');
+      fold.classList.toggle("bg-cov", !bgFr(w));   /* covers carry title type: dim a little more */
+      const k = W.indexOf(w); [1, -1].forEach(d => bgLoad(bgSrc(W[(k + d + W.length) % W.length])));   /* warm the neighbours so turning never flashes empty */
+    };
     const ACC = ["#ff4f8b", "#ffc531", "#13c8a4", "#ff3dd2", "#ff8a00", "#7b5cff"];
     const W = P.map((p, o) => ({ p, o })).sort((a, b) => (parseInt(b.p.year) || 0) - (parseInt(a.p.year) || 0) || a.o - b.o).map(({ p }, i) => ({ p, img: BASE + p.img, col: ACC[i % ACC.length] })); /* newest → oldest */
     const N = W.length, STEP = 360 / N;
@@ -114,6 +127,7 @@
       $(".meta", nowEl).textContent = p.year + "  ·  " + pRole(p) + (pNote(p) ? "  ·  " + pNote(p).split("·")[0].trim() : "");
       $(".go", nowEl).href = href;
       fold.style.setProperty("--acc", w.col);
+      BGX(w);
       $$("li", rail).forEach((li, j) => li.classList.toggle("on", j === k));
       nowEl.classList.remove("in"); void nowEl.offsetWidth; nowEl.classList.add("in");
     }
@@ -286,12 +300,20 @@
     const L = (J2.logos || {})[el.dataset.l] || [];
     const n = $(".n", el); if (n) n.textContent = L.length;
     $$('.lwn[data-ln="' + el.dataset.l + '"]').forEach(x => x.textContent = L.length);
-    const media = el.classList.contains("media");
-    $(".logos", el).innerHTML = L.map(l => {
-      const A = media ? 2400 : 2300, h = Math.max(18, Math.min(60, Math.sqrt(A / l.ar)));
-      const w = Math.min(130 * Math.min(l.k || 1, 1.15), h * (l.k || 1) * l.ar), hh = w / l.ar;
-      return '<span class="lg" title="' + esc(l.name) + '"><img src="' + BASE + 'logos/' + l.file + '" alt="' + esc(l.name) + '" loading="lazy" style="--h:' + hh.toFixed(1) + '"></span>';
+    /* logo walls v2: equal cells; width as % of the cell from equal-visual-area + ink-density normalisation */
+    const box = $(".logos", el);
+    box.innerHTML = L.map(l => {
+      const ar = l.ar || 3, dk = Math.max(.72, Math.min(1.22, Math.pow(.33 / (l.dn || .33), .35)));
+      const w = Math.min(.8, .27 * ar, Math.sqrt(.11 * ar) * dk) * 100;
+      return '<span class="lg" title="' + esc(l.name) + '"><img src="' + BASE + 'logos/' + l.file + '" alt="' + esc(l.name) + '" loading="lazy" style="width:' + w.toFixed(1) + '%"></span>';
     }).join("");
+    $$("img", box).forEach(i => { const cap = () => i.style.maxWidth = Math.round(i.naturalWidth / 2) + "px"; i.complete && i.naturalWidth ? cap() : i.addEventListener("load", cap); });   /* never upscale past 2× density */
+    const fill = () => {   /* pad the last row with empty cells so the hairline grid stays a clean rectangle */
+      $$(".lg.e", box).forEach(x => x.remove());
+      const c = getComputedStyle(box).gridTemplateColumns.split(" ").filter(Boolean).length, r = L.length % c;
+      if (c > 1 && r) box.insertAdjacentHTML("beforeend", '<span class="lg e" aria-hidden="true"></span>'.repeat(c - r));
+    };
+    fill(); addEventListener("resize", fill);
   });
   const pl = $(".plist");
   if (pl) {
