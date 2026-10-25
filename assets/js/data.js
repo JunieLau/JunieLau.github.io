@@ -2,6 +2,19 @@
 window.JL = {
  "projects": [
   {
+   "id": "goldfish",
+   "title_zh": "金鱼街大乱斗",
+   "role_zh": "导演",
+   "note_zh": "官方预告。粤式赛博朋克世界，功夫与机械警察：三姐妹从赛博精英手中救出姑妈。",
+   "title": "Goldfish Mayhem",
+   "zh": "",
+   "year": "2026",
+   "role": "Director",
+   "note": "Official trailer. A Cantonese cyberpunk world of kung fu and robo-cops: three sisters save their aunt from cyber elites.",
+   "yt": "N3ZfYhO8cBY",
+   "img": "yt/N3ZfYhO8cBY.jpg"
+  },
+  {
    "id": "dear",
    "title_zh": "浮生若梦 Dear \"Stranger\"",
    "role_zh": "导演",
@@ -883,6 +896,13 @@ window.JL = {
   }
  ],
  "covers": [
+  {
+   "yt": "N3ZfYhO8cBY",
+   "pid": "goldfish",
+   "img": "yt/N3ZfYhO8cBY.jpg",
+   "cap": "Goldfish Mayhem — 2026",
+   "cap_zh": "金鱼街大乱斗 — 2026"
+  },
   {
    "yt": "UCiSWcHSdYE",
    "pid": "dear",

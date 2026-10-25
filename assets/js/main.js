@@ -72,7 +72,7 @@
   if (fold) {
     const ringEl = $(".ring", fold), small = matchMedia("(max-width:760px)").matches;
     const ACC = ["#ff4f8b", "#ffc531", "#13c8a4", "#ff3dd2", "#ff8a00", "#7b5cff"];
-    const W = P.map((p, i) => ({ p, img: BASE + p.img, col: ACC[i % ACC.length] }));
+    const W = P.map((p, o) => ({ p, o })).sort((a, b) => (parseInt(b.p.year) || 0) - (parseInt(a.p.year) || 0) || a.o - b.o).map(({ p }, i) => ({ p, img: BASE + p.img, col: ACC[i % ACC.length] })); /* newest → oldest */
     const N = W.length, STEP = 360 / N;
     const cards = W.map((w, i) => {
       const a = document.createElement("a"); a.className = "rc"; a.href = "work-" + w.p.id + ".html";
