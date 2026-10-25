@@ -401,3 +401,28 @@ main{padding-top:var(--tb)}
 .rs-band:hover .rs-go i{transform:translateX(clamp(-14px,-.8vw,-6px))}
 @media (max-width:1100px){.rs-band{grid-template-columns:1fr auto;row-gap:18px}.rs-k{grid-column:1/-1}.rs-d{grid-column:1}.rs-go{grid-column:2;grid-row:2}}
 @media (max-width:760px){.rs-lead br{display:none}.rs-band{grid-template-columns:1fr auto}.rs-open{display:none}.rs-go i{font-size:56px}}
+/* ---- Press · featured Forbes card (2026-10-25, option 3) ---- */
+.sec.pfeatw{padding-bottom:0}
+.fx{position:relative;display:flex;min-height:clamp(560px,50vw,1060px);overflow:hidden;background:#000;color:var(--paper)}
+.fx .fx-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 30%;transition:transform 1.4s cubic-bezier(.2,.8,.2,1)}
+.fx:hover .fx-bg{transform:scale(1.02)}
+.fx::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(6,3,3,.92) 0%,rgba(6,3,3,.72) 34%,rgba(6,3,3,.08) 68%),linear-gradient(to top,rgba(6,3,3,.88),transparent 48%)}
+.fx-in{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:48px;padding:clamp(28px,3.4vw,80px)}
+.fx-top{display:flex;flex-direction:column;gap:clamp(18px,1.6vw,30px)}
+.fx-wm{display:block;width:clamp(240px,27vw,600px)}.fx-wm img{display:block;width:100%;height:auto}
+.fx-k{display:flex;flex-wrap:wrap;row-gap:8px;font:500 11px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase}
+.fx-k span{white-space:nowrap}.fx-k span:first-child{color:var(--red)}.fx-k span:not(:last-child)::after{content:"·";margin:0 .7em;opacity:.5}
+.fx-bot{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(24px,4vw,96px);align-items:end}
+.fx-t{font:400 clamp(40px,5vw,124px)/.95 var(--serif);letter-spacing:-.02em;max-width:15ch;text-wrap:balance;border-left:2px solid var(--red);padding-left:clamp(16px,1.6vw,32px)}
+.is-zh .fx-t{letter-spacing:0;line-height:1.12;max-width:13em}
+.fx-t a:hover{color:var(--red)}
+.fx-side{display:flex;flex-direction:column;gap:24px;align-items:flex-start;color:#eadfd2}
+.fx-dek{font:400 clamp(15px,calc(.4vw + 11px),21px)/1.55 var(--sans);max-width:44ch;text-shadow:0 1px 12px rgba(0,0,0,.5)}
+.fx-btn{display:inline-flex;align-items:center;gap:12px;font:500 12px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;padding:17px 24px;border:1px solid currentColor;background:rgba(6,3,3,.35);white-space:nowrap;transition:background-color .3s,color .3s,border-color .3s}
+.fx-btn i{font-style:normal;transition:transform .3s}.fx-btn:hover{background:var(--red);border-color:var(--red);color:var(--ink)}.fx-btn:hover i{transform:translate(3px,-3px)}
+.fx-note{font:400 12px/1.4 var(--sans);color:#b9a796}
+@media (max-width:1100px){.fx-bot{grid-template-columns:1fr}.fx::before{background:linear-gradient(90deg,rgba(6,3,3,.85),rgba(6,3,3,.35) 70%),linear-gradient(to top,rgba(6,3,3,.92),transparent 60%)}}
+@media (max-width:760px){.fx{min-height:0;flex-direction:column}.fx .fx-bg{position:relative;height:auto;aspect-ratio:3/2;object-position:68% 30%}.fx:hover .fx-bg{transform:none}
+  .fx::before{inset:0 0 auto 0;aspect-ratio:3/2;background:linear-gradient(rgba(6,3,3,.88),rgba(6,3,3,.55) 38%,transparent 70%)}
+  .fx-in{position:static;padding:24px 20px 32px}.fx-top{position:static;gap:0}.fx-wm{position:absolute;z-index:3;top:20px;left:20px;width:180px}
+  .fx-bot{gap:24px}}

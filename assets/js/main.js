@@ -374,7 +374,23 @@
       const yr = p => (p.d || "").slice(0, 4) || "—";
       const years = [...new Set(L.slice(1).map(yr))];
       const row = p => '<a class="pr" href="' + p.u + '" target="_blank" rel="noopener"><span class="d">' + esc(p.d || "—") + '</span><span class="o">' + esc(p.o) + '</span><span class="tt">' + esc(ZH() && p.t_zh ? p.t_zh : p.t) + '</span><span class="lt">' + esc(p.l) + '</span><span class="ar">↗</span></a>';
-      pl.innerHTML = '<a class="feat" href="' + f.u + '" target="_blank" rel="noopener"><span class="k">' + T("Featured", "专题报道") + ' · ' + esc(f.o) + ' · ' + esc(f.d) + '</span><h3>' + esc(ZH() && f.t_zh ? f.t_zh : f.t) + '</h3><span class="more">' + T("Read on Forbes ↗", "阅读全文 ↗") + '</span></a>' +
+      /* featured Forbes card (option 3: full-bleed photo hero) — dek verbatim from the Forbes article (2026-09-04); photo + wordmark cropped/traced from Junie's screenshot of the article; zh = our translation, marked as such */
+      const FX = f.u.indexOf("maureenkerr/2026/09/04") > -1 ? {
+        img: BASE + "press/forbes/photo.jpg", w: 2416, h: 1590, wm: BASE + "press/forbes/forbes-wordmark-white.svg",
+        t: ["How AI And Peter Gabriel Changed Junie Lau’s Path To Directing", "AI 与 Peter Gabriel 如何改变了 Junie Lau 的导演之路"],
+        dek: ["Filmmaker Junie Lau used generative AI to break into directing, win Peter Gabriel’s backing and turn childhood memories into Goldfish Mayhem.", "电影人 Junie Lau 借助生成式 AI 踏入导演行业，赢得 Peter Gabriel 的支持，并把童年记忆化作《金鱼街大乱斗》。"]
+      } : null;
+      const L2 = x => ZH() ? x[1] : x[0];
+      const featHTML = FX ? '<article class="fx"><img class="fx-bg" src="' + FX.img + '" alt="" width="' + FX.w + '" height="' + FX.h + '" loading="lazy">' +
+        '<div class="fx-in"><div class="fx-top"><a class="fx-wm" href="' + f.u + '" target="_blank" rel="noopener"><img src="' + FX.wm + '" alt="Forbes" width="596" height="169"></a>' +
+        '<p class="fx-k"><span>' + T("Featured", "精选") + '</span><span>' + T("Forbes", "福布斯") + '</span><span>Maureen Kerr</span><span>' + esc(f.d.replace(/-/g, ".")) + '</span></p></div>' +
+        '<div class="fx-bot"><h3 class="fx-t"><a href="' + f.u + '" target="_blank" rel="noopener">' + esc(L2(FX.t)) + '</a></h3>' +
+        '<div class="fx-side"><p class="fx-dek">' + esc(L2(FX.dek)) + '</p><a class="fx-btn" href="' + f.u + '" target="_blank" rel="noopener">' + T("Read on Forbes", "去福布斯阅读全文") + ' <i>↗</i></a>' +
+        (ZH() ? '<span class="fx-note">标题与导语为中文译文，原文为英文</span>' : '') + '</div></div></div></article>'
+        : '<a class="feat" href="' + f.u + '" target="_blank" rel="noopener"><span class="k">' + T("Featured", "专题报道") + ' · ' + esc(f.o) + ' · ' + esc(f.d) + '</span><h3>' + esc(ZH() && f.t_zh ? f.t_zh : f.t) + '</h3><span class="more">' + T("Read on Forbes ↗", "阅读全文 ↗") + '</span></a>';
+      const fbox = $(".pfeat");
+      if (fbox) fbox.innerHTML = featHTML;
+      pl.innerHTML = (fbox ? '' : featHTML) +
         years.map(y => '<h3 class="py" id="y' + y + '">' + y + '</h3>' + L.slice(1).filter(p => yr(p) === y).map(row).join("")).join("");
       if (side) side.innerHTML = '<p class="k">' + T("Index", "索引") + '</p>' + years.map(y => '<a href="#y' + y + '">' + y + ' <i>' + L.slice(1).filter(p => yr(p) === y).length + '</i></a>').join("") +
         '<p class="k">' + T("Outlets", "媒体") + '</p><ul>' + [...new Set(L.map(p => p.o.split(" (")[0]))].map(o => '<li>' + esc(o) + '</li>').join("") + '</ul>';
@@ -396,7 +412,7 @@
   if (!RM && "IntersectionObserver" in window) {
     document.documentElement.classList.add("rv-on");
     const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -6% 0px" });
-    hooks.push(() => $$(".wt, .vc, .xc, .gi, .pr, .feat, .lg, .lists li, .tile, .ilist li, .st, .clip").forEach(el => { if (!el.classList.contains("in")) io.observe(el); }));
+    hooks.push(() => $$(".wt, .vc, .xc, .gi, .pr, .feat, .fx, .lg, .lists li, .tile, .ilist li, .st, .clip").forEach(el => { if (!el.classList.contains("in")) io.observe(el); }));
   }
   applyLang();
 })();
