@@ -36,7 +36,6 @@ main{padding-top:var(--tb)}
 .fold{position:relative;height:calc(100svh - var(--tb));min-height:560px;overflow:hidden;background:var(--ink);--acc:var(--red);touch-action:pan-y}
 .ring{position:absolute;inset:0;z-index:3;touch-action:pan-y;cursor:grab;user-select:none;-webkit-user-select:none}
 .fold.grab .ring{cursor:grabbing}
-.hblock{position:absolute;left:21%;right:21%;top:44%;bottom:0;background:var(--acc);z-index:1;transition:background-color .5s}
 .rc{position:absolute;left:0;top:0;width:var(--ew);height:var(--eh);transform-origin:50% 50%;display:block;background:var(--ink);box-shadow:0 0 0 calc(2px * var(--ek)) var(--c);will-change:transform;--ek:1.7}
 .rc img{width:100%;height:100%;object-fit:cover;pointer-events:none}
 .rc .no{position:absolute;left:0;top:0;font:500 calc(11px * var(--ek))/1 var(--mono);background:var(--c);color:var(--ink);padding:calc(5px * var(--ek)) calc(7px * var(--ek))}
@@ -257,7 +256,7 @@ main{padding-top:var(--tb)}
   .pos span{font-size:18px}.cred span{font-size:10px}
   .now{left:var(--pad);right:var(--pad);bottom:96px;max-width:none}
   .now .ttl{font-size:clamp(30px,9vw,44px)}.now .meta{font-size:11px}
-  .rail{display:none}.hblock{left:0;right:0;top:34%;bottom:auto;height:34%}
+  .rail{display:none}
   .p-home .wm{font-size:20.5vw}.p-home .fold .hd .pos,.p-home .fold .hd .cred{position:static;flex-direction:row;align-items:flex-start;margin-top:10px}.p-home .fold .hd .cred{margin-top:6px}.p-home .cred span{margin:0 4px 4px 0}
   .p-home .now{max-width:none;bottom:90px}
   .hint{bottom:56px}.cta-contact{left:var(--pad);right:auto;bottom:16px}
@@ -315,3 +314,27 @@ main{padding-top:var(--tb)}
   .lt-follow{padding:9px 11px;font-size:11px}
 }
 @media (hover:none){.lc-a:hover .lc-f img{transform:none}}
+/* ---------- HOME backdrop — sharp full-bleed still of the front work, dimmed (never blurred) ---------- */
+.bgx{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.bgx i{position:absolute;inset:0;display:block}
+.bgx .still{background:var(--fimg) center 40%/cover no-repeat;transition:background-image .6s}
+.bgx .shade{background:radial-gradient(ellipse 75% 60% at 50% 62%,rgba(11,6,6,.5),rgba(11,6,6,.72) 100%),linear-gradient(180deg,rgba(11,6,6,.55) 0%,rgba(11,6,6,0) 30%,rgba(11,6,6,0) 72%,rgba(11,6,6,.45) 100%)}
+.fold.bg-cov .bgx .shade{background-color:rgba(11,6,6,.3)}
+
+/* logo walls v2 — strict equal-cell grid, hairline dividers, optically normalised marks (sizes set in main.js) */
+.lw{--lc:8;--hl:rgba(246,239,228,.13);margin-top:0}
+.lw+.lw{margin-top:56px}
+.lw h4{display:flex;align-items:baseline;gap:14px;margin:0 0 18px;font:500 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--paper)}
+.lw h4 .n{color:var(--red);font-weight:400}
+.lw h4::after{content:"";flex:1;height:1px;background:var(--hl);align-self:center}
+.lw .logos,.media .logos{display:grid;grid-template-columns:repeat(var(--lc),minmax(0,1fr));gap:0;border-top:1px solid var(--hl);border-left:1px solid var(--hl)}
+.lw .lg{display:flex;align-items:center;justify-content:center;aspect-ratio:16/9;padding:0 6%;border-right:1px solid var(--hl);border-bottom:1px solid var(--hl);transition:background-color .35s}
+.lw .lg img{height:auto;max-width:100%;opacity:.8;transition:opacity .35s,transform .35s}
+.lw .lg:not(.e):hover{background:rgba(246,239,228,.04)}
+.lw .lg:hover img{opacity:1;transform:scale(1.04)}
+.collab .lw{--lc:10}
+@media (max-width:1280px){.collab .lw{--lc:8}}
+@media (max-width:1100px){.lw,.collab .lw{--lc:6}}
+@media (max-width:820px){.lw,.collab .lw{--lc:4}}
+@media (max-width:560px){.lw,.collab .lw{--lc:3}.lw+.lw{margin-top:40px}.lw .lg{aspect-ratio:16/10;padding:0 8%}}
+/* end logo walls v2 */
