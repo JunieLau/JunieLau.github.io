@@ -363,3 +363,7 @@ main{padding-top:var(--tb)}
 @media (max-width:760px){.pvh{flex-direction:column;align-items:flex-start}.pvs{text-align:left}.pvgrid{grid-template-columns:1fr;gap:44px}.pvid:first-child{display:block}.pvid:first-child .pvm{margin-top:16px}.pvid:first-child h3{font-size:clamp(24px,2.1vw,40px)}.pvid .pbtn{right:10px;top:10px;width:42px;height:42px}}
 /* end press videos */
 .lists li a{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .35s,color .2s}.lists li a:hover{color:var(--red);background-size:100% 1px}.lists li a i{font-style:normal;color:var(--red);font-size:.8em}
+/* bio refinement v2: calmer type, smaller body */
+.biotext p{font-size:clamp(15px,calc(.45vw + 10.5px),21px);line-height:1.62;color:#d8cabb;letter-spacing:.004em;margin-bottom:.95em;text-wrap:pretty;hyphens:none}
+.biotext p:first-child{font-size:clamp(22px,calc(1.3vw + 10px),42px);line-height:1.22;color:#f6efe4;letter-spacing:-.005em;padding-bottom:.75em;margin-bottom:1.1em;border-bottom:1px solid #3a2626;text-wrap:balance}
+@media (min-width:1100px){.biotext p{font-size:clamp(15px,calc(.45vw + 10.5px),21px)}.biotext p:first-child{font-size:clamp(22px,calc(1.3vw + 10px),42px);margin-bottom:1.3em}.biotext{column-gap:clamp(40px,3.6vw,80px);column-rule:1px solid #2e1f1f}.bio2{gap:clamp(36px,4vw,88px)}}
