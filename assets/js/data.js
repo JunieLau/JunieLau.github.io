@@ -50,8 +50,8 @@ window.JL = {
    "year": "2024",
    "role": "Director · Hybrid short",
    "note": "Silver, Runway International AI Film Festival · Best Film, AIFA (UK) · Best Hybrid Film, AI Film Festival Amsterdam · Best AI Application, Artefact (France) · Invited to Tribeca 2024",
-   "yt": "91EfR3Bo1vk",
-   "img": "yt/91EfR3Bo1vk.jpg"
+   "yt": "yli8f4ddgRU",
+   "img": "yt/yli8f4ddgRU.jpg"
   },
   {
    "id": "void",
@@ -905,9 +905,9 @@ window.JL = {
    "cap_zh": "难为正邪定分界 — 2023"
   },
   {
-   "yt": "91EfR3Bo1vk",
+   "yt": "yli8f4ddgRU",
    "pid": "euler",
-   "img": "yt/91EfR3Bo1vk.jpg",
+   "img": "yt/yli8f4ddgRU.jpg",
    "cap": "e^(iπ) + 1 = 0 — 2024",
    "cap_zh": "e^(iπ) + 1 = 0 — 2024"
   },
