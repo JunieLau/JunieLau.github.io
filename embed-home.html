@@ -42,7 +42,7 @@ img{display:block}
 .home .meta .cap{max-width:62%;color:#fff;min-height:1em}
 .home .meta .cap b{color:var(--accent);font-weight:400}
 .home .meta .hint{color:var(--dim)}
-.sectionwords{position:absolute;z-index:3;left:50%;bottom:52px;transform:translateX(-50%);display:flex;gap:44px}
+.sectionwords{position:absolute;z-index:3;left:50%;bottom:52px;transform:translateX(-50%);display:flex;gap:44px;pointer-events:auto}
 .sectionwords a{font-family:var(--serif);font-style:italic;font-size:clamp(20px,1.9vw,28px);color:#fff;opacity:.9;transition:color .3s}
 .sectionwords a:hover{color:var(--accent)}
 @media (max-width:700px){
@@ -501,19 +501,21 @@ html,body{height:100%;overflow:hidden}.home{height:100vh;min-height:0}
   <button type="button" class="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button></header>
 <div class="mmenu" aria-hidden="true"><nav><a href="https://www.junielau.com/film" target="_top"><b>01</b><span data-zh="影片">Film</span><em>影片</em></a><a href="https://www.junielau.com/campaign" target="_top"><b>02</b><span data-zh="商业">Campaign</span><em>商业</em></a><a href="https://www.junielau.com/production" target="_top"><b>03</b><span data-zh="美术设计">Production</span><em>美术设计</em></a><a href="https://www.junielau.com/photography" target="_top"><b>04</b><span data-zh="摄影">Photography</span><em>摄影</em></a><a href="https://www.junielau.com/about" target="_top"><b>05</b><span data-zh="关于">About</span><em>关于</em></a><a href="https://www.junielau.com/press" target="_top"><b>06</b><span data-zh="媒体">Press</span><em>媒体</em></a><a href="https://www.junielau.com/contact" target="_top"><b>07</b><span data-zh="联系">Contact</span><em>联系</em></a></nav>
   <div class="mfoot"><span class="langs"><button type="button" data-lang="en">EN</button><i>/</i><button type="button" data-lang="zh">中文</button></span><div class="soc"></div></div></div>
-<section class="home field-home" id="home">
-  <div class="fstage"><div class="field"></div></div>
-  <div class="echo" aria-hidden="true"><span>JUNIE LAU</span><span>JUNIE LAU</span><span>JUNIE LAU</span><span>JUNIE LAU</span></div>
-  <h1 class="wmx"><span class="l1">JUNIE</span><span class="l2">LAU</span></h1>
-  <div class="hud tl"><b><span data-zh="AI 电影导演">AI Film Director</span></b><span>London / Shanghai</span></div>
-  <div class="hud tr"><span class="xy">X 0.500 &nbsp; Y 0.500</span><span class="idx">00 / 00</span></div>
+<section class="home" id="home">
+  <div class="stage">
+    <div class="scene">
+      <div class="carousel"></div>
+      <div class="wordmark">JUNIE LAU</div>
+    </div>
+  </div>
+  <div class="wm2" aria-hidden="true">JUNIE LAU</div>
+  <div class="glow" aria-hidden="true"></div>
   <nav class="sectionwords"><a href="https://www.junielau.com/film" target="_top"><span data-zh="影片">Film</span></a><a href="https://www.junielau.com/campaign" target="_top"><span data-zh="商业">Campaign</span></a><a href="https://www.junielau.com/production" target="_top"><span data-zh="美术设计">Production</span></a><a href="https://www.junielau.com/photography" target="_top"><span data-zh="摄影">Photography</span></a><a href="https://www.junielau.com/about" target="_top"><span data-zh="关于">About</span></a><a href="https://www.junielau.com/press" target="_top"><span data-zh="媒体">Press</span></a><a href="https://www.junielau.com/contact" target="_top"><span data-zh="联系">Contact</span></a></nav>
   <div class="meta">
     <div class="cap"></div>
     <div class="soc mini"></div>
-    <div class="hint"><span class="h-mouse"><span data-zh="移动鼠标浏览 · 点击播放">Move to explore · Click to play</span></span><span class="h-touch"><span data-zh="拖动浏览 · 轻点播放">Drag to explore · Tap to play</span></span></div>
+    <div class="hint"><span class="h-mouse"><span data-zh="拖动浏览 · 点击播放">Drag to explore · Click to play</span></span><span class="h-touch"><span data-zh="拖动浏览 · 轻点播放">Drag to explore · Tap to play</span></span></div>
   </div>
-  <div class="cur" aria-hidden="true"><i class="ring"></i><i class="h"></i><i class="v"></i><div class="ttl"><em></em><small></small></div></div>
 </section>
 
 <div class="lb"><span class="x"><span data-zh="关闭 ×">Close ×</span></span><button class="prev" type="button" aria-label="Previous">‹</button><div class="frame"></div><button class="next" type="button" aria-label="Next">›</button><span class="t"></span></div>
@@ -1693,17 +1695,10 @@ window.JL2={
 },
 {
 "o": "ZCOOL 站酷 · 站酷设计周",
-"t": "2026 站酷设计周｜评论区找搭子 2/3人拼团开抢",
-"d": "2026-09-04",
+"t": "从Runway、OpenAI到Google，巨妮Junie怎么一路拍进了全球AI影像圈？",
+"d": "2026-09-28",
 "l": "ZH",
-"u": "https://www.zcool.com.cn/article/ZMTgxNzUwOA==.html"
-},
-{
-"o": "ZCOOL 站酷 · 站酷设计周",
-"t": "20年等一回，手慢无，站酷设计周早鸟票开抢！",
-"d": "2026-09-01",
-"l": "ZH",
-"u": "https://www.zcool.com.cn/article/ZMTgxNjIzMg==.html"
+"u": "https://www.zcool.com.cn/article/ZMTgyNTkyMA==.html"
 },
 {
 "o": "Forbes (Maureen Kerr)",
@@ -2716,13 +2711,6 @@ window.JL2={
 ],
 "institutions": [
 {
-"name": "a16z",
-"file": "institutions-a16z.png",
-"ar": 2.533,
-"dn": 0.463,
-"k": 0.9
-},
-{
 "name": "Tribeca Film Festival",
 "file": "institutions-tribeca-film-festival.png",
 "ar": 1.8,
@@ -2951,175 +2939,189 @@ window.JL2={
     lb.addEventListener("touchend", e => { if (sx === null || !gset) return; const dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 40) step(dx < 0 ? 1 : -1); sx = null; }, { passive:true });
   }
 
-  /* ---------- home: cursor-driven field of frames ---------- */
-  const fieldEl = $(".field");
-  if (fieldEl) {
-    const home = $(".home"), stage = $(".fstage"), cap = $(".home .cap");
-    const cur = $(".cur"), ttlEm = $(".cur .ttl em"), ttlSm = $(".cur .ttl small");
-    const wm = $(".wmx"), echoes = [...document.querySelectorAll(".echo span")];
-    const xyEl = $(".hud .xy"), idxEl = $(".hud .idx");
+  /* ---------- home: 3D rotating ring of frames ---------- */
+  const carousel = $(".carousel");
+  if (carousel) {
+    const home = $(".home"), stage = $(".stage"), scene = $(".scene"), cap = $(".home .cap");
     const touch = matchMedia("(hover:none)").matches;
     const small = matchMedia("(max-width:700px)").matches;
     const RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const tilt = document.createElement("div"); tilt.className = "tilt"; stage.appendChild(tilt); tilt.appendChild(fieldEl);
-    // seeded random so the composition is stable
-    let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
     const C = k => JL.clips.find(c => c.key === k);
-    const clips = (small ? ["clip01","clip05"] : ["clip01","clip05","clip04","clip03"]).map(C).filter(Boolean);
-    const pool = JL.all.slice();
-    for (let i = pool.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]]; }
-    let W, H, vw, vh, tiles = [];
-    function build(){
-      vw = innerWidth; vh = home.clientHeight || innerHeight;
-      W = vw * (small ? 2.7 : 2.25); H = vh * (small ? 2.3 : 2.15);
-      fieldEl.innerHTML = ""; tiles = []; seed = 7;
-      const cols = small ? 4 : 7, colW = W / cols;
-      let n = 0, ci = 0;
-      for (let c = 0; c < cols; c++) {
-        let y = -colW * (.15 + rnd() * .55);
-        while (y < H) {
-          const w = colW * (small ? .74 + rnd() * .2 : .56 + rnd() * .38);
-          const h = small ? w * 1.25 : w * 9 / 16;
-          const x = c * colW + (colW - w) * rnd();
-          const useClip = ci < clips.length && n % 11 === 5;
-          const it = useClip ? clips[ci++] : pool[n % pool.length];
-          n++;
-          const el = document.createElement("div"); el.className = "tile";
-          el.style.cssText = "left:" + x.toFixed(1) + "px;top:" + y.toFixed(1) + "px;width:" + w.toFixed(1) + "px;height:" + h.toFixed(1) + "px";
-          const im = document.createElement("div"); im.className = "im";
-          if (it.video) {
-            const v = document.createElement("video");
-            v.muted = true; v.defaultMuted = true; v.loop = true; v.playsInline = true;
-            ["muted","playsinline","webkit-playsinline","loop","disablepictureinpicture"].forEach(a => v.setAttribute(a, ""));
-            v.preload = "metadata"; v.poster = src(it); v.src = vsrc(it); im.appendChild(v); el._v = v;
-          } else im.style.backgroundImage = 'url("' + src(it) + '")';
-          el.appendChild(im);
-          const no = document.createElement("span"); no.className = "no"; no.textContent = String(n).padStart(2, "0"); el.appendChild(no);
-          fieldEl.appendChild(el);
-          tiles.push({ el, it, x, y, w, h, cx: x + w / 2, cy: y + h / 2, s: -1, o: -1, z: -1 });
-          y += h + colW * (.07 + rnd() * .26);
-        }
-      }
-      fieldEl.style.width = W + "px"; fieldEl.style.height = H + "px";
-      if (idxEl) idxEl.textContent = "00 / " + String(tiles.length).padStart(2, "0");
-    }
-    build();
-    let rT; addEventListener("resize", () => { clearTimeout(rT); rT = setTimeout(build, 150); });
-    // input state
-    let mx = innerWidth * .5, my = innerHeight * .45, cx = mx, cy = my, hasMouse = false, lastInput = 0;
-    let ox = 0, oy = 0, tx = 0, ty = 0, pox = 0, poy = 0, rx = 0, ry = 0, vx = 0, vy = 0;
-    let dragging = false, lx = 0, ly = 0, moved = 0, dvx = 0, dvy = 0, gx = 0, gy = 0;
-    const clampT = () => { tx = Math.max(-(W - vw), Math.min(0, tx)); ty = Math.max(-(H - vh), Math.min(0, ty)); };
-    tx = -(W - vw) * .5; ty = -(H - vh) * .45; ox = tx; oy = ty;
-    if (!touch) {
-      home.addEventListener("pointermove", e => { const r = home.getBoundingClientRect(); mx = e.clientX; my = e.clientY - r.top; hasMouse = true; lastInput = performance.now(); });
-      home.addEventListener("pointerleave", () => cur && cur.classList.add("off"));
-      home.addEventListener("pointerenter", () => cur && cur.classList.remove("off"));
-    } else {
-      stage.addEventListener("pointerdown", e => { dragging = true; moved = 0; lx = e.clientX; ly = e.clientY; dvx = dvy = 0; lastInput = performance.now(); });
-      addEventListener("pointermove", e => {
-        if (!dragging) return;
-        const dx = e.clientX - lx, dy = e.clientY - ly; lx = e.clientX; ly = e.clientY; moved += Math.abs(dx) + Math.abs(dy);
-        tx += dx * 1.25; ty += dy * 1.25; dvx = dx * 1.25; dvy = dy * 1.25; clampT(); lastInput = performance.now();
-        const r = home.getBoundingClientRect(); mx = e.clientX; my = e.clientY - r.top;
-      }, { passive:true });
-      const up = () => { dragging = false; lastInput = performance.now(); };
-      addEventListener("pointerup", up); addEventListener("pointercancel", up);
-      // gyroscope only where no permission prompt is required (Android); iOS asks, so we skip it there
-      if (window.DeviceOrientationEvent && typeof DeviceOrientationEvent.requestPermission !== "function") {
-        addEventListener("deviceorientation", e => { if (e.gamma == null) return; gx = Math.max(-1, Math.min(1, e.gamma / 30)); gy = Math.max(-1, Math.min(1, (e.beta - 45) / 30)); }, { passive:true });
-      }
-    }
-    let hot = null;
-    function hitTile(px, py){
-      let best = null, bf = -1;
-      for (const t of tiles) {
-        const s = t.s > 0 ? t.s : 1, hw = t.w * s / 2, hh = t.h * s / 2, sx = t.cx + ox, sy = t.cy + oy;
-        if (px > sx - hw && px < sx + hw && py > sy - hh && py < sy + hh && t.f > bf) { bf = t.f; best = t; }
-      }
-      return best;
-    }
-    stage.addEventListener("click", e => {
-      if (touch && moved > 10) return;
-      const r = home.getBoundingClientRect();
-      const t = touch ? hitTile(e.clientX, e.clientY - r.top) : hot;
-      if (t && t.it.yt) play(t.it.yt, capOf(t.it), secs(t.it.ts));
+    const clipKeys = small ? ["clip01","clip05"] : ["clip01","clip05","clip04","clip03"];
+    const clips = clipKeys.map(C).filter(Boolean);
+    // prefer hero stills spread around the ring, then fill from JL.all
+    const heroKeys = [
+      "03_the-court_0119775ms",
+      "21_dear-stranger_0010000ms","21_dear-stranger",
+      "25_dear-stranger_0360816ms",
+      "11_every-multiverse","12_every-multiverse_0152750ms",
+      "32_one-blink","33_one-blink_0119970ms"
+    ];
+    const pool = [];
+    const used = new Set();
+    const push = it => { if (!it || used.has(it.key)) return; used.add(it.key); pool.push(it); };
+    // exact / prefix heroes from frames
+    heroKeys.forEach(k => {
+      const hit = JL.all.find(f => f.key === k || (f.key && f.key.indexOf(k) === 0) || (f.img && f.img.indexOf(k) > -1));
+      push(hit);
     });
-    function title(it){
-      const c = capOf(it) || ""; const i = c.lastIndexOf(" — ");
-      return i > 0 ? [c.slice(0, i), c.slice(i + 3)] : [c, ""];
-    }
-    function setHot(t){
-      if (t === hot) return;
-      if (hot) { hot.el.classList.remove("hot"); hot.el.style.filter = ""; }
-      hot = t;
-      if (hot) {
-        hot.el.classList.add("hot");
-        const [a, b2] = title(hot.it);
-        if (ttlEm) { ttlEm.textContent = a; ttlSm.textContent = b2; }
-        if (cap) cap.innerHTML = "<b>●</b>&nbsp; " + capOf(hot.it);
-        if (idxEl) idxEl.textContent = hot.el.querySelector(".no").textContent + " / " + String(tiles.length).padStart(2, "0");
-      }
-      cur && cur.classList.toggle("on", !!hot);
-    }
-    hooks.push(() => { const t = hot; hot = null; setHot(t); });
-    const ep = echoes.map(() => ({ x: 0, y: 0 }));
-    let prev = performance.now(), fr = 0;
-    function frame(now){
-      const dt = Math.min(.05, (now - prev) / 1000); prev = now; fr++;
-      const idle = now - lastInput > (touch ? 2600 : 4000);
-      let fx = mx, fy = my;                       // focus point (cursor / finger / auto)
-      if (!touch) {
-        if (!hasMouse && !RM) { const k = now / 1000; mx = vw * (.5 + .32 * Math.sin(k * .37)); my = vh * (.48 + .26 * Math.sin(k * .53 + 1)); fx = mx; fy = my; }
-        tx = -(mx / vw) * (W - vw); ty = -(my / vh) * (H - vh);
+    // also pin by filename substrings from the original ring brief
+    ["03_the-court","21_dear-stranger","25_dear-stranger","12_every-multiverse","33_one-blink","32_one-blink"].forEach(s => {
+      push(JL.all.find(f => (f.img || "").indexOf(s) > -1 || (f.key || "").indexOf(s) > -1));
+    });
+    clips.forEach(push);
+    JL.all.forEach(push);
+    const N = small ? 12 : 24;
+    const items = pool.slice(0, N);
+    // back-face images: next half of the leftover pool (or wrap)
+    const backs = pool.slice(N, N * 2);
+    while (backs.length < N) backs.push(pool[backs.length % pool.length]);
+
+    let cw, ch, R, step;
+    const cards = [];
+    function layout(){
+      const w = innerWidth, h = home.clientHeight || innerHeight;
+      if (small) {
+        cw = Math.min(w * .42, h * .28); ch = cw * 1.45;
+        home.style.setProperty("--persp", Math.round(w * 2.2) + "px");
+        home.style.setProperty("--push", Math.round(-Math.min(w, h) * .55) + "px");
       } else {
-        if (!dragging) { tx += dvx; ty += dvy; dvx *= .92; dvy *= .92; }
-        if (idle && !RM) { tx += Math.cos(now / 6000) * 26 * dt; ty += Math.sin(now / 4700) * 22 * dt; }
-        tx += gx * 3; ty += gy * 3; gx *= .9; gy *= .9;
-        clampT();
-        if (!dragging) { fx = vw / 2; fy = vh * .5; }
+        cw = Math.min(w * .22, h * .34); ch = cw * 9 / 16;
+        home.style.setProperty("--persp", "2600px");
+        home.style.setProperty("--push", "-1000px");
       }
-      const L = RM ? 1 : (touch ? .16 : .075);
-      ox += (tx - ox) * L; oy += (ty - oy) * L;
-      vx = ox - pox; vy = oy - poy; pox = ox; poy = oy;
-      ry += (((fx / vw) - .5) * 14 - ry) * .08; rx += ((-(fy / vh) + .5) * 10 - rx) * .08;
-      fieldEl.style.transform = "translate3d(" + ox.toFixed(1) + "px," + oy.toFixed(1) + "px,0)";
-      tilt.style.transform = "rotateX(" + rx.toFixed(2) + "deg) rotateY(" + ry.toFixed(2) + "deg)";
-      const R = vw * (small ? .5 : .26), R2 = R * R;
-      for (const t of tiles) {
-        const dx = t.cx + ox - fx, dy = t.cy + oy - fy, f = Math.exp(-(dx * dx + dy * dy) / R2);
-        t.f = f;
-        const s = 1 + .34 * f, o = .3 + .7 * Math.min(1, f * 1.6 + .08), z = 220 * f;
-        const ss = s.toFixed(3), os = o.toFixed(2);
-        if (ss !== t.ss) { t.el.style.transform = "translate3d(0,0," + z.toFixed(0) + "px) scale(" + ss + ")"; t.ss = ss; t.s = s; t.el.style.zIndex = Math.round(f * 100); }
-        if (os !== t.os) { t.el.style.opacity = os; t.os = os; }
-        if (t.el._v) { const vis = Math.abs(dx) < vw * .8 && Math.abs(dy) < vh * .8; if (vis && t.el._v.paused) t.el._v.play().catch(()=>{}); else if (!vis && !t.el._v.paused) t.el._v.pause(); }
+      home.style.setProperty("--cw", cw.toFixed(1) + "px");
+      home.style.setProperty("--ch", ch.toFixed(1) + "px");
+      step = 360 / N;
+      R = (cw * .5) / Math.tan(Math.PI / N) + cw * (small ? .18 : .28);
+      cards.forEach((c, i) => {
+        c.el.style.transform = "rotateY(" + (i * step).toFixed(3) + "deg) translateZ(" + R.toFixed(1) + "px)";
+      });
+    }
+    function makeFace(it, cls){
+      const f = document.createElement("div"); f.className = "face" + (cls ? " " + cls : "");
+      if (it.video) {
+        const v = document.createElement("video");
+        v.muted = true; v.defaultMuted = true; v.loop = true; v.playsInline = true;
+        ["muted","playsinline","webkit-playsinline","loop","disablepictureinpicture"].forEach(a => v.setAttribute(a, ""));
+        v.preload = "metadata"; v.poster = src(it); v.src = vsrc(it);
+        f.appendChild(v); f._v = v; f.style.backgroundImage = 'url("' + src(it) + '")';
+      } else {
+        f.style.backgroundImage = 'url("' + src(it) + '")';
       }
-      setHot(touch ? hitTile(fx, fy) : hitTile(mx, my));
-      const sp = Math.min(16, Math.hypot(vx, vy) * .5);
-      if (hot) hot.el.style.filter = sp > 1 ? "drop-shadow(" + sp.toFixed(1) + "px 0 0 rgba(255,0,60,.8)) drop-shadow(" + (-sp).toFixed(1) + "px 0 0 rgba(0,220,255,.7))" : "";
-      // wordmark: parallax + velocity skew + chromatic split
-      if (wm) {
-        const sk = Math.max(-14, Math.min(14, vx * .35)), px = (fx / vw - .5) * -40, py = (fy / vh - .5) * -24;
-        wm.style.transform = "translate(-50%,-50%) translate(" + px.toFixed(1) + "px," + py.toFixed(1) + "px) skewX(" + sk.toFixed(2) + "deg)";
-        const k = Math.max(-18, Math.min(18, vx * .6));
-        wm.style.textShadow = (k).toFixed(1) + "px 0 rgba(0,220,255,.55), " + (-k).toFixed(1) + "px 0 rgba(255,255,255,.18)";
-        echoes.forEach((e, i) => {
-          const r = .16 / (i + 1.4), q = ep[i];
-          q.x += (px * (2.2 + i * 1.6) - q.x) * r; q.y += (py * (2.2 + i * 1.6) - q.y) * r;
-          e.style.transform = "translate(-50%,-50%) translate(" + q.x.toFixed(1) + "px," + q.y.toFixed(1) + "px)";
+      return f;
+    }
+    items.forEach((it, i) => {
+      const el = document.createElement("div"); el.className = "card";
+      const front = makeFace(it, "");
+      const back = makeFace(backs[i], "back");
+      el.appendChild(front); el.appendChild(back);
+      el._it = it; el._front = front; el._back = back;
+      carousel.appendChild(el);
+      cards.push({ el, it, i, ang: i * (360 / N) });
+      el.addEventListener("pointerenter", () => { if (!touch) { hoverPause = true; setHot(el); } });
+      el.addEventListener("pointerleave", () => { if (!touch) { hoverPause = false; if (hot === el) setHot(null); } });
+      el.addEventListener("click", e => {
+        if (moved > 8) return;
+        e.stopPropagation();
+        const face = nearFront(el) ? el._it : (el._back && el._back._it) || el._it;
+        // prefer the item facing camera-ish; use card's primary it
+        const target = el._it;
+        if (target && target.yt) play(target.yt, capOf(target), secs(target.ts));
+      });
+    });
+    // attach back item ref for completeness
+    cards.forEach((c, i) => { c.el._back._it = backs[i]; });
+    layout();
+    let rT; addEventListener("resize", () => { clearTimeout(rT); rT = setTimeout(layout, 120); });
+
+    let rot = 0, vel = 0, dragging = false, lx = 0, moved = 0, hoverPause = false;
+    let hot = null, frontEl = null;
+    function setHot(el){
+      if (hot === el) return;
+      if (hot) hot.classList.remove("hot");
+      hot = el;
+      if (hot) hot.classList.add("hot");
+      const it = hot ? hot._it : (frontEl && frontEl._it);
+      if (cap) cap.innerHTML = it ? "<b>●</b>&nbsp; " + capOf(it) : "";
+    }
+    function nearFront(el){
+      // whether this card's front face is more toward the camera than its back
+      const i = cards.find(c => c.el === el).i;
+      let a = ((i * step + rot) % 360 + 360) % 360;
+      if (a > 180) a -= 360;
+      return Math.abs(a) < 90;
+    }
+    function setFront(){
+      let best = null, ba = 1e9;
+      cards.forEach(c => {
+        let a = ((c.i * step + rot) % 360 + 360) % 360;
+        if (a > 180) a -= 360;
+        const aa = Math.abs(a);
+        if (aa < ba) { ba = aa; best = c.el; }
+        // opacity: front bright, back dim
+        const o = .28 + .72 * Math.max(0, 1 - aa / 160);
+        if (c._o !== o) { c.el.style.opacity = o.toFixed(2); c._o = o; }
+        // play videos near the front
+        const vis = aa < 100;
+        [c.el._front, c.el._back].forEach(f => {
+          if (!f || !f._v) return;
+          if (vis && f._v.paused) f._v.play().catch(()=>{});
+          else if (!vis && !f._v.paused) f._v.pause();
         });
+      });
+      if (frontEl !== best) {
+        if (frontEl) frontEl.classList.remove("front");
+        frontEl = best;
+        if (frontEl) frontEl.classList.add("front");
+        if (!hot && cap) cap.innerHTML = frontEl ? "<b>●</b>&nbsp; " + capOf(frontEl._it) : "";
       }
-      if (cur && !touch) {
-        cx += (mx - cx) * .28; cy += (my - cy) * .28;
-        cur.style.transform = "translate3d(" + cx.toFixed(1) + "px," + cy.toFixed(1) + "px,0)";
-        if (fr % 6 === 0) { cur.classList.toggle("fl", cx > vw * .56); cur.classList.toggle("fb", cy < vh * .34); }
+    }
+    hooks.push(() => {
+      const it = (hot && hot._it) || (frontEl && frontEl._it);
+      if (cap && it) cap.innerHTML = "<b>●</b>&nbsp; " + capOf(it);
+    });
+
+    // pointer drag / swipe
+    stage.addEventListener("pointerdown", e => {
+      dragging = true; moved = 0; lx = e.clientX; vel = 0;
+      home.classList.add("grab");
+      try { stage.setPointerCapture(e.pointerId); } catch(_){}
+    });
+    stage.addEventListener("pointermove", e => {
+      if (!dragging) return;
+      const dx = e.clientX - lx; lx = e.clientX; moved += Math.abs(dx);
+      const d = dx * (small ? .18 : .12);
+      rot += d; vel = d;
+    });
+    const endDrag = () => { dragging = false; home.classList.remove("grab"); };
+    stage.addEventListener("pointerup", endDrag);
+    stage.addEventListener("pointercancel", endDrag);
+    // wheel spins without trapping scroll
+    home.addEventListener("wheel", e => {
+      rot += (e.deltaY + e.deltaX) * .04;
+      vel = (e.deltaY + e.deltaX) * .02;
+    }, { passive: true });
+
+    let prev = performance.now();
+    const AUTO = 4.5; // deg / sec
+    function frame(now){
+      const dt = Math.min(.05, (now - prev) / 1000); prev = now;
+      if (!dragging) {
+        if (!RM && !hoverPause) rot += AUTO * dt;
+        if (!RM) { rot += vel; vel *= .94; if (Math.abs(vel) < .002) vel = 0; }
+        else vel = 0;
       }
-      if (xyEl && fr % 4 === 0) xyEl.textContent = "X " + (fx / vw).toFixed(3) + "   Y " + (fy / vh).toFixed(3);
+      carousel.style.transform = "rotateY(" + rot.toFixed(3) + "deg)";
+      setFront();
       requestAnimationFrame(frame);
     }
     requestAnimationFrame(frame);
-    document.addEventListener("touchstart", () => tiles.forEach(t => t.el._v && t.el._v.play().catch(()=>{})), { once:true, passive:true });
+    document.addEventListener("touchstart", () => {
+      cards.forEach(c => { [c.el._front, c.el._back].forEach(f => f && f._v && f._v.play().catch(()=>{})); });
+    }, { once: true, passive: true });
+    // initial caption
+    setFront();
   }
 
   /* ---------- work grid ---------- */
