@@ -278,3 +278,40 @@ main{padding-top:var(--tb)}
   .bigl{font-size:58vw}
 }
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+/* ---------- HOME: Latest / 最新动态 (Instagram cards) ---------- */
+.latest{padding:clamp(48px,7vw,104px) var(--pad) clamp(40px,6vw,88px);background:var(--ink);border-top:1px solid #2a1a1a}
+.lt-hd{display:flex;flex-direction:column;gap:clamp(10px,1.4vw,18px);margin-bottom:clamp(22px,3vw,40px)}
+.lt-hd .lab{margin-bottom:0}
+.lt-row{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.lt-t{display:flex;align-items:flex-end;gap:.3em;flex-wrap:wrap;font-weight:400}
+.lt-t .en{font:400 clamp(64px,11vw,176px)/.8 var(--serif);color:var(--red);letter-spacing:-.02em}
+.lt-t .zh{font:900 clamp(22px,3vw,48px)/1 var(--zh);color:var(--pink);padding-bottom:.14em}
+.lt-follow{font:500 12px/1 var(--mono);text-transform:uppercase;letter-spacing:.04em;border:1px solid var(--pink);color:var(--pink);padding:11px 14px;white-space:nowrap}
+.lt-follow:hover{background:var(--pink);color:var(--ink)}
+/* cards never exceed the 360px native width of the smallest cover */
+.lt-grid{list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(22px,2.4vw,36px) clamp(12px,1.2vw,18px);max-width:calc(5 * 330px + 4 * 18px)}
+.lc{position:relative;min-width:0}
+.lc-a{display:block}
+.lc-f{position:relative;display:block;aspect-ratio:4/5;overflow:hidden;background:var(--ink2);outline:1px solid #2a1a1a}
+.lc-f img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.lc-a:hover .lc-f img,.lc-a:focus-visible .lc-f img{transform:scale(1.08)}
+.lc-a:hover .lc-f,.lc-a:focus-visible .lc-f{outline:2px solid var(--red)}
+.lc-n{position:absolute;top:0;left:0;font:500 12px/1 var(--mono);background:var(--ink);color:var(--red);padding:7px 8px}
+.lc-k{position:absolute;left:0;bottom:0;font:500 11px/1 var(--mono);text-transform:uppercase;background:var(--paper);color:var(--ink);padding:7px 9px}
+.lc-m{display:flex;justify-content:space-between;gap:8px;margin-top:12px;font:500 11px/1.2 var(--mono);text-transform:uppercase;letter-spacing:.04em}
+.lc-d{color:var(--red)}.lc-s{color:#b9a796;white-space:nowrap}
+.lc-h{display:block;margin-top:8px;font:400 clamp(17px,1.35vw,21px)/1.22 var(--serif)}
+.is-zh .lc-h{font-family:var(--zh);font-size:clamp(14px,1.05vw,16px);line-height:1.55}
+.lc-a:hover .lc-h{color:var(--red)}
+.lc-x{display:inline-block;margin-top:8px;font:500 11px/1 var(--mono);text-transform:uppercase;color:var(--pink);border-bottom:1px solid currentColor;padding-bottom:2px}
+.lc-x:hover{color:var(--red)}
+/* whole image, centred (no crop) on a dark tinted backdrop */
+.lc-c img{object-fit:contain;object-position:50% 50%}
+@media (max-width:1100px){.lt-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:760px){
+  .lt-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 12px}
+  .lc-m{flex-direction:column;gap:5px}
+  .lc-h{font-size:16px}.is-zh .lc-h{font-size:13.5px}
+  .lt-follow{padding:9px 11px;font-size:11px}
+}
+@media (hover:none){.lc-a:hover .lc-f img{transform:none}}
