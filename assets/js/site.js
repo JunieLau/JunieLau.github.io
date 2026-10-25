@@ -22,17 +22,27 @@ window.JL2={
 "img": "yt/K6_PjuWnC40.jpg"
 },
 {
+"pid": "zhengxie",
+"href": "work-zhengxie.html",
+"yt": "LPqLxh-T13E",
+"t": "The Line Between Good and Evil",
+"s": "Director · AI music video",
+"s_zh": "导演 · AI 音乐录像",
+"img": "yt/LPqLxh-T13E.jpg"
+},
+{
 "yt": "b9krYypYl2c",
 "t": "Deceptive Veil",
 "s": "AI film · Midjourney, Runway Gen-1, DALL·E 2, Deforum Stable Diffusion",
-"s_zh": "AI 电影 · Midjourney、Runway Gen-1、DALL·E 2、Deforum Stable Diffusion 混合工作流"
+"s_zh": "AI 电影 · Midjourney、Runway Gen-1、DALL·E 2、Deforum Stable Diffusion 混合工作流",
+"img": "yt/b9krYypYl2c_hd.jpg"
 },
 {
 "yt": "Zn212Dq05SA",
 "t": "I Collaborated with AI to Design a Fashion Collection",
 "s": "Fashion experimental film",
 "s_zh": "AI时装系列设计与原创时尚实验短片",
-"img": "old/film_29_t.jpg"
+"img": "yt/Zn212Dq05SA_hd.jpg"
 }
 ],
 "filmImgs": [
@@ -368,15 +378,17 @@ window.JL2={
 },
 {
 "vimeo": "387422088",
-"t": "Vimeo · 387422088",
-"s": "From the original junielau.com Production page",
-"s_zh": "来自原 junielau.com「美术设计」页面"
+"t": "Love·Lord·Minister [Official Trailer]",
+"s": "Official trailer · Vimeo · 2020",
+"s_zh": "官方预告片 · Vimeo · 2020",
+"img": "vimeo/387422088.jpg"
 },
 {
 "vimeo": "349053096",
-"t": "Vimeo · 349053096",
-"s": "From the original junielau.com Production page",
-"s_zh": "来自原 junielau.com「美术设计」页面"
+"t": "Queeroes Of London | Official Trailer",
+"s": "Documentary trailer · Vimeo · 2019",
+"s_zh": "纪录片预告片 · Vimeo · 2019",
+"img": "vimeo/349053096.jpg"
 }
 ],
 "prodImgs": [
