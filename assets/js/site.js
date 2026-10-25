@@ -707,308 +707,448 @@ window.JL2={
 "t": "How AI And Peter Gabriel Changed Junie Lau's Path To Directing",
 "d": "2026-09-04",
 "l": "EN",
-"u": "https://www.forbes.com/sites/maureenkerr/2026/09/04/how-ai-and-peter-gabriel-changed-junie-laus-path-to-directing/"
+"u": "https://www.forbes.com/sites/maureenkerr/2026/09/04/how-ai-and-peter-gabriel-changed-junie-laus-path-to-directing/",
+"t_zh": "How AI And Peter Gabriel Changed Junie Lau's Path To Directing"
 },
 {
 "o": "ZCOOL 站酷 · 站酷设计周",
 "t": "从Runway、OpenAI到Google，巨妮Junie怎么一路拍进了全球AI影像圈？",
 "d": "2026-09-28",
 "l": "ZH",
-"u": "https://www.zcool.com.cn/article/ZMTgyNTkyMA==.html"
+"u": "https://www.zcool.com.cn/article/ZMTgyNTkyMA==.html",
+"t_zh": "从Runway、OpenAI到Google，巨妮Junie怎么一路拍进了全球AI影像圈？"
 },
 {
 "o": "Forbes (Maureen Kerr)",
 "t": "AI Studios Rewrite Ownership Rules For Films, Pipelines And Audiences",
 "d": "2026-07-29",
 "l": "EN",
-"u": "https://www.forbes.com/sites/maureenkerr/2026/07/29/ai-studios-rewrite-ownership-rules-for-films-pipelines-and-audiences/"
+"u": "https://www.forbes.com/sites/maureenkerr/2026/07/29/ai-studios-rewrite-ownership-rules-for-films-pipelines-and-audiences/",
+"t_zh": "AI Studios Rewrite Ownership Rules For Films, Pipelines And Audiences"
 },
 {
 "o": "Tencent News 腾讯新闻",
 "t": "LibTV上线Seedance 2.0：做AI视频讲故事这件事，终于不用排队了（曜·AURAE）",
 "d": "2026-04-03",
 "l": "ZH",
-"u": "https://view.inews.qq.com/a/20260403A03J2S00"
+"u": "https://view.inews.qq.com/a/20260403A03J2S00",
+"t_zh": "LibTV上线Seedance 2.0：做AI视频讲故事这件事，终于不用排队了（曜·AURAE）"
 },
 {
 "o": "Tencent News 腾讯新闻",
 "t": "独家对话谷歌Flow合作艺术家：3周完成9分钟短片，Flow很多新功能在内测",
 "d": "2025-05-23",
 "l": "ZH",
-"u": "https://news.qq.com/rain/a/20250523A06K3000"
+"u": "https://news.qq.com/rain/a/20250523A06K3000",
+"t_zh": "独家对话谷歌Flow合作艺术家：3周完成9分钟短片，Flow很多新功能在内测"
+},
+{
+"o": "WeChat 微信公众号",
+"t": "Exclusive Interview with a Google Flow Collaborating Artist: Completing a Nine-Minute Short Film in Three Weeks, with Many New Flow Features in Beta Testing",
+"t_zh": "独家对话谷歌Flow合作艺术家：3周完成9分钟短片，Flow很多新功能在内测",
+"d": "2025-05-23",
+"l": "ZH",
+"u": "https://mp.weixin.qq.com/s/u076O9WgG7l9DqEo34twNA"
 },
 {
 "o": "India Today",
 "t": "Google I/O 2025: Flow is AI video generator tuned for filmmaking, Google says it is working with Hollywood",
 "d": "2025-05-21",
 "l": "EN",
-"u": "https://www.indiatoday.in/technology/news/story/google-io-2025-flow-is-ai-video-generator-tuned-for-filmmaking-google-says-it-is-working-with-hollywood-2727871-2025-05-21"
+"u": "https://www.indiatoday.in/technology/news/story/google-io-2025-flow-is-ai-video-generator-tuned-for-filmmaking-google-says-it-is-working-with-hollywood-2727871-2025-05-21",
+"t_zh": "Google I/O 2025：Flow 是专为电影制作优化的 AI 视频生成器，谷歌表示正与好莱坞合作"
+},
+{
+"o": "WeChat · WAIC UP!",
+"t": "WAIC UP! Guest | Chinese Director Junie Stuns at Google I/O by Merging Eastern Aesthetics with Cutting-Edge AI Technology",
+"t_zh": "《WAIC UP!》嘉宾 | 中国女导演Junie惊艳谷歌I/O大会，用东方美学邂逅AI黑科技！",
+"d": "2025-05-21",
+"l": "ZH",
+"u": "https://mp.weixin.qq.com/s/Rm0V-OCzpWEBmd1jLGYf3g"
+},
+{
+"o": "China.com.cn 中国网",
+"t": "Google Launches Its New AI Filmmaking Platform Flow, Chinese Director Junie Named Official Collaborating Artist",
+"t_zh": "谷歌发布最新AI电影制作平台Flow，中国女导演Junie成为官方合作艺术家",
+"d": "2025-05-21",
+"l": "ZH",
+"u": "http://yingshi.china.com.cn/web/huayushijie/detail2_2025_05/21/4509446.html"
 },
 {
 "o": "Google Blog",
-"t": "Introducing Flow: Google's AI filmmaking tool designed for Veo (Meet Flow)",
+"t": "Meet Flow: AI-powered filmmaking with Veo 3",
 "d": "2025-05-20",
 "l": "EN",
-"u": "https://blog.google/innovation-and-ai/products/google-flow-veo-ai-filmmaking-tool/"
+"u": "https://blog.google/technology/ai/google-flow-veo-ai-filmmaking-tool/",
+"t_zh": "走近 Flow：借助 Veo 3 的 AI 驱动电影制作"
 },
 {
 "o": "Mashable",
-"t": "All the Gemini announcements from Google I/O 2025",
+"t": "All the Gemini announcements from Google I/O 2025: Free Gemini Live, a Sora competitor, AI Ultra",
 "d": "2025-05-20",
 "l": "EN",
-"u": "https://me.mashable.com/tech/56126/all-the-gemini-announcements-from-google-io-2025-free-gemini-live-a-sora-competitor-ai-ultra"
+"u": "https://mashable.com/article/google-io-free-gemini-live-sora-competitor-gemini-announcements",
+"t_zh": "Google I/O 2025 全部 Gemini 发布：免费 Gemini Live、Sora 竞品与 AI Ultra"
 },
 {
 "o": "Variety",
-"t": "Darren Aronofsky AI Studio Announces Google Pact, 'Ancestra' Project",
+"t": "Darren Aronofsky’s AI-Driven Studio Primordial Soup Inks Google DeepMind Partnership, First Film Project to Premiere at Tribeca Festival",
 "d": "2025-05-20",
 "l": "EN",
-"u": "https://variety.com/2025/film/news/darren-aronofsky-ai-studio-primordial-soup-google-deepmind-1236403412/"
+"u": "https://variety.com/2025/digital/news/darren-aronofsky-ai-studio-primordial-soup-google-deepmind-1236403412/",
+"t_zh": "达伦·阿罗诺夫斯基的 AI 驱动工作室 Primordial Soup 与 Google DeepMind 签署合作协议，其首部电影项目将于翠贝卡电影节首映"
 },
 {
 "o": "la Repubblica D",
-"t": "Junie Lau: l'AI che mescola meraviglia e ribellione",
+"t": "Junie Lau: l’AI che mescola meraviglia e ribellione",
 "d": "2025-05-19",
 "l": "IT",
-"u": "https://d.repubblica.it/culture/arte/2025/05/19/news/junie_lau_chi_e_artista_intelligenza_artificiale-424378529/"
+"u": "https://d.repubblica.it/culture/arte/2025/05/19/news/junie_lau_chi_e_artista_intelligenza_artificiale-424378529/",
+"t_zh": "Junie Lau：将惊艳与叛逆精神融为一体的人工智能"
 },
 {
 "o": "NewRank 新榜",
 "t": "独家对话谷歌Flow合作艺术家：3周完成9分钟短片，Flow很多新功能在内测 (mirror)",
 "d": "2025-05",
 "l": "ZH",
-"u": "https://www.newrank.cn/article/detail/31374"
+"u": "https://www.newrank.cn/article/detail/31374",
+"t_zh": "独家对话谷歌Flow合作艺术家：3周完成9分钟短片，Flow很多新功能在内测 (mirror)"
 },
 {
 "o": "ABP Live",
 "t": "Is Google Flow Hollywood's Next Big Thing? Filmmakers Show Off What Veo 3, Imagen, & Gemini Can Really Do",
 "d": "2025-05",
 "l": "EN",
-"u": "https://news.abplive.com/technology/google-flow-movie-veo-3-imagen-gemini-shorts-youtube-io-2025-1773758"
+"u": "https://news.abplive.com/technology/google-flow-movie-veo-3-imagen-gemini-shorts-youtube-io-2025-1773758",
+"t_zh": "谷歌 Flow 会成为好莱坞的下一大趋势吗？电影制作者展示 Veo 3、Imagen 与 Gemini 的真正实力"
+},
+{
+"o": "WeChat 微信公众号",
+"t": "Exclusive Insights | Emerging Director Junie Lau: AI Will Give Rise to Novel Forms Beyond Our Imagination Today",
+"t_zh": "独家观点｜青年导演Junie Lau：AI将催生今天无法完全想象的新颖形式",
+"d": "2025-03-14",
+"l": "ZH",
+"u": "https://mp.weixin.qq.com/s/YcNl1OryfDchcI1FB5syyA"
 },
 {
 "o": "Promise Studios",
 "t": "Promise Welcomes Groundbreaking Gen AI Talent to the Studio",
 "d": "2025-02",
 "l": "EN",
-"u": "https://www.promise.ai/post/promise-welcomes-groundbreaking-gen-ai-talent-to-the-studio"
+"u": "https://www.promisestudios.com/post/promise-welcomes-groundbreaking-gen-ai-talent-to-the-studio",
+"t_zh": "Promise 工作室的第一批开创性的生成式 AI 导演"
 },
 {
 "o": "IndieWire",
-"t": "Promise: What Does a Gen AI Content Studio Actually Look Like?",
+"t": "What Does a Gen AI Content Studio Actually Look Like?",
 "d": "2025",
 "l": "EN",
-"u": "https://www.indiewire.com/news/general-news/promise-gen-ai-content-studio-1235093932/"
+"u": "https://www.indiewire.com/news/general-news/promise-gen-ai-content-studio-1235093932/",
+"t_zh": "生成式 AI 内容工作室究竟是什么样的？"
 },
 {
 "o": "NetEase 网易",
-"t": "2025年如何用AI\"拍\"电影？我们扒了10部口碑佳作的幕后制作流程",
+"t": "How to “Make” Movies with AI in 2025? A Deep Dive into the Production Workflows of 10 Critically Acclaimed AI Films",
 "d": "2025",
 "l": "ZH",
-"u": "https://www.163.com/dy/article/JLSJEP3F05567EZL.html"
+"u": "https://www.163.com/dy/article/JLSJEP3F05567EZL.html",
+"t_zh": "2025年如何用AI“拍”电影？我们扒了10部口碑佳作的幕后制作流程"
 },
 {
 "o": "The Paper 澎湃 (对齐Lab)",
 "t": "对话Sora合作的首位中国艺术家：如果没有AI，我可能只是导演的AI",
 "d": "2025",
 "l": "ZH",
-"u": "https://www.thepaper.cn/newsDetail_forward_31247217"
+"u": "https://www.thepaper.cn/newsDetail_forward_31247217",
+"t_zh": "对话Sora合作的首位中国艺术家：如果没有AI，我可能只是导演的AI"
 },
 {
 "o": "Leonardo.Ai",
 "t": "2025's Power List: Top 50 Women AI Artists",
 "d": "2025",
 "l": "EN",
-"u": "https://leonardo.ai/news/50-top-women-ai-artists/"
+"u": "https://leonardo.ai/news/50-top-women-ai-artists/",
+"t_zh": "2025 权力榜单：全球 50 位最具影响力的女性 AI 艺术家"
 },
 {
 "o": "AIFA Ventures",
 "t": "AIFA Awards 2025 press release",
 "d": "2025",
 "l": "EN",
-"u": "https://www.aifaventures.com/events/aifa-awards-2025-press-release"
+"u": "https://www.aifaventures.com/events/aifa-awards-2025-press-release",
+"t_zh": "AIFA Awards 2025 press release"
+},
+{
+"o": "WeChat · WAIC UP!",
+"t": "Junie Lau: The Storyteller of the Future | Guest Preview for the Inaugural Issue of WAIC UP! at the World Artificial Intelligence Conference",
+"t_zh": "Junie Lau：未来叙事者 | 世界人工智能大会创刊号《WAIC UP!》嘉宾预告",
+"d": "2024-12-26",
+"l": "ZH",
+"u": "https://mp.weixin.qq.com/s/Oo8GHGrSyTooUopwOG7RdA"
+},
+{
+"o": "WeChat 微信公众号",
+"t": "Exclusive | Inside Look at the Sora Team: Beta Artists Weigh in on the Official Release Criticism — AI Still Lacks True Creative Capability",
+"t_zh": "独家 | 近距离围观 Sora 团队，内测艺术家谈正式版负评，AI 还算不上具备创作能力",
+"d": "2024-12-11",
+"l": "ZH",
+"u": "https://mp.weixin.qq.com/s/eoQMUAtaNo6VMcbGhs1Reg"
+},
+{
+"o": "mk2",
+"t": "The L’Artefact AI Film Festival with mk2 reveals the winners of its international competition",
+"t_zh": "L’Artefact AI 电影节与 mk2 公布国际竞赛获奖名单",
+"d": "2024-11-15",
+"l": "FR",
+"u": "https://mk2pro.com/communiques/lartefact-ai-film-festival-avec-mk2-revele-les-laureats-de-son-concours-international/"
 },
 {
 "o": "Artefact (mk2)",
-"t": "The Artefact AI Film Festival with mk2, chaired by Jean-Pierre Jeunet, reveals the winners of its international competition",
+"t": "The L’Artefact AI Film Festival with mk2, chaired by Jean-Pierre Jeunet, announces the winners of its international competition",
 "d": "2024-11",
 "l": "EN/FR",
-"u": "https://www.artefact.com/news/lartefact-ai-film-festival-avec-mk2-preside-par-jean-pierre-jeunet-revele-les-laureats-de-son-concours-international/"
+"u": "https://www.artefact.com/news/lartefact-ai-film-festival-avec-mk2-preside-par-jean-pierre-jeunet-revele-les-laureats-de-son-concours-international/",
+"t_zh": "L’Artefact AI 电影节（与 mk2 合作）公布国际竞赛获奖名单，主席 Jean-Pierre Jeunet"
 },
 {
 "o": "Forbes (Charlie Fink)",
-"t": "Meta's Many XR Updates, Distance Technologies Raises $11M For 3D Without Glasses (MASSIVE section)",
+"t": "MASSIVE brings together popular AI filmmakers",
 "d": "2024-09-26",
 "l": "EN",
-"u": "https://www.forbes.com/sites/charliefink/2024/09/26/metas-many-xr-updates-distance-technologies-raises-11m-for-3d-without-glasses/"
+"u": "https://www.forbes.com/sites/charliefink/2024/09/26/metas-many-xr-updates-distance-technologies-raises-11m-for-3d-without-glasses/",
+"t_zh": "MASSIVE，汇聚全球顶尖 AI 电影人的工作室"
 },
 {
 "o": "Ars Electronica",
-"t": "Guest Program: Runway's AI Film Festival – Ars Electronica Animation Festival 2024",
+"t": "Ars Electronica Animation Festival 2024: Guest Program — Runway's AI Film Festival",
 "d": "2024-09-07",
 "l": "EN",
-"u": "https://ars.electronica.art/hope/en/events/runway-ai-film-festival/"
+"u": "https://ars.electronica.art/hope/en/animation-festival-2024/",
+"t_zh": "Ars Electronica 动画电影节 2024：特别策划 - Runway AI 电影节"
 },
 {
 "o": "NewRank 新榜 · AI新榜",
 "t": "小红书开了家AI便利店，针对AI内容提供流量扶持（AI一周热门 · #AI便利店#）",
 "d": "2024-07-23",
 "l": "ZH",
-"u": "https://www.newrank.cn/article/detail/26638"
+"u": "https://www.newrank.cn/article/detail/26638",
+"t_zh": "小红书开了家AI便利店，针对AI内容提供流量扶持（AI一周热门 · #AI便利店#）"
+},
+{
+"o": "Sohu 搜狐",
+"t": "QUINTESSENCE | AI liberates creators, but you must first know how to tell a story — Junie",
+"t_zh": "QUINTESSENCE | AI解放创作者，但你得先会讲故事 - Junie",
+"d": "2024-07-23",
+"l": "ZH",
+"u": "https://www.sohu.com/a/795490612_121119379"
 },
 {
 "o": "Curious Refuge",
 "t": "How to Make an Award Winning AI Short Film",
 "d": "2024-07",
 "l": "EN",
-"u": "https://curiousrefuge.com/blog/award-winning-ai-short-film"
+"u": "https://curiousrefuge.com/blog/award-winning-ai-short-film",
+"t_zh": "如何制作获奖 AI 短片"
+},
+{
+"o": "Tribeca",
+"t": "Human Powered: AI Shorts Program | 2024 Tribeca Festival",
+"t_zh": "Human Powered: AI 短片单元 | 2024 美国翠贝卡电影节",
+"d": "2024-06-08",
+"l": "EN",
+"u": "https://tribecafilm.com/films/human-powered-ai-shorts-program-2024"
 },
 {
 "o": "Tippett.org",
 "t": "The Best AI Filmmakers in the World",
 "d": "2024-06",
 "l": "EN",
-"u": "https://tippett.org/the-best-ai-film-makers-in-the-world/"
+"u": "https://tippett.org/the-best-ai-film-makers-in-the-world/",
+"t_zh": "全球最顶级的 AI 电影人"
 },
 {
 "o": "The Ankler",
-"t": "I Went to the Runway AI Film Festival. Here's What I Learned ('Everything, Everywhere' Used AI From This Startup…)",
+"t": "‘Everything, Everywhere’ Used AI From This Startup. I Went to its Film Festival",
 "d": "2024-05",
 "l": "EN",
-"u": "https://theankler.com/runway-ai-film-festival-2024-hollywood/"
+"u": "https://theankler.com/p/runway-ai-film-festival-2024-hollywood",
+"t_zh": "《瞬息全宇宙》使用了这家初创公司的 AI 技术，我去了它的电影节"
+},
+{
+"o": "Tencent News 腾讯新闻",
+"t": "The World's First AI Feature Film Our T2 Remake Premieres! Behind-the-Scenes Workflow Revealed — Interview with Junie",
+"t_zh": "全球首部 AI 长片《Our T2 Remake》上映！幕后工作流全揭秘 - Junie 专访",
+"d": "2024-04-05",
+"l": "ZH",
+"u": "https://new.qq.com/rain/a/20240405A05LLT00"
 },
 {
 "o": "NewRank 新榜 (头号AI玩家)",
-"t": "对话全球首部AI电影制作人：幕后制作全流程揭秘 (Our T2 Remake)",
+"t": "The World's First AI Feature Film Our T2 Remake Premieres! Behind-the-Scenes Workflow Revealed — Interview with Junie",
 "d": "2024-03-28",
 "l": "ZH",
-"u": "https://www.newrank.cn/article/detail/25211"
+"u": "https://edit.newrank.cn/detail.html?uuid=C00E5D81A71D317AD6A334EB442D2646",
+"t_zh": "全球首部 AI 长片《Our T2 Remake》上映！幕后工作流全揭秘 - Junie 专访"
 },
 {
 "o": "WeChat 头号AI玩家",
 "t": "Junie：首部AI长电影幕后制作全流程揭秘 (original WeChat)",
 "d": "2024-03",
 "l": "ZH",
-"u": "https://mp.weixin.qq.com/s/yK4hutof96-trFDsC3LIHg"
+"u": "https://mp.weixin.qq.com/s/yK4hutof96-trFDsC3LIHg",
+"t_zh": "Junie：首部AI长电影幕后制作全流程揭秘 (original WeChat)"
 },
 {
 "o": "Runway AIFF",
-"t": "AIFF 2024 (Silver — e^(i*π) + 1 = 0)",
+"t": "Won Silver at the International AI Film Festival 2024 by Runway",
 "d": "2024",
 "l": "EN",
-"u": "https://aiff.runwayml.com/2024"
+"u": "https://aiff.runwayml.com/",
+"t_zh": "Junie Lau 荣获 2024 年 Runway 国际 AI 电影节银奖"
 },
 {
 "o": "Runway",
 "t": "Exploring the Future of Filmmaking: Runway's programming partnership with Tribeca Festival 2024",
 "d": "2024",
 "l": "EN",
-"u": "https://runway.com/news/runway-partners-with-tribeca-festival"
+"u": "https://runway.com/news/runway-partners-with-tribeca-festival",
+"t_zh": "Exploring the Future of Filmmaking: Runway's programming partnership with Tribeca Festival 2024"
+},
+{
+"o": "AI Film Festival Amsterdam",
+"t": "Won Best Hybrid Film at AI Film Festival Amsterdam 2024",
+"t_zh": "Junie Lau 荣获 2024 年阿姆斯特丹 AI 电影节最佳混合影片奖",
+"d": "2024",
+"l": "EN",
+"u": "https://aifilmfest.io/"
 },
 {
 "o": "Yahoo Hong Kong 雅虎香港",
-"t": "劉德華林子祥首度合唱經典《難為正邪定分界》 華仔大讚阿Lam魔鬼演繹 利誘出山拍戲",
+"t": "Andy Lau and George Lam Collaborate for the First Time on the Classic Song ‘The Line Between Good and Evil’ — Music Video by Junie",
 "d": "2023-12-22",
 "l": "ZH-HK",
-"u": "https://hk.news.yahoo.com/%E5%8A%89%E5%BE%B7%E8%8F%AF%E6%9E%97%E5%AD%90%E7%A5%A5%E9%A6%96%E5%BA%A6%E5%90%88%E5%94%B1%E7%B6%93%E5%85%B8%E3%80%8A%E9%9B%A3%E7%82%BA%E6%AD%A3%E9%82%AA%E5%AE%9A%E5%88%86%E7%95%8C%E3%80%8B-%E8%8F%AF%E4%BB%94%E5%A4%A7%E8%AE%9A%E9%98%BFlam%E9%AD%94%E9%AC%BC%E6%BC%94%E7%B9%B9-%E5%88%A9%E8%AA%98%E5%87%BA%E5%B1%B1%E6%8B%8D%E6%88%B2-071109271.html"
+"u": "https://hk.news.yahoo.com/%E5%8A%89%E5%BE%B7%E8%8F%AF%E6%9E%97%E5%AD%90%E7%A5%A5%E9%A6%96%E5%BA%A6%E5%90%88%E5%94%B1%E7%B6%93%E5%85%B8%E3%80%8A%E9%9B%A3%E7%82%BA%E6%AD%A3%E9%82%AA%E5%AE%9A%E5%88%86%E7%95%8C%E3%80%8B-%E8%8F%AF%E4%BB%94%E5%A4%A7%E8%AE%9A%E9%98%BFlam%E9%AD%94%E9%AC%BC%E6%BC%94%E7%B9%B9-%E5%88%A9%E8%AA%98%E5%87%BA%E5%B1%B1%E6%8B%8D%E6%88%B2-071109271.html",
+"t_zh": "劉德華林子祥首度合唱經典《難為正邪定分界》Music Video by Junie"
 },
 {
 "o": "Sina 新浪娱乐",
 "t": "电影《潜行》发布主题曲《难为正邪定分界》MV",
 "d": "2023-12-22",
 "l": "ZH",
-"u": "https://k.sina.cn/article_5991816334_16523dc8e0010161mx.html"
+"u": "https://k.sina.cn/article_5991816334_16523dc8e0010161mx.html",
+"t_zh": "电影《潜行》发布主题曲《难为正邪定分界》MV"
 },
 {
 "o": "Hit Radio 叱咤",
 "t": "【電影】劉德華 林子祥 為《潛行》首度合唱",
 "d": "2023-12",
 "l": "ZH-HK",
-"u": "https://www.hitoradio.com/newweb/80866hitonews"
+"u": "https://www.hitoradio.com/newweb/80866hitonews",
+"t_zh": "【電影】劉德華 林子祥 為《潛行》首度合唱"
 },
 {
 "o": "PeterGabriel.com",
 "t": "The Court - Junie Lau Official Video",
 "d": "2023-09-05",
 "l": "EN",
-"u": "https://petergabriel.com/news/the-court-junie-lau-official-video/"
+"u": "https://petergabriel.com/news/the-court-junie-lau-official-video/",
+"t_zh": "The Court - Junie Lau Official Video"
 },
 {
 "o": "Stable Digest (Substack)",
-"t": "STABLE DIGEST #10 — Artist spotlight: DiffuseTogether Winners & Full Videos Exclusive",
+"t": "STABLE DIGEST #10 Artist spotlight — DiffuseTogether Winners & Full Videos Exclusive!",
 "d": "2023-06-29",
 "l": "EN",
-"u": "https://stabledigest.substack.com/p/stable-digest-10"
+"u": "https://stabledigest.substack.com/p/stable-digest-10",
+"t_zh": "STABLE DIGEST #10：艺术家聚焦 - #DiffuseTogether 获奖者及完整视频独家放送！"
 },
 {
 "o": "PeterGabriel.com",
 "t": "#DiffuseTogether Winners Announced",
 "d": "2023-06-07",
 "l": "EN",
-"u": "https://petergabriel.com/news/diffusetogether-winners-announced/"
+"u": "https://petergabriel.com/news/diffusetogether-winners-announced/",
+"t_zh": "#DiffuseTogether 获奖者公布"
 },
 {
 "o": "Stability AI",
 "t": "Peter Gabriel and Stability AI Announce #DiffuseTogether AI Animation Challenge Winners",
 "d": "2023-06",
 "l": "EN",
-"u": "https://stability.ai/news-updates/peter-gabriel-and-stability-ai-announce-diffusetogether-ai-animation-challenge-winners"
+"u": "https://stability.ai/news/peter-gabriel-and-stability-ai-announce-diffusetogether-ai-animation-challenge-winners",
+"t_zh": "Peter Gabriel 与 Stability AI 公布 #DiffuseTogether AI 动画挑战赛获奖者"
 },
 {
 "o": "SHOWstudio",
-"t": "How Peter Gabriel Is Championing A Generation Of AI Artists",
+"t": "How Peter Gabriel Is Championing a Generation of AI Artists",
 "d": "2023",
 "l": "EN",
-"u": "https://www.showstudio.com/news/how-peter-gabriel-is-championing-a-generation-of-ai-artists"
+"u": "https://www.showstudio.com/news/how-peter-gabriel-is-championing-a-generation-of-ai-artists",
+"t_zh": "Peter Gabriel 如何推动新一代 AI 艺术家"
 },
 {
 "o": "The Sweetshop",
-"t": "Interview: Meet Junie Lau",
+"t": "The Sweetshop TV Interview: Meet Junie Lau",
 "d": "",
 "l": "EN",
-"u": "https://thesweetshop.tv/notes/interview-meet-junie-lau"
+"u": "https://thesweetshop.tv/notes/interview-meet-junie-lau",
+"t_zh": "The Sweetshop TV 专访：认识 Junie Lau"
 },
 {
 "o": "Wikipedia",
-"t": "The Court (song) — music video by Junie Lau",
+"t": "The Court by English musician Peter Gabriel — Music Video by Junie Lau",
 "d": "",
 "l": "EN",
-"u": "https://en.wikipedia.org/wiki/The_Court_(song)"
+"u": "https://en.wikipedia.org/wiki/The_Court_(song)",
+"t_zh": "Peter Gabriel 的单曲《The Court》- 由 Junie 执导的音乐视频"
 },
 {
 "o": "Wikipedia",
-"t": "I Did It My Way (film) — theme-song MV by Junie Lau",
+"t": "I Did It My Way (film) — Music Video by Junie",
 "d": "",
 "l": "EN",
-"u": "https://en.wikipedia.org/wiki/I_Did_It_My_Way_(film)"
+"u": "https://en.wikipedia.org/wiki/I_Did_It_My_Way_(film)",
+"t_zh": "《I Did It My Way》（电影）- 由 Junie 执导的音乐视频"
 },
 {
 "o": "Curious Refuge",
 "t": "LOVE FROM VOID (AI film gallery)",
 "d": "",
 "l": "EN",
-"u": "https://curiousrefuge.com/ai-film-gallery/love-from-void"
-},
-{
-"o": "Wonder Studios",
-"t": "Talent: Junie Lau",
-"d": "",
-"l": "EN",
-"u": "https://wonderstudios.com/talent/junie-lau"
-},
-{
-"o": "Lipstick",
-"t": "AI Directors: Junie Lau",
-"d": "",
-"l": "EN",
-"u": "https://www.lipstick.film/ai-directors/junie-lau"
+"u": "https://curiousrefuge.com/ai-film-gallery/love-from-void",
+"t_zh": "LOVE FROM VOID (AI film gallery)"
 },
 {
 "o": "Hollywood.AI",
 "t": "AI Films by Junie Lau — creator page",
 "d": "",
 "l": "EN",
-"u": "https://hollywood.ai/creators/junie-lau"
+"u": "https://hollywood.ai/creators/junie-lau",
+"t_zh": "AI Films by Junie Lau — creator page"
+},
+{
+"o": "Fireside · 硅谷早知道",
+"t": "What's Next | Tech Insights with Junie Lau",
+"t_zh": "What's Next｜科技早知道 - Junie Lau",
+"d": "",
+"l": "ZH",
+"u": "https://guiguzaozhidao.fireside.fm/guests/jl01"
+},
+{
+"o": "MSN",
+"t": "Google launches AI video creator Flow with Veo 3",
+"t_zh": "谷歌发布基于 Veo 3 的 AI 视频创作平台 Flow",
+"d": "",
+"l": "EN",
+"u": "https://www.msn.com/en-in/money/news/google-launches-ai-video-creator-flow-with-veo-3/ar-AA1FcfIS"
+},
+{
+"o": "mk2 Curiosity",
+"t": "Won Best use of AI Award at Artefact AI Film Festival, France",
+"t_zh": "Junie Lau 荣获法国 Artefact AI 电影节最佳 AI 应用奖",
+"d": "",
+"l": "EN/FR",
+"u": "https://www.mk2curiosity.com/page/artefact-ai-film-festival"
 }
 ],
 "logos": {
@@ -1721,7 +1861,7 @@ window.JL2={
 "name": "NetEase News 网易新闻",
 "file": "media-netease-news.png",
 "ar": 3.865,
-"dn": 0.440,
+"dn": 0.44,
 "k": 1.26
 }
 ],
