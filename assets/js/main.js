@@ -65,7 +65,7 @@
     lb.addEventListener("touchend", e => { if (sx === null || !gset) return; const dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 40) step(dx < 0 ? 1 : -1); sx = null; }, { passive:true });
   }
 
-  /* ---------- home: 3D rotating ring of frames (v6 exaggerated) ---------- */
+  /* ---------- home: 3D rotating ring (v7 cyberfolk — sharp / readable) ---------- */
   const carousel = $(".carousel");
   if (carousel) {
     const home = $(".home"), stage = $(".stage"), scene = $(".scene"), cap = $(".home .cap");
@@ -77,29 +77,46 @@
     const small = matchMedia("(max-width:700px)").matches;
     const RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
     const C = k => JL.clips.find(c => c.key === k);
-    const clipKeys = small ? ["clip01","clip05"] : ["clip01","clip05","clip04","clip03"];
+    // muted loops: desktop few, mobile fewer — full color
+    const clipKeys = small ? ["cfclip_02","cfclip_10"] : ["cfclip_01","cfclip_02","cfclip_05","cfclip_06","cfclip_10"];
     const clips = clipKeys.map(C).filter(Boolean);
-    // prefer hero stills spread around the ring, then fill from JL.all
-    const heroKeys = [
-      "03_the-court_0119775ms",
-      "21_dear-stranger_0010000ms","21_dear-stranger",
-      "25_dear-stranger_0360816ms",
-      "11_every-multiverse","12_every-multiverse_0152750ms",
-      "32_one-blink","33_one-blink_0119970ms"
-    ];
+    // Ring pool: interleave sharp YT covers + cyberfolk stills + muted clips
     const pool = [];
     const used = new Set();
     const push = it => { if (!it || used.has(it.key)) return; used.add(it.key); pool.push(it); };
-    heroKeys.forEach(k => {
-      const hit = JL.all.find(f => f.key === k || (f.key && f.key.indexOf(k) === 0) || (f.img && f.img.indexOf(k) > -1));
-      push(hit);
-    });
-    ["03_the-court","21_dear-stranger","25_dear-stranger","12_every-multiverse","33_one-blink","32_one-blink"].forEach(s => {
-      push(JL.all.find(f => (f.img || "").indexOf(s) > -1 || (f.key || "").indexOf(s) > -1));
-    });
-    clips.forEach(push);
+    const covers = (JL.covers || []).slice();
+    const prefer = [
+      "cf_27_tsui-folk-cyber_one-blink_dragon-fireworks",
+      "cf_04_ninagawa-colour_dear-stranger_petal-field-heroine",
+      "cf_15_wong-urban_every-multiverse_umbrella-neon-street",
+      "cf_38_speed-racer-digital_culture-pop-soda_pink-muscle-car",
+      "cf_30_tsui-folk-cyber_the-court_red-robed-corridor",
+      "cf_08_ninagawa-colour_dear-stranger_blossom-sea",
+      "cf_43_daniels-surreal_dear-stranger_underwater-float",
+      "cf_48_tarsem-system_chanel-spec_gilded-hall-gown",
+      "cf_06_ninagawa-colour_culture-pop-soda_neon-girl-group",
+      "cf_33_luhrmann-theatre_every-multiverse_clock-ballerina",
+      "cf_01_ninagawa-colour_dear-stranger_red-flower-forest",
+      "cf_21_wong-urban_girls_neon-crowd",
+      "cf_16_wong-urban_dear-stranger_neon-city-night",
+      "cf_49_tarsem-system_dear-stranger_red-carpet-gown",
+      "cf_40_gilliam-absurd_what-if-mother_scarlet-studio",
+      "cf_07_ninagawa-colour_love-from-void_goldfish-swarm"
+    ].map(k => JL.all.find(f => f.key === k)).filter(Boolean);
+    // round-robin: cover → still → (clip every 3rd) so fronts stay sharp & varied
+    let ci = 0, fi = 0, vi = 0, tick = 0;
+    const N = small ? 8 : 12;
+    while (pool.length < N * 2 + 4) {
+      if (tick % 3 === 0 && ci < covers.length) push(covers[ci++]);
+      else if (tick % 3 === 1 && fi < prefer.length) push(prefer[fi++]);
+      else if (vi < clips.length) push(clips[vi++]);
+      else if (ci < covers.length) push(covers[ci++]);
+      else if (fi < prefer.length) push(prefer[fi++]);
+      else break;
+      tick++;
+    }
     JL.all.forEach(push);
-    const N = small ? 11 : 18;
+    covers.forEach(push);
     const items = pool.slice(0, N);
     const backs = pool.slice(N, N * 2);
     while (backs.length < N) backs.push(pool[backs.length % pool.length]);
@@ -109,23 +126,22 @@
     function layout(){
       const w = innerWidth, h = home.clientHeight || innerHeight;
       if (small) {
-        cw = Math.min(w * .58, h * .36); ch = cw * 1.38;
-        home.style.setProperty("--persp", Math.round(w * 1.55) + "px");
-        home.style.setProperty("--push", Math.round(-Math.min(w, h) * .28) + "px");
-        home.style.setProperty("--tilt", "-20deg");
+        cw = Math.min(w * .78, h * .42); ch = cw * 9 / 16;
+        home.style.setProperty("--persp", Math.round(w * 2.0) + "px");
+        home.style.setProperty("--push", Math.round(-Math.min(w, h) * .06) + "px");
+        home.style.setProperty("--tilt", "-8deg");
       } else {
-        // large cards, strong but viewport-safe depth
-        cw = Math.min(w * .42, h * .52); ch = cw * 9 / 16;
-        home.style.setProperty("--persp", "1100px");
-        home.style.setProperty("--push", "-280px");
-        home.style.setProperty("--tilt", "-26deg");
+        // readable front: large 16:9, mild depth
+        cw = Math.min(w * .52, h * .58); ch = cw * 9 / 16;
+        home.style.setProperty("--persp", "1800px");
+        home.style.setProperty("--push", "-60px");
+        home.style.setProperty("--tilt", "-10deg");
       }
       home.style.setProperty("--cw", cw.toFixed(1) + "px");
       home.style.setProperty("--ch", ch.toFixed(1) + "px");
       step = 360 / N;
-      // clamp radius so front card stays on screen under tilt
-      const raw = (cw * .5) / Math.tan(Math.PI / N) + cw * (small ? .04 : .06);
-      R = Math.min(raw, (small ? h : h) * (small ? .38 : .46));
+      const raw = (cw * .5) / Math.tan(Math.PI / N) + cw * (small ? .08 : .12);
+      R = Math.min(raw, h * (small ? .28 : .32));
       cards.forEach((c, i) => {
         c.base = "rotateY(" + (i * step).toFixed(3) + "deg) translateZ(" + R.toFixed(1) + "px)";
         c.el.style.transform = c.base;
@@ -148,9 +164,8 @@
     items.forEach((it, i) => {
       const el = document.createElement("div"); el.className = "card";
       const front = makeFace(it, "");
-      const back = makeFace(backs[i], "back");
-      el.appendChild(front); el.appendChild(back);
-      el._it = it; el._front = front; el._back = back;
+      el.appendChild(front);
+      el._it = it; el._front = front; el._back = null;
       carousel.appendChild(el);
       cards.push({ el, it, i, ang: i * (360 / N), base: "" });
       el.addEventListener("pointerenter", () => { if (!touch) { hoverPause = true; setHot(el); } });
@@ -162,7 +177,6 @@
         if (target && target.yt) play(target.yt, capOf(target), secs(target.ts));
       });
     });
-    cards.forEach((c, i) => { c.el._back._it = backs[i]; });
     layout();
     let rT; addEventListener("resize", () => { clearTimeout(rT); rT = setTimeout(layout, 120); });
 
@@ -191,28 +205,27 @@
         if (a > 180) a -= 360;
         const aa = Math.abs(a);
         if (aa < ba) { ba = aa; best = c.el; bi = c.i; }
-        // opacity: front bright, back nearly ghosted
-        const o = .18 + .82 * Math.max(0, 1 - aa / 145);
-        if (c._o !== o) { c.el.style.opacity = o.toFixed(2); c._o = o; }
-        // dramatic scale: front almost fills vision, back shrinks hard
-        const t = Math.max(0, 1 - aa / 160);
-        // scale in local space — front nearly fills, back shrinks
-        const sc = small ? (.88 + .52 * t) : (.58 + .95 * t); // front ~1.53×
-        const sk = (a / 90) * (small ? 4 : 7);
-        // translateZ boost on front pulls it toward camera without leaving viewport
-        const zBoost = (small ? 40 : 90) * t;
+        // ONLY front half of ring visible — hide far side so nothing ghosts through
+        const o = aa > 95 ? 0 : (.72 + .28 * Math.max(0, 1 - aa / 95));
+        if (c._o !== o) {
+          c.el.style.opacity = o.toFixed(2);
+          c.el.style.visibility = o < .05 ? "hidden" : "visible";
+          c._o = o;
+        }
+        const t = Math.max(0, 1 - aa / 100);
+        const sc = small ? (.96 + .28 * t) : (.92 + .28 * t); // front ~1.2×
+        const sk = (a / 90) * (small ? .6 : 1.0);
+        const zBoost = (small ? 28 : 56) * t;
         const xf = c.base + " translateZ(" + zBoost.toFixed(1) + "px) rotateZ(" + sk.toFixed(2) + "deg) scale(" + sc.toFixed(3) + ")";
         if (c._xf !== xf) { c.el.style.transform = xf; c._xf = xf; }
-        // blur far cards a touch
-        const bl = aa > 70 ? Math.min(4, (aa - 70) / 40) : 0;
-        const flt = bl > .1 ? "blur(" + bl.toFixed(2) + "px)" : "";
-        if (c._flt !== flt) { c.el.style.filter = flt; c._flt = flt; }
-        const vis = aa < 110;
-        [c.el._front, c.el._back].forEach(f => {
-          if (!f || !f._v) return;
+        // HARD RULE: never blur
+        if (c._flt) { c.el.style.filter = ""; c._flt = ""; }
+        const vis = aa < 85;
+        const f = c.el._front;
+        if (f && f._v) {
           if (vis && f._v.paused) f._v.play().catch(()=>{});
           else if (!vis && !f._v.paused) f._v.pause();
-        });
+        }
       });
       if (frontEl !== best) {
         if (frontEl) frontEl.classList.remove("front");
@@ -241,13 +254,12 @@
       mx = e.clientX; my = e.clientY;
       if (!dragging) return;
       const dx = e.clientX - lx, dy = e.clientY - ly; lx = e.clientX; ly = e.clientY; moved += Math.abs(dx) + Math.abs(dy) * .3;
-      const d = dx * (small ? .28 : .22);
-      rot += d; vel = d * 1.15;
-      // vertical drag nudges scene roll/tilt for a wilder feel
-      roll += dy * .012;
-      roll = Math.max(-8, Math.min(8, roll));
-      tiltNudge += dy * .008;
-      tiltNudge = Math.max(-6, Math.min(6, tiltNudge));
+      const d = dx * (small ? .22 : .16);
+      rot += d; vel = d * .85;
+      roll += dy * .006;
+      roll = Math.max(-4, Math.min(4, roll));
+      tiltNudge += dy * .004;
+      tiltNudge = Math.max(-3, Math.min(3, tiltNudge));
     });
     const endDrag = () => { dragging = false; home.classList.remove("grab"); };
     stage.addEventListener("pointerup", endDrag);
@@ -255,27 +267,25 @@
     home.addEventListener("pointermove", e => { mx = e.clientX; my = e.clientY; }, { passive: true });
     // wheel spins hard
     home.addEventListener("wheel", e => {
-      const s = (e.deltaY + e.deltaX) * .07;
-      rot += s; vel = s * .55;
+      const s = (e.deltaY + e.deltaX) * .045;
+      rot += s; vel = s * .35;
     }, { passive: true });
 
     let prev = performance.now();
-    const AUTO_BASE = small ? 7.5 : 11; // deg / sec — faster, uneven
+    const AUTO_BASE = small ? 4.5 : 6.5; // deg / sec — calm readable spin
     function frame(now){
       const dt = Math.min(.05, (now - prev) / 1000); prev = now;
       if (!dragging) {
         if (!RM && !hoverPause) {
           // uneven auto: pulse + soft figure-8 wobble
-          const pulse = 1 + .45 * Math.sin(now * .0011) + .2 * Math.sin(now * .0027);
+          const pulse = 1 + .18 * Math.sin(now * .0009);
           rot += AUTO_BASE * pulse * dt;
         }
         if (!RM) {
           rot += vel;
-          // long, wild inertia
-          vel *= .965;
-          if (Math.abs(vel) < .003) vel = 0;
-          // ease roll/tilt back
-          roll *= .96; tiltNudge *= .96;
+          vel *= .94;
+          if (Math.abs(vel) < .002) vel = 0;
+          roll *= .97; tiltNudge *= .97;
         } else vel = 0;
       }
       carousel.style.transform = "rotateY(" + rot.toFixed(3) + "deg)";
@@ -283,28 +293,28 @@
       if (scene && !RM) {
         const nx = (mx / innerWidth) * 2 - 1;
         const ny = (my / innerHeight) * 2 - 1;
-        const r = roll + nx * 2.8 + vel * .35;
-        const t = (small ? -20 : -26) + tiltNudge + ny * -3.2;
+        const r = roll + nx * 1.2 + vel * .12;
+        const t = (small ? -8 : -10) + tiltNudge + ny * -0.7;
         home.style.setProperty("--roll", r.toFixed(2) + "deg");
         home.style.setProperty("--tilt", t.toFixed(2) + "deg");
       }
       // glitch / RGB split on title driven by speed
-      const spd = Math.min(28, Math.abs(vel) * 14 + (dragging ? 4 : 0));
-      const glx = spd * .55 + Math.sin(now * .02) * spd * .2;
-      const gly = spd * .25 + Math.cos(now * .017) * spd * .15;
+      const spd = Math.min(10, Math.abs(vel) * 8 + (dragging ? 1.5 : 0));
+      const glx = spd * .25;
+      const gly = spd * .1;
       home.style.setProperty("--glx", glx.toFixed(2));
       home.style.setProperty("--gly", gly.toFixed(2));
       if (wordmarks.length && !RM) {
-        const sk = Math.max(-14, Math.min(14, vel * 4.2));
-        const sx = Math.sin(now * .0013) * 1.6 + vel * 1.1;
-        const sy = Math.cos(now * .0011) * .8;
+        const sk = Math.max(-4, Math.min(4, vel * 1.6));
+        const sx = Math.sin(now * .001) * .6;
+        const sy = 0;
         wordmarks.forEach(wm => {
           if (wm.classList.contains("wm2")) {
             wm.style.transform = "skewX(" + sk.toFixed(2) + "deg) translate(" + sx.toFixed(2) + "px," + sy.toFixed(2) + "px)";
           } else {
             wm.style.transform = "translate(-50%,-58%) translateZ(40px) skewX(" + sk.toFixed(2) + "deg) translateX(" + sx.toFixed(2) + "px)";
           }
-          wm.style.filter = spd > 1.5 ? "contrast(1.2) saturate(1.25)" : "";
+          wm.style.filter = "";
         });
       }
       // outline echo trails lag behind
@@ -315,7 +325,7 @@
           const oy = Math.cos(now * .0012 + i * .7) * (3 + i * 1.5) - spd * i * .4;
           const sc = 1 + i * .012 + spd * .004;
           sp.style.transform = "translate(calc(-50% + " + ox.toFixed(1) + "px), calc(-50% + " + oy.toFixed(1) + "px)) scale(" + sc.toFixed(3) + ") skewX(" + (vel * (i + 1) * .8).toFixed(2) + "deg)";
-          sp.style.opacity = String(Math.max(.12, .55 - i * .1 - (spd > 8 ? .05 : 0)));
+          sp.style.opacity = String(Math.max(.06, .28 - i * .07));
         });
       }
       // HUD
