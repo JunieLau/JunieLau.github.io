@@ -321,8 +321,11 @@ main{padding-top:var(--tb)}
 /* ---------- HOME backdrop — sharp full-bleed still of the front work, dimmed (never blurred) ---------- */
 .bgx{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
 .bgx i{position:absolute;inset:0;display:block}
-.bgx .still{background:var(--fimg) center 40%/cover no-repeat;transition:background-image .6s}
-.bgx .shade{background:radial-gradient(ellipse 75% 60% at 50% 62%,rgba(11,6,6,.5),rgba(11,6,6,.72) 100%),linear-gradient(180deg,rgba(11,6,6,.55) 0%,rgba(11,6,6,0) 30%,rgba(11,6,6,0) 72%,rgba(11,6,6,.45) 100%)}
+.bgx .still{background:var(--ink) url("../bg2/blink-3-1920.jpg") center 40%/cover no-repeat}
+@media (max-width:760px) and (orientation:portrait){.bgx .still{background-image:url("../bg2/blink-3-m.jpg")}}
+@media (min-width:761px) and (min-resolution:1.5dppx){.bgx .still{background-image:url("../bg2/blink-3-3840.jpg")}}
+.bgx .shade{background:radial-gradient(ellipse 75% 60% at 50% 62%,rgba(11,6,6,.34),rgba(11,6,6,.56) 100%),linear-gradient(180deg,rgba(11,6,6,.42) 0%,rgba(11,6,6,0) 28%,rgba(11,6,6,0) 72%,rgba(11,6,6,.38) 100%)}
+.bgx .shade::after{content:"";position:absolute;inset:0;opacity:.09;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E")} /* fine static grain: dithers banding in dark gradients */
 .fold.bg-cov .bgx .shade{background-color:rgba(11,6,6,.3)}
 
 /* logo walls v2 — strict equal-cell grid, hairline dividers, optically normalised marks (sizes set in main.js) */

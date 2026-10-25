@@ -77,22 +77,33 @@
        Each still is fully decoded before it fades in over the previous one, so there is never a black frame. */
     const bgx = $(".bgx", fold), bgHost = bgx && $(".still", bgx);
     const BGDWELL = 4500, BGFADE = 1600;
-    const BGSET = {   /* real frames from each film (stills-for-site); chanel-15 has motion blur in the source and is never used */
-      goldfish: ["bg/goldfish-2.jpg", "bg/goldfish-1.jpg", "bg/goldfish-3.jpg"],
-      zhengxie: ["bg/zhengxie-1.jpg", "bg/zhengxie-2.jpg", "bg/zhengxie-3.jpg"],
-      euler: ["bg/euler-1.jpg", "bg/euler-4.jpg", "bg/euler-2.jpg", "bg/euler-3.jpg"],
-      void: ["bg/void-2.jpg", "bg/void-1.jpg", "bg/void-3.jpg"],
-      mother: ["bg/mother-2.jpg", "bg/mother-3.jpg", "bg/mother-1.jpg"],
-      thermal: ["bg/thermal-1.jpg", "bg/thermal-4.jpg", "bg/thermal-2.jpg", "bg/thermal-3.jpg"],
-      chanel: ["frames/cf_23_tarsem-system_chanel-spec_chanel-20.jpg", "frames/cf_26_tarsem-system_chanel-spec_chanel-hall.jpg", "frames/cf_02_tarsem-system_chanel-spec_chanel-premiere.jpg"]
+    /* Junie's picks per film (stills-for-site-v2), in her crossfade order. Every ring work has its own set. */
+    const BGSET = {
+      goldfish: ["goldfish-1", "goldfish-3", "goldfish-8"],
+      dear: ["dear-3", "dear-4", "dear-8", "dear-5"],
+      court: ["court-4", "court-5", "court-7", "court-9"],
+      euler: ["euler-1", "euler-4", "euler-8"],
+      void: ["void-4", "void-6", "void-9"],
+      chanel: ["chanel-2", "chanel-6", "chanel-4"],
+      mother: ["mother-3", "mother-1"],
+      soda: ["soda-1", "soda-2", "soda-9"],
+      thermal: ["thermal-5", "thermal-3", "thermal-9"],
+      blink: ["blink-3", "blink-4", "blink-6"],
+      multiverse: ["multiverse-4", "multiverse-6", "multiverse-3"],
+      heroes: ["heroes-2", "heroes-3", "heroes-7"]
     };
-    const bgList = w => {
-      if (BGSET[w.p.id]) return BGSET[w.p.id];
-      const f = (JL.frames || []).filter(x => x.pid === w.p.id && !/chanel-15/.test(x.img)).map(x => x.img);
-      const s = f.length > 1 ? [f[1], f[0]].concat(f.slice(2)) : f;   /* keep the existing lead still first */
-      return s.length ? s.slice(0, 3) : [w.p.img];                     /* no stills at all: its own cover */
+    /* shipped widths per still (never upscaled: 1080p / 720p sources ship native only); "-m" = native-height 9:16 centre crop for portrait phones */
+    const BGW = {"blink-3":[3840,2560,1920],"blink-4":[3840,2560,1920],"blink-6":[3840,2560,1920],"goldfish-1":[3840,2560,1920],"goldfish-3":[3840,2560,1920],"goldfish-8":[3840,2560,1920],"dear-3":[3840,2560,1920],"dear-4":[3840,2560,1920],"dear-8":[3840,2560,1920],"dear-5":[3840,2560,1920],"court-4":[3840,2560,1920],"court-5":[3840,2560,1920],"court-7":[3840,2560,1920],"euler-1":[3840,2560,1920],"euler-4":[3840,2560,1920],"euler-8":[3840,2560,1920],"void-4":[1920],"void-6":[1920],"chanel-2":[1920],"chanel-6":[1920],"chanel-4":[1920],"mother-3":[1920],"mother-1":[1920],"soda-1":[3840,2560,1920],"soda-2":[3840,2560,1920],"thermal-5":[1280],"thermal-3":[1280],"multiverse-4":[3840,2560,1920],"multiverse-6":[3840,2560,1920],"multiverse-3":[3840,2560,1920],"heroes-2":[3840,2560,1920],"heroes-3":[3840,2560,1920],"heroes-7":[3840,2560,1920],"court-9":[3840,2560,1920],"void-9":[1920],"soda-9":[3840,2560,1920],"thermal-9":[1280]};
+    const BDPR = Math.max(1, window.devicePixelRatio || 1);
+    const bgSrc = k => {
+      const ws = BGW[k]; if (!ws) return k;
+      if (innerWidth <= 760 && innerHeight > innerWidth) return "bg2/" + k + "-m.jpg";
+      const need = Math.max(fold.clientWidth, fold.clientHeight * 16 / 9) * BDPR;
+      let w = ws[0]; for (const x of ws) if (x >= need * .98) w = x;   /* smallest size that still covers the screen at this pixel ratio */
+      return "bg2/" + k + "-" + w + ".jpg";
     };
-    if (bgHost && !document.getElementById("jl-ring-css")) document.head.insertAdjacentHTML("beforeend", '<style id="jl-ring-css">.bgx .still{background:none}.bgx .still img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;opacity:0;transition:opacity ' + BGFADE + 'ms ease-in-out;will-change:opacity;transform:translateZ(0)}.bgx .still img.on{opacity:1}.p-home .rail.tight a{padding-top:3px;padding-bottom:3px}.rc .dm{position:absolute;inset:calc(-2px * var(--ek));background:#000;opacity:0;pointer-events:none;will-change:opacity}</style>');
+    const bgList = w => (BGSET[w.p.id] || []).map(bgSrc).concat(BGSET[w.p.id] ? [] : [w.p.img]);
+    if (bgHost && !document.getElementById("jl-ring-css")) document.head.insertAdjacentHTML("beforeend", '<style id="jl-ring-css">.bgx .still img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;opacity:0;transition:opacity ' + BGFADE + 'ms ease-in-out;will-change:opacity;transform:translateZ(0)}.bgx .still img.on{opacity:1}.p-home .rail.tight a{padding-top:3px;padding-bottom:3px}.rc .dm{position:absolute;inset:calc(-2px * var(--ek));background:#000;opacity:0;pointer-events:none;will-change:opacity}</style>');
     const bgCache = {};
     const bgImg = src => bgCache[src] || (bgCache[src] = new Promise(res => {
       const im = new Image(), ok = () => res(im); im.alt = ""; im.src = BASE + src;
