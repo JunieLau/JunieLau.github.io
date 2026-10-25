@@ -146,7 +146,21 @@
     let cw = 0, R = 0, PERSP = 0, cx = 0, cy = 0, TILT = 0;
     function layout(){
       const w = fold.clientWidth, h = fold.clientHeight;
-      if (small) { cw = Math.round(w * .8); R = Math.round(w * 1.75); PERSP = R * 2.2; cx = w / 2; TILT = .15; cy = h * .50 - R * TILT; }
+      if (small) {
+        cw = Math.round(w * .8); R = Math.round(w * 1.75); PERSP = R * 2.2; cx = w / 2; TILT = .15; cy = h * .50 - R * TILT;
+        /* mobile: drop the ring just enough that no cover (at any drift angle) rises into the credit staircase */
+        const cr = $(".hd .cred", fold);
+        if (cr) {
+          const fb = fold.getBoundingClientRect(), lim = cr.getBoundingClientRect().bottom - fb.top + 14;   /* 14 px breathing gap */
+          const reach = c => { let m = -1e9; for (let a = 0; a < 360; a += 1) { const th = a * Math.PI / 180, z = R * Math.cos(th), off = ((a + 540) % 360) - 180;
+            const s = PERSP / (PERSP + R - z) * (.72 + .28 * Math.exp(-(off / 20) * (off / 20))); m = Math.max(m, s * (c * 9 / 32 + 4) - z * TILT * s); } return m; };   /* +4: frame outline */
+          /* short screens: if the dropped ring would sink well under the caption (≈150 px tall, 90 px off the bottom), scale it down instead */
+          const floorOf = c => h - 90 - 150 + c * 9 / 64;                         /* front cover may tuck ≤ 1/4 of its height under the caption */
+          let need = lim + reach(cw);
+          while (need + R * TILT + cw * 9 / 32 > floorOf(cw) && cw > w * .55) { cw = Math.round(cw * .97); need = lim + reach(cw); }
+          cy = Math.max(cy, need);
+        }
+      }
       else {
         cw = Math.round(Math.min(560, w * .39, (h - 230) * 16 / 9));         // ≤ 560 px: 1280 covers always drawn below native size
         R = Math.round(Math.max(w * 1.04, cw * 2.5)); PERSP = R * 2.2; cx = w * .5; TILT = .10; cy = h * .655 - R * TILT;
@@ -251,6 +265,7 @@
       if (ct && rail.getBoundingClientRect().bottom > ct.getBoundingClientRect().top - 10) rail.classList.add("tight");   /* short screens: slimmer rows */
     }
     layout(); renderRail(); place(); fitRail(); requestAnimationFrame(frame);
+    if (small && document.fonts && document.fonts.ready) document.fonts.ready.then(() => { layout(); cards.forEach(c => c._xf = null); });
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitRail);
     let rT; addEventListener("resize", () => { clearTimeout(rT); rT = setTimeout(() => { layout(); fitRail(); cards.forEach(c => c._xf = null); }, 120); });
     window.JLring = { spinTo, get hover(){ return hover; }, get front(){ return front; }, nudge(v){ vel = v; target = null; idle = performance.now(); } };
@@ -434,5 +449,20 @@
     const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -6% 0px" });
     hooks.push(() => $$(".wt, .vc, .xc, .gi, .pr, .feat, .fx, .lg, .lists li, .tile, .ilist li, .st, .clip").forEach(el => { if (!el.classList.contains("in")) io.observe(el); }));
   }
+  /* Home hero credit labels: clean, even staircase (same step per line, one direction) */
+  function stairCred(){
+    const sp = $$(".p-home .cred > span"); if (!sp.length) return;
+    sp.forEach(s => s.style.width = "");
+    const n = sp.length, fs = parseFloat(getComputedStyle(sp[0]).fontSize) || 11;
+    const box = sp[0].parentElement.getBoundingClientRect().width || innerWidth;
+    const t = sp.map(s => s.getBoundingClientRect().width);
+    let st = fs * (innerWidth <= 760 ? 1.6 : 2.6), W;
+    for (let k = 0; k < 6; k++) { W = Math.max(...t.map((w, i) => w + (n - 1 - i) * st)); if (innerWidth > 760 || W <= Math.min(box, innerWidth - 32)) break; st *= .7; }
+    st = Math.round(st); W = Math.ceil(W);
+    sp.forEach((s, i) => s.style.width = (W - (n - 1 - i) * st) + "px");
+  }
+  hooks.push(stairCred);
+  addEventListener("resize", stairCred);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(stairCred);
   applyLang();
 })();
