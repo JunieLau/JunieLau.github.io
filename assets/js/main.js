@@ -451,15 +451,8 @@
   }
   /* Home hero credit labels: clean, even staircase (same step per line, one direction) */
   function stairCred(){
-    const sp = $$(".p-home .cred > span"); if (!sp.length) return;
-    sp.forEach(s => s.style.width = "");
-    const n = sp.length, fs = parseFloat(getComputedStyle(sp[0]).fontSize) || 11;
-    const box = sp[0].parentElement.getBoundingClientRect().width || innerWidth;
-    const t = sp.map(s => s.getBoundingClientRect().width);
-    let st = fs * (innerWidth <= 760 ? 1.6 : 2.6), W;
-    for (let k = 0; k < 6; k++) { W = Math.max(...t.map((w, i) => w + (n - 1 - i) * st)); if (innerWidth > 760 || W <= Math.min(box, innerWidth - 32)) break; st *= .7; }
-    st = Math.round(st); W = Math.ceil(W);
-    sp.forEach((s, i) => s.style.width = (W - (n - 1 - i) * st) + "px");
+    /* natural-width boxes, right-aligned via CSS — clear any leftover forced widths */
+    $$(".p-home .cred > span").forEach(s => { s.style.width = ""; });
   }
   hooks.push(stairCred);
   addEventListener("resize", stairCred);
