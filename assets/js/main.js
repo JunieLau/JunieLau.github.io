@@ -1,4 +1,4 @@
-/* Junie Lau — v9b multi-page. Home: billboard ring of works — sharp, full colour, drag / swipe / list-hover / idle drift. */
+/* Junie Lau — v9d multi-page. Home: billboard ring of works — sharp, full colour, drag / swipe / list-hover / hover-zoom / idle drift. */
 (function(){
   const JL = window.JL || {}, J2 = window.JL2 || {};
   const BASE = "assets/";
@@ -16,6 +16,7 @@
     document.documentElement.classList.toggle("is-zh", ZH());
     $$("[data-zh]").forEach(el => { if (el.dataset.en === undefined) el.dataset.en = el.innerHTML; el.innerHTML = ZH() ? el.dataset.zh : el.dataset.en; });
     $$(".langs button").forEach(b => b.classList.toggle("on", b.dataset.lang === LANG));
+    $$("[data-zh-t]").forEach(el => { if (el.dataset.enT === undefined) el.dataset.enT = el.textContent; el.textContent = ZH() ? el.dataset.zhT : el.dataset.enT; });
     hooks.forEach(f => f());
   }
   document.addEventListener("click", e => {
@@ -77,13 +78,20 @@
       const a = document.createElement("a"); a.className = "rc"; a.href = "work-" + w.p.id + ".html";
       a.style.setProperty("--c", w.col);
       a.innerHTML = '<img src="' + w.img + '" alt="" draggable="false" width="1280" height="720"><b class="no">' + String(i + 1).padStart(2, "0") + '</b><span class="lb2"><i></i><em>' + w.p.year + '</em></span>';
-      a.addEventListener("click", e => { if (moved > 6) e.preventDefault(); });
+      a.addEventListener("pointerdown", e => { ptype = e.pointerType; });
+      a.addEventListener("click", e => {
+        if (moved > 6) { e.preventDefault(); return; }
+        // touch / pen: first tap enlarges, second tap on the same cover opens the work
+        if (ptype !== "mouse" && hover !== i) { e.preventDefault(); hover = i; idle = performance.now(); }
+      });
       a.addEventListener("pointerenter", e => { if (e.pointerType === "mouse") { hover = i; idle = performance.now(); } });
       a.addEventListener("pointerleave", e => { if (e.pointerType === "mouse" && hover === i) hover = -1; });
       ringEl.appendChild(a);
-      return { el: a, i, ang0: i * STEP };
+      return { el: a, i, ang0: i * STEP, k: 1 };
     });
     function labels(){ cards.forEach(c => { $("i", c.el).textContent = pTitle(W[c.i].p); }); }
+    const ENL = 1.7, DPR = Math.max(1, window.devicePixelRatio || 1), SRCW = 1280;   // official maxres covers are 1280 px wide
+    let ew = 0, eh = 0, ptype = "mouse";
     let cw = 0, R = 0, PERSP = 0, cx = 0, cy = 0, TILT = 0;
     function layout(){
       const w = fold.clientWidth, h = fold.clientHeight;
@@ -93,6 +101,9 @@
         R = Math.round(Math.max(w * 1.04, cw * 2.5)); PERSP = R * 2.2; cx = w * .5; TILT = .10; cy = h * .655 - R * TILT;
       }
       fold.style.setProperty("--cw", cw + "px"); fold.style.setProperty("--chh", Math.round(cw * 9 / 16) + "px");
+      // frames are laid out at the ENLARGED pixel size and scaled DOWN at rest → hover zoom never upscales
+      ew = Math.round(cw * ENL); eh = Math.round(ew * 9 / 16);
+      fold.style.setProperty("--ew", ew + "px"); fold.style.setProperty("--eh", eh + "px"); fold.style.setProperty("--ek", ENL);
     }
     let rot = 0, vel = 0, target = null, dragging = false, lx = 0, moved = 0, hover = -1, idle = performance.now(), front = -1;
     const nowEl = $(".now", fold), rail = $(".rail", fold);
@@ -113,7 +124,7 @@
     hooks.push(renderRail);
     const norm = a => ((a % 360) + 540) % 360 - 180;   // → (-180, 180]
     function spinTo(k){ target = rot + norm(-cards[k].ang0 - rot); vel = 0; idle = performance.now(); }
-    function place(){
+    function place(dt){
       let best = 0, bz = -1e9;
       cards.forEach(c => {
         const th = (c.ang0 + rot) * Math.PI / 180;
@@ -121,12 +132,18 @@
         const off = norm(c.ang0 + rot);
         const s = PERSP / (PERSP + R - z) * (.72 + .28 * Math.exp(-(off / 20) * (off / 20)));   // front (z = R) → exactly 1, neighbours step back
         const y = z * TILT;                                 // tilted ellipse: front lower, back higher
-        const tx = Math.round(cx + x * s - cw / 2), ty = Math.round(cy + y * s - cw * 9 / 32);
-        const isF = Math.abs(off) < STEP / 2;
-        const xf = isF && Math.abs(s - 1) < .002 ? "translate(" + tx + "px," + ty + "px)" : "translate(" + tx + "px," + ty + "px) scale(" + s.toFixed(4) + ")";
+        // hover zoom: ~1.7×, capped so the shown width never exceeds the 1280 px source at this screen's pixel ratio
+        const kMax = Math.max(1, Math.min(ENL, (SRCW / DPR) / (cw * s)));
+        const kt = hover === c.i ? kMax : 1;
+        c.k += (kt - c.k) * (RM ? 1 : Math.min(1, (dt || .016) * 11)); if (Math.abs(kt - c.k) < .002) c.k = kt;
+        const sc = s * c.k * cw / ew;                        // ≤ 1 always (element is already at the enlarged size)
+        const tx = Math.round(cx + x * s - ew / 2), ty = Math.round(cy + y * s - eh / 2);
+        const xf = "translate(" + tx + "px," + ty + "px) scale(" + sc.toFixed(4) + ")";
         if (c._xf !== xf) { c.el.style.transform = xf; c._xf = xf; }
-        const zi = String(Math.round(z + R) + 10); if (c._z !== zi) { c.el.style.zIndex = zi; c._z = zi; }
-        const br = (.58 + .42 * (z + R) / (2 * R)).toFixed(2); if (c._b !== br) { c.el.style.filter = br >= .99 ? "" : "brightness(" + br + ")"; c._b = br; }
+        const up = c.k > 1.01;
+        c.el.classList.toggle("zoom", up);
+        const zi = String(up ? 5000 + Math.round(c.k * 100) : Math.round(z + R) + 10); if (c._z !== zi) { c.el.style.zIndex = zi; c._z = zi; }
+        const br = up ? "1.00" : (.58 + .42 * (z + R) / (2 * R)).toFixed(2); if (c._b !== br) { c.el.style.filter = br >= .99 ? "" : "brightness(" + br + ")"; c._b = br; }
         if (z > bz) { bz = z; best = c.i; }
       });
       if (best !== front) { if (front >= 0) cards[front].el.classList.remove("front"); front = best; cards[front].el.classList.add("front"); setNow(front); }
@@ -134,12 +151,14 @@
     // drag (mouse + touch) with inertia; vertical page scroll stays native on touch
     fold.addEventListener("pointerdown", e => {
       if (e.target.closest(".rail, .now, .cta-contact, .hd a")) return;
+      if (e.pointerType !== "mouse" && !e.target.closest(".rc")) hover = -1;   // tap outside a cover: un-zoom
       dragging = true; moved = 0; lx = e.clientX; vel = 0; target = null; fold.classList.add("grab");
     });
     addEventListener("pointermove", e => {
       if (!dragging) return;
       const dx = e.clientX - lx; lx = e.clientX; moved += Math.abs(dx);
       const d = dx * (small ? .32 : .16); rot += d; vel = d; idle = performance.now();
+      if (moved > 6 && e.pointerType !== "mouse") hover = -1;
     }, { passive: true });
     const end = () => { if (!dragging) return; dragging = false; fold.classList.remove("grab"); idle = performance.now(); };
     addEventListener("pointerup", end); addEventListener("pointercancel", end);
@@ -155,18 +174,19 @@
         else {
           vel = 0;
           const quiet = now - idle;
-          if (hover >= 0 || quiet < 2600 || RM) {
+          if (hover >= 0) { /* hovering a cover: ring holds still */ }
+          else if (quiet < 2600 || RM) {
             // settle the nearest frame to the front so it reads at 1:1
             const k = cards.reduce((b, c) => Math.abs(norm(c.ang0 + rot)) < Math.abs(norm(cards[b].ang0 + rot)) ? c.i : b, 0);
             const d = norm(-cards[k].ang0 - rot); rot += d * Math.min(1, dt * 5); if (Math.abs(d) < .02) rot += d;
           } else rot -= (small ? 5 : 4) * dt;   // slow idle drift
         }
       }
-      place(); requestAnimationFrame(frame);
+      place(dt); requestAnimationFrame(frame);
     }
     layout(); renderRail(); place(); requestAnimationFrame(frame);
     let rT; addEventListener("resize", () => { clearTimeout(rT); rT = setTimeout(() => { layout(); cards.forEach(c => c._xf = null); }, 120); });
-    window.JLring = { spinTo, get front(){ return front; }, nudge(v){ vel = v; target = null; idle = performance.now(); } };
+    window.JLring = { spinTo, get hover(){ return hover; }, get front(){ return front; }, nudge(v){ vel = v; target = null; idle = performance.now(); } };
   }
   /* home index tiles: each tile hard-cuts through sharp stills on hover */
   const TILE_IMG = {
@@ -287,6 +307,9 @@
         '<p class="k">' + T("Outlets", "媒体") + '</p><ul>' + [...new Set(L.map(p => p.o.split(" (")[0]))].map(o => '<li>' + esc(o) + '</li>').join("") + '</ul>';
     });
   }
+  /* work-with-Junie form: calm thank-you after FormSubmit redirect (?sent=1) */
+  const sent = $(".wwj .sent");
+  if (sent && /[?&]sent=1\b/.test(location.search)) { sent.hidden = false; const f = $(".wwj .wf"); if (f) f.hidden = true; }
   /* about: long bio collapsed */
   const more = $(".biowrap .more");
   if (more) more.addEventListener("click", () => { const w = more.parentNode; w.classList.toggle("open"); more.innerHTML = w.classList.contains("open") ? T("Show less −", "收起 −") : T("Read full bio +", "展开完整简介 +"); });
