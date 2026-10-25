@@ -711,17 +711,10 @@ window.JL2={
 },
 {
 "o": "ZCOOL 站酷 · 站酷设计周",
-"t": "2026 站酷设计周｜评论区找搭子 2/3人拼团开抢",
-"d": "2026-09-04",
+"t": "从Runway、OpenAI到Google，巨妮Junie怎么一路拍进了全球AI影像圈？",
+"d": "2026-09-28",
 "l": "ZH",
-"u": "https://www.zcool.com.cn/article/ZMTgxNzUwOA==.html"
-},
-{
-"o": "ZCOOL 站酷 · 站酷设计周",
-"t": "20年等一回，手慢无，站酷设计周早鸟票开抢！",
-"d": "2026-09-01",
-"l": "ZH",
-"u": "https://www.zcool.com.cn/article/ZMTgxNjIzMg==.html"
+"u": "https://www.zcool.com.cn/article/ZMTgyNTkyMA==.html"
 },
 {
 "o": "Forbes (Maureen Kerr)",
@@ -1733,13 +1726,6 @@ window.JL2={
 }
 ],
 "institutions": [
-{
-"name": "a16z",
-"file": "institutions-a16z.png",
-"ar": 2.533,
-"dn": 0.463,
-"k": 0.9
-},
 {
 "name": "Tribeca Film Festival",
 "file": "institutions-tribeca-film-festival.png",
