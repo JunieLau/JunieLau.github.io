@@ -71,18 +71,54 @@
   const fold = $(".fold");
   if (fold) {
     const ringEl = $(".ring", fold), small = matchMedia("(max-width:760px)").matches;
-    /* backdrop: sharp full-bleed still of the front work, dimmed by .bgx .shade (never blurred) */
-    const bgx = $(".bgx", fold), bgSeen = {};
-    const BGPICK = { chanel: "frames/cf_23_tarsem-system_chanel-spec_chanel-20.jpg", goldfish: "bg/goldfish-2.jpg", zhengxie: "bg/zhengxie-1.jpg", euler: "bg/euler-1.jpg", void: "bg/void-2.jpg", mother: "bg/mother-1.jpg", thermal: "bg/thermal-1.jpg" };   /* chanel-15 has motion blur in the source */
-    const bgFr = w => BGPICK[w.p.id] || ((JL.frames || []).filter(f => f.pid === w.p.id).map(f => f.img)[1]) || ((JL.frames || []).find(f => f.pid === w.p.id) || {}).img;
-    const bgSrc = w => BASE + (bgFr(w) || w.p.img);   /* works with no stills fall back to their own cover */
-    const bgLoad = src => { if (!bgSeen[src]) { bgSeen[src] = 1; new Image().src = src; } };
+    /* backdrop (option 5, 剧照暗场): sharp full-colour stills of the front work, slow crossfade loop, dimmed by .bgx .shade (never blurred).
+       Each still is fully decoded before it fades in over the previous one, so there is never a black frame. */
+    const bgx = $(".bgx", fold), bgHost = bgx && $(".still", bgx);
+    const BGDWELL = 4500, BGFADE = 1600;
+    const BGSET = {   /* real frames from each film (stills-for-site); chanel-15 has motion blur in the source and is never used */
+      goldfish: ["bg/goldfish-2.jpg", "bg/goldfish-1.jpg", "bg/goldfish-3.jpg"],
+      zhengxie: ["bg/zhengxie-1.jpg", "bg/zhengxie-2.jpg", "bg/zhengxie-3.jpg"],
+      euler: ["bg/euler-1.jpg", "bg/euler-4.jpg", "bg/euler-2.jpg", "bg/euler-3.jpg"],
+      void: ["bg/void-2.jpg", "bg/void-1.jpg", "bg/void-3.jpg"],
+      mother: ["bg/mother-2.jpg", "bg/mother-3.jpg", "bg/mother-1.jpg"],
+      thermal: ["bg/thermal-1.jpg", "bg/thermal-4.jpg", "bg/thermal-2.jpg", "bg/thermal-3.jpg"],
+      chanel: ["frames/cf_23_tarsem-system_chanel-spec_chanel-20.jpg", "frames/cf_26_tarsem-system_chanel-spec_chanel-hall.jpg", "frames/cf_02_tarsem-system_chanel-spec_chanel-premiere.jpg"]
+    };
+    const bgList = w => {
+      if (BGSET[w.p.id]) return BGSET[w.p.id];
+      const f = (JL.frames || []).filter(x => x.pid === w.p.id && !/chanel-15/.test(x.img)).map(x => x.img);
+      const s = f.length > 1 ? [f[1], f[0]].concat(f.slice(2)) : f;   /* keep the existing lead still first */
+      return s.length ? s.slice(0, 3) : [w.p.img];                     /* no stills at all: its own cover */
+    };
+    if (bgHost && !document.getElementById("jl-ring-css")) document.head.insertAdjacentHTML("beforeend", '<style id="jl-ring-css">.bgx .still{background:none}.bgx .still img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;opacity:0;transition:opacity ' + BGFADE + 'ms ease-in-out;will-change:opacity;transform:translateZ(0)}.bgx .still img.on{opacity:1}.p-home .rail.tight a{padding-top:3px;padding-bottom:3px}.rc .dm{position:absolute;inset:calc(-2px * var(--ek));background:#000;opacity:0;pointer-events:none;will-change:opacity}</style>');
+    const bgCache = {};
+    const bgImg = src => bgCache[src] || (bgCache[src] = new Promise(res => {
+      const im = new Image(), ok = () => res(im); im.alt = ""; im.src = BASE + src;
+      (im.decode ? im.decode() : Promise.reject()).then(ok, () => { if (im.complete && im.naturalWidth) ok(); else { im.onload = ok; im.onerror = () => res(null); } });
+    }));
+    let bgW = null, bgI = 0, bgTok = 0, bgT = 0, bgD = 0, bgTop = null;
+    const bgShow = (src, tok) => bgImg(src).then(im => {
+      if (!im || tok !== bgTok || im === bgTop) return;
+      im.classList.remove("on"); bgHost.appendChild(im);           /* newest layer on top, old one stays opaque underneath */
+      requestAnimationFrame(() => requestAnimationFrame(() => im.classList.add("on")));
+      const old = bgTop; bgTop = im;
+      if (old) setTimeout(() => { if (old !== bgTop && old.parentNode) { old.classList.remove("on"); old.remove(); } }, BGFADE + 80);
+    });
+    const bgCycle = tok => {
+      const L = bgList(bgW); if (L.length < 2 || RM) return;
+      bgImg(L[(bgI + 1) % L.length]);                                /* decode the next still during the dwell */
+      bgT = setTimeout(() => { if (tok !== bgTok) return; bgI = (bgI + 1) % L.length; bgShow(L[bgI], tok).then(() => { if (tok === bgTok) bgCycle(tok); }); }, BGDWELL + BGFADE);
+    };
     const BGX = w => {
-      if (!bgx) return;
-      const src = bgSrc(w); bgLoad(src);
-      fold.style.setProperty("--fimg", 'url("' + new URL(src, location.href).href + '")');
-      fold.classList.toggle("bg-cov", !bgFr(w));   /* covers carry title type: dim a little more */
-      const k = W.indexOf(w); [1, -1].forEach(d => bgLoad(bgSrc(W[(k + d + W.length) % W.length])));   /* warm the neighbours so turning never flashes empty */
+      if (!bgHost || w === bgW) return;
+      bgW = w; const tok = ++bgTok; clearTimeout(bgT); clearTimeout(bgD);
+      const L = bgList(w); fold.classList.toggle("bg-cov", L[0] === w.p.img);   /* covers carry title type: dim a little more */
+      const go = () => {
+        if (tok !== bgTok) return; bgI = 0;
+        bgShow(L[0], tok).then(() => { if (tok === bgTok) bgCycle(tok); });
+        const k = W.indexOf(w); [1, -1].forEach(d => bgImg(bgList(W[(k + d + W.length) % W.length])[0]));   /* warm the neighbours */
+      };
+      bgTop ? (bgD = setTimeout(go, 140)) : go();                  /* fast spins skip the works flying past */
     };
     const ACC = ["#ff4f8b", "#ffc531", "#13c8a4", "#ff3dd2", "#ff8a00", "#7b5cff"];
     const W = P.map((p, o) => ({ p, o })).sort((a, b) => (parseInt(b.p.year) || 0) - (parseInt(a.p.year) || 0) || a.o - b.o).map(({ p }, i) => ({ p, img: BASE + p.img, col: ACC[i % ACC.length] })); /* newest → oldest */
@@ -90,7 +126,7 @@
     const cards = W.map((w, i) => {
       const a = document.createElement("a"); a.className = "rc"; a.href = "work-" + w.p.id + ".html";
       a.style.setProperty("--c", w.col);
-      a.innerHTML = '<img src="' + w.img + '" alt="" draggable="false" width="1280" height="720"><b class="no">' + String(i + 1).padStart(2, "0") + '</b><span class="lb2"><i></i><em>' + w.p.year + '</em></span>';
+      a.innerHTML = '<img src="' + w.img + '" alt="" draggable="false" width="1280" height="720"><b class="no">' + String(i + 1).padStart(2, "0") + '</b><span class="dm"></span><span class="lb2"><i></i><em>' + w.p.year + '</em></span>';
       a.addEventListener("pointerdown", e => { ptype = e.pointerType; });
       a.addEventListener("click", e => {
         if (moved > 6) { e.preventDefault(); return; }
@@ -100,7 +136,7 @@
       a.addEventListener("pointerenter", e => { if (e.pointerType === "mouse") { hover = i; idle = performance.now(); } });
       a.addEventListener("pointerleave", e => { if (e.pointerType === "mouse" && hover === i) hover = -1; });
       ringEl.appendChild(a);
-      return { el: a, i, ang0: i * STEP, k: 1 };
+      return { el: a, dm: $(".dm", a), i, ang0: i * STEP, k: 1 };
     });
     function labels(){ cards.forEach(c => { $("i", c.el).textContent = pTitle(W[c.i].p); }); }
     const ENL = 1.7, DPR = Math.max(1, window.devicePixelRatio || 1), SRCW = 1280;   // official maxres covers are 1280 px wide
@@ -118,7 +154,7 @@
       ew = Math.round(cw * ENL); eh = Math.round(ew * 9 / 16);
       fold.style.setProperty("--ew", ew + "px"); fold.style.setProperty("--eh", eh + "px"); fold.style.setProperty("--ek", ENL);
     }
-    let rot = 0, vel = 0, target = null, dragging = false, lx = 0, moved = 0, hover = -1, idle = performance.now(), front = -1;
+    let rot = 0, pend = 0, vel = 0, target = null, dragging = false, lx = 0, moved = 0, hover = -1, idle = performance.now(), front = -1;
     const nowEl = $(".now", fold), rail = $(".rail", fold);
     function setNow(k){
       const w = W[k], p = w.p, href = "work-" + p.id + ".html";
@@ -129,7 +165,7 @@
       fold.style.setProperty("--acc", w.col);
       BGX(w);
       $$("li", rail).forEach((li, j) => li.classList.toggle("on", j === k));
-      nowEl.classList.remove("in"); void nowEl.offsetWidth; nowEl.classList.add("in");
+      nowEl.classList.remove("in"); requestAnimationFrame(() => requestAnimationFrame(() => nowEl.classList.add("in")));   /* no forced reflow mid-rotation */
     }
     function renderRail(){
       rail.innerHTML = W.map((w, j) => '<li style="--c:' + w.col + '"><a href="work-' + w.p.id + '.html" data-k="' + j + '"><b>' + String(j + 1).padStart(2, "0") + '</b><span>' + esc(pTitle(w.p)) + '</span><i>' + w.p.year + '</i></a></li>').join("");
@@ -137,7 +173,7 @@
     }
     hooks.push(renderRail);
     const norm = a => ((a % 360) + 540) % 360 - 180;   // → (-180, 180]
-    function spinTo(k){ target = rot + norm(-cards[k].ang0 - rot); vel = 0; idle = performance.now(); }
+    function spinTo(k){ rot += pend; pend = 0; target = rot + norm(-cards[k].ang0 - rot); vel = 0; idle = performance.now(); }
     function place(dt){
       let best = 0, bz = -1e9;
       cards.forEach(c => {
@@ -149,17 +185,21 @@
         // hover zoom: ~1.7×, capped so the shown width never exceeds the 1280 px source at this screen's pixel ratio
         const kMax = Math.max(1, Math.min(ENL, (SRCW / DPR) / (cw * s)));
         const kt = hover === c.i ? kMax : 1;
-        c.k += (kt - c.k) * (RM ? 1 : Math.min(1, (dt || .016) * 11)); if (Math.abs(kt - c.k) < .002) c.k = kt;
+        c.k += (kt - c.k) * (RM ? 1 : 1 - Math.exp(-(dt || .016) * 11)); if (Math.abs(kt - c.k) < .002) c.k = kt;
         const sc = s * c.k * cw / ew;                        // ≤ 1 always (element is already at the enlarged size)
-        const tx = Math.round(cx + x * s - ew / 2), ty = Math.round(cy + y * s - eh / 2);
-        const xf = "translate(" + tx + "px," + ty + "px) scale(" + sc.toFixed(4) + ")";
+        // sub-pixel, compositor-only motion: no integer snapping (rounding made covers stall/jump 1 px → 发抖)
+        const tx = cx + x * s - ew / 2, ty = cy + y * s - eh / 2;
+        const xf = "translate3d(" + tx.toFixed(2) + "px," + ty.toFixed(2) + "px,0) scale(" + sc.toFixed(4) + ")";
         if (c._xf !== xf) { c.el.style.transform = xf; c._xf = xf; }
         const up = c.k > 1.01;
-        c.el.classList.toggle("zoom", up);
-        const zi = String(up ? 5000 + Math.round(c.k * 100) : Math.round(z + R) + 10); if (c._z !== zi) { c.el.style.zIndex = zi; c._z = zi; }
-        const br = up ? "1.00" : (.58 + .42 * (z + R) / (2 * R)).toFixed(2); if (c._b !== br) { c.el.style.filter = br >= .99 ? "" : "brightness(" + br + ")"; c._b = br; }
+        if (c._up !== up) { c.el.classList.toggle("zoom", up); c._up = up; }
+        c._zz = up ? 1e9 + (hover === c.i ? 1 : 0) : z;
+        // depth dimming on a GPU opacity layer (a per-frame CSS filter forced every cover to repaint)
+        const dk = up ? "0.000" : (1 - (.58 + .42 * (z + R) / (2 * R))).toFixed(3); if (c._b !== dk) { c.dm.style.opacity = dk; c._b = dk; }
         if (z > bz) { bz = z; best = c.i; }
       });
+      // stacking by depth rank: z-index only changes when two covers actually cross
+      cards.slice().sort((a, b) => a._zz - b._zz).forEach((c, r) => { const zi = String(c._zz >= 1e9 ? 5000 + r : 10 + r); if (c._z !== zi) { c.el.style.zIndex = zi; c._z = zi; } });
       if (best !== front) { if (front >= 0) cards[front].el.classList.remove("front"); front = best; cards[front].el.classList.add("front"); setNow(front); }
     }
     // drag (mouse + touch) with inertia; vertical page scroll stays native on touch
@@ -171,20 +211,22 @@
     addEventListener("pointermove", e => {
       if (!dragging) return;
       const dx = e.clientX - lx; lx = e.clientX; moved += Math.abs(dx);
-      const d = dx * (small ? .32 : .16); rot += d; vel = d; idle = performance.now();
+      const d = dx * (small ? .32 : .16); pend += d; vel = d; idle = performance.now();   /* applied in rAF, eased: pointer events and frames never beat */
       if (moved > 6 && e.pointerType !== "mouse") hover = -1;
     }, { passive: true });
     const end = () => { if (!dragging) return; dragging = false; fold.classList.remove("grab"); idle = performance.now(); };
     addEventListener("pointerup", end); addEventListener("pointercancel", end);
-    fold.addEventListener("wheel", e => { if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) { rot -= e.deltaX * .08; vel = -e.deltaX * .02; target = null; idle = performance.now(); } }, { passive: true });
+    fold.addEventListener("wheel", e => { if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) { pend -= e.deltaX * .08; vel = -e.deltaX * .02; target = null; idle = performance.now(); } }, { passive: true });
     rail.addEventListener("mouseover", e => { const a = e.target.closest("a[data-k]"); if (a) spinTo(+a.dataset.k); });
     rail.addEventListener("focusin", e => { const a = e.target.closest("a[data-k]"); if (a) spinTo(+a.dataset.k); });
-    let prev = performance.now();
+    let prev = -1;
+    const ease = (k, dt) => 1 - Math.exp(-k * dt);   // frame-rate independent exponential easing
     function frame(now){
-      const dt = Math.min(.05, (now - prev) / 1000); prev = now;
+      const dt = prev < 0 ? 1 / 60 : Math.max(0, Math.min(.05, (now - prev) / 1000)); prev = now;
+      if (pend) { const a = Math.abs(pend) < .001 ? pend : pend * ease(RM ? 1e3 : 26, dt); rot += a; pend -= a; }
       if (!dragging) {
-        if (target !== null) { const d = target - rot; rot += d * Math.min(1, dt * 7); if (Math.abs(d) < .02) { rot = target; target = null; } }
-        else if (Math.abs(vel) > .01 && !RM) { rot += vel; vel *= Math.pow(.9, dt * 60); }
+        if (target !== null) { const d = target - rot; rot += d * ease(7, dt); if (Math.abs(d) < .02) { rot = target; target = null; } }
+        else if (Math.abs(vel) > .01 && !RM) { rot += vel * dt * 60; vel *= Math.pow(.9, dt * 60); }
         else {
           vel = 0;
           const quiet = now - idle;
@@ -192,14 +234,23 @@
           else if (quiet < 2600 || RM) {
             // settle the nearest frame to the front so it reads at 1:1
             const k = cards.reduce((b, c) => Math.abs(norm(c.ang0 + rot)) < Math.abs(norm(cards[b].ang0 + rot)) ? c.i : b, 0);
-            const d = norm(-cards[k].ang0 - rot); rot += d * Math.min(1, dt * 5); if (Math.abs(d) < .02) rot += d;
+            const d = norm(-cards[k].ang0 - rot); rot += d * ease(5, dt); if (Math.abs(d) < .005) rot += d;
           } else rot -= (small ? 5 : 4) * dt;   // slow idle drift
         }
       }
       place(dt); requestAnimationFrame(frame);
     }
-    layout(); renderRail(); place(); requestAnimationFrame(frame);
-    let rT; addEventListener("resize", () => { clearTimeout(rT); rT = setTimeout(() => { layout(); cards.forEach(c => c._xf = null); }, 120); });
+    /* keep the right-hand index clear of the hero tag stack (it is centred by CSS; nudge it down only when they would touch) */
+    function fitRail(){
+      rail.style.top = rail.style.transform = ""; rail.classList.remove("tight");
+      const cr = $(".hd .cred", fold), ct = $(".cta-contact", fold); if (!cr || small || getComputedStyle(rail).display === "none") return;
+      const fb = fold.getBoundingClientRect(), minTop = cr.getBoundingClientRect().bottom - fb.top + 14;
+      if (rail.getBoundingClientRect().top - fb.top < minTop) { rail.style.top = minTop + "px"; rail.style.transform = "none"; }
+      if (ct && rail.getBoundingClientRect().bottom > ct.getBoundingClientRect().top - 10) rail.classList.add("tight");   /* short screens: slimmer rows */
+    }
+    layout(); renderRail(); place(); fitRail(); requestAnimationFrame(frame);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitRail);
+    let rT; addEventListener("resize", () => { clearTimeout(rT); rT = setTimeout(() => { layout(); fitRail(); cards.forEach(c => c._xf = null); }, 120); });
     window.JLring = { spinTo, get hover(){ return hover; }, get front(){ return front; }, nudge(v){ vel = v; target = null; idle = performance.now(); } };
   }
   /* home index tiles: each tile hard-cuts through sharp stills on hover */
@@ -237,7 +288,7 @@
   }
   const il = $(".ilist");
   if (il) {
-    const render = () => { il.innerHTML = P.map(p => '<li><a href="work-' + p.id + '.html"><span class="y">' + p.year + ',</span> ' + esc(pTitle(p)) + '<span class="r">' + esc(pRole(p)) + '</span></a></li>').join(""); };
+    const render = () => { il.innerHTML = P.map(p => '<li><a href="work-' + p.id + '.html"><span class="y">' + p.year + ',</span><span class="t">' + esc(pTitle(p)) + '</span><span class="r">' + esc(pRole(p)) + '</span></a></li>').join(""); };
     hooks.push(render);
   }
   /* =========================================================
