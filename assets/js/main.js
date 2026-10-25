@@ -24,7 +24,9 @@
     LANG = b.dataset.lang; try { localStorage.setItem("jl-lang", LANG); } catch(e) {}
     applyLang();
   });
-  const P = (JL.projects || []).map((p, o) => ({ p, o })).sort((a, b) => (parseInt(b.p.year) || 0) - (parseInt(a.p.year) || 0) || a.o - b.o).map(x => x.p); /* newest → oldest everywhere */
+  const PA = (JL.projects || []).map((p, o) => ({ p, o })).sort((a, b) => (parseInt(b.p.year) || 0) - (parseInt(a.p.year) || 0) || a.o - b.o).map(x => x.p); /* newest → oldest everywhere */
+  const MOREIDS = ((window.JL2 || {}).filmMore || []).map(v => v.pid).filter(Boolean);
+  const P = PA.filter(p => MOREIDS.indexOf(p.id) < 0); /* main film list; projects moved into "More films" keep their work pages (PA) */
   const pTitle = p => ZH() ? (p.title_zh || p.title) : p.title;
   const pRole = p => ZH() ? (p.role_zh || p.role) : p.role;
   const pNote = p => ZH() ? (p.note_zh || p.note) : p.note;
@@ -296,6 +298,7 @@
      ========================================================= */
   const work = $(".work");
   if (work) {
+    const P = PA; /* work pages: unchanged prev/next across all films */
     const id = work.dataset.pid, i = P.findIndex(p => p.id === id), p = P[i];
     const pl = $(".player", work);
     pl.addEventListener("click", () => {
@@ -331,11 +334,11 @@
     hooks.push(() => {
       el.innerHTML = "";
       list.forEach((v, n) => {
-        const a = document.createElement("article"); a.className = "vc";
+        const a = document.createElement(v.href ? "a" : "article"); a.className = "vc"; if (v.href) a.href = v.href;
         const sub = ZH() ? v.s_zh : v.s;
         a.innerHTML = '<div class="th">' + (v.img ? '<img src="' + BASE + v.img + '" alt="" loading="lazy">' : '<span class="ph">' + esc(v.t) + '</span>') + '<span class="pl"><i></i></span>' + (v.vimeo ? '<span class="tag">Vimeo</span>' : '') + '</div>' +
           '<h3><b>' + String(n + 1).padStart(2, "0") + '</b>' + esc(v.t) + '</h3>' + (sub ? '<p>' + esc(sub) + '</p>' : '');
-        a.addEventListener("click", () => play(v.yt, v.t, 0, v.vimeo));
+        if (!v.href) a.addEventListener("click", () => play(v.yt, v.t, 0, v.vimeo));
         el.appendChild(a);
       });
     });

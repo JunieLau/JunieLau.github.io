@@ -439,3 +439,4 @@ main{padding-top:var(--tb)}
 .cc p em{font-style:normal;color:var(--red)}
 @media (max-width:1100px){.cgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:760px){.cgrid{grid-template-columns:1fr;gap:36px}.cc h3{font-size:21px;min-height:0}}
+a.vc{display:block}
