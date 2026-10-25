@@ -279,9 +279,9 @@
     function renderWall(){
       wall.innerHTML = P.map((p, i) => {
         const st = stillsOf(p.id)[0];
-        return '<a class="wt" href="work-' + p.id + '.html"><span class="c" style="background-image:url(&quot;' + BASE + p.img + '&quot;)"></span>' +
-          (st ? '<span class="s" style="background-image:url(&quot;' + BASE + st.thumb + '&quot;)"></span>' : '') +
-          '<span class="lbl"><b>' + String(i + 1).padStart(2, "0") + '</b>' + esc(pTitle(p)) + ' <i>/ ' + p.year + '</i> <em>--&gt;</em></span></a>';
+        return '<a class="wt wt3" href="work-' + p.id + '.html"><span class="fr"><span class="c" style="background-image:url(&quot;' + BASE + p.img + '&quot;)"></span>' +
+          (st ? '<span class="s" style="background-image:url(&quot;' + BASE + st.thumb + '&quot;)"></span>' : '') + '</span>' +
+          '<span class="cap"><b>' + String(i + 1).padStart(2, "0") + '</b><span class="t">' + esc(pTitle(p)) + '</span><i>' + p.year + '</i></span></a>';
       }).join("");
     }
     hooks.push(renderWall);
