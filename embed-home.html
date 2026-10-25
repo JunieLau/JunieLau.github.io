@@ -21,23 +21,22 @@ img{display:block}
 .topline nav a:hover{opacity:1}
 .topline .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-right:9px;vertical-align:1px}
 
-/* ---------- HOME : 3D ring (v7 — cyberfolk sharp / readable) ---------- */
+/* ---------- HOME : 3D ring (v8 — clear / readable, mild 3D) ---------- */
 .home{position:relative;height:100vh;height:100svh;min-height:560px;overflow:hidden;background:
-  radial-gradient(80% 65% at 50% 55%,#1a0808 0%,#050202 50%,#000 100%);
+  radial-gradient(75% 60% at 50% 52%,#140606 0%,#050202 55%,#000 100%);
   touch-action:pan-y;user-select:none;-webkit-user-select:none}
 .home::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;background:
-  linear-gradient(90deg,rgba(0,0,0,.28) 0%,transparent 14%,transparent 86%,rgba(0,0,0,.28) 100%),
-  linear-gradient(0deg,rgba(0,0,0,.32) 0%,transparent 16%,transparent 84%,rgba(0,0,0,.18) 100%)}
-.stage{position:absolute;inset:0;perspective:var(--persp,1600px);perspective-origin:50% 45%;cursor:grab;z-index:1}
+  linear-gradient(90deg,rgba(0,0,0,.22) 0%,transparent 12%,transparent 88%,rgba(0,0,0,.22) 100%),
+  linear-gradient(0deg,rgba(0,0,0,.28) 0%,transparent 14%,transparent 86%,rgba(0,0,0,.14) 100%)}
+.stage{position:absolute;inset:0;perspective:var(--persp,2200px);perspective-origin:50% 42%;cursor:grab;z-index:1}
 .home.grab .stage{cursor:grabbing}
 .scene{position:absolute;left:50%;top:48%;width:0;height:0;transform-style:preserve-3d;
-  transform:translateZ(var(--push,-120px)) rotateX(var(--tilt,-14deg)) rotateZ(var(--roll,0deg));
+  transform:translateZ(var(--push,-20px)) rotateX(var(--tilt,-14deg)) rotateZ(var(--roll,0deg));
   will-change:transform}
 .carousel{position:absolute;left:0;top:0;transform-style:preserve-3d;will-change:transform}
-.card{position:absolute;left:calc(var(--cw)/-2);top:calc(var(--ch)/-2);width:var(--cw);height:var(--ch);transform-style:preserve-3d;will-change:transform,opacity,filter}
+.card{position:absolute;left:calc(var(--cw)/-2);top:calc(var(--ch)/-2);width:var(--cw);height:var(--ch);transform-style:preserve-3d;will-change:transform,opacity}
 .card .face{position:absolute;inset:0;background-size:cover;background-position:center;backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden;border-radius:2px;
-  box-shadow:0 24px 60px -12px rgba(0,0,0,.85),0 0 0 1px rgba(255,255,255,.06);filter:none!important}
-.card .face.back{transform:rotateY(180deg);filter:none!important;opacity:.95}
+  box-shadow:0 18px 48px -10px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.07);filter:none!important}
 .card video{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
 .card .face::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);pointer-events:none;background:none}
 .card.hot .face::after,.card.front .face::after{
@@ -45,51 +44,34 @@ img{display:block}
   background:none}
 .card.front{z-index:2}
 .card.hot{cursor:pointer;z-index:3}
-.card.front .face{filter:none!important;box-shadow:0 30px 70px -12px rgba(0,0,0,.92),0 0 0 1px rgba(255,255,255,.16)}
-.card,.card .face{filter:none!important;-webkit-filter:none!important}
-.wordmark{display:none;position:absolute;left:0;top:0;transform:translate(-50%,-58%) translateZ(40px);white-space:nowrap;pointer-events:none;font-family:var(--serif);font-weight:400;color:var(--accent);
-  font-size:calc(var(--cw) * .55);line-height:.78;letter-spacing:-.03em;z-index:4;will-change:transform;opacity:.88;
-  text-shadow:0 0 40px rgba(227,38,28,.35), 1px 0 0 rgba(0,229,255,.35), -1px 0 0 rgba(227,38,28,.45)}
-.wordmark .wm-core{position:relative;display:inline-block}
-.wordmark .wm-core::before,.wordmark .wm-core::after{content:"JUNIE LAU";position:absolute;left:0;top:0;width:100%;pointer-events:none}
-.wordmark .wm-core::before{color:transparent;-webkit-text-stroke:1px rgba(0,229,255,.85);transform:translate(calc(var(--glx,0)*1px), calc(var(--gly,0)*-1px));mix-blend-mode:screen;opacity:.9}
-.wordmark .wm-core::after{color:transparent;-webkit-text-stroke:1px rgba(227,38,28,.95);transform:translate(calc(var(--glx,0)*-1px), calc(var(--gly,0)*1px));mix-blend-mode:screen;opacity:.85}
+.card.front .face{filter:none!important;box-shadow:0 22px 56px -10px rgba(0,0,0,.88),0 0 0 1px rgba(255,255,255,.14)}
+.card .face{filter:none!important;-webkit-filter:none!important}
+.wordmark{display:block;position:absolute;left:0;top:0;transform:translate(-50%,-50%) translateZ(0px);white-space:nowrap;pointer-events:none;font-family:var(--serif);font-weight:400;color:var(--accent);
+  font-size:clamp(64px, calc(var(--cw) * .78), 200px);line-height:.78;letter-spacing:-.03em;z-index:4;opacity:.92;
+  text-shadow:0 0 36px rgba(227,38,28,.28),0 2px 24px rgba(0,0,0,.55)}
 .wm2{display:none}
-.home .echo{display:none}
- .home .echo span{font-size:calc(var(--cw,220px) * .55);top:48%;letter-spacing:-.03em;word-spacing:0}
-.glow{position:absolute;left:50%;bottom:-50vh;width:90vw;height:45vh;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(227,38,28,.06),transparent 70%);pointer-events:none;z-index:0}
-.home .hud{z-index:8;opacity:.55}
-.home .hud.tl{display:none} /* drop X/Y/VEL clutter */
-.home .hud.tr{top:70px}
-.vlabel{position:absolute;z-index:8;left:18px;top:50%;transform:translateY(-50%);writing-mode:vertical-rl;font-family:"Noto Serif SC",var(--serif);font-weight:300;font-size:13px;letter-spacing:.42em;color:rgba(242,240,235,.55);pointer-events:none}
-.vlabel span{display:inline-block;border-left:1px solid rgba(227,38,28,.55);padding-left:10px}
-.is-zh .vlabel{letter-spacing:.28em}
+.glow{position:absolute;left:50%;bottom:-50vh;width:90vw;height:45vh;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(227,38,28,.05),transparent 70%);pointer-events:none;z-index:0}
 .home .meta{position:absolute;z-index:8;left:22px;right:22px;bottom:20px;display:flex;justify-content:space-between;align-items:flex-end;font-size:11px;letter-spacing:.08em;text-transform:uppercase;pointer-events:none}
 .home .meta .cap{max-width:62%;color:#fff;min-height:1em;text-shadow:0 1px 16px rgba(0,0,0,.9)}
 .home .meta .cap b{color:var(--accent);font-weight:400}
 .home .meta .hint{color:var(--dim)}
+.home .meta .soc{pointer-events:auto}
 .sectionwords{position:absolute;z-index:8;left:50%;bottom:52px;transform:translateX(-50%);display:flex;gap:44px;pointer-events:auto}
 .sectionwords a{font-family:var(--serif);font-style:italic;font-size:clamp(20px,1.9vw,28px);color:#fff;opacity:.92;transition:color .3s;text-shadow:0 2px 18px rgba(0,0,0,.85)}
 .sectionwords a:hover{color:var(--accent)}
 @media (max-width:700px){
-  .scene{top:52%;transform:translateZ(var(--push,-80px)) rotateX(var(--tilt,-12deg)) rotateZ(var(--roll,0deg))}
+  .scene{top:54%;transform:translateZ(var(--push,-30px)) rotateX(var(--tilt,-10deg)) rotateZ(var(--roll,0deg))}
   .wordmark{display:none}
-  .wm2{display:block;position:absolute;left:0;right:0;top:14%;text-align:center;font-family:var(--serif);color:var(--accent);font-size:13vw;line-height:.78;letter-spacing:-.03em;pointer-events:none;z-index:4;will-change:transform;opacity:.7;
-    text-shadow:0 0 36px rgba(227,38,28,.3), 1px 0 0 rgba(0,229,255,.35), -1px 0 0 rgba(227,38,28,.45)}
-  .wm2 .wm-core{position:relative;display:inline-block}
-  .wm2 .wm-core::before,.wm2 .wm-core::after{content:"JUNIE LAU";position:absolute;left:0;top:0;width:100%;pointer-events:none}
-  .wm2 .wm-core::before{color:transparent;-webkit-text-stroke:1px rgba(0,229,255,.85);transform:translate(calc(var(--glx,0)*1px), calc(var(--gly,0)*-1px));mix-blend-mode:screen}
-  .wm2 .wm-core::after{color:transparent;-webkit-text-stroke:1px rgba(227,38,28,.95);transform:translate(calc(var(--glx,0)*-1px), calc(var(--gly,0)*1px));mix-blend-mode:screen}
-  .home .echo span{font-size:16vw;top:18%}
-  .vlabel{left:10px;font-size:11px;letter-spacing:.32em;opacity:.7}
-  .home .hud.tr{top:58px;font-size:9px}
+  .wm2{display:block;position:absolute;left:0;right:0;top:13%;text-align:center;font-family:var(--serif);color:var(--accent);font-size:12.5vw;line-height:.78;letter-spacing:-.03em;pointer-events:none;z-index:4;opacity:.88;
+    text-shadow:0 0 28px rgba(227,38,28,.28),0 2px 18px rgba(0,0,0,.5)}
   .home .meta{flex-direction:column-reverse;align-items:flex-start;gap:8px;left:16px;right:16px;bottom:16px}
   .home .meta .cap{max-width:100%}
   .sectionwords{display:none}
 }
 @media (prefers-reduced-motion:reduce){
-  .wordmark .wm-core::before,.wordmark .wm-core::after,.home .echo{display:none!important}
+  .home .scene{transition:none}
 }
+
 /* ---------- ARCHIVE RING ---------- */
 .archive{position:relative;height:100vh;min-height:620px;overflow:hidden;background:#000;display:grid;place-items:center}
 .ring{--rs:min(78vh,78vw);position:absolute;width:var(--rs);height:var(--rs);animation:spin 160s linear infinite}
@@ -542,15 +524,11 @@ html,body{height:100%;overflow:hidden}.home{height:100vh;min-height:0}
   <div class="stage">
     <div class="scene">
       <div class="carousel"></div>
-      <div class="wordmark" aria-hidden="true"><span class="wm-core">JUNIE LAU</span></div>
+      <div class="wordmark" aria-hidden="true">JUNIE LAU</div>
     </div>
   </div>
-  <div class="wm2" aria-hidden="true"><span class="wm-core">JUNIE LAU</span></div>
-  <div class="echo" aria-hidden="true"><span>JUNIE LAU</span><span>JUNIE LAU</span></div>
+  <div class="wm2" aria-hidden="true">JUNIE LAU</div>
   <div class="glow" aria-hidden="true"></div>
-  <div class="hud tl" aria-hidden="true"></div>
-  <div class="hud tr" aria-hidden="true"><span class="idx">01 / 12</span><span class="hmode">CYBERFOLK</span></div>
-  <div class="vlabel" aria-hidden="true"><span data-zh="影像">IMAGE</span></div>
   <nav class="sectionwords"><a href="https://www.junielau.com/film" target="_top"><span data-zh="影片">Film</span></a><a href="https://www.junielau.com/campaign" target="_top"><span data-zh="商业">Campaign</span></a><a href="https://www.junielau.com/production" target="_top"><span data-zh="美术设计">Production</span></a><a href="https://www.junielau.com/photography" target="_top"><span data-zh="摄影">Photography</span></a><a href="https://www.junielau.com/about" target="_top"><span data-zh="关于">About</span></a><a href="https://www.junielau.com/press" target="_top"><span data-zh="媒体">Press</span></a><a href="https://www.junielau.com/contact" target="_top"><span data-zh="联系">Contact</span></a></nav>
   <div class="meta">
     <div class="cap"></div>
@@ -3382,91 +3360,99 @@ window.JL2={
     lb.addEventListener("touchend", e => { if (sx === null || !gset) return; const dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 40) step(dx < 0 ? 1 : -1); sx = null; }, { passive:true });
   }
 
-  /* ---------- home: 3D rotating ring (v7 cyberfolk — sharp / readable) ---------- */
+  /* ---------- home: 3D rotating ring (v8 — clear / readable) ---------- */
   const carousel = $(".carousel");
   if (carousel) {
     const home = $(".home"), stage = $(".stage"), scene = $(".scene"), cap = $(".home .cap");
-    const wordmarks = [".wordmark", ".wm2"].map(s => $(s)).filter(Boolean);
-    const echoes = [...document.querySelectorAll(".home .echo span")];
-    const hx = $(".home .hx"), hy = $(".home .hy"), hv = $(".home .hv");
-    const hidx = $(".home .idx"), hang = $(".home .hang");
     const touch = matchMedia("(hover:none)").matches;
     const small = matchMedia("(max-width:700px)").matches;
     const RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
     const C = k => JL.clips.find(c => c.key === k);
-    // muted loops: desktop few, mobile fewer — full color
-    const clipKeys = small ? ["cfclip_02","cfclip_10"] : ["cfclip_01","cfclip_02","cfclip_05","cfclip_06","cfclip_10"];
+    // muted loops — few, full color, sharp posters only
+    const clipKeys = small ? ["cfclip_02"] : ["cfclip_02", "cfclip_01"];
     const clips = clipKeys.map(C).filter(Boolean);
-    // Ring pool: interleave sharp YT covers + cyberfolk stills + muted clips
+    // Sharp cyberfolk stills (skip soft/muddy frames)
+    const SHARP = new Set([
+      "cf_06_ninagawa-colour_culture-pop-soda_neon-girl-group",
+      "cf_21_wong-urban_girls_neon-crowd",
+      "cf_50_daniels-surreal_dear-stranger_golden-tree",
+      "cf_23_chow-street_culture-pop-soda_pink-cloud-city",
+      "cf_35_luhrmann-theatre_every-multiverse_red-dancers",
+      "cf_45_daniels-surreal_dear-stranger_elephant-flower-field",
+      "cf_14_ninagawa-colour_love-from-void_claw-machine-girl",
+      "cf_03_ninagawa-colour_dear-stranger_blossom-dancers",
+      "cf_08_ninagawa-colour_dear-stranger_blossom-sea",
+      "cf_04_ninagawa-colour_dear-stranger_petal-field-heroine",
+      "cf_16_wong-urban_dear-stranger_neon-city-night",
+      "cf_05_ninagawa-colour_female-heroes_opera-peonies",
+      "cf_28_tsui-folk-cyber_one-blink_lantern-promenade",
+      "cf_32_luhrmann-theatre_the-court_colour-audience",
+      "cf_17_wong-urban_love-from-void_neon-taxi-street",
+      "cf_15_wong-urban_every-multiverse_umbrella-neon-street",
+      "cf_12_tarsem-system_female-heroes_opera-dressing-room",
+      "cf_44_daniels-surreal_dear-stranger_paper-boat",
+      "cf_30_tsui-folk-cyber_the-court_red-robed-corridor",
+      "cf_48_tarsem-system_chanel-spec_gilded-hall-gown",
+      "cf_27_tsui-folk-cyber_one-blink_dragon-fireworks",
+      "cf_33_luhrmann-theatre_every-multiverse_clock-ballerina",
+      "cf_38_speed-racer-digital_culture-pop-soda_pink-muscle-car",
+      "cf_01_ninagawa-colour_dear-stranger_red-flower-forest"
+    ]);
+    const stills = (JL.all || []).filter(f => SHARP.has(f.key));
+    // Official YouTube covers first (skip near-blank thumbs)
+    const SKIP_COVER = new Set(["ytcover_3J828r-yIPg","ytcover_69mPtlYtkbg","ytcover_g1yAfNW_qW0"]);
+    const covers = (JL.covers || []).filter(c => !SKIP_COVER.has(c.key));
     const pool = [];
     const used = new Set();
     const push = it => { if (!it || used.has(it.key)) return; used.add(it.key); pool.push(it); };
-    const covers = (JL.covers || []).slice();
-    const prefer = [
-      "cf_27_tsui-folk-cyber_one-blink_dragon-fireworks",
-      "cf_04_ninagawa-colour_dear-stranger_petal-field-heroine",
-      "cf_15_wong-urban_every-multiverse_umbrella-neon-street",
-      "cf_38_speed-racer-digital_culture-pop-soda_pink-muscle-car",
-      "cf_30_tsui-folk-cyber_the-court_red-robed-corridor",
-      "cf_08_ninagawa-colour_dear-stranger_blossom-sea",
-      "cf_43_daniels-surreal_dear-stranger_underwater-float",
-      "cf_48_tarsem-system_chanel-spec_gilded-hall-gown",
-      "cf_06_ninagawa-colour_culture-pop-soda_neon-girl-group",
-      "cf_33_luhrmann-theatre_every-multiverse_clock-ballerina",
-      "cf_01_ninagawa-colour_dear-stranger_red-flower-forest",
-      "cf_21_wong-urban_girls_neon-crowd",
-      "cf_16_wong-urban_dear-stranger_neon-city-night",
-      "cf_49_tarsem-system_dear-stranger_red-carpet-gown",
-      "cf_40_gilliam-absurd_what-if-mother_scarlet-studio",
-      "cf_07_ninagawa-colour_love-from-void_goldfish-swarm"
-    ].map(k => JL.all.find(f => f.key === k)).filter(Boolean);
-    // round-robin: cover → still → (clip every 3rd) so fronts stay sharp & varied
+    // Interleave: cover → sharp still → (clip sparingly) so front stays crisp
     let ci = 0, fi = 0, vi = 0, tick = 0;
-    const N = small ? 8 : 12;
-    while (pool.length < N * 2 + 4) {
+    const N = small ? 9 : 12;
+    while (pool.length < N) {
       if (tick % 3 === 0 && ci < covers.length) push(covers[ci++]);
-      else if (tick % 3 === 1 && fi < prefer.length) push(prefer[fi++]);
-      else if (vi < clips.length) push(clips[vi++]);
+      else if (tick % 3 === 1 && fi < stills.length) push(stills[fi++]);
+      else if (tick % 5 === 4 && vi < clips.length) push(clips[vi++]);
       else if (ci < covers.length) push(covers[ci++]);
-      else if (fi < prefer.length) push(prefer[fi++]);
+      else if (fi < stills.length) push(stills[fi++]);
+      else if (vi < clips.length) push(clips[vi++]);
       else break;
       tick++;
     }
-    JL.all.forEach(push);
     covers.forEach(push);
+    stills.forEach(push);
     const items = pool.slice(0, N);
-    const backs = pool.slice(N, N * 2);
-    while (backs.length < N) backs.push(pool[backs.length % pool.length]);
 
     let cw, ch, R, step;
     const cards = [];
     function layout(){
       const w = innerWidth, h = home.clientHeight || innerHeight;
       if (small) {
-        cw = Math.min(w * .78, h * .42); ch = cw * 9 / 16;
-        home.style.setProperty("--persp", Math.round(w * 2.0) + "px");
-        home.style.setProperty("--push", Math.round(-Math.min(w, h) * .06) + "px");
-        home.style.setProperty("--tilt", "-8deg");
+        cw = Math.min(w * .62, h * .30); ch = cw * 9 / 16;
+        home.style.setProperty("--persp", Math.round(w * 2.6) + "px");
+        home.style.setProperty("--push", Math.round(-Math.min(w, h) * .03) + "px");
+        home.style.setProperty("--tilt", "-12deg");
       } else {
-        // readable front: large 16:9, mild depth
-        cw = Math.min(w * .52, h * .58); ch = cw * 9 / 16;
-        home.style.setProperty("--persp", "1800px");
-        home.style.setProperty("--push", "-60px");
-        home.style.setProperty("--tilt", "-10deg");
+        // v5 clarity: smaller cards, larger ring hole so title + frames both read
+        cw = Math.min(w * .26, h * .30); ch = cw * 9 / 16;
+        home.style.setProperty("--persp", "2200px");
+        home.style.setProperty("--push", "-20px");
+        home.style.setProperty("--tilt", "-14deg");
       }
       home.style.setProperty("--cw", cw.toFixed(1) + "px");
       home.style.setProperty("--ch", ch.toFixed(1) + "px");
+      home.style.setProperty("--roll", "0deg");
       step = 360 / N;
-      const raw = (cw * .5) / Math.tan(Math.PI / N) + cw * (small ? .08 : .12);
-      R = Math.min(raw, h * (small ? .28 : .32));
+      // force a generous radius so the ring has an open center
+      const raw = (cw * .5) / Math.tan(Math.PI / N) + cw * (small ? .35 : .55);
+      R = Math.max(raw, h * (small ? .34 : .42));
+      R = Math.min(R, h * (small ? .40 : .48));
       cards.forEach((c, i) => {
-        c.base = "rotateY(" + (i * step).toFixed(3) + "deg) translateZ(" + R.toFixed(1) + "px)";
-        c.el.style.transform = c.base;
+        c.ang0 = i * step;
         c._xf = null;
       });
     }
-    function makeFace(it, cls){
-      const f = document.createElement("div"); f.className = "face" + (cls ? " " + cls : "");
+    function makeFace(it){
+      const f = document.createElement("div"); f.className = "face";
       if (it.video) {
         const v = document.createElement("video");
         v.muted = true; v.defaultMuted = true; v.loop = true; v.playsInline = true;
@@ -3480,11 +3466,11 @@ window.JL2={
     }
     items.forEach((it, i) => {
       const el = document.createElement("div"); el.className = "card";
-      const front = makeFace(it, "");
+      const front = makeFace(it);
       el.appendChild(front);
-      el._it = it; el._front = front; el._back = null;
+      el._it = it; el._front = front;
       carousel.appendChild(el);
-      cards.push({ el, it, i, ang: i * (360 / N), base: "" });
+      cards.push({ el, it, i, base: "" });
       el.addEventListener("pointerenter", () => { if (!touch) { hoverPause = true; setHot(el); } });
       el.addEventListener("pointerleave", () => { if (!touch) { hoverPause = false; if (hot === el) setHot(null); } });
       el.addEventListener("click", e => {
@@ -3499,8 +3485,7 @@ window.JL2={
 
     let rot = 0, vel = 0, dragging = false, lx = 0, ly = 0, moved = 0, hoverPause = false;
     let mx = innerWidth / 2, my = innerHeight / 2;
-    let hot = null, frontEl = null, frontIdx = 0;
-    let roll = 0, tiltNudge = 0;
+    let hot = null, frontEl = null;
     function setHot(el){
       if (hot === el) return;
       if (hot) hot.classList.remove("hot");
@@ -3509,35 +3494,28 @@ window.JL2={
       const it = hot ? hot._it : (frontEl && frontEl._it);
       if (cap) cap.innerHTML = it ? "<b>●</b>&nbsp; " + capOf(it) : "";
     }
-    function nearFront(el){
-      const i = cards.find(c => c.el === el).i;
-      let a = ((i * step + rot) % 360 + 360) % 360;
-      if (a > 180) a -= 360;
-      return Math.abs(a) < 90;
-    }
     function setFront(){
-      let best = null, ba = 1e9, bi = 0;
+      let best = null, ba = 1e9;
       cards.forEach(c => {
-        let a = ((c.i * step + rot) % 360 + 360) % 360;
-        if (a > 180) a -= 360;
-        const aa = Math.abs(a);
-        if (aa < ba) { ba = aa; best = c.el; bi = c.i; }
-        // ONLY front half of ring visible — hide far side so nothing ghosts through
-        const o = aa > 95 ? 0 : (.72 + .28 * Math.max(0, 1 - aa / 95));
-        if (c._o !== o) {
-          c.el.style.opacity = o.toFixed(2);
-          c.el.style.visibility = o < .05 ? "hidden" : "visible";
-          c._o = o;
-        }
-        const t = Math.max(0, 1 - aa / 100);
-        const sc = small ? (.96 + .28 * t) : (.92 + .28 * t); // front ~1.2×
-        const sk = (a / 90) * (small ? .6 : 1.0);
-        const zBoost = (small ? 28 : 56) * t;
-        const xf = c.base + " translateZ(" + zBoost.toFixed(1) + "px) rotateZ(" + sk.toFixed(2) + "deg) scale(" + sc.toFixed(3) + ")";
+        // world angle around ring
+        let a = ((c.ang0 + rot) % 360 + 360) % 360;
+        let signed = a > 180 ? a - 360 : a;
+        const aa = Math.abs(signed);
+        if (aa < ba) { ba = aa; best = c.el; }
+        // Billboard: sit on circle, then counter-rotate so every face looks at camera.
+        // Full opaque ring — depth from perspective only (no blur / no ghost opacity).
+        const frontness = Math.max(0, 1 - aa / 180);
+        const sc = small ? (.86 + .22 * frontness) : (.82 + .24 * frontness);
+        const xf = "rotateY(" + (c.ang0).toFixed(3) + "deg) translateZ(" + R.toFixed(1) + "px) rotateY(" + (-c.ang0 - rot).toFixed(3) + "deg) scale(" + sc.toFixed(3) + ")";
         if (c._xf !== xf) { c.el.style.transform = xf; c._xf = xf; }
-        // HARD RULE: never blur
-        if (c._flt) { c.el.style.filter = ""; c._flt = ""; }
-        const vis = aa < 85;
+        // Soft dim only on the far side (still fully opaque — no stacking blend)
+        const bright = .55 + .45 * frontness;
+        const flt = "brightness(" + bright.toFixed(2) + ")";
+        if (c._flt !== flt) { c.el.style.filter = flt; c._flt = flt; }
+        c.el.style.opacity = "1";
+        c.el.style.visibility = "visible";
+        c.el.style.zIndex = String(Math.round(frontness * 100));
+        const vis = aa < 95;
         const f = c.el._front;
         if (f && f._v) {
           if (vis && f._v.paused) f._v.play().catch(()=>{});
@@ -3546,14 +3524,9 @@ window.JL2={
       });
       if (frontEl !== best) {
         if (frontEl) frontEl.classList.remove("front");
-        frontEl = best; frontIdx = bi;
+        frontEl = best;
         if (frontEl) frontEl.classList.add("front");
         if (!hot && cap) cap.innerHTML = frontEl ? "<b>●</b>&nbsp; " + capOf(frontEl._it) : "";
-      }
-      if (hidx) hidx.textContent = String(frontIdx + 1).padStart(2, "0") + " / " + String(N).padStart(2, "0");
-      if (hang) {
-        let deg = ((rot % 360) + 360) % 360;
-        hang.textContent = "ROT " + deg.toFixed(1) + "°";
       }
     }
     hooks.push(() => {
@@ -3561,7 +3534,6 @@ window.JL2={
       if (cap && it) cap.innerHTML = "<b>●</b>&nbsp; " + capOf(it);
     });
 
-    // pointer drag / swipe — wilder sensitivity + vertical roll
     stage.addEventListener("pointerdown", e => {
       dragging = true; moved = 0; lx = e.clientX; ly = e.clientY; vel = 0;
       home.classList.add("grab");
@@ -3570,91 +3542,45 @@ window.JL2={
     stage.addEventListener("pointermove", e => {
       mx = e.clientX; my = e.clientY;
       if (!dragging) return;
-      const dx = e.clientX - lx, dy = e.clientY - ly; lx = e.clientX; ly = e.clientY; moved += Math.abs(dx) + Math.abs(dy) * .3;
-      const d = dx * (small ? .22 : .16);
-      rot += d; vel = d * .85;
-      roll += dy * .006;
-      roll = Math.max(-4, Math.min(4, roll));
-      tiltNudge += dy * .004;
-      tiltNudge = Math.max(-3, Math.min(3, tiltNudge));
+      const dx = e.clientX - lx; lx = e.clientX; ly = e.clientY; moved += Math.abs(dx);
+      const d = dx * (small ? .18 : .12);
+      rot += d; vel = d * .7;
     });
     const endDrag = () => { dragging = false; home.classList.remove("grab"); };
     stage.addEventListener("pointerup", endDrag);
     stage.addEventListener("pointercancel", endDrag);
     home.addEventListener("pointermove", e => { mx = e.clientX; my = e.clientY; }, { passive: true });
-    // wheel spins hard
     home.addEventListener("wheel", e => {
-      const s = (e.deltaY + e.deltaX) * .045;
-      rot += s; vel = s * .35;
+      const s = (e.deltaY + e.deltaX) * .03;
+      rot += s; vel = s * .25;
     }, { passive: true });
 
     let prev = performance.now();
-    const AUTO_BASE = small ? 4.5 : 6.5; // deg / sec — calm readable spin
+    const AUTO_BASE = small ? 3.2 : 4.2; // calm readable spin
     function frame(now){
       const dt = Math.min(.05, (now - prev) / 1000); prev = now;
       if (!dragging) {
-        if (!RM && !hoverPause) {
-          // uneven auto: pulse + soft figure-8 wobble
-          const pulse = 1 + .18 * Math.sin(now * .0009);
-          rot += AUTO_BASE * pulse * dt;
-        }
+        if (!RM && !hoverPause) rot += AUTO_BASE * dt;
         if (!RM) {
           rot += vel;
-          vel *= .94;
+          vel *= .93;
           if (Math.abs(vel) < .002) vel = 0;
-          roll *= .97; tiltNudge *= .97;
         } else vel = 0;
       }
-      carousel.style.transform = "rotateY(" + rot.toFixed(3) + "deg)";
-      // scene reacts to pointer + velocity
-      if (scene && !RM) {
+      carousel.style.transform = "rotateY(0deg)"; // rot applied per-card (billboard)
+      // very gentle pointer tilt — no wild roll / glitch
+      if (scene && !RM && !small) {
         const nx = (mx / innerWidth) * 2 - 1;
         const ny = (my / innerHeight) * 2 - 1;
-        const r = roll + nx * 1.2 + vel * .12;
-        const t = (small ? -8 : -10) + tiltNudge + ny * -0.7;
-        home.style.setProperty("--roll", r.toFixed(2) + "deg");
-        home.style.setProperty("--tilt", t.toFixed(2) + "deg");
+        home.style.setProperty("--roll", (nx * 0.35).toFixed(2) + "deg");
+        home.style.setProperty("--tilt", (-14 + ny * -0.35).toFixed(2) + "deg");
       }
-      // glitch / RGB split on title driven by speed
-      const spd = Math.min(10, Math.abs(vel) * 8 + (dragging ? 1.5 : 0));
-      const glx = spd * .25;
-      const gly = spd * .1;
-      home.style.setProperty("--glx", glx.toFixed(2));
-      home.style.setProperty("--gly", gly.toFixed(2));
-      if (wordmarks.length && !RM) {
-        const sk = Math.max(-4, Math.min(4, vel * 1.6));
-        const sx = Math.sin(now * .001) * .6;
-        const sy = 0;
-        wordmarks.forEach(wm => {
-          if (wm.classList.contains("wm2")) {
-            wm.style.transform = "skewX(" + sk.toFixed(2) + "deg) translate(" + sx.toFixed(2) + "px," + sy.toFixed(2) + "px)";
-          } else {
-            wm.style.transform = "translate(-50%,-58%) translateZ(40px) skewX(" + sk.toFixed(2) + "deg) translateX(" + sx.toFixed(2) + "px)";
-          }
-          wm.style.filter = "";
-        });
-      }
-      // outline echo trails lag behind
-      if (echoes.length && !RM) {
-        echoes.forEach((sp, i) => {
-          const lag = (i + 1) * (1.8 + spd * .35);
-          const ox = -vel * lag * 2.2 + Math.sin(now * .001 + i) * (2 + i);
-          const oy = Math.cos(now * .0012 + i * .7) * (3 + i * 1.5) - spd * i * .4;
-          const sc = 1 + i * .012 + spd * .004;
-          sp.style.transform = "translate(calc(-50% + " + ox.toFixed(1) + "px), calc(-50% + " + oy.toFixed(1) + "px)) scale(" + sc.toFixed(3) + ") skewX(" + (vel * (i + 1) * .8).toFixed(2) + "deg)";
-          sp.style.opacity = String(Math.max(.06, .28 - i * .07));
-        });
-      }
-      // HUD
-      if (hx) hx.textContent = "X " + String(Math.round(mx)).padStart(4, "0");
-      if (hy) hy.textContent = "Y " + String(Math.round(my)).padStart(4, "0");
-      if (hv) hv.textContent = "VEL " + (vel >= 0 ? "+" : "") + vel.toFixed(2);
       setFront();
       requestAnimationFrame(frame);
     }
     requestAnimationFrame(frame);
     document.addEventListener("touchstart", () => {
-      cards.forEach(c => { [c.el._front, c.el._back].forEach(f => f && f._v && f._v.play().catch(()=>{})); });
+      cards.forEach(c => { const f = c.el._front; if (f && f._v) f._v.play().catch(()=>{}); });
     }, { once: true, passive: true });
     setFront();
   }
