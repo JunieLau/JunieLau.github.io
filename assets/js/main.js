@@ -345,6 +345,23 @@
     el.innerHTML = set.map((it, i) => '<a href="' + BASE + it.f + '" data-i="' + i + '" class="gi"><img src="' + BASE + it.t + '" alt="" loading="lazy" width="' + it.w + '" height="' + it.h + '"></a>').join("");
     el.addEventListener("click", e => { const a = e.target.closest(".gi"); if (!a) return; e.preventDefault(); viewImg(set, +a.dataset.i); });
   });
+  /* Commercial: one uniform 16:9 grid, newest → oldest */
+  $$(".cgrid[data-c]").forEach(el => {
+    const list = J2[el.dataset.c] || [];
+    hooks.push(() => {
+      el.innerHTML = "";
+      list.forEach((v, n) => {
+        const ext = !v.yt;
+        const a = document.createElement(ext ? "a" : "article"); a.className = "vc cc";
+        if (ext) { a.href = v.u; a.target = "_blank"; a.rel = "noopener"; }
+        const sub = ZH() ? v.s_zh : v.s;
+        a.innerHTML = '<div class="th"><img src="' + BASE + v.img + '" alt="' + esc(v.t) + '" loading="lazy" width="960" height="540">' + (ext ? '<span class="pl ex"><i></i></span>' : '<span class="pl"><i></i></span>') + '</div>' +
+          '<h3 title="' + esc(v.t) + '"><b>' + String(n + 1).padStart(2, "0") + '</b><span>' + esc(v.t) + '</span></h3><p><span>' + esc(sub) + (ext ? ' ↗' : '') + '</span><em>' + esc(v.y || "") + '</em></p>';
+        if (!ext) a.addEventListener("click", () => play(v.yt, v.t, 0, v.vimeo));
+        el.appendChild(a);
+      });
+    });
+  });
   const xpc = $(".xpc");
   if (xpc) xpc.innerHTML = (J2.xpc || []).map((x, n) => '<a class="xc" href="' + x.u + '" target="_blank" rel="noopener"><div class="th"><img src="' + BASE + x.img + '" alt="" loading="lazy"></div><h3><b>' + String(n + 1).padStart(2, "0") + '</b>' + esc(x.t) + '</h3><p>新片场 Xinpianchang ↗</p></a>').join("");
   $$(".lw[data-l]").forEach(el => {
