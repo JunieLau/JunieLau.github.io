@@ -373,13 +373,19 @@
       const L = J2.press || [], f = L[0];
       const yr = p => (p.d || "").slice(0, 4) || "—";
       const years = [...new Set(L.slice(1).map(yr))];
-      const row = p => '<a class="pr" href="' + p.u + '" target="_blank" rel="noopener"><span class="d">' + esc(p.d || "—") + '</span><span class="o">' + esc(p.o) + '</span><span class="tt">' + esc(p.t) + '</span><span class="lt">' + esc(p.l) + '</span><span class="ar">↗</span></a>';
-      pl.innerHTML = '<a class="feat" href="' + f.u + '" target="_blank" rel="noopener"><span class="k">' + T("Featured", "专题报道") + ' · ' + esc(f.o) + ' · ' + esc(f.d) + '</span><h3>' + esc(f.t) + '</h3><span class="more">' + T("Read on Forbes ↗", "阅读全文 ↗") + '</span></a>' +
+      const row = p => '<a class="pr" href="' + p.u + '" target="_blank" rel="noopener"><span class="d">' + esc(p.d || "—") + '</span><span class="o">' + esc(p.o) + '</span><span class="tt">' + esc(ZH() && p.t_zh ? p.t_zh : p.t) + '</span><span class="lt">' + esc(p.l) + '</span><span class="ar">↗</span></a>';
+      pl.innerHTML = '<a class="feat" href="' + f.u + '" target="_blank" rel="noopener"><span class="k">' + T("Featured", "专题报道") + ' · ' + esc(f.o) + ' · ' + esc(f.d) + '</span><h3>' + esc(ZH() && f.t_zh ? f.t_zh : f.t) + '</h3><span class="more">' + T("Read on Forbes ↗", "阅读全文 ↗") + '</span></a>' +
         years.map(y => '<h3 class="py" id="y' + y + '">' + y + '</h3>' + L.slice(1).filter(p => yr(p) === y).map(row).join("")).join("");
       if (side) side.innerHTML = '<p class="k">' + T("Index", "索引") + '</p>' + years.map(y => '<a href="#y' + y + '">' + y + ' <i>' + L.slice(1).filter(p => yr(p) === y).length + '</i></a>').join("") +
         '<p class="k">' + T("Outlets", "媒体") + '</p><ul>' + [...new Set(L.map(p => p.o.split(" (")[0]))].map(o => '<li>' + esc(o) + '</li>').join("") + '</ul>';
     });
   }
+  /* press videos: click-to-play covers → inline youtube-nocookie embed */
+  $$(".pvid .player").forEach(pv => pv.addEventListener("click", () => {
+    if (pv.classList.contains("on")) return;
+    pv.classList.add("on");
+    pv.insertAdjacentHTML("beforeend", '<iframe src="' + ytURL(pv.dataset.yt) + '" title="' + esc(pv.dataset.t || "") + '" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>');
+  }));
   /* work-with-Junie form: calm thank-you after FormSubmit redirect (?sent=1) */
   const sent = $(".wwj .sent");
   if (sent && /[?&]sent=1\b/.test(location.search)) { sent.hidden = false; const f = $(".wwj .wf"); if (f) f.hidden = true; }
