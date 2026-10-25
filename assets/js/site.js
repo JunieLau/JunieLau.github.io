@@ -2025,5 +2025,142 @@ window.JL2={
 "u": "https://www.xiaohongshu.com/user/profile/5be2345ada307000018d1449",
 "i": "social/xiaohongshu.png"
 }
+],
+"comAll": [
+{
+"t": "Pump Up",
+"s": "Akini Jing · Official music video",
+"s_zh": "Akini Jing · 官方音乐录像",
+"d": "2023-03-20",
+"y": "2023",
+"yt": "grEYQfd7uv0",
+"img": "yt/grEYQfd7uv0.jpg"
+},
+{
+"t": "realmeow",
+"s": "Global premiere",
+"s_zh": "全球首映",
+"d": "2020-12-15",
+"y": "2020",
+"yt": "D6DibTrxalE",
+"img": "yt/D6DibTrxalE_hd.jpg"
+},
+{
+"t": "CadillacXT6 x 谷爱凌｜所有的伟大 源于一个勇敢的开始",
+"s": "Brand film · Xinpianchang",
+"s_zh": "品牌影片 · 新片场",
+"d": "2022-01",
+"y": "2022",
+"u": "https://www.xinpianchang.com/a11697885",
+"img": "old/campaign_03.jpg"
+},
+{
+"t": "福特电马 | 电力澎湃，野性不改",
+"s": "Brand film · Xinpianchang",
+"s_zh": "品牌影片 · 新片场",
+"d": "2021-11-19",
+"y": "2021",
+"u": "https://www.xinpianchang.com/a11622846",
+"img": "old/campaign_02.jpg"
+},
+{
+"t": "明日创作计划 7Z",
+"s": "Brand film · Xinpianchang",
+"s_zh": "品牌影片 · 新片场",
+"d": "2021-10-16T17:41",
+"y": "2021",
+"u": "https://www.xinpianchang.com/a11563687",
+"img": "old/campaign_05.jpg"
+},
+{
+"t": "明日创作计划 蒋先贵",
+"s": "Brand film · Xinpianchang",
+"s_zh": "品牌影片 · 新片场",
+"d": "2021-10-16T17:37",
+"y": "2021",
+"u": "https://www.xinpianchang.com/a11563686",
+"img": "old/campaign_04.jpg"
+},
+{
+"t": "明日创作计划 钟易轩",
+"s": "Brand film · Xinpianchang",
+"s_zh": "品牌影片 · 新片场",
+"d": "2021-10-16T17:33",
+"y": "2021",
+"u": "https://www.xinpianchang.com/a11563684",
+"img": "old/campaign_07.jpg"
+},
+{
+"t": "明日创作计划 庄主恒",
+"s": "Brand film · Xinpianchang",
+"s_zh": "品牌影片 · 新片场",
+"d": "2021-10-16T17:30",
+"y": "2021",
+"u": "https://www.xinpianchang.com/a11563683",
+"img": "old/campaign_06.jpg"
+},
+{
+"t": "Dior迪奥水光气垫｜王子文",
+"s": "Brand film · Xinpianchang",
+"s_zh": "品牌影片 · 新片场",
+"d": "2021-09-09",
+"y": "2021",
+"u": "https://www.xinpianchang.com/a11496705",
+"img": "old/campaign_08.jpg"
+},
+{
+"t": "LONGUN | 松下 × 蔡徐坤",
+"s": "Brand film · Xinpianchang",
+"s_zh": "品牌影片 · 新片场",
+"d": "2021-08-27",
+"y": "2021",
+"u": "https://www.xinpianchang.com/a11476819",
+"img": "old/campaign_10.jpg"
+},
+{
+"t": "COLORKEY X 迪丽热巴｜「黑缎」唇釉",
+"s": "Brand film · Xinpianchang",
+"s_zh": "品牌影片 · 新片场",
+"d": "2021-05-26",
+"y": "2021",
+"u": "https://www.xinpianchang.com/a11312122",
+"img": "old/campaign_09.jpg"
+},
+{
+"t": "OPPO Reno6 《Every Emotion in Portrait》",
+"s": "Commercial",
+"s_zh": "广告",
+"d": "2021-05-27",
+"y": "2021",
+"yt": "d_4anpR65YQ",
+"img": "yt/d_4anpR65YQ.jpg"
+},
+{
+"t": "迪丽热巴 奶茶旅拍 Nacaphoto",
+"s": "Commercial",
+"s_zh": "广告",
+"d": "2020-10-09",
+"y": "2020",
+"yt": "g1yAfNW_qW0",
+"img": "yt/g1yAfNW_qW0_hd.jpg"
+},
+{
+"t": "ONEPLUS TV 一加电视画质展示片",
+"s": "Brand film · Xinpianchang",
+"s_zh": "品牌影片 · 新片场",
+"d": "2021-08-04",
+"y": "2021",
+"u": "https://www.xinpianchang.com/a11440638",
+"img": "old/campaign_12.jpg"
+},
+{
+"t": "战神遗迹 x 陈赫：魔王降世",
+"s": "Brand film · Xinpianchang",
+"s_zh": "品牌影片 · 新片场",
+"d": "2021-05-27T09",
+"y": "2021",
+"u": "https://www.xinpianchang.com/a11312536",
+"img": "old/campaign_11.jpg"
+}
 ]
 };
