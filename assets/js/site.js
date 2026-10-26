@@ -370,13 +370,6 @@ window.JL2={
 "img": "yt/zQuUoXeMQ38.jpg"
 },
 {
-"yt": "69mPtlYtkbg",
-"t": "Visual Pain",
-"s": "",
-"s_zh": "",
-"img": "yt/69mPtlYtkbg.jpg"
-},
-{
 "vimeo": "387422088",
 "t": "Love·Lord·Minister [Official Trailer]",
 "s": "Official trailer · Vimeo · 2020",
@@ -389,6 +382,13 @@ window.JL2={
 "s": "Documentary trailer · Vimeo · 2019",
 "s_zh": "纪录片预告片 · Vimeo · 2019",
 "img": "vimeo/349053096.jpg"
+},
+{
+"yt": "69mPtlYtkbg",
+"t": "Visual Pain",
+"s": "",
+"s_zh": "",
+"img": "yt/69mPtlYtkbg.jpg"
 }
 ],
 "prodImgs": [
