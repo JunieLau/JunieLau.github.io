@@ -118,7 +118,7 @@
     if (bgHost && !document.getElementById("jl-ring-css")) document.head.insertAdjacentHTML("beforeend", '<style id="jl-ring-css">.bgx .still img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;opacity:0;transition:opacity ' + BGFADE + 'ms ease-in-out;will-change:opacity;transform:translateZ(0)}.bgx .still img.on{opacity:1}.p-home .rail.tight a{padding-top:3px;padding-bottom:3px}.rc .dm{position:absolute;inset:calc(-2px * var(--ek));background:#000;opacity:0;pointer-events:none;will-change:opacity}</style>');
     const bgCache = {};
     const bgImg = src => bgCache[src] || (bgCache[src] = new Promise(res => {
-      const im = new Image(), ok = () => res(im); im.alt = ""; im.src = BASE + src;
+      const im = new Image(), ok = () => res(im); im.alt = ""; im.decoding = "async"; im.src = BASE + src;
       (im.decode ? im.decode() : Promise.reject()).then(ok, () => { if (im.complete && im.naturalWidth) ok(); else { im.onload = ok; im.onerror = () => res(null); } });
     }));
     let bgW = null, bgI = 0, bgTok = 0, bgT = 0, bgD = 0, bgTop = null;
@@ -131,27 +131,35 @@
     });
     const bgCycle = tok => {
       const L = bgList(bgW); if (L.length < 2 || RM) return;
-      bgImg(L[(bgI + 1) % L.length]);                                /* decode the next still during the dwell */
+      setTimeout(() => { if (tok === bgTok) bgImg(L[(bgI + 1) % L.length]); }, 1200);   /* next still decodes after the opening burst, still inside the dwell */
       bgT = setTimeout(() => { if (tok !== bgTok) return; bgI = (bgI + 1) % L.length; bgShow(L[bgI], tok).then(() => { if (tok === bgTok) bgCycle(tok); }); }, BGDWELL + BGFADE);
     };
+    /* hold the multi‑megapixel backdrop until the ring's first frames have painted */
+    let bgHold = true, bgPending = null;
     const BGX = w => {
-      if (!bgHost || w === bgW) return;
+      if (!bgHost || !w) return;
+      if (bgHold) { bgPending = w; return; }
+      if (bgW && bgW.p && w.p && bgW.p.id === w.p.id) { bgW = w; return; }   /* full film and trailer share one still set */
+      if (w === bgW) return;
       bgW = w; const tok = ++bgTok; clearTimeout(bgT); clearTimeout(bgD);
       const L = bgList(w); fold.classList.toggle("bg-cov", L[0] === w.p.img);   /* covers carry title type: dim a little more */
       const go = () => {
         if (tok !== bgTok) return; bgI = 0;
         bgShow(L[0], tok).then(() => { if (tok === bgTok) bgCycle(tok); });
-        const k = W.indexOf(w); [1, -1].forEach(d => bgImg(bgList(W[(k + d + W.length) % W.length])[0]));   /* warm the neighbours */
+        setTimeout(() => { if (tok !== bgTok) return; const k = W.indexOf(w); [1, -1].forEach(d => bgImg(bgList(W[(k + d + W.length) % W.length])[0])); }, 1400);
       };
       bgTop ? (bgD = setTimeout(go, 140)) : go();                  /* fast spins skip the works flying past */
     };
+    const releaseBg = () => { if (!bgHold) return; bgHold = false; const w = bgPending; bgPending = null; if (w) BGX(w); };
+    setTimeout(releaseBg, 800);
     const ACC = ["#ff4f8b", "#ffc531", "#13c8a4", "#ff3dd2", "#ff8a00", "#7b5cff"];
     const W = videoEntries(P).map((e, i) => ({ p: e.p, href: e.href, kind: e.kind, img: BASE + e.img, col: ACC[i % ACC.length] })); /* newest → oldest; trailer keeps its own cover */
     const N = W.length, STEP = 360 / N;
+    const eager = new Set([0, 1, N - 1]);   /* front cover and its two neighbours paint first; the rest follow so decode does not land in one frame */
     const cards = W.map((w, i) => {
       const a = document.createElement("a"); a.className = "rc"; a.href = w.href;
       a.style.setProperty("--c", w.col);
-      a.innerHTML = '<img src="' + w.img + '" alt="" draggable="false" width="1280" height="720"><b class="no">' + String(i + 1).padStart(2, "0") + '</b><span class="dm"></span><span class="lb2"><i></i><em>' + w.p.year + '</em></span>';
+      a.innerHTML = '<img alt="" draggable="false" decoding="async" fetchpriority="' + (i === 0 ? "high" : "low") + '" width="1280" height="720"' + (eager.has(i) ? ' src="' + w.img + '"' : ' data-src="' + w.img + '"') + '><b class="no">' + String(i + 1).padStart(2, "0") + '</b><span class="dm"></span><span class="lb2"><i></i><em>' + w.p.year + '</em></span>';
       a.addEventListener("pointerdown", e => { ptype = e.pointerType; });
       a.addEventListener("click", e => {
         if (moved > 6) { e.preventDefault(); return; }
@@ -160,8 +168,12 @@
       });
       a.addEventListener("pointerenter", e => { if (e.pointerType === "mouse") { hover = i; idle = performance.now(); } });
       a.addEventListener("pointerleave", e => { if (e.pointerType === "mouse" && hover === i) hover = -1; });
-      ringEl.appendChild(a);
       return { el: a, dm: $(".dm", a), i, ang0: i * STEP, k: 1 };
+    });
+    cards.forEach((c, i) => {
+      if (eager.has(i)) return;
+      const im = c.el.querySelector("img");
+      setTimeout(() => { im.src = im.dataset.src; }, 90 + i * 40);
     });
     function labels(){ cards.forEach(c => { const w = W[c.i], k = kindLabel(w); $("i", c.el).textContent = pTitle(w.p) + (k ? " — " + k : ""); }); }
     const ENL = 1.7, DPR = Math.max(1, window.devicePixelRatio || 1), SRCW = 1280;   // official maxres covers are 1280 px wide
@@ -287,7 +299,9 @@
       if (rail.getBoundingClientRect().top - fb.top < minTop) { rail.style.top = minTop + "px"; rail.style.transform = "none"; }
       if (ct && rail.getBoundingClientRect().bottom > ct.getBoundingClientRect().top - 10) rail.classList.add("tight");   /* short screens: slimmer rows */
     }
-    layout(); renderRail(); place(); fitRail(); requestAnimationFrame(frame);
+    layout();
+    cards.forEach(c => ringEl.appendChild(c.el));
+    renderRail(); place(); fitRail(); requestAnimationFrame(frame);
     if (small && document.fonts && document.fonts.ready) document.fonts.ready.then(() => { layout(); cards.forEach(c => c._xf = null); });
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitRail);
     let rT; addEventListener("resize", () => { clearTimeout(rT); rT = setTimeout(() => { layout(); fitRail(); cards.forEach(c => c._xf = null); }, 120); });
