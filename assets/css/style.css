@@ -88,6 +88,10 @@ main{padding-top:var(--tb)}
 .tile .tw{font:400 clamp(48px,6.4vw,104px)/.9 var(--serif);color:#fff;align-self:flex-start;background:var(--ink);padding:4px 16px 12px 12px}
 .tile:nth-child(6n+1) .tw{color:var(--red)}.tile:nth-child(6n+2) .tw{color:var(--gold)}.tile:nth-child(6n+3) .tw{color:var(--jade)}.tile:nth-child(6n+4) .tw{color:var(--pink)}.tile:nth-child(6n+5) .tw{color:var(--paper)}.tile:nth-child(6n) .tw{color:var(--mag)}
 .tile .ts{font:500 11px/1 var(--mono);text-transform:uppercase;background:var(--paper);color:var(--ink);padding:7px 9px;align-self:flex-start}
+/* home Forbes uses the Press feature composition; the translation note stays Chinese-only */
+.hf{border-top:1px solid #2a1a1a}
+.hf .fx-note{display:none}
+.is-zh .hf .fx-note{display:block}
 /* =========== page bands =========== */
 .band{position:relative;padding:clamp(28px,5vw,64px) var(--pad) clamp(22px,3vw,40px);color:var(--ink);overflow:hidden}
 .c-red{background:var(--red)}.c-gold{background:var(--gold)}.c-jade{background:var(--jade)}.c-pink{background:var(--pink)}.c-paper{background:var(--paper)}
@@ -326,9 +330,7 @@ main{padding-top:var(--tb)}
 /* ---------- HOME backdrop — sharp full-bleed still of the front work, dimmed (never blurred) ---------- */
 .bgx{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
 .bgx i{position:absolute;inset:0;display:block}
-.bgx .still{background:var(--ink) url("../bg2/blink-3-1920.jpg") center 40%/cover no-repeat}
-@media (max-width:760px) and (orientation:portrait){.bgx .still{background-image:url("../bg2/blink-3-m.jpg")}}
-@media (min-width:761px) and (min-resolution:1.5dppx){.bgx .still{background-image:url("../bg2/blink-3-3840.jpg")}}
+.bgx .still{background:var(--ink)}
 .bgx .shade{background:radial-gradient(ellipse 75% 60% at 50% 62%,rgba(11,6,6,.34),rgba(11,6,6,.56) 100%),linear-gradient(180deg,rgba(11,6,6,.42) 0%,rgba(11,6,6,0) 28%,rgba(11,6,6,0) 72%,rgba(11,6,6,.38) 100%)}
 .bgx .shade::after{content:"";position:absolute;inset:0;opacity:.09;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E")} /* fine static grain: dithers banding in dark gradients */
 .fold.bg-cov .bgx .shade{background-color:rgba(11,6,6,.3)}
