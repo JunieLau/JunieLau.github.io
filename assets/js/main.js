@@ -118,12 +118,12 @@
     const bgList = w => (BGSET[w.p.id] || []).map(bgSrc).concat(BGSET[w.p.id] ? [] : [w.p.img]);
     if (bgHost && !document.getElementById("jl-ring-css")) document.head.insertAdjacentHTML("beforeend", '<style id="jl-ring-css">.bgx .still img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;opacity:0;transition:opacity ' + BGFADE + 'ms ease-in-out;will-change:opacity;transform:translateZ(0)}.bgx .still img.on{opacity:1}.p-home .rail.tight a{padding-top:3px;padding-bottom:3px}.rc .dm{position:absolute;inset:calc(-2px * var(--ek));background:#000;opacity:0;pointer-events:none;will-change:opacity}</style>');
     const bgCache = {};
-    const bgImg = src => bgCache[src] || (bgCache[src] = new Promise(res => {
-      const im = new Image(), ok = () => res(im); im.alt = ""; im.decoding = "async"; im.src = BASE + src;
+    const bgImg = (src, pri) => bgCache[src] || (bgCache[src] = new Promise(res => {
+      const im = new Image(), ok = () => res(im); im.alt = ""; im.decoding = "async"; if (pri) im.fetchPriority = pri; im.src = BASE + src;
       (im.decode ? im.decode() : Promise.reject()).then(ok, () => { if (im.complete && im.naturalWidth) ok(); else { im.onload = ok; im.onerror = () => res(null); } });
     }));
     let bgW = null, bgI = 0, bgTok = 0, bgT = 0, bgD = 0, bgTop = null;
-    const bgShow = (src, tok) => bgImg(src).then(im => {
+    const bgShow = (src, tok, pri) => bgImg(src, pri).then(im => {
       if (!im || tok !== bgTok || im === bgTop) return;
       im.classList.remove("on"); bgHost.appendChild(im);           /* newest layer on top, old one stays opaque underneath */
       requestAnimationFrame(() => requestAnimationFrame(() => im.classList.add("on")));
@@ -132,27 +132,22 @@
     });
     const bgCycle = tok => {
       const L = bgList(bgW); if (L.length < 2 || RM) return;
-      setTimeout(() => { if (tok === bgTok) bgImg(L[(bgI + 1) % L.length]); }, 1200);   /* next still decodes after the opening burst, still inside the dwell */
+      setTimeout(() => { if (tok === bgTok) bgImg(L[(bgI + 1) % L.length], "low"); }, 1200);   /* next still decodes after the opening burst, still inside the dwell */
       bgT = setTimeout(() => { if (tok !== bgTok) return; bgI = (bgI + 1) % L.length; bgShow(L[bgI], tok).then(() => { if (tok === bgTok) bgCycle(tok); }); }, BGDWELL + BGFADE);
     };
-    /* hold the multi‑megapixel backdrop until the ring's first frames have painted */
-    let bgHold = true, bgPending = null;
     const BGX = w => {
       if (!bgHost || !w) return;
-      if (bgHold) { bgPending = w; return; }
       if (bgW && bgW.p && w.p && bgW.p.id === w.p.id) { bgW = w; return; }   /* full film and trailer share one still set */
       if (w === bgW) return;
       bgW = w; const tok = ++bgTok; clearTimeout(bgT); clearTimeout(bgD);
       const L = bgList(w); fold.classList.toggle("bg-cov", L[0] === w.p.img);   /* covers carry title type: dim a little more */
       const go = () => {
         if (tok !== bgTok) return; bgI = 0;
-        bgShow(L[0], tok).then(() => { if (tok === bgTok) bgCycle(tok); });
-        setTimeout(() => { if (tok !== bgTok) return; const k = W.indexOf(w); [1, -1].forEach(d => bgImg(bgList(W[(k + d + W.length) % W.length])[0])); }, 1400);
+        bgShow(L[0], tok, "high").then(() => { if (tok === bgTok) bgCycle(tok); });
+        setTimeout(() => { if (tok !== bgTok) return; const k = W.indexOf(w); [1, -1].forEach(d => bgImg(bgList(W[(k + d + W.length) % W.length])[0], "low")); }, 1400);
       };
       bgTop ? (bgD = setTimeout(go, 140)) : go();                  /* fast spins skip the works flying past */
     };
-    const releaseBg = () => { if (!bgHold) return; bgHold = false; const w = bgPending; bgPending = null; if (w) BGX(w); };
-    setTimeout(releaseBg, 800);
     const ACC = ["#ff4f8b", "#ffc531", "#13c8a4", "#ff3dd2", "#ff8a00", "#7b5cff"];
     const W = videoEntries(P).map((e, i) => ({ p: e.p, href: e.href, kind: e.kind, img: BASE + e.img, col: ACC[i % ACC.length] })); /* newest → oldest; trailer keeps its own cover */
     const N = W.length, STEP = 360 / N;
