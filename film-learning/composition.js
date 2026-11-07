@@ -4,23 +4,8 @@ const p=(z,e)=>pair(z,e,'p');
 const q=(z,e)=>pair(z,e,'p','composition-question');
 const note=(z,e,bz,be)=>`<div class="callout">${pair(z,e,'h3')}${p(bz,be)}</div>`;
 const check=items=>`<ul class="director-checklist">${items.map(t=>`<li>${pair(t[0],t[1])}</li>`).join('')}</ul>`;
-const figure=()=>'';
-const frame=()=>'';
-const diagrams={
- environment:frame('<path d="M25 135V46H93V135M108 135V25H175V135M200 135V60H258V135M281 135V35H332V135" fill="none" stroke="#409aba"/><path d="M18 137H342" stroke="#409aba"/>'+figure(184,133,.6)),
- plot:frame('<rect x="265" y="28" width="60" height="110" fill="none" stroke="#409aba"/><path d="M145 95h55m-15 0v13m-12-13v8" stroke="#409aba" stroke-width="5"/><circle cx="133" cy="95" r="13" fill="none" stroke="#409aba" stroke-width="5"/><path d="M72 93H107M211 93H249" stroke="#409aba" stroke-dasharray="4 5"/>'+figure(62,112,.7)),
- character:frame('<path d="M38 145H322" stroke="#409aba"/>'+figure(180,105,1.45)+'<path d="M153 48l12-4m30 0 12 4" stroke="#409aba" stroke-width="3"/><path d="M178 57h6" stroke="#409aba" stroke-width="2"/>'),
- mood:frame('<path d="M309 15L128 153H340Z" fill="none" opacity=".13"/><path d="M310 19L166 151" stroke="#409aba" opacity=".5"/>'+figure(152,123,.9,'#8b9875')+'<rect x="15" y="15" width="74" height="140" fill="none"/>'),
- theme:frame('<rect x="45" y="32" width="110" height="107" fill="none" stroke="#409aba"/><path d="M72 32V139M100 32V139M128 32V139" stroke="#409aba"/>'+figure(101,111,.8)+'<path d="M155 139C205 139 219 80 315 80" stroke="#409aba" fill="none"/><path d="M303 71L316 80L303 89" stroke="#409aba" fill="none"/>'),
- echo:frame('<path d="M244 65h65v65h-65z" fill="none" opacity=".65"/>'+figure(115,110,1.2)+'<path d="M43 143H321" stroke="#409aba"/>'),
- juxtaposition:frame('<path d="M235 37L320 130H235Z" fill="none" opacity=".9"/>'+figure(112,110,1.2)+'<path d="M43 143H321" stroke="#409aba"/>'),
- mirroring:frame(figure(150,111,1)+figure(202,111,1)+'<path d="M110 135H241" stroke="#409aba"/><path d="M150 50H202" stroke="#409aba" stroke-dasharray="3 5"/>'),
- unity:frame(figure(165,112,1,'#879a6b')+figure(186,112,1,'#c8ae7c')+'<ellipse cx="176" cy="97" rx="48" ry="53" stroke="#409aba" fill="none" stroke-dasharray="4 5"/>'),
- distance:frame(figure(65,113,1)+figure(294,113,1,'#879a6b')+'<path d="M106 95H253" stroke="#409aba" stroke-dasharray="4 5"/>'),
- repetition:frame(figure(58,113,.9)+figure(138,113,.9)+figure(218,113,.9)+figure(300,113,.9,'#879a6b')+'<path d="M27 140H333" stroke="#409aba"/>'),
- hero:frame(figure(180,108,1.2)+'<path d="M30 30h25m-25 0v25m300-25h-25m25 0v25M30 140h25m-25 0v-25m300 25h-25m25 0v-25" fill="none" stroke="#409aba"/>'),
- beginning:frame('<rect x="62" y="25" width="92" height="119" fill="none" stroke="#409aba"/><path d="M83 26V143M111 26V143M139 26V143" stroke="#409aba"/>'+figure(109,118,.8)+'<path d="M180 86H217M206 76L218 86L206 96" stroke="#409aba" fill="none"/>'+figure(280,118,.8)+'<path d="M237 145H328" stroke="#409aba"/>')
-};
+// Removed all former self-drawn frame/path generators; PDF stills are provided by editorial.js.
+const diagrams=Object.fromEntries(["environment", "plot", "character", "mood", "theme", "echo", "juxtaposition", "mirroring", "unity", "distance", "repetition", "hero", "beginning"].map(key=>[key,'']));
 const intentions=[
 ['environment','环境','Environment','背景语境','Context',
  '通过交代或隐藏空间，决定观众理解故事的起点。清楚展示环境有助于读懂行动；限制环境信息，也可以让我们与角色一起迷失。',

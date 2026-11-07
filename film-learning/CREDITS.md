@@ -234,3 +234,328 @@ Moved from visible lessons; these are research records, not additional lesson se
 - [Save the Cat! Goes to the Movies — At a Glance (PDF)](https://www.savethecat.com/wp-content/uploads/2013/11/STC-At-The-Movies-At-A-Glance.pdf)
 - [Phil Gyford — Reading Notes](https://www.gyford.com/phil/writing/2018/02/25/save-cat-blake-snyder/)
 - [SuperSummary — Chapters 6–8](https://www.supersummary.com/save-the-cat/chapters-6-8-summary/)
+
+
+## Compositional Intent overview
+
+© Film Reframed. English text transcribed from Junie’s supplied COMPOSITIONAL INTENT reference screenshot; Chinese is the course translation. The original double stop after “significance..” is retained rather than silently rewriting the reference. Colors sampled from that slide: #a2cad4, #b7caa6, #e3ced3, #d99993, #cfa9cc.
+
+Five overview stills are the existing original-PDF extractions: `img/intention-environment-arena.jpg` (Composition & Intention p.3), `intention-plot-back-to-the-future.jpg` (p.4), `intention-character-forrest-gump.jpg` (p.5), `intention-mood-fight-club.jpg` (p.6), `intention-theme-cross.jpg` (p.7). They match the five intentions; they are not claimed to be the five thumbnails in the screenshot. No generated sketches or new stock images.
+
+
+## Recommended-viewing theatrical posters
+
+65 publicly sourced promotional posters, normalized to 480 × 720 WebP (2:3), for the existing explicit recommendation lists, assigned film-analysis exercises, and existing director/film studies. Rights remain with the film and publicity rights holders. Rotten Tomatoes/Flixster hosts promotional theatrical artwork; this is attribution, not a new license. Some artwork is a rerelease variant. Source release dates can refer to a rerelease or US opening; card years follow the supplied handouts. Short why-watch prompts are course viewing questions, not quotations from the films or publishers.
+
+- `assets/posters/when_harry_met_sally.webp` — **When Harry Met Sally (1989)**; [film/source page](https://www.rottentomatoes.com/m/when_harry_met_sally); [poster image](https://resizing.flixster.com/M4iPWls-t9r93XS_d0IBF9snH0w=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2IxMDNkY2Y0LTY0NzktNGM3OS04MWFmLTI1YWNlNDg4MzE4YS5qcGc=); source image 2353 × 3567; film identity checked against Movie structured metadata.
+- `assets/posters/cat_on_a_hot_tin_roof.webp` — **Cat on a Hot Tin Roof (1958)**; [film/source page](https://www.rottentomatoes.com/m/cat_on_a_hot_tin_roof_1958); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p5702_p_v8_ao.jpg); source image 960 × 1440; film identity checked against Movie structured metadata.
+- `assets/posters/silver_linings_playbook.webp` — **Silver Linings Playbook (2012)**; [film/source page](https://www.rottentomatoes.com/m/silver_linings_playbook); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/NowShowing/118336/118336_aa.jpg); source image 288 × 432; film identity checked against Movie structured metadata.
+- `assets/posters/brokeback_mountain.webp` — **Brokeback Mountain (2005)**; [film/source page](https://www.rottentomatoes.com/m/brokeback_mountain); [poster image](https://resizing.flixster.com/jgvAYJCG2HJh8uNwM1u-yAQ79Ug=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2ZlMGJjZDQ1LWY4YjMtNGQ1My1iZmNmLTk1NzhjNjc2Mzg1ZC5qcGc=); source image 1080 × 1600; film identity checked against Movie structured metadata.
+- `assets/posters/the_sound_of_music.webp` — **The Sound of Music (1965)**; [film/source page](https://www.rottentomatoes.com/m/sound_of_music); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p5620_p_v8_av.jpg); source image 960 × 1440; film identity checked against Movie structured metadata.
+- `assets/posters/titanic.webp` — **Titanic (1997)**; [film/source page](https://www.rottentomatoes.com/m/titanic); [poster image](https://resizing.flixster.com/j1q6PHK0ZtbdABMQcflU-wH5-eE=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2Y1NGZmNWMyLTczMGUtNDViMS04NzdmLTRiODZiMDM0YWMwOS5qcGc=); source image 1987 × 2910; film identity checked against Movie structured metadata.
+- `assets/posters/brooklyn.webp` — **Brooklyn (2015)**; [film/source page](https://www.rottentomatoes.com/m/brooklyn); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p11436766_p_v8_ak.jpg); source image 960 × 1440; film identity checked against Movie structured metadata.
+- `assets/posters/pride_and_prejudice_2005.webp` — **Pride & Prejudice (2005)**; [film/source page](https://www.rottentomatoes.com/m/pride_and_prejudice); [poster image](https://resizing.flixster.com/x_nl2WNkTAm-VD5YMP-9pWXhsNY=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2QzM2MyMDBkLWZiYzUtNGI4My1hMTlhLTgxZDkwYzRmMjc3OS5qcGc=); source image 472 × 700; film identity checked against Movie structured metadata.
+- `assets/posters/paterson.webp` — **Paterson (2016)**; [film/source page](https://www.rottentomatoes.com/m/paterson); [poster image](https://resizing.flixster.com/ZXWoU0hT5_jxeGbBv0jpkeKeHLw=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzEzYWY5ZDhkLTRhY2YtNGZhOS04ZDlmLTkyM2YzODU2MDFiNy53ZWJw); source image 195 × 290; film identity checked against Movie structured metadata.
+- `assets/posters/the_place_beyond_the_pines.webp` — **The Place Beyond the Pines (2012)**; [film/source page](https://www.rottentomatoes.com/m/the_place_beyond_the_pines); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p9465453_p_v8_ak.jpg); source image 960 × 1440; film identity checked against Movie structured metadata.
+- `assets/posters/the_notebook.webp` — **The Notebook (2004)**; [film/source page](https://www.rottentomatoes.com/m/the_notebook); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p33410_p_v8_aa.jpg); source image 960 × 1440; film identity checked against Movie structured metadata.
+- `assets/posters/african_queen.webp` — **The African Queen (1951)**; [film/source page](https://www.rottentomatoes.com/m/african_queen); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p4105_p_v10_aa.jpg); source image 1536 × 2048; film identity checked against Movie structured metadata.
+- `assets/posters/broadcast_news.webp` — **Broadcast News (1987)**; [film/source page](https://www.rottentomatoes.com/m/broadcast_news); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p10500_p_v10_aa.jpg); source image 1536 × 2048; film identity checked against Movie structured metadata.
+- `assets/posters/moonlight_2016.webp` — **Moonlight (2016)**; [film/source page](https://www.rottentomatoes.com/m/moonlight_2016); [poster image](https://resizing.flixster.com/HE1uYAymQPCdYxRQ4SQHAOmKE60=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzQ1MTIzMDlhLWJiMWUtNGVhOS05MjFhLTkyMjVmNDkzNDA5Yi53ZWJw); source image 2700 × 3910; film identity checked against Movie structured metadata.
+- `assets/posters/if_beale_street_could_talk.webp` — **If Beale Street Could Talk (2018)**; [film/source page](https://www.rottentomatoes.com/m/if_beale_street_could_talk); [poster image](https://resizing.flixster.com/vlYhEG0d0r-hcVZHmszYoEMqG7g=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzA2MzBkN2IyLWRjMmEtNDkyMC1iMmExLTVkOWIyNTllMTBkMC53ZWJw); source image 1458 × 2160; film identity checked against Movie structured metadata.
+- `assets/posters/uncut_gems.webp` — **Uncut Gems (2019)**; [film/source page](https://www.rottentomatoes.com/m/uncut_gems); [poster image](https://resizing.flixster.com/ofstn0L9iAUdOiiFWr7RXtDV_QI=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzBkYjM5NGU2LWQ3NzMtNGFjMi05NDMwLWY2YTc5N2M0N2E3Yi53ZWJw); source image 961 × 1500; film identity checked against Movie structured metadata.
+- `assets/posters/a_star_is_born_2018.webp` — **A Star Is Born (2018)**; [film/source page](https://www.rottentomatoes.com/m/a_star_is_born_2018); [poster image](https://resizing.flixster.com/jmpKZR-GAGYWjZpXu25ndlHpD7w=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzQyNWM2MmY3LTkyMTctNDU1YS1hNDk1LTBjNDBlNmE1NmQzZi53ZWJw); source image 509 × 755; film identity checked against Movie structured metadata.
+- `assets/posters/birdcage.webp` — **The Birdcage (1996)**; [film/source page](https://www.rottentomatoes.com/m/birdcage); [poster image](https://resizing.flixster.com/bvayTUHwKnPHS06ZzxCz_KfMlBo=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2Q0N2YzZDI0LTE3ZDAtNDVjYS04ZDYzLWU2Y2FmZjE2NjE4NC5qcGc=); source image 1947 × 2872; film identity checked against Movie structured metadata.
+- `assets/posters/once.webp` — **Once (2007)**; [film/source page](https://www.rottentomatoes.com/m/once); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p168350_p_v10_ab.jpg); source image 1536 × 2048; film identity checked against Movie structured metadata.
+- `assets/posters/hot_fuzz.webp` — **Hot Fuzz (2007)**; [film/source page](https://www.rottentomatoes.com/m/hot_fuzz); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p163411_p_v8_ag.jpg); source image 960 × 1440; film identity checked against Movie structured metadata.
+- `assets/posters/ferris_buellers_day_off.webp` — **Ferris Bueller’s Day Off (1986)**; [film/source page](https://www.rottentomatoes.com/m/ferris_buellers_day_off); [poster image](https://resizing.flixster.com/Z7ss5mCEPRWng-tA2Wgvnv8luio=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2U0YzYyMGU0LThiMGItNGU4YS04NDE0LTRkYjczZjI3N2ZkYi5qcGc=); source image 456 × 700; film identity checked against Movie structured metadata.
+- `assets/posters/portrait_of_a_lady_on_fire.webp` — **Portrait of a Lady on Fire (2019)**; [film/source page](https://www.rottentomatoes.com/m/portrait_of_a_lady_on_fire); [poster image](https://resizing.flixster.com/ZuekQu_YZy-dzoxHM8QVSXJjYJY=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzM5ZGMxMjZhLWZmYzYtNGQ5ZC05NmFjLTUwNWQ1YWU3NzQ1NC53ZWJw); source image 2000 × 2945; film identity checked against Movie structured metadata.
+- `assets/posters/mikey_and_nicky.webp` — **Mikey & Nicky (1976)**; [film/source page](https://www.rottentomatoes.com/m/mikey_and_nicky); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p6411_p_v8_aa.jpg); source image 960 × 1440; film identity checked against Movie structured metadata.
+- `assets/posters/desert_hearts.webp` — **Desert Hearts (1985)**; [film/source page](https://www.rottentomatoes.com/m/desert_hearts); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p9545_p_v10_aa.jpg); source image 1536 × 2048; film identity checked against Movie structured metadata.
+- `assets/posters/atonement.webp` — **Atonement (2007)**; [film/source page](https://www.rottentomatoes.com/m/atonement); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p167496_p_v8_ab.jpg); source image 960 × 1440; film identity checked against Movie structured metadata.
+- `assets/posters/bridesmaids.webp` — **Bridesmaids (2011)**; [film/source page](https://www.rottentomatoes.com/m/bridesmaids_2011); [poster image](https://resizing.flixster.com/yJg_aUTbtdQP9higcjqpEri2VAQ=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzA2OWQwNTMwLWFkMmUtNGNlYy04YjI1LWY3NjlkNDcyZGUwZi5qcGc=); source image 1080 × 1350; film identity checked against Movie structured metadata.
+- `assets/posters/the_fighter.webp` — **The Fighter (2010)**; [film/source page](https://www.rottentomatoes.com/m/the_fighter); [poster image](https://resizing.flixster.com/FQZs2ADoIKn9nM1CO4zpOqds_-A=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2RiNGI1ZmE5LTdmM2QtNGY4ZC04MjA5LTAzYTU5NmNjNDFlZi5qcGc=); source image 424 × 657; film identity checked against Movie structured metadata.
+- `assets/posters/i_tonya.webp` — **I, Tonya (2017)**; [film/source page](https://www.rottentomatoes.com/m/i_tonya); [poster image](https://resizing.flixster.com/pnoG2si87mmO1ZxD5kOzssYcMlU=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2U2ODY3M2QxLTg1YTktNDc4ZS1hNDZlLWY0MWNiNjAxYTUyMi53ZWJw); source image 274 × 408; film identity checked against Movie structured metadata.
+- `assets/posters/it_follows.webp` — **It Follows (2014)**; [film/source page](https://www.rottentomatoes.com/m/it_follows); [poster image](https://resizing.flixster.com/Sh_xpK_bWDSnb_xZoRI0LhWOWiY=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzcxMGY3MTc4LTY4OWEtNGU1ZC1iZjZiLTQ0YWQ4YjVhMzYwMS53ZWJw); source image 2764 × 4096; film identity checked against Movie structured metadata.
+- `assets/posters/nightcrawler.webp` — **Nightcrawler (2014)**; [film/source page](https://www.rottentomatoes.com/m/nightcrawler); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p10939779_p_v10_ad.jpg); source image 1536 × 2048; film identity checked against Movie structured metadata.
+- `assets/posters/oceans_eleven.webp` — **Ocean’s Eleven (2001)**; [film/source page](https://www.rottentomatoes.com/m/oceans_eleven); [poster image](https://resizing.flixster.com/faPNAcncp-_AAoVTS8xb2L4LxDU=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2FhYjg1Y2MxLWM4NWMtNGVmYy1hNDQ5LWM1ZDc5OTJkMWU4NC5qcGc=); source image 2008 × 3000; film identity checked against Movie structured metadata.
+- `assets/posters/once_upon_a_time_in_hollywood.webp` — **Once Upon a Time… in Hollywood (2019)**; [film/source page](https://www.rottentomatoes.com/m/once_upon_a_time_in_hollywood); [poster image](https://resizing.flixster.com/XZhUDb2br0TYzoMUa0T5B-Az_c0=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2VkMmI3OGU4LWRlZDYtNGQ2MS1hZWRmLWU4ZGEzMjhkNTViNS53ZWJw); source image 169 × 250; film identity checked against Movie structured metadata.
+- `assets/posters/the_raid_2.webp` — **The Raid 2 (2014)**; [film/source page](https://www.rottentomatoes.com/m/the_raid_2); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p10503143_p_v8_af.jpg); source image 960 × 1440; film identity checked against Movie structured metadata.
+- `assets/posters/shadow_2018.webp` — **Shadow (2018)**; [film/source page](https://www.rottentomatoes.com/m/shadow_2018); [poster image](https://resizing.flixster.com/IdKTfmTMso6tsUpV-3Krux4UiFQ=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzAzNTU0YWE2LTE2NGYtNDQ2MS04NmYyLTE4YmUyYjc1ZTZkZC53ZWJw); source image 1382 × 2048; film identity checked against Movie structured metadata.
+- `assets/posters/there_will_be_blood.webp` — **There Will Be Blood (2007)**; [film/source page](https://www.rottentomatoes.com/m/there_will_be_blood); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p171565_p_v8_aa.jpg); source image 960 × 1440; film identity checked against Movie structured metadata.
+- `assets/posters/road_to_roma.webp` — **Road to Roma (2020)**; [film/source page](https://www.rottentomatoes.com/m/road_to_roma); [poster image](https://images.fandango.com/cms/assets/5d84d010-59b1-11ea-b175-791e911be53d--rt-poster-defaultgif.gif); source image 269 × 405; film identity checked against Movie structured metadata.
+- `assets/posters/the_artist.webp` — **The Artist (2011)**; [film/source page](https://www.rottentomatoes.com/m/the_artist); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p8725913_p_v8_aa.jpg); source image 960 × 1440; film identity checked against Movie structured metadata.
+- `assets/posters/django_unchained.webp` — **Django Unchained (2012)**; [film/source page](https://www.rottentomatoes.com/m/django_unchained); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p9287010_p_v11_ad.jpg); source image 1280 × 1920; film identity checked against Movie structured metadata.
+- `assets/posters/the_rider.webp` — **The Rider (2017)**; [film/source page](https://www.rottentomatoes.com/m/the_rider); [poster image](https://resizing.flixster.com/7fnJ22af15scWzUBAjZ_VjXKHjg=/206x305/v2/https://resizing.flixster.com/IF0DeQDrXKxIY-YiRdHZQyaLvAc=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzY1YTUwMjQzLWRhYjMtNDUwMi05NmY1LTQ0Mjc3OWJmNjllMC53ZWJw); source image 206 × 305; film identity checked against Movie structured metadata.
+- `assets/posters/take_shelter.webp` — **Take Shelter (2011)**; [film/source page](https://www.rottentomatoes.com/m/take_shelter); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p8683227_v_v12_aa.jpg); source image 1920 × 2880; film identity checked against Movie structured metadata.
+- `assets/posters/house_of_flying_daggers.webp` — **House of Flying Daggers (2004)**; [film/source page](https://www.rottentomatoes.com/m/house_of_flying_daggers); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p34650_p_v10_ay.jpg); source image 1536 × 2048; film identity checked against Movie structured metadata.
+- `assets/posters/the_shining.webp` — **The Shining (1980)**; [film/source page](https://www.rottentomatoes.com/m/shining); [poster image](https://resizing.flixster.com/5E5qZzbrG8KdvlmDKFjnun2HBog=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzA3ZGFkNTA3LTEwZjEtNDM2Yy1hYmQxLWMyMjI4ZjY1ZjBkNy5qcGc=); source image 2100 × 3156; film identity checked against Movie structured metadata.
+- `assets/posters/barry_lyndon.webp` — **Barry Lyndon (1975)**; [film/source page](https://www.rottentomatoes.com/m/barry_lyndon); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p1752_p_v7_at.jpg); source image 480 × 720; film identity checked against Movie structured metadata.
+- `assets/posters/oppenheimer_2023.webp` — **Oppenheimer (2023)**; [film/source page](https://www.rottentomatoes.com/m/oppenheimer_2023); [poster image](https://resizing.flixster.com/dV1vfa4w_dB4wzk7A_VzThWUWw8=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzEyZDMyYjZmLThmNzAtNDliNC1hMjFmLTA2ZWY4M2UyMjJhMi5qcGc=); source image 2587 × 4096; film identity checked against Movie structured metadata.
+- `assets/posters/the_grand_budapest_hotel.webp` — **The Grand Budapest Hotel (2014)**; [film/source page](https://www.rottentomatoes.com/m/the_grand_budapest_hotel); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p10295153_p_v12_ab.jpg); source image 1920 × 2880; film identity checked against Movie structured metadata.
+- `assets/posters/gone_girl.webp` — **Gone Girl (2014)**; [film/source page](https://www.rottentomatoes.com/m/gone_girl); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p10556843_p_v13_ar.jpg); source image 2160 × 2880; film identity checked against Movie structured metadata.
+- `assets/posters/mank.webp` — **Mank (2020)**; [film/source page](https://www.rottentomatoes.com/m/mank); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p18858963_p_v8_ab.jpg); source image 960 × 1440; film identity checked against Movie structured metadata.
+- `assets/posters/blade_runner_2049.webp` — **Blade Runner 2049 (2017)**; [film/source page](https://www.rottentomatoes.com/m/blade_runner_2049); [poster image](https://resizing.flixster.com/73VCeyfsM8UDQ0o7IjUIcXr7jd8=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2RlNzI0MGQyLTQ2ZTktNGMyYi05N2VmLTFjMDhiY2VlMDQ2Ni53ZWJw); source image 2656 × 4096; film identity checked against Movie structured metadata.
+- `assets/posters/dune_2021.webp` — **Dune (2021)**; [film/source page](https://www.rottentomatoes.com/m/dune_2021); [poster image](https://resizing.flixster.com/gcRn4_emLo1Iz5ndbvUOKDYq35c=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzdhYTI2NDJkLTU5YTYtNDNkOS05ZWQxLWZiNjFlOTZmYjZlZS5qcGc=); source image 2764 × 4096; film identity checked against Movie structured metadata.
+- `assets/posters/in_the_mood_for_love_2001.webp` — **In the Mood for Love (2000)**; [film/source page](https://www.rottentomatoes.com/m/in_the_mood_for_love_2001); [poster image](https://resizing.flixster.com/JiKhYY6ezF5gebJkR2gPLMBq3lI=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzQ5MGE5YWJlLTAzMzgtNGRmOC1iMWQ1LTlhZjFjYjg3MmY3ZS5qcGc=); source image 500 × 753; film identity checked against Movie structured metadata.
+- `assets/posters/nobody_knows.webp` — **Nobody Knows (2004)**; [film/source page](https://www.rottentomatoes.com/m/nobody_knows); [poster image](https://resizing.flixster.com/haEqBjCQa7mvtJDnwqvOYHdqf_E=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzM3NGUxODY2LWMwZmMtNDhmMS1iYWNhLTJmMjFmNjYxYTEwNy53ZWJw); source image 484 × 700; film identity checked against Movie structured metadata.
+- `assets/posters/hero_2002.webp` — **Hero (2002)**; [film/source page](https://www.rottentomatoes.com/m/hero); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p34738_p_v8_ae.jpg); source image 960 × 1440; film identity checked against Movie structured metadata.
+- `assets/posters/flowers_of_shanghai.webp` — **Flowers of Shanghai (1998)**; [film/source page](https://www.rottentomatoes.com/m/flowers_of_shanghai); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p68135_p_v8_ab.jpg); source image 960 × 1440; film identity checked against Movie structured metadata.
+- `assets/posters/1917_2019.webp` — **1917 (2019)**; [film/source page](https://www.rottentomatoes.com/m/1917_2019); [poster image](https://resizing.flixster.com/hu80cOh-9NU_eottnuVgtP_nW54=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2ZlMTgyZjNiLTIxMDQtNGE4Mi05ZjAxLTlhNjk3YTdkMDYxNi53ZWJw); source image 2765 × 4096; film identity checked against Movie structured metadata.
+- `assets/posters/children_of_men.webp` — **Children of Men (2006)**; [film/source page](https://www.rottentomatoes.com/m/children_of_men); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p159796_p_v8_be.jpg); source image 960 × 1440; film identity checked against Movie structured metadata.
+- `assets/posters/nomadland.webp` — **Nomadland (2020)**; [film/source page](https://www.rottentomatoes.com/m/nomadland); [poster image](https://resizing.flixster.com/7TTnMSfqk40GyhbZ_ael5N4Zp9o=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzJjOWRjNGVkLTIwNDAtNDlmZS04MDM5LTNjYzM0ZDFlODhhMy5qcGc=); source image 1334 × 2000; film identity checked against Movie structured metadata.
+- `assets/posters/finding_nemo.webp` — **Finding Nemo (2003)**; [film/source page](https://www.rottentomatoes.com/m/finding_nemo); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p31890_p_v8_aa.jpg); source image 960 × 1440; film identity checked against Movie structured metadata.
+- `assets/posters/faces.webp` — **Faces (1968)**; [film/source page](https://www.rottentomatoes.com/m/faces); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p55985_p_v8_aa.jpg); source image 960 × 1440; film identity checked against Movie structured metadata.
+- `assets/posters/pretty_woman.webp` — **Pretty Woman (1990)**; [film/source page](https://www.rottentomatoes.com/m/pretty_woman); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p12198_p_v12_al.jpg); source image 1920 × 2880; film identity checked against Movie structured metadata.
+- `assets/posters/the_zone_of_interest.webp` — **The Zone of Interest (2023)**; [film/source page](https://www.rottentomatoes.com/m/the_zone_of_interest); [poster image](https://resizing.flixster.com/sK_6rOkR73t2sfxWzzu1MJY4e-E=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2RkMDcxNjExLWY2OGYtNGJlNS04OTNjLTdhNDA3OGIzZjA1NC5qcGc=); source image 2700 × 4000; film identity checked against Movie structured metadata.
+- `assets/posters/jurassic_park.webp` — **Jurassic Park (1993)**; [film/source page](https://www.rottentomatoes.com/m/jurassic_park); [poster image](https://resizing.flixster.com/dqWYuJel6FX3Ox51DWfMv77fChM=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzU5OWIyYTUzLTVmNTQtNDIxMS04MTdmLWU3ZDc5YmQ5YjM2Zi5qcGc=); source image 2000 × 3000; film identity checked against Movie structured metadata.
+- `assets/posters/mary_poppins.webp` — **Mary Poppins (1964)**; [film/source page](https://www.rottentomatoes.com/m/mary_poppins); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p4246_p_v8_aa.jpg); source image 960 × 1440; film identity checked against Movie structured metadata.
+- `assets/posters/a_place_in_the_sun.webp` — **A Place in the Sun (1951)**; [film/source page](https://www.rottentomatoes.com/m/a_place_in_the_sun); [poster image](https://images.fandango.com/cms/assets/5d84d010-59b1-11ea-b175-791e911be53d--rt-poster-defaultgif.gif); source image 269 × 405; film identity checked against Movie structured metadata.
+- `assets/posters/casablanca.webp` — **Casablanca (1942)**; [film/source page](https://www.rottentomatoes.com/m/casablanca); [poster image](https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p21202119_v_v7_aa.jpg); source image 480 × 720; film identity checked against Movie structured metadata.
+- `assets/posters/breakfast_club.webp` — **The Breakfast Club (1985)**; [film/source page](https://www.rottentomatoes.com/m/breakfast_club); [poster image](https://resizing.flixster.com/p3yTEcKpo05sHKCVu36pH1pfnS4=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2FhOGI3YWYxLWE0ODctNDRhYy05Y2UxLTdlMDVlN2UxY2ZmMS5qcGc=); source image 2353 × 3572; film identity checked against Movie structured metadata.
+
+No missing posters in these 65 identified films. Sony Paint and Balls are advertisements with official stills/video, not standalone theatrical-poster claims. Harvey Dunn’s lecture is not treated as a film with an invented poster. Historic filmography mentions and the 50 compositions’ existing source-still examples are not silently recast as new recommendation lists.
+
+### Original Film Reframed recommendation-page crew credits
+
+
+#### chemistry, PDF p. 13
+
+recommended viewing
+When Harry Met Sally (1989)         Titanic (1997)
+Director: Rob Reiner                               Director: James Cameron
+DP: Barry Sonnenfeld                        DP: Russell Carpenter
+Casting: Janet Hirshenson, Jane Jenkins           Casting: Mali Finn
+Editor: Robert Leighton                            Editors: Conrad Buff IV, James Cameron, Richard
+Production Design: Jane Musky                  A. Harris
+Costume Design: Gloria Gresham                Production Design: Peter Lamont
+                                            Costumes: Deborah Lynn Scott
+Cat on a Hot Tin Roof (1958)
+Director: Richard Brooks                 Brooklyn (2015)
+DP: William H. Daniels                            Director: John Crowley
+Casting: Maude Spector                      DP: Yves Bélanger
+Editor: Ferris Webster                             Casting: Fiona Weir
+Art Direction: William A. Horning, Urie McCleary  Editor: Jake Roberts
+                                              Production Design: François Séguin
+Silver Linings Playbook (2012)         Costumes: Odile Dicks-Mireaux
+Director: David O. Russell
+DP: Masanobu Takayanagi                 Pride & Prejudice (2005)
+Casting: Lindsay Graham, Mary Vernieu           Director: Joe Wright
+Editors: Jay Cassidy, Crispin Struthers          DP: Roman Osin
+Production Design: Judy Becker                   Casting: Jina Jay
+Costumes: Mark Bridges                           Editor: Paul Tothill
+                                              Production Design: Sarah Greenwood
+Brokeback Mountain (2005)           Costumes: Jacqueline Durran
+Director: Ang Lee
+DP: Rodrigo Prieto                     Paterson (2016)
+Casting: Avy Kaufman                             Director: Jim Jarmusch
+Editors: Geraldine Peroni, Dylan Tichenor        DP: Frederick Elmes
+Production Design: Judy Becker                   Casting: Meghan Rafferty, Ellen Lewis
+Costumes: Marit Allen                             Editor: Affonso Gonçalves
+                                              Production Design: Mark Friedberg
+The Sound of Music (1965)             Costumes: Catherine George
+Director: Robert Wise
+DP: Ted D. McCord                   The Place Beyond the Pines (2012)
+Casting: Lee Wallace                               Director: Derek Cianfrance
+Editor: William Reynolds                     DP: Sean Bobbit
+Production Design: Boris Leven                    Casting: Cindy Tolan
+Costumes: Dorothy Jeakins                        Editors: Jim Helton, Ron Patane
+                                              Production Design: Inbal Weinberg
+                                            Costumes: Erin Benach
+
+
+
+
+#### chemistry, PDF p. 14
+
+recommended viewing
+The Notebook (2004)              Uncut Gems (2019)
+Director: Nick Cassavetes                          Director: Josh & Benny Safdie
+DP: Robert Fraisse                          DP: Darius Khondji
+Casting: Matthew Berry, Nancy Green-Keyes       Casting: Francine Maisler, Jennifer Venditti
+Editor: Alan Heim                                 Editors: Ronald Bronstein, Benny Safdie
+Production Design: Sarah Knowles               Production Design: Sam Lisenco
+Costumes: Karyn Wagner                      Costumes: Miyako Bellizzi, Nawaal Hendriks
+
+The African Queen (1951)         A Star is Born (2018)
+Director: John Huston                             Director: Bradley Cooper
+DP: Jack Cardiff                            DP: Matthew Libatique
+Editor: Ralph Kemplen                            Casting: Lindsay Graham, Mary Vernieu
+Art Direction: Wilfred Shingleton                  Editor: Jay Cassidy
+Costumes: Doris Langley Moore                  Production Design: Karen Murphy
+                                            Costumes: Erin Benach
+Broadcast News (1987)
+Director: James L. Brooks               The Birdcage (1996)
+DP: Michael Ballhaus                              Director: Mike Nichols
+Casting: Ellen Chenoweth                     DP: Emmanuel Lubezki
+Editor: Richard Marks                            Casting: Ellen Lewis, Juliet Taylor
+Production Design: Charles Rosen                 Editor: Arthur Schmidt
+Costumes: Molly Maginnis                      Production Design: Bo Welch
+                                            Costumes: Ann Roth
+Moonlight (2016)
+If Beale Street Could Talk (2018)    Once (2007)
+Director: Barry Jenkins                            Director: John Carney
+DP: James Laxton                           DP: Tim Fleming
+Moonlight casting: Yesi Ramirez                   Casting: Maureen Hughes
+Beale Street casting: Cindy Tolan                   Editor: Paul Mullen
+Editors: Joi McMillon, Nat Sanders               Production Design: Tamara Conboy
+Moonlight production design: Hannah Beachler   Costumes: Tiziana Corvisieri
+Beale Street production design: Mark Friedberg
+Costumes: Caroline Eselin-Schaefer         Hot Fuzz (2007)
+                                                    Director: Edgar Wright
+                                         DP: Jess Hall
+                                                  Casting: Nina Gold
+                                                   Editor: Chris Dickens
+                                              Production Design: Marcus Rowland
+                                            Costumes: Annie Hardinge
+
+
+
+
+
+#### chemistry, PDF p. 15
+
+recommended viewing
+Ferris Bueller’s Day Off (1986)      Mikey & Nicky (1976)
+Director: John Hughes                             Director: Elaine May
+DP: Tak Fujimoto                            DPs: Bernie Abrahmson, Lucien Ballard, Jack
+Casting: Janet Hirshenson, Jane Jenkins         Cooperman, Jerry File, Victor J. Kemper
+Editor: Paul Hirsch                                Casting: Wayne Carson
+Production Design: John W. Corso               Production Design: Paul Sylbert
+Costumes: Marilyn Vance                      Costumes: Richard Bruno
+
+Portrait of a Lady on Fire (2019)     Desert Hearts (1985)
+Director: Céline Sciamma                          Director: Donna Deitch
+DP: Claire Mathon                          DP: Robert Elswit
+Casting: Christel Baras                            Casting: Tim Flack
+Editor: Julien Lacheray                         Production Design: Jeannine Oppewall
+Production Design: Thomas Grézaud             Costumes: Linda M. Bass
+Costumes: Dorothée Guiraud
+
+
+
+
+
+
+#### composition-for-editing, PDF p. 13
+
+
+recommended reading
+The Invisible Cut:
+How Editors Make Movie Magic (Bobbie O’Steen)
+
+Film Directing Shot by Shot:
+Visualizing from Script to Screen (Steven D. Katz)
+recommended viewing
+Atonement (2007)        Nightcrawler (2014)
+dir. Joe Wright                  dir. Dan Gilroy
+DP. Seamus McGarvey       DP. Robert Elswit
+ed. Paul Tothill               ed. John Gilroy
+
+Bridesmaids (2011)       Ocean’s Eleven (2001)
+dir. Paul Feig                    dir. Steven Soderbergh
+DP. Robert D. Yeoman       DP. Steven Soderbergh (as “Peter Andrews”)
+ed. William Kerr and Mike    ed. Stephen Mirrione
+Sale
+                     Once Upon a Time… in Hollywood (2019)
+The Fighter (2010)           dir. Quentin Tarantino
+dir. David O. Russell        DP. Robert Richardson
+DP. Hoyte van Hoytema       ed. Fred Raskin
+ed. Pamela Martin
+                     The Raid 2 (2014)
+I, Tonya (2017)                dir. Gareth Evans
+dir. Craig Gillespie          DP. Matt Flannery and Dimas Imam Subhono
+DP. Nicolas Karakantsanis    ed. Gareth Evans
+ed. Tatiana S. Riegel
+                    Shadow (2018)
+If Beale Street Could        dir. Zhang Yimou
+Talk (2018)               DP. Xiaoding Zhao
+dir. Barry Jenkins             ed. Xiaolin Zhao
+DP. James Laxton
+ed. Joi McMillon & Nat     There Will Be Blood (2007)
+Sanders                          dir. Paul Thomas Anderson
+                         DP. Robert Elswit
+It Follows (2014)            ed. Dylan Tichenor
+dir. David Robert Mitchell
+DP. Mike Gioulakis
+ed. Julio C. Perez IV
+
+
+
+
+
+## PDF image-association correction
+
+Composing for Character p.6: Effects and Distortion uses `character-effects-carol.jpg` followed by `character-endings-group.jpg` (A Serious Man, visual identification). Beginnings and Endings uses `character-effects-brooklyn.jpg` followed by `character-beginnings-closeup.jpg` (the two Brooklyn frames, visual identification). Internal legacy filenames are retained; their former role names were misleading. Placement/labels now follow the PDF page positions. Editing p.6 contains two overlapping raster objects for the same visible far-focal frame (`p06-04`/`p06-05`, IoU 0.9985); only one visible instance is shown. The original asset and complete source-page facsimile remain.
+
+
+### Original crew records for chemistry film-analysis exercises
+
+#### Cinematic Chemistry p.10
+
+
+
+
+
+1B. film analysis - implicit soulmates
+Two notorious movie couples:
+We are never explicitly informed that these are romantic partners, but we come away from the
+movie with a deep belief that they are. How does this happen?
+
+                                    Jurassic Park (1993)
+                                                   Director: Steven Speilberg
+                                         DP: Dean Cundey
+                                                  Casting: Janet Hershinson, Jane Jenkins
+                                                   Editor: Michael Kahn
+                                              Production Design: Rick Carter
+                                            Costumes: Mitchell Ray Kenney, Sue
+                                           Moore, Eric H. Sandberg
+
+                             Mary Poppins (1964)
+                                                   Director: Robert Stevenson
+                                         DP: Edward Colman
+                                                   Editor: Cotton Warburton
+                                                Art Direction: Carroll Clark, William H.
+                                            Tuntke
+                                            Costumes: Gertrude Casey, Chuck
+                                             Keehne, Luster Bayless
+
+
+Go back and watch these movies. See if you can identify what choices the director made that
+intentionally or unintentionally imply a deeper connection than the screenplay communicates.
+
+#### Cinematic Chemistry p.11
+
+
+
+
+
+1C. film analysis - who’s the soulmate?
+
+Two relationships, two potential soulmates.
+In A Place in the Sun, George Eastman begins the movie by dating 2 different women: Alice
+& Angela. In Broadcast News, Jane Craig finds she has a connection to 2 colleagues: Aaron &
+Tom. How do we know if they end up with the right mate?
+
+                          A Place in the Sun (1951)
+                                                   Director: George Stevens
+                                         DP: William C. Mellor, John F. Seitz
+                                                   Editor: William Hornbeck
+                                                Art Direction: Hans Drier, Walter H. Tyler,
+                                            Emile Kuri
+                                            Costumes: Edith Head
+
+
+                                  Broadcast News (1987)
+                                                   Director: James L. Brooks
+                                         DP: Michael Ballhaus
+                                                  Casting: Ellen Chenoweth
+                                                   Editor: Richard Marks
+                                              Production Design: Charles Rosen
+                                            Costumes: Molly Maginnis
+
+
+
+
+Go back and watch these movies. See if you can identify what choices the director is making to
+build each chemistry dynamic. Which couple has a deeper connection? How quickly can you
+predict which relationship will survive and which relationship will fail?

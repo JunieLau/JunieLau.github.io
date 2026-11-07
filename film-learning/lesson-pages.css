@@ -3,9 +3,9 @@
 .pdf-course main{width:min(94vw,1760px)}
 .lesson-intro{padding-bottom:40px}
 .lesson-intro h1{color:var(--accent)}
-.lesson-index{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 28px;border-block:1px solid var(--rule);margin:20px 0 64px;padding:20px 0}
-.lesson-index a{min-width:0;text-decoration:none;padding:14px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55}
-.lesson-index a .en{font-size:14px!important}
+.lesson-index{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 28px;border-block:1px solid var(--rule);margin:20px 0 64px;padding:20px 0;}
+.lesson-index a{min-width:0;text-decoration:none;padding:14px 0;border-bottom:1px solid var(--rule);font-size:16px;line-height:1.55;}
+.lesson-index a .en{font-size:14px!important;}
 .lesson-section{padding:0 0 70px;margin:0 0 70px;border-bottom:1px solid var(--rule);scroll-margin-top:calc(var(--topbar-height,160px) + 24px)}
 .lesson-section h2{font-size:30px}
 .lesson-section h3{font-size:22px;margin-top:34px}
@@ -26,9 +26,9 @@ html:not([data-mode=bi]) .lesson-pair{grid-template-columns:minmax(0,1fr)}
 .source-page-grid img{display:block;width:100%;height:auto;aspect-ratio:1200/1554;object-fit:contain;background:#fff}
 .source-page-grid figcaption{font-size:14px;min-height:48px;padding-top:12px}
 .pdf-course footer{font-size:14px}
-@media(min-width:1601px){.lesson-index{grid-template-columns:repeat(5,minmax(0,1fr))}}
-@media(max-width:1000px){.lesson-index{grid-template-columns:repeat(3,minmax(0,1fr))}.lesson-pair{gap:26px}.feature-grid,.example-grid,.source-page-grid{gap:20px}}
-@media(max-width:700px){.pdf-course{font-size:18px}.pdf-course main{width:calc(100% - 40px)}.lesson-index{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px}.lesson-index a{font-size:15px}.lesson-pair,.feature-grid{grid-template-columns:minmax(0,1fr);gap:20px}.example-grid,.source-page-grid,.credit-grid{grid-template-columns:minmax(0,1fr)}.feature-grid figcaption,.example-grid figcaption{min-height:76px}.lesson-section{scroll-margin-top:24px;margin-bottom:50px;padding-bottom:50px}.lesson-section h2{font-size:27px}.lesson-section h3{font-size:21px}.pdf-course .masthead-title{overflow-wrap:anywhere}}
+@media(min-width:1601px){.lesson-index{grid-template-columns:repeat(5,minmax(0,1fr));}}
+@media(max-width:1000px){.lesson-index{grid-template-columns:repeat(3,minmax(0,1fr));}.lesson-pair{gap:26px}.feature-grid,.example-grid,.source-page-grid{gap:20px}}
+@media(max-width:700px){.pdf-course{font-size:18px}.pdf-course main{width:calc(100% - 40px)}.lesson-index{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px;}.lesson-index a{font-size:15px;}.lesson-pair,.feature-grid{grid-template-columns:minmax(0,1fr);gap:20px}.example-grid,.source-page-grid,.credit-grid{grid-template-columns:minmax(0,1fr)}.feature-grid figcaption,.example-grid figcaption{min-height:76px}.lesson-section{scroll-margin-top:24px;margin-bottom:50px;padding-bottom:50px}.lesson-section h2{font-size:27px}.lesson-section h3{font-size:21px}.pdf-course .masthead-title{overflow-wrap:anywhere}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 /* Screenshot-review corrections: one hero and topic-aligned bilingual rows. */
 .pdf-course .lesson-hero{padding:64px 0 40px;text-align:left}
@@ -59,12 +59,12 @@ html:not([data-mode=bi]) .technique-pair{grid-template-columns:minmax(0,1fr)}
 @media(max-width:1000px) and (min-width:701px){.composition-media-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:700px){.composition-media-grid{grid-template-columns:minmax(0,1fr)}.composition-media-grid figcaption{min-height:128px}}
 /* Round 2: no ragged outlines or unused media-grid tracks. */
-.pdf-course .pdf-outline{grid-template-columns:minmax(0,1fr);gap:0;padding:12px 0}
-.pdf-course .pdf-outline>a>span{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
-.pdf-course .pdf-outline>a .en{margin:0}
-html:not([data-mode=bi]) .pdf-course .pdf-outline>a>span{grid-template-columns:minmax(0,1fr)}
+.pdf-course .pdf-outline{grid-template-columns:minmax(0,1fr);gap:0;padding:12px 0;}
+.pdf-course .pdf-outline>a>span{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start;}
+.pdf-course .pdf-outline>a .en{margin:0;}
+html:not([data-mode=bi]) .pdf-course .pdf-outline>a>span{grid-template-columns:minmax(0,1fr);}
 .pdf-course[data-course] .example-grid,.pdf-course[data-course] .source-page-grid{grid-template-columns:repeat(var(--media-columns,1),minmax(0,1fr))}
-@media(max-width:700px){.pdf-course .pdf-outline>a>span{grid-template-columns:minmax(0,1fr);gap:6px}.pdf-course[data-course] .example-grid,.pdf-course[data-course] .source-page-grid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:700px){.pdf-course .pdf-outline>a>span{grid-template-columns:minmax(0,1fr);gap:6px;}.pdf-course[data-course] .example-grid,.pdf-course[data-course] .source-page-grid{grid-template-columns:minmax(0,1fr)}}
 /* Junie's approved study hierarchy: two generous comparisons, three examples. */
 .pdf-course .study-media-grid{display:grid;grid-template-columns:repeat(var(--study-columns,3),minmax(0,1fr));gap:28px;align-items:stretch;margin:28px 0 36px}
 .pdf-course .study-media-grid>figure{margin:0;min-width:0;display:flex;flex-direction:column}
@@ -96,26 +96,26 @@ html:not([data-mode=bi]) .pdf-course .pdf-outline>a>span{grid-template-columns:m
 @media(max-width:700px){.pdf-course .composition-entry>.comparison-pair{width:100%}.pdf-course .composition-entry>.example-triptych figcaption{height:auto;min-height:156px}.pdf-course .technique-media .study-media-grid{gap:24px}.pdf-course .technique-media figcaption{height:auto;min-height:88px}.pdf-course .technique-row.has-study-media{display:block}.pdf-course .technique-media{margin-top:24px}}
 /* Always-available two-line maximum chapter scroller, including mobile. */
 .pdf-course .topbar{position:sticky;top:0;z-index:60}
-.pdf-course .sticky-toc{position:sticky;top:var(--topbar-height,112px);z-index:55;display:flex;flex-wrap:nowrap;gap:10px;width:100%;max-width:100%;height:64px;padding:8px max(3vw,calc((100vw - 1760px)/2));margin:0;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scrollbar-width:thin;border-bottom:1px solid var(--rule);background:#0a0a0a;align-items:center;scroll-behavior:smooth}
-.pdf-course .toc-chip{display:block;flex:0 0 auto;max-width:220px;min-width:56px;padding:4px 10px;text-decoration:none;border:1px solid #444;border-radius:3px;font-size:13px;line-height:1.35}
-.pdf-course .toc-chip>span{display:block}
-.pdf-course .toc-chip .zh,.pdf-course .toc-chip .en{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:198px;margin:0;line-height:1.35;font-size:12px!important}
-.pdf-course .toc-chip[aria-current=location]{border-color:var(--accent);color:var(--accent);background:#211210}
+
+
+
+
+
 .pdf-course .lesson-section,.pdf-course section[id]{scroll-margin-top:var(--lesson-anchor-offset,200px)}
 .pdf-course .lesson-hero{padding-top:36px}
-@media(max-width:700px){.pdf-course .topbar{padding-block:9px;gap:8px}.pdf-course .site-nav{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;white-space:nowrap;padding-bottom:4px;gap:18px}.pdf-course .site-nav>a{flex-shrink:0}.pdf-course .site-nav .nav-books{flex-shrink:0}.pdf-course .site-nav .book-menu{position:fixed;top:var(--topbar-height);left:20px;z-index:90}.pdf-course .sticky-toc{height:60px;padding-inline:20px}.pdf-course .lesson-hero{padding-top:28px}}
-@media(prefers-reduced-motion:reduce){.pdf-course .sticky-toc{scroll-behavior:auto}}
+@media(max-width:700px){.pdf-course .topbar{padding-block:9px;gap:8px}.pdf-course .site-nav{flex-wrap:wrap;justify-content:flex-start;overflow-x:visible;white-space:normal;padding-bottom:4px;gap:18px;}.pdf-course .site-nav>a{flex-shrink:0;}.pdf-course .site-nav .nav-books{flex-shrink:0;}.pdf-course .site-nav .book-menu{position:fixed;top:var(--topbar-height);left:20px;z-index:90;}.pdf-course .lesson-hero{padding-top:28px}}
+@media(prefers-reduced-motion:reduce){}
 /* Whole-site reading audit: only PDF-derived illustrations, clean text reflow. */
-.pdf-course .replaced-by-sticky-toc{display:none!important}
+.pdf-course .replaced-by-sticky-toc{display:none!important;}
 .pdf-course .text-only-row{display:block!important}
 .pdf-course .text-only-row>.row-copy{width:100%;max-width:none}
 .pdf-course .still-diagram-pair{grid-template-columns:minmax(0,1fr)}
 .pdf-course .expanded-reference{margin-block:32px;padding-block:24px;border-block:1px solid var(--rule)}
 .pdf-course .expanded-reference>h2{font-size:24px}
-.pdf-course .map-viewport{max-height:none!important;overflow:visible!important}
-.pdf-course .map-canvas{width:100%!important;min-width:0!important;transform:none!important}
-.pdf-course .map-connectors{display:none}
-.pdf-course .history-panel{scroll-margin-top:var(--lesson-anchor-offset,200px)}
+
+
+
+
 .pdf-course .paired-study img,.pdf-course .concept-visual img,.pdf-course .gallery-row img{max-height:36vh;object-fit:contain}
 .pdf-course .source-page-grid img{max-height:300px;object-fit:contain}
 .pdf-course main [id]{scroll-margin-top:var(--lesson-anchor-offset,200px)}
@@ -124,7 +124,7 @@ html:not([data-mode=bi]) .pdf-course .pdf-outline>a>span{grid-template-columns:m
 .pdf-course #all-worked-beats article{padding:24px 0;border-bottom:1px solid var(--rule)}
 .pdf-course .course-layout{display:block!important}
 .pdf-course .course-layout>div{width:100%;min-width:0}
-.pdf-course .country-tabs{position:relative;top:auto}
+.pdf-course .country-tabs{position:relative;top:auto;}
 .pdf-course .comparison-scroll{max-height:none;overflow-x:auto}
 /* Review polish: fill frames, compact bilingual captions, full-width comparison pair. */
 .pdf-course .study-media-grid img{object-fit:cover}
@@ -143,33 +143,33 @@ html:not([data-mode=bi]) .pdf-course .pdf-outline>a>span{grid-template-columns:m
 .pdf-course main{padding-top:24px}
 .pdf-course main [id]{scroll-margin-top:var(--lesson-anchor-offset,220px)}
 /* Film history: expanded document flow, never a fixed-height/overflowing diagram canvas. */
-body[data-volume=history] .map-viewport{height:auto!important;max-height:none!important;overflow:visible!important;isolation:auto}
-body[data-volume=history] .map-canvas{display:block!important;position:static!important;width:100%!important;min-width:0!important;padding:24px 0!important;zoom:1!important;transform:none!important}
-body[data-volume=history] .map-root{position:static!important;margin:0 0 28px;max-width:100%}
-body[data-volume=history] .map-eras{position:static!important;min-width:0}
-body[data-volume=history] .map-era{display:block!important;position:static!important;width:100%;min-width:0;margin:0 0 48px!important;padding-top:18px;border-top:1px solid var(--rule)}
-body[data-volume=history] .map-era>.map-toggle{margin:0 0 24px}
-body[data-volume=history] .map-topics{display:grid!important;grid-template-columns:minmax(0,1fr);gap:28px;margin:0!important;padding:0!important;border:0}
-body[data-volume=history] .map-topic{display:grid!important;grid-template-columns:minmax(190px,26%) minmax(0,1fr);gap:28px;position:static!important;min-width:0;margin:0!important}
-body[data-volume=history] .map-leaves{display:grid!important;grid-template-columns:minmax(0,1fr);gap:18px;margin:0!important;padding:0!important;border:0;min-width:0}
-body[data-volume=history] .map-node{position:static!important;min-width:0;max-width:100%;height:auto!important;white-space:normal;overflow-wrap:anywhere}
-body[data-volume=history] .map-node .node-title.map-added::before,body[data-volume=history] .map-node .film-title.map-added::before{position:static;margin-right:8px}
-body[data-volume=history] .map-toggle{cursor:default;padding-right:14px}
-body[data-volume=history] .map-toggle::after{content:none!important}
-body[data-volume=history] .map-toolbar{display:none!important}
-body[data-volume=history] .history-source-note{position:static;max-width:none;clear:both;margin-top:40px}
-html[data-mode=bi] body[data-volume=history] .map-leaf>p{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
-html[data-mode=bi] body[data-volume=history] .map-leaf>p>.en{margin:0!important}
-@media(max-width:760px){body[data-volume=history] .map-topic{grid-template-columns:minmax(0,1fr);gap:16px}html[data-mode=bi] body[data-volume=history] .map-leaf>p{grid-template-columns:minmax(0,1fr);gap:10px}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:760px){}
 /* Wrapped sticky indexes: no scrolling strip. Actual row height is measured by JS. */
-.pdf-course .sticky-toc{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(112px,1fr));gap:5px!important;height:auto!important;max-height:none!important;overflow:visible!important;align-items:stretch;padding-block:6px!important;scrollbar-width:none}
-.pdf-course .toc-chip{display:flex!important;align-items:center;width:100%;min-width:0!important;max-width:none!important;height:40px!important;padding:3px 7px!important;margin:0;overflow:hidden}
-.pdf-course .toc-chip>span{width:100%;min-width:0}
-.pdf-course .toc-chip .zh,.pdf-course .toc-chip .en{max-width:100%;font-size:11px!important;line-height:1.3!important}
-.pdf-course .sticky-toc.numbered-toc{grid-template-columns:repeat(25,minmax(0,1fr))}
-.pdf-course .numbered-toc .toc-chip{height:28px!important;padding:3px 2px!important;justify-content:center;text-align:center}
-.pdf-course .toc-number{font-size:12px;line-height:1;white-space:nowrap}
-@media(max-width:700px){.pdf-course .sticky-toc{grid-template-columns:repeat(4,minmax(0,1fr));padding-inline:3vw!important;gap:4px!important}.pdf-course .sticky-toc.numbered-toc{grid-template-columns:repeat(10,minmax(0,1fr))}.pdf-course .site-nav{flex-wrap:wrap!important;overflow:visible!important;white-space:normal!important;gap:8px 14px!important}}
+
+
+
+
+
+
+
+@media(max-width:700px){.pdf-course .site-nav{flex-wrap:wrap!important;overflow:visible!important;white-space:normal!important;gap:8px 14px!important;}}
 /* Compact film images stay beside their explanation. */
 .film-study.editorial-row{display:grid!important;grid-template-columns:minmax(0,38%) minmax(0,1fr)!important;gap:32px;align-items:start}
 .film-media{width:100%;min-width:0;margin:0!important;align-self:start}
@@ -181,7 +181,7 @@ html[data-mode=bi] body[data-volume=history] .map-leaf>p>.en{margin:0!important}
 .film-media figcaption{display:grid!important;gap:2px!important;min-height:3.3em;padding:8px 0 0!important;font-size:13px;line-height:1.35}
 .film-media figcaption>.zh,.film-media figcaption>.en{margin:0!important}
 .film-external{display:block;font-size:12px;margin-top:6px}
-.history-reading-notes{clear:both;margin:28px 0 44px;padding-top:18px;border-top:1px solid #555}
+
 @media(max-width:760px){.film-study.editorial-row{grid-template-columns:minmax(0,1fr)!important;gap:18px}.film-media{max-width:100%}}
 .pdf-course main .film-media>img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover!important;padding:0!important}
 /* The visual comes first in both DOM and layout; headings/ledes use the complete row. */
@@ -193,3 +193,15 @@ html[data-mode=bi] .pdf-course .lesson-section>h2>.en{margin-top:0!important}
 .pdf-course .lesson-section>.lesson-pair.prose{gap:36px}
 @media(max-width:1000px){.pdf-course .technique-row.has-study-media{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:22px}}
 @media(max-width:700px){html[data-mode=bi] .pdf-course .lesson-section>h2{grid-template-columns:minmax(0,1fr);gap:8px}.pdf-course .lesson-section>.lesson-pair.prose{gap:12px}}
+
+/* Canonical sticky TOC: wrapping document flow at EVERY width; never a slider. */
+.pdf-course .sticky-toc{position:sticky;top:var(--topbar-height,112px);z-index:55;display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:5px;width:100%;max-width:100%;height:auto;max-height:none;margin:0;padding:6px max(3vw,calc((100vw - 1760px)/2));overflow:visible;overflow-x:visible;overflow-y:visible;scrollbar-width:none;border-bottom:1px solid var(--rule);background:#0a0a0a}
+.pdf-course .sticky-toc::-webkit-scrollbar{display:none}
+.pdf-course .toc-chip{display:flex;align-items:center;flex:0 0 calc((100% + 5px)/var(--toc-columns,7) - 5px);width:auto;min-width:0;max-width:none;height:46px;margin:0;padding:3px 7px;overflow:hidden;text-decoration:none;border:1px solid #444;border-radius:3px;font-size:12px;line-height:1.3;white-space:normal}
+.pdf-course .toc-chip>span{display:block;width:100%;min-width:0}
+.pdf-course .toc-chip .zh,.pdf-course .toc-chip .en{display:block;max-width:100%;margin:0;white-space:normal;font-size:11px!important;line-height:1.3!important}
+.pdf-course .toc-chip[aria-current=location]{border-color:var(--accent);color:var(--accent);background:#211210}
+.pdf-course .numbered-toc .toc-chip{height:28px;padding:3px 2px;justify-content:center;text-align:center}
+.pdf-course .toc-number{font-size:12px;line-height:1;white-space:normal}
+.pdf-course .site-nav{flex-wrap:wrap;overflow:visible;overflow-x:visible;overflow-y:visible;white-space:normal}
+@media(max-width:700px){.pdf-course .sticky-toc{--toc-columns:4!important;padding-inline:3vw;gap:5px}.pdf-course .sticky-toc.numbered-toc{--toc-columns:10!important}.pdf-course .site-nav{flex-wrap:wrap;overflow:visible;white-space:normal;gap:8px 14px}}
