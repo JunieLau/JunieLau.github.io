@@ -16,9 +16,10 @@ function study(index){
  return `<div class="paired-study" data-still="${d.name}"><div class="still-diagram-pair"><figure><img src="./img/${d.name}.jpg" alt="${esc(d.zh+' / '+d.en)}" loading="lazy" width="360" height="203">${dual('讲义剧照','Guide still','figcaption')}</figure></div>${dual(`来源：Film Reframed《${g[0]}》第 ${d.page} 页 · ${esc(movie[0])}${d.title?'（视觉识别）':''}`,`Source: Film Reframed, ${g[1]}, p. ${d.page} · ${esc(movie[1]||movie[0])}${d.title?' (visual identification)':''}`,'p','still-credit')}${dual(d.ideaZh,d.ideaEn,'p','frame-reading')}</div>`;
 }
 function lineVisual(z,e,i=0){
- if(!['story','books','hero','three','freytag','modern'].includes(page))return '';
- const type={story:'beats',books:'beats',hero:'cycle',three:'three',freytag:'pyramid',modern:'cycle'}[page];
- return `<figure class="concept-visual">${window.BookStructureArt(type,{active:page==='story'?i:-1,stages:page==='hero'?17:8})}${dual(z,e,'figcaption')}${dual('原创结构示意 · 非电影剧照','Original structural schematic · not a film still','figcaption','original-label')}</figure>`;
+ if(page!=='story'||typeof beats==='undefined')return '';
+ const j=beats.findIndex(b=>e.endsWith(' · '+b[1]));if(j<0)return '';
+ const beat=beats[j],a=Math.round(beat[2]/110*100),b=Math.round(beat[3]/110*100),position=a===b?`${a}%`:`${a}–${b}%`;
+ return `<figure class="concept-visual">${window.BookStructureArt('beats',{model:'beats',focus:[j],heading:[beat[0],beat[1]],caption:[`第 ${beat[2]}${beat[3]!==beat[2]?'–'+beat[3]:''} / 110 页 · ${position}`,`Page ${beat[2]}${beat[3]!==beat[2]?'–'+beat[3]:''} / 110 · ${position}`]})}</figure>`;
 }
 function makeRow(el,visual){
  const body=document.createElement('div');body.className='row-copy';while(el.firstChild)body.appendChild(el.firstChild);el.appendChild(body);el.insertAdjacentHTML('afterbegin',visual);el.classList.add('editorial-row');if(visual.includes('paired-study'))el.classList.add('has-still');
@@ -29,7 +30,7 @@ if(page==='story'){
  document.querySelector('.hero-art')?.remove();
  document.querySelectorAll('.grid>.card,.law-list>.law,.pitfall').forEach((el,i)=>{const [z,e]=headingText(el);makeRow(el,lineVisual(z,e,i));});
  const detail=document.querySelector('#beat-detail');
- function decorateBeat(){if(detail.querySelector('.concept-visual'))return;const name=detail.querySelector('h3 .zh')?.textContent||'',en=detail.querySelector('h3 .en')?.textContent||'';detail.insertAdjacentHTML('afterbegin',lineVisual('《海底总动员》 · '+name,'Finding Nemo · '+en,Number(document.querySelector('[data-beat][aria-pressed=true]')?.dataset.beat||0)));}
+ function decorateBeat(){/* Every beat is illustrated in the named overview below. */}
  decorateBeat();new MutationObserver(decorateBeat).observe(detail,{childList:true});
  // A scannable editorial index complements (rather than replaces) the interactive timeline.
  const overview=document.createElement('div');overview.className='beat-overview';overview.innerHTML=dual('十五个节拍，一次看清','Fifteen beats at a glance','h3')+dual('先浏览功能，再回到上方互动节拍表读完整片例。页位仍按 110 页模型换算。','Scan the functions, then return to the interactive beat sheet for the complete worked examples. Page targets still follow the 110-page model.','p','small muted')+beats.map((b,i)=>`<article class="editorial-row">${lineVisual('《海底总动员》 · '+String(i+1).padStart(2,'0'),'Finding Nemo · '+b[1],i)}<div class="row-copy"><span class="index">${String(i+1).padStart(2,'0')} · ${b[2]}${b[2]!==b[3]?'–'+b[3]:''} / 110 · ${Math.round(b[2]/110*100)}${b[2]!==b[3]?'–'+Math.round(b[3]/110*100):''}%</span>${dual(b[0],b[1],'h3')}${dual(b[4],b[5],'p')}</div></article>`).join('');
@@ -67,7 +68,7 @@ if(page==='composition'){
 main.querySelectorAll('.wide-diagram').forEach(el=>{
  const row=document.createElement('article');row.className='editorial-row library-row overview-row';
  const fig=document.createElement('figure');fig.className='concept-visual';while(el.firstChild)fig.appendChild(el.firstChild);
- fig.insertAdjacentHTML('beforeend',dual('原创结构示意','Original structural schematic','figcaption'));
+ fig.insertAdjacentHTML('beforeend',el.closest('#story-circle')?dual('哈蒙八步：需求、探索、代价与返回连成循环','Harmon’s eight steps: need, search, cost and return form a cycle','figcaption'):dual('坎贝尔十七母题：出发、启蒙与归返三阶段','Campbell’s seventeen motifs across departure, initiation and return','figcaption'));
  const copy=document.createElement('div');copy.className='row-copy';
  const circle=el.closest('#story-circle');
  copy.innerHTML=dual('先看整体，再读每一步','Read the whole before the steps','h3')+dual(circle?'先看需求、出发、代价与返回怎样连成循环；下方八步把这个循环拆成可拍的行动，不是固定时长或强制顺序。':'先看出发、历险、归返的关系；下方逐项说明如何把变化落实到行动与人物关系。图形不规定固定时长。',circle?'See how need, departure, cost and return connect. The eight steps below turn this cycle into filmable actions, not compulsory timing or order.':'See the relation between departure, initiation and return, then read how change becomes action and relationships. The diagram does not prescribe timing.','p');

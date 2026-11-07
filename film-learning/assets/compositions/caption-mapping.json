@@ -109,7 +109,9 @@
     "file": "05-example-3.webp",
     "source": "B p. 10",
     "sourceCaption": "Le Bonheur (1965) dir. Agnès Varda DP: Claude Beausoliel, Jean Rabier",
-    "attribution": "As captioned in text handout; not independently fact-checked"
+    "attribution": "As captioned in text handout; not independently fact-checked",
+    "displayCaption": "Le Bonheur (1965) dir. Agnès Varda DP: Claude Beausoleil, Jean Rabier",
+    "editorialCorrection": "Original handout spelling/date preserved in sourceCaption; corrected display credit."
   },
   {
     "composition": 5,
@@ -117,7 +119,9 @@
     "file": "05-example-2.webp",
     "source": "B p. 10",
     "sourceCaption": "The Master (2012) dir. Paul Thomas Anderson DP: Mihai Malamare, Jr.",
-    "attribution": "As captioned in text handout; not independently fact-checked"
+    "attribution": "As captioned in text handout; not independently fact-checked",
+    "displayCaption": "The Master (2012) dir. Paul Thomas Anderson DP: Mihai Mălaimare Jr.",
+    "editorialCorrection": "Original handout spelling/date preserved in sourceCaption; corrected display credit."
   },
   {
     "composition": 6,
@@ -277,7 +281,9 @@
     "file": "12-example-1.webp",
     "source": "B p. 24",
     "sourceCaption": "Shame (2011) dir. Steve McQueen DP: Sean Bobbit",
-    "attribution": "As captioned in text handout; not independently fact-checked"
+    "attribution": "As captioned in text handout; not independently fact-checked",
+    "displayCaption": "Shame (2011) dir. Steve McQueen DP: Sean Bobbitt",
+    "editorialCorrection": "Original handout spelling/date preserved in sourceCaption; corrected display credit."
   },
   {
     "composition": 12,
@@ -293,7 +299,9 @@
     "file": "13-example-2.webp",
     "source": "B p. 26",
     "sourceCaption": "The Phantom Thread (2017) dir. Paul Thomas Anderson DP: Paul Thomas Anderson",
-    "attribution": "As captioned in text handout; not independently fact-checked"
+    "attribution": "As captioned in text handout; not independently fact-checked",
+    "displayCaption": "Phantom Thread (2017) dir. Paul Thomas Anderson No credited cinematographer; lighting cameraman: Michael Bauman",
+    "editorialCorrection": "Original handout spelling/date preserved in sourceCaption; corrected display credit."
   },
   {
     "composition": 13,
@@ -309,7 +317,9 @@
     "file": "13-example-1.webp",
     "source": "B p. 26",
     "sourceCaption": "Black Swan (2010) dir. Darren Aronofsky DP: Matthew Libitique",
-    "attribution": "As captioned in text handout; not independently fact-checked"
+    "attribution": "As captioned in text handout; not independently fact-checked",
+    "displayCaption": "Black Swan (2010) dir. Darren Aronofsky DP: Matthew Libatique",
+    "editorialCorrection": "Original handout spelling/date preserved in sourceCaption; corrected display credit."
   },
   {
     "composition": 14,
@@ -333,7 +343,9 @@
     "file": "14-example-3.webp",
     "source": "B p. 28",
     "sourceCaption": "The Revenant (2015) dir. Alejandro Gonzales Iñárritu DP: Emmanuel Lubezki",
-    "attribution": "As captioned in text handout; not independently fact-checked"
+    "attribution": "As captioned in text handout; not independently fact-checked",
+    "displayCaption": "The Revenant (2015) dir. Alejandro González Iñárritu DP: Emmanuel Lubezki",
+    "editorialCorrection": "Original handout spelling/date preserved in sourceCaption; corrected display credit."
   },
   {
     "composition": 15,
@@ -357,7 +369,9 @@
     "file": "15-example-3.webp",
     "source": "B p. 30",
     "sourceCaption": "The Descendents (2011) dir. Alexander Payne DP: Phedon Papamichael",
-    "attribution": "As captioned in text handout; not independently fact-checked"
+    "attribution": "As captioned in text handout; not independently fact-checked",
+    "displayCaption": "The Descendants (2011) dir. Alexander Payne DP: Phedon Papamichael",
+    "editorialCorrection": "Original handout spelling/date preserved in sourceCaption; corrected display credit."
   },
   {
     "composition": 16,
@@ -389,7 +403,9 @@
     "file": "17-example-2.webp",
     "source": "B p. 34",
     "sourceCaption": "Birdman or the Unexpected Virtue of Ignorance (2014) dir. Alejandro Gonzales Iñárritu DP: Emmanuel Lubezki",
-    "attribution": "As captioned in text handout; not independently fact-checked"
+    "attribution": "As captioned in text handout; not independently fact-checked",
+    "displayCaption": "Birdman or the Unexpected Virtue of Ignorance (2014) dir. Alejandro González Iñárritu DP: Emmanuel Lubezki",
+    "editorialCorrection": "Original handout spelling/date preserved in sourceCaption; corrected display credit."
   },
   {
     "composition": 17,
@@ -421,7 +437,9 @@
     "file": "18-example-1.webp",
     "source": "B p. 36",
     "sourceCaption": "Paper Moon (1973) dir. Peter Bogdanovich DP: Lázló Kovács",
-    "attribution": "As captioned in text handout; not independently fact-checked"
+    "attribution": "As captioned in text handout; not independently fact-checked",
+    "displayCaption": "Paper Moon (1973) dir. Peter Bogdanovich DP: László Kovács",
+    "editorialCorrection": "Original handout spelling/date preserved in sourceCaption; corrected display credit."
   },
   {
     "composition": 18,
@@ -429,7 +447,9 @@
     "file": "18-example-3.webp",
     "source": "B p. 36",
     "sourceCaption": "The Place Beyond the Pines (2012) dir. Derek Cianfrance DP: Sean Bobbit",
-    "attribution": "As captioned in text handout; not independently fact-checked"
+    "attribution": "As captioned in text handout; not independently fact-checked",
+    "displayCaption": "The Place Beyond the Pines (2012) dir. Derek Cianfrance DP: Sean Bobbitt",
+    "editorialCorrection": "Original handout spelling/date preserved in sourceCaption; corrected display credit."
   },
   {
     "composition": 19,
@@ -517,7 +537,9 @@
     "file": "22-example-3.webp",
     "source": "B p. 44",
     "sourceCaption": "Jojo Rabbit (2019) dir. Taika Waititi DP: Mihai Malaimare, Jr.",
-    "attribution": "As captioned in text handout; not independently fact-checked"
+    "attribution": "As captioned in text handout; not independently fact-checked",
+    "displayCaption": "Jojo Rabbit (2019) dir. Taika Waititi DP: Mihai Mălaimare Jr.",
+    "editorialCorrection": "Original handout spelling/date preserved in sourceCaption; corrected display credit."
   },
   {
     "composition": 22,
@@ -533,7 +555,9 @@
     "file": "23-example-1.webp",
     "source": "B p. 46",
     "sourceCaption": "Silence (2018) dir. Martin Scorsese DP: Rodrigo Prieto",
-    "attribution": "As captioned in text handout; not independently fact-checked"
+    "attribution": "As captioned in text handout; not independently fact-checked",
+    "displayCaption": "Silence (2016) dir. Martin Scorsese DP: Rodrigo Prieto",
+    "editorialCorrection": "Original handout spelling/date preserved in sourceCaption; corrected display credit."
   },
   {
     "composition": 23,
@@ -701,7 +725,9 @@
     "file": "30-example-1.webp",
     "source": "B p. 60",
     "sourceCaption": "American Hustle (2015) dir. David O. Russell DP: Linus Sandgren",
-    "attribution": "As captioned in text handout; not independently fact-checked"
+    "attribution": "As captioned in text handout; not independently fact-checked",
+    "displayCaption": "American Hustle (2013) dir. David O. Russell DP: Linus Sandgren",
+    "editorialCorrection": "Original handout spelling/date preserved in sourceCaption; corrected display credit."
   },
   {
     "composition": 30,
@@ -709,7 +735,9 @@
     "file": "30-example-2.webp",
     "source": "B p. 60",
     "sourceCaption": "Widows (2017) dir. Steve McQueen DP: Sean Bobbitt",
-    "attribution": "As captioned in text handout; not independently fact-checked"
+    "attribution": "As captioned in text handout; not independently fact-checked",
+    "displayCaption": "Widows (2018) dir. Steve McQueen DP: Sean Bobbitt",
+    "editorialCorrection": "Original handout spelling/date preserved in sourceCaption; corrected display credit."
   },
   {
     "composition": 30,
@@ -853,7 +881,9 @@
     "file": "36-example-1.webp",
     "source": "B p. 72",
     "sourceCaption": "Back to the Future (1985) dir. Robert Zemekis DP: Dean Cundey",
-    "attribution": "As captioned in text handout; not independently fact-checked"
+    "attribution": "As captioned in text handout; not independently fact-checked",
+    "displayCaption": "Back to the Future (1985) dir. Robert Zemeckis DP: Dean Cundey",
+    "editorialCorrection": "Original handout spelling/date preserved in sourceCaption; corrected display credit."
   },
   {
     "composition": 36,
@@ -877,7 +907,9 @@
     "file": "37-example-2.webp",
     "source": "B p. 74",
     "sourceCaption": "The Assassination of Jesse James by the Coward Robert Ford (2007) dir. Andrew Dominick DP: Roger Deakins",
-    "attribution": "As captioned in text handout; not independently fact-checked"
+    "attribution": "As captioned in text handout; not independently fact-checked",
+    "displayCaption": "The Assassination of Jesse James by the Coward Robert Ford (2007) dir. Andrew Dominik DP: Roger Deakins",
+    "editorialCorrection": "Original handout spelling/date preserved in sourceCaption; corrected display credit."
   },
   {
     "composition": 37,
@@ -933,7 +965,9 @@
     "file": "39-example-3.webp",
     "source": "B p. 78",
     "sourceCaption": "8 ½ (1963) dir. Frederico Fellini DP: Gianni Di Venanzo",
-    "attribution": "As captioned in text handout; not independently fact-checked"
+    "attribution": "As captioned in text handout; not independently fact-checked",
+    "displayCaption": "8 ½ (1963) dir. Federico Fellini DP: Gianni Di Venanzo",
+    "editorialCorrection": "Original handout spelling/date preserved in sourceCaption; corrected display credit."
   },
   {
     "composition": 40,
@@ -981,7 +1015,9 @@
     "file": "41-example-1.webp",
     "source": "B p. 82",
     "sourceCaption": "The Conformist (1970) dir. Bernardo Bertolucci DP: Vittario Storaro",
-    "attribution": "As captioned in text handout; not independently fact-checked"
+    "attribution": "As captioned in text handout; not independently fact-checked",
+    "displayCaption": "The Conformist (1970) dir. Bernardo Bertolucci DP: Vittorio Storaro",
+    "editorialCorrection": "Original handout spelling/date preserved in sourceCaption; corrected display credit."
   },
   {
     "composition": 42,
@@ -1053,7 +1089,9 @@
     "file": "44-example-3.webp",
     "source": "B p. 88",
     "sourceCaption": "House of Flying Daggers (2004) dir. Yimou Zhang DP: Xiaodang Zhao",
-    "attribution": "As captioned in text handout; not independently fact-checked"
+    "attribution": "As captioned in text handout; not independently fact-checked",
+    "displayCaption": "House of Flying Daggers (2004) dir. Yimou Zhang DP: Zhao Xiaoding",
+    "editorialCorrection": "Original handout spelling/date preserved in sourceCaption; corrected display credit."
   },
   {
     "composition": 45,
@@ -1165,7 +1203,9 @@
     "file": "49-example-2.webp",
     "source": "B p. 96",
     "sourceCaption": "The Place Beyond the Pines (2012) dir. Derek Cianfrance DP: Sean Bobbit",
-    "attribution": "As captioned in text handout; not independently fact-checked"
+    "attribution": "As captioned in text handout; not independently fact-checked",
+    "displayCaption": "The Place Beyond the Pines (2012) dir. Derek Cianfrance DP: Sean Bobbitt",
+    "editorialCorrection": "Original handout spelling/date preserved in sourceCaption; corrected display credit."
   },
   {
     "composition": 49,
@@ -1197,6 +1237,8 @@
     "file": "50-example-2.webp",
     "source": "B p. 100",
     "sourceCaption": "A Wrinkle in Time (2018) dir. Ava Duvernay DP: Tobias A. Schiessler",
-    "attribution": "As captioned in text handout; not independently fact-checked"
+    "attribution": "As captioned in text handout; not independently fact-checked",
+    "displayCaption": "A Wrinkle in Time (2018) dir. Ava DuVernay DP: Tobias A. Schiessler",
+    "editorialCorrection": "Original handout spelling/date preserved in sourceCaption; corrected display credit."
   }
 ]

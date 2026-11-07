@@ -253,7 +253,7 @@ const narrativeMatrix=[[1, 1, 1, 0, 0, 0, 0, 0], [1, 1, 1, 0, 0, 0, 0, 0], [1, 1
 const wideFeelings=[
  ['让人物很小、山野很大，像被整个世界包围。','A small figure within a vast landscape feels surrounded by the world.'],
  ['把人和剧场同时留下，观众像身在表演空间里。','Hold the person and theatre together, as if the viewer is inside the performance space.'],
- ['留住独行人物周围的空地，让环境参与情绪。','Leave open space around a solitary figure so the environment shares the emotion.'],
+ ['留住两个人物周围的空地，让环境参与情绪。','Leave open space around the two figures so the environment shares the emotion.'],
  ['人物与城市保持距离，日常空间也能带出疏离。','Separate the person from the city; ordinary space can suggest estrangement.'],
  ['让身体与壕沟同时清楚，像跟人物一起越过障碍。','Keep bodies and trenches together, as if crossing the obstacle with the characters.'],
  ['把房子当作被观察的对象，窗与阴影藏住秘密。','Observe the house as a subject, with windows and shadows hiding secrets.'],
