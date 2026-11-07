@@ -136,3 +136,60 @@ html:not([data-mode=bi]) .pdf-course .pdf-outline>a>span{grid-template-columns:m
 .pdf-course .composition-entry>.example-triptych figcaption{height:200px}
 @media(max-width:700px){.pdf-course .composition-entry>.comparison-pair img{height:auto;aspect-ratio:1000/563;max-height:40vh}.pdf-course .composition-entry>.example-triptych figcaption{height:auto;min-height:156px}}
 .pdf-course .technique-media figcaption>.zh,.pdf-course .technique-media figcaption>.en{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.5}
+/* Books-menu artwork exception: original restored sketches, not new illustrations. */
+.pdf-course[data-volume=books] .concept-visual svg,.pdf-course[data-volume=hero] .concept-visual svg,.pdf-course[data-volume=three] .concept-visual svg,.pdf-course[data-volume=freytag] .concept-visual svg,.pdf-course[data-volume=modern] .concept-visual svg{display:block;width:100%;height:auto;aspect-ratio:360/203;max-height:34vh}
+.pdf-course .pyramid-study{max-width:900px;margin-inline:auto}
+.pdf-course .pyramid-study svg{width:100%;max-height:32vh}
+.pdf-course main{padding-top:24px}
+.pdf-course main [id]{scroll-margin-top:var(--lesson-anchor-offset,220px)}
+/* Film history: expanded document flow, never a fixed-height/overflowing diagram canvas. */
+body[data-volume=history] .map-viewport{height:auto!important;max-height:none!important;overflow:visible!important;isolation:auto}
+body[data-volume=history] .map-canvas{display:block!important;position:static!important;width:100%!important;min-width:0!important;padding:24px 0!important;zoom:1!important;transform:none!important}
+body[data-volume=history] .map-root{position:static!important;margin:0 0 28px;max-width:100%}
+body[data-volume=history] .map-eras{position:static!important;min-width:0}
+body[data-volume=history] .map-era{display:block!important;position:static!important;width:100%;min-width:0;margin:0 0 48px!important;padding-top:18px;border-top:1px solid var(--rule)}
+body[data-volume=history] .map-era>.map-toggle{margin:0 0 24px}
+body[data-volume=history] .map-topics{display:grid!important;grid-template-columns:minmax(0,1fr);gap:28px;margin:0!important;padding:0!important;border:0}
+body[data-volume=history] .map-topic{display:grid!important;grid-template-columns:minmax(190px,26%) minmax(0,1fr);gap:28px;position:static!important;min-width:0;margin:0!important}
+body[data-volume=history] .map-leaves{display:grid!important;grid-template-columns:minmax(0,1fr);gap:18px;margin:0!important;padding:0!important;border:0;min-width:0}
+body[data-volume=history] .map-node{position:static!important;min-width:0;max-width:100%;height:auto!important;white-space:normal;overflow-wrap:anywhere}
+body[data-volume=history] .map-node .node-title.map-added::before,body[data-volume=history] .map-node .film-title.map-added::before{position:static;margin-right:8px}
+body[data-volume=history] .map-toggle{cursor:default;padding-right:14px}
+body[data-volume=history] .map-toggle::after{content:none!important}
+body[data-volume=history] .map-toolbar{display:none!important}
+body[data-volume=history] .history-source-note{position:static;max-width:none;clear:both;margin-top:40px}
+html[data-mode=bi] body[data-volume=history] .map-leaf>p{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+html[data-mode=bi] body[data-volume=history] .map-leaf>p>.en{margin:0!important}
+@media(max-width:760px){body[data-volume=history] .map-topic{grid-template-columns:minmax(0,1fr);gap:16px}html[data-mode=bi] body[data-volume=history] .map-leaf>p{grid-template-columns:minmax(0,1fr);gap:10px}}
+/* Wrapped sticky indexes: no scrolling strip. Actual row height is measured by JS. */
+.pdf-course .sticky-toc{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(112px,1fr));gap:5px!important;height:auto!important;max-height:none!important;overflow:visible!important;align-items:stretch;padding-block:6px!important;scrollbar-width:none}
+.pdf-course .toc-chip{display:flex!important;align-items:center;width:100%;min-width:0!important;max-width:none!important;height:40px!important;padding:3px 7px!important;margin:0;overflow:hidden}
+.pdf-course .toc-chip>span{width:100%;min-width:0}
+.pdf-course .toc-chip .zh,.pdf-course .toc-chip .en{max-width:100%;font-size:11px!important;line-height:1.3!important}
+.pdf-course .sticky-toc.numbered-toc{grid-template-columns:repeat(25,minmax(0,1fr))}
+.pdf-course .numbered-toc .toc-chip{height:28px!important;padding:3px 2px!important;justify-content:center;text-align:center}
+.pdf-course .toc-number{font-size:12px;line-height:1;white-space:nowrap}
+@media(max-width:700px){.pdf-course .sticky-toc{grid-template-columns:repeat(4,minmax(0,1fr));padding-inline:3vw!important;gap:4px!important}.pdf-course .sticky-toc.numbered-toc{grid-template-columns:repeat(10,minmax(0,1fr))}.pdf-course .site-nav{flex-wrap:wrap!important;overflow:visible!important;white-space:normal!important;gap:8px 14px!important}}
+/* Compact film images stay beside their explanation. */
+.film-study.editorial-row{display:grid!important;grid-template-columns:minmax(0,38%) minmax(0,1fr)!important;gap:32px;align-items:start}
+.film-media{width:100%;min-width:0;margin:0!important;align-self:start}
+.film-media>img,.film-facade,.film-player{display:block;width:100%;height:auto;aspect-ratio:16/9;max-height:36vh;object-fit:cover;border:0;padding:0;background:#111}
+.film-facade{position:relative;cursor:pointer;overflow:hidden}
+.film-facade>img{display:block!important;width:100%!important;height:100%!important;aspect-ratio:16/9;object-fit:cover!important;padding:0!important}
+.film-play{position:absolute;bottom:10px;left:10px;padding:6px 10px;background:#000;color:#fff;font-size:13px;line-height:1.3}
+.film-play>.en{display:block;margin-top:2px}
+.film-media figcaption{display:grid!important;gap:2px!important;min-height:3.3em;padding:8px 0 0!important;font-size:13px;line-height:1.35}
+.film-media figcaption>.zh,.film-media figcaption>.en{margin:0!important}
+.film-external{display:block;font-size:12px;margin-top:6px}
+.history-reading-notes{clear:both;margin:28px 0 44px;padding-top:18px;border-top:1px solid #555}
+@media(max-width:760px){.film-study.editorial-row{grid-template-columns:minmax(0,1fr)!important;gap:18px}.film-media{max-width:100%}}
+.pdf-course main .film-media>img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover!important;padding:0!important}
+/* The visual comes first in both DOM and layout; headings/ledes use the complete row. */
+.pdf-course .technique-row.has-study-media>.technique-media{order:-1;margin-top:0!important}
+.pdf-course .technique-row.has-study-media>.technique-pair{order:1}
+.pdf-course .lesson-section>h2,.pdf-course .lesson-section>.lesson-pair.prose{width:100%;max-width:none;grid-column:1/-1;clear:both}
+html[data-mode=bi] .pdf-course .lesson-section>h2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:36px;align-items:start}
+html[data-mode=bi] .pdf-course .lesson-section>h2>.en{margin-top:0!important}
+.pdf-course .lesson-section>.lesson-pair.prose{gap:36px}
+@media(max-width:1000px){.pdf-course .technique-row.has-study-media{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:22px}}
+@media(max-width:700px){html[data-mode=bi] .pdf-course .lesson-section>h2{grid-template-columns:minmax(0,1fr);gap:8px}.pdf-course .lesson-section>.lesson-pair.prose{gap:12px}}

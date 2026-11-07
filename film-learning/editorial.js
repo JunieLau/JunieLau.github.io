@@ -15,7 +15,12 @@ function study(index){
  const movie=d.title?d.title.split(' / '):['片名未确认','Film title unconfirmed'];
  return `<div class="paired-study" data-still="${d.name}"><div class="still-diagram-pair"><figure><img src="./img/${d.name}.jpg" alt="${esc(d.zh+' / '+d.en)}" loading="lazy" width="360" height="203">${dual('讲义剧照','Guide still','figcaption')}</figure></div>${dual(`来源：Film Reframed《${g[0]}》第 ${d.page} 页 · ${esc(movie[0])}${d.title?'（视觉识别）':''}`,`Source: Film Reframed, ${g[1]}, p. ${d.page} · ${esc(movie[1]||movie[0])}${d.title?' (visual identification)':''}`,'p','still-credit')}${dual(d.ideaZh,d.ideaEn,'p','frame-reading')}</div>`;
 }
-function lineVisual(z,e,i=0){return ''}
+function lineVisual(z,e,i=0){
+ if(!['story','books','hero','three','freytag','modern'].includes(page))return '';
+ // Original, neutral storyboard slots: simple spatial patterns, never a claimed film still.
+ const bodies=[`<path d="M30 154H330M72 154V43H288V154M94 43V154M266 43V154"/><circle cx="180" cy="86" r="13"/><path d="M163 149L164 110Q180 101 196 110L197 149M180 100V155"/>`, `<path d="M35 170L140 49H255L329 170M140 49V167M255 49V167"/><circle cx="182" cy="105" r="11"/><path d="M169 148V122L196 122V148M112 169H246"/>`, `<path d="M22 163H338M120 35V170M240 35V170" stroke-dasharray="3 5"/><circle cx="120" cy="86" r="13"/><circle cx="262" cy="86" r="13"/><path d="M102 148L105 111H135L138 148M244 148L247 111H277L280 148M152 113H231M222 106L232 113L222 120"/>`, `<path d="M25 170H335M25 45H335"/><circle cx="180" cy="83" r="15"/><path d="M153 156L156 111Q180 99 204 111L207 156M63 170L146 89M297 170L214 89"/>`];
+ return `<figure class="concept-visual"><svg viewBox="0 0 360 203" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#409aba" stroke-width="1.25" role="img" aria-label="${esc(z+' / '+e)}"><rect x=".5" y=".5" width="359" height="202" fill="#fafaf8" stroke="#e3e3dd"/>${bodies[i%4]}</svg>${dual(z,e,'figcaption')}${dual('原创示意 · 可替换剧照位','Original schematic · replaceable still slot','figcaption','original-label')}</figure>`;
+}
 function makeRow(el,visual){
  const body=document.createElement('div');body.className='row-copy';while(el.firstChild)body.appendChild(el.firstChild);el.appendChild(body);el.insertAdjacentHTML('afterbegin',visual);el.classList.add('editorial-row');if(visual.includes('paired-study'))el.classList.add('has-still');
 }
