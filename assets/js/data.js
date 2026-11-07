@@ -27,6 +27,8 @@ window.JL = {
    "zh": "浮生若夢",
    "year": "2025",
    "role": "Director",
+   "credit": "Google",
+   "credit_zh": "Google",
    "note": "Premiered on Google Flow TV at Google I/O 2025 · Screened at Tribeca 2025",
    "yt": "UCiSWcHSdYE",
    "img": "yt/UCiSWcHSdYE.jpg"
@@ -40,6 +42,8 @@ window.JL = {
    "zh": "Peter Gabriel",
    "year": "2023",
    "role": "Director · Official music video",
+   "credit": "Peter Gabriel",
+   "credit_zh": "Peter Gabriel",
    "note": "Won the global championship at Stable Diffusion’s #DiffuseTogether · praised by six-time Grammy winner Peter Gabriel",
    "yt": "6chvzqAVCnI",
    "img": "yt/6chvzqAVCnI.jpg"
@@ -66,6 +70,8 @@ window.JL = {
    "zh": "",
    "year": "2024",
    "role": "Director · Hybrid short",
+   "credit": "Runway",
+   "credit_zh": "Runway",
    "note": "Silver, Runway International AI Film Festival · Best Film, AIFA (UK) · Best Hybrid Film, AI Film Festival Amsterdam · Best AI Application, Artefact (France) · Invited to Tribeca 2024",
    "yt": "yli8f4ddgRU",
    "img": "yt/yli8f4ddgRU.jpg"
@@ -79,6 +85,8 @@ window.JL = {
    "zh": "",
    "year": "2024",
    "role": "Director · AI short",
+   "credit": "OpenAI Sora",
+   "credit_zh": "OpenAI Sora",
    "note": "Silver, Project Odyssey · Official selection, OpenAI Sora Select",
    "yt": "kLAQU3nsNP8",
    "img": "yt/kLAQU3nsNP8.jpg"
@@ -107,6 +115,8 @@ window.JL = {
    "zh": "",
    "year": "2024",
    "role": "Director · Sora short",
+   "credit": "OpenAI Sora",
+   "credit_zh": "OpenAI Sora",
    "note": "OpenAI Sora showcase",
    "yt": "e1lp-LR6m9Y",
    "img": "yt/e1lp-LR6m9Y.jpg"
@@ -135,6 +145,8 @@ window.JL = {
    "zh": "Dreamcore music video",
    "year": "2025",
    "role": "Director",
+   "credit": "Higgsfield",
+   "credit_zh": "Higgsfield",
    "note": "",
    "yt": "i7Wq0m52G24",
    "img": "yt/i7Wq0m52G24.jpg"
@@ -163,6 +175,8 @@ window.JL = {
    "zh": "",
    "year": "2026",
    "role": "Director",
+   "credit": "360",
+   "credit_zh": "360",
    "note": "",
    "yt": "ELt1s2p2axk",
    "img": "yt/ELt1s2p2axk.jpg"
@@ -176,6 +190,8 @@ window.JL = {
    "zh": "",
    "year": "2026",
    "role": "Director",
+   "credit": "LIB TV",
+   "credit_zh": "LIB TV",
    "note": "",
    "yt": "aqK0-Q9_Az8",
    "img": "yt/aqK0-Q9_Az8.jpg"
