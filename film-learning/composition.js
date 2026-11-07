@@ -4,8 +4,8 @@ const p=(z,e)=>pair(z,e,'p');
 const q=(z,e)=>pair(z,e,'p','composition-question');
 const note=(z,e,bz,be)=>`<div class="callout">${pair(z,e,'h3')}${p(bz,be)}</div>`;
 const check=items=>`<ul class="director-checklist">${items.map(t=>`<li>${pair(t[0],t[1])}</li>`).join('')}</ul>`;
-const figure=(x,y,s=1,color='#409aba')=>`<g transform="translate(${x} ${y}) scale(${s})" fill="none" stroke="#409aba" stroke-width="1.4"><circle cy="-25" r="8"/><path d="M-12-12 Q0-19 12-12 L16 20 L-16 20Z"/></g>`;
-const frame=inner=>`<svg viewBox="0 0 360 170" class="composition-diagram" aria-hidden="true" focusable="false"><rect x="1" y="1" width="358" height="168" rx="3" fill="#fafaf8" stroke="#deded8"/>${inner}</svg>`;
+const figure=()=>'';
+const frame=()=>'';
 const diagrams={
  environment:frame('<path d="M25 135V46H93V135M108 135V25H175V135M200 135V60H258V135M281 135V35H332V135" fill="none" stroke="#409aba"/><path d="M18 137H342" stroke="#409aba"/>'+figure(184,133,.6)),
  plot:frame('<rect x="265" y="28" width="60" height="110" fill="none" stroke="#409aba"/><path d="M145 95h55m-15 0v13m-12-13v8" stroke="#409aba" stroke-width="5"/><circle cx="133" cy="95" r="13" fill="none" stroke="#409aba" stroke-width="5"/><path d="M72 93H107M211 93H249" stroke="#409aba" stroke-dasharray="4 5"/>'+figure(62,112,.7)),

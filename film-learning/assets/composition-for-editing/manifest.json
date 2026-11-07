@@ -11,7 +11,8 @@
           527.953369140625,
           461.917236328125,
           763.0010986328125
-        ]
+        ],
+        "fit": "cover; no added padding"
       }
     ],
     "originalEnglish": ""
@@ -28,7 +29,8 @@
           171.2799072265625,
           208.9664764404297,
           258.77362060546875
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p02-02.webp",
@@ -38,7 +40,8 @@
           171.27987670898438,
           389.03558349609375,
           258.77362060546875
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p02-03.webp",
@@ -48,7 +51,8 @@
           171.3426513671875,
           569.52001953125,
           258.7109375
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p02-04.webp",
@@ -58,7 +62,8 @@
           487.3057556152344,
           210.00888061523438,
           575.8468017578125
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p02-05.webp",
@@ -68,7 +73,8 @@
           488.41583251953125,
           390.2921142578125,
           575.8048095703125
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p02-06.webp",
@@ -78,7 +84,8 @@
           488.35308837890625,
           569.2498168945312,
           576.8765258789062
-        ]
+        ],
+        "fit": "cover; no added padding"
       }
     ],
     "originalEnglish": "\nsequencing\nEvery shot in a film is sandwiched within the context of the shot immediately before it and\nthe shot immediately after it.\n\n\n\n\n\nMovies are simply a long sequence of individual images. Because the audience can’t walk around the\nspace or ask the characters questions, your role as the director is to guide them to what they need to\nsee to understand the story.\n\nThe images before and after each image create thematic, informational and geographic context.\nBringing intentionality to how one image relates to the next is the power you have to create a movie\nthat is cohesive and affecting.\n\ncoverage\nMany directors shoot solely “coverage.” Coverage is a classic selection of angles within a\nscene (maybe a wide shot, a two shot and each actor’s close ups.) that provide the editor with\noptions in post-production. This mitigates the risk of not having the images you need when\nyou get to the edit, but leads to generalized, uninspired compositions.\n\n wideshot                    two-shot                    close-up\n\n\n\n\n\nThe better understanding you have of how the principles of composition and editing work together,\nyou’ll have more opportunities to think outside the box and create shots that are unique and\naffecting– with the confidence to know they’ll cut together!\n\n        reframing coverage\n           Instead of starting a shotlist by selecting shots that “cover” you in the\n             edit, try writing a shot list that provides “emotional coverage”.\n\n         Ask yourself: have the compositions of the shots in your shotlist covered\n          each emotional beat in your scene? Remember that an image is worth\n         1000 words, and that the audience should be able to understand what’s\n          happening in a scene with no dialogue at all."
@@ -95,7 +102,8 @@
           505.5147705078125,
           210.47286987304688,
           593.9949951171875
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p03-02.webp",
@@ -105,7 +113,8 @@
           505.45208740234375,
           391.9063720703125,
           594.0230712890625
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p03-03.webp",
@@ -115,7 +124,8 @@
           504.44012451171875,
           572.0578002929688,
           593.957763671875
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p03-04.webp",
@@ -125,7 +135,8 @@
           676.901611328125,
           211.48129272460938,
           766.4832763671875
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p03-05.webp",
@@ -135,7 +146,8 @@
           676.9059448242188,
           391.8677673339844,
           766.4342651367188
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p03-06.webp",
@@ -145,7 +157,8 @@
           676.9014892578125,
           572.0932006835938,
           766.4381103515625
-        ]
+        ],
+        "fit": "cover; no added padding"
       }
     ],
     "originalEnglish": "context\nWhen watching a movie, the viewer’s brain is trying to deduce 3 things to make sense of each image:\n       1. “where am I?”\n     2. “what do I know?”\n     3. “how do I feel about it?”\n\nWhen devising your compositions, start by ensuring these questions are answered.\n“where am I?”\nHave you ever seen a picture of a house or apartment in a real estate listing, then when\nyou go take a tour it somehow looks totally different than you pictured? That’s what’s\nhappening in your movie! It’s the director’s responsibility to keep the viewer oriented in a\n2D representation of a 3D world. We need to give the viewer enough information – and at\nthe right time – to get oriented within the space. We do this with everything from angles, to\nvisual landmarks, to eyelines.\ngeography and orientation\nYou can establish physical geography by using establishing shots, landmarks, and the 180 line.\nestablishing shots\nFilming multiple angles of your environment before diving into the narrative of a scene will help\norient your audience to their surroundings.\n\n\n\n\nlandmarks\nIn addition to shooting establishing shots, you can include visually memorable indicators of location\nin the backgrounds of your scenes."
@@ -162,7 +175,8 @@
           280.0,
           550.0,
           583.0
-        ]
+        ],
+        "fit": "cover; no added padding"
       }
     ],
     "originalEnglish": "the axis of action and the 180 rule\nThe 180 Rule refers to the arc of space the camera is placed in to preserve the viewer’s\ngeographic understanding of the world.\n\nThe 180 Arc is established from The Axis of Action.\n\nThe Axis of Action is the midpoint on the direct Line of Action between two\nsubjects.\n\nOnce The Line of Action has been established, every shot must be framed from within\nThe 180 Arc to preserve the viewer’s spatial orientation.\n\n\n\n\n\n               A                  B\n                                   the line of action\n                     character a                “the pov line”        character b\nchanging or establishing a new axis of action\nA new Line of Action can be established in the following ways:\n1. A character moves across the line within a single shot.\n2. The camera moves across the line within a single shot.\n3. A new character enters the scene and establishes a new line of action with an existing character.\n\n        reframing shot lists\n            Fix it in preproduction! Consider incorporating eyeline\n            delineations within your shotlist. Understanding an eyeline\n           plan is crucial to ensuring your images will cut together."
@@ -179,7 +193,8 @@
           235.80398559570312,
           195.79046630859375,
           320.75579833984375
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p05-02.webp",
@@ -189,7 +204,8 @@
           356.6418762207031,
           194.76004028320312,
           441.6780700683594
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p05-03.webp",
@@ -199,7 +215,8 @@
           477.0000305175781,
           195.79000854492188,
           560.9896240234375
-        ]
+        ],
+        "fit": "cover; no added padding"
       }
     ],
     "originalEnglish": "\n“what do I know?”\nEvery shot in a film will either ask a question or provide an answer.\n\nWhen deciding on the composition of a shot, understand if it is asking a question\n(interrogation) or providing an answer (information).\n\nBut how do we guide our audience’s attention to the things they need to know?\n\n                     the focal point\n                      The focal point of an image is determined by:\n\n                         Focus: Our eyes are drawn to a subject in sharp focus.\n\n                           Contrast: Our eyes are drawn to the highest point of contrast.\n\n                         Placement: Our eyes are drawn to a subject that has\n                            prominent placement within the frame (or in relation to its\n                              environment).\n\n\n                      The focal point of moving images is determined by the\n                           additional elements:\n\n                           Faces: Our eyes are drawn to human faces, particularly one\n                                that is expressing emotion.\n\n                          Noise: Noise demands our attention, so our eyes are drawn to\n                               the noisemaker within a frame.\n\n                      Movement: Our eyes are drawn to a subject in motion.\n\nHow does having a focal point change now that we add the context of editing?\nmoving focal points\nBecause each image is preceded and followed by a new one, our focal point changes from\nshot to shot. A focal point will change location within a shot when the camera moves or the\nsubject moves.\n\n       reframing focal points\n          Consider making the focal point of your composition a misdirection from a\n          key piece of information in a frame. If you do this, you can create a sense of\n           “discovery” when the audience’s eye finally goes from the primary point of\n           interest to the secondary item."
@@ -216,7 +233,8 @@
           335.7333679199219,
           418.61328125,
           413.6400146484375
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p06-02.webp",
@@ -226,7 +244,8 @@
           335.7333679199219,
           580.9313354492188,
           413.6400146484375
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p06-03.webp",
@@ -236,7 +255,8 @@
           436.7565002441406,
           419.6142272949219,
           516.7423095703125
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p06-04.webp",
@@ -246,7 +266,8 @@
           436.79705810546875,
           581.991943359375,
           516.765380859375
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p06-05.webp",
@@ -256,7 +277,8 @@
           436.7565002441406,
           581.932373046875,
           516.7423095703125
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p06-06.webp",
@@ -266,7 +288,8 @@
           576.6408081054688,
           584.0140380859375,
           718.34814453125
-        ]
+        ],
+        "fit": "cover; no added padding"
       }
     ],
     "originalEnglish": "\nguiding the eye\nThe placement of the focal point within the frame at the end of a shot will be a determining factor of\nhow visible or invisible a cut will be when transitioning to the next shot.\ninvisible cuts:\nMaking the cut between shots feel invisible can help the characters or subjects in each scene feel\nmore connected, and the audience remain immersed.\nvisible cuts:\nFeeling the cut between shots can be helpful to show a disconnection or conflict between\ncharacters or subjects.\n\nThe closer in proximity the focal point of one frame is to the next, the less distance the\nviewer’s eye has to travel to follow the action.\n\nclose proximity between two\nfocal points after an edit:\nless awareness of self, maintains\nflow, building a more immersive\nexperience.\n\n\nfar proximity between two\nfocal points after an edit:\nmore awareness of self, creates\na more disjointed, interactive\nexperience.\n\ngrouping\n\nThe geographic organization of\ncharacters within a scene establishes\ntheir relationship to one another.\nCharacters standing in a group or on\nthe same side of the frame represent a\nunified viewpoint of the scene.\n\nCharacters on opposing sides of the\nframe or isolated from the group relay a\nlack of unity or an opposing perspective."
@@ -283,7 +306,8 @@
           295.20001220703125,
           298.3680114746094,
           410.4000244140625
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p07-02.webp",
@@ -293,7 +317,8 @@
           295.20001220703125,
           527.3280029296875,
           410.4000244140625
-        ]
+        ],
+        "fit": "cover; no added padding"
       }
     ],
     "originalEnglish": "\nhow do I feel about it?\nIt’s not only what’s seen that matters, but how it’s interpreted. How an image will be\ninterpreted will depend on which perspective you see. Which perspective we see is essential\nto how we think and feel about the situation! When creating a shot, we first need to choose if\nwe’re going to shoot it objectively or subjectively.\n\nobjective vs subjective shots\nWe need objective images to create logic.\nWe need subjective images to build emotion.\n\n\n\n\n\n                objective                     subjective\n      A shot where no particular character’s   A shot where we follow a character’s\n             perspective is being expressed.                     perspective.\n\n\nLet’s say a screenplay says:\nCharacter A walks through a hallway and rounds the corner,\nrunning into character B.\n\n        Shooting subjectively might look like:\n         a) We stay with A the entire time... and are startled with her.\n\n        Shooting objectively might look like:\n        b) We’re omniscient. We see A walking down the hallway and B coming down\n        the other side.\n        This could create suspense (“Oh no, what’s going to happen?!)\n        or anticipation (“Oh no! They are going to run into each other! She’s going to\n        embarrass herself!”)"
@@ -310,7 +335,8 @@
           106.55999755859375,
           577.079345703125,
           375.10693359375
-        ]
+        ],
+        "fit": "cover; no added padding"
       }
     ],
     "originalEnglish": "\n\n\n\n\nsubjective vs subjective shots\nWhen shooting subjectively, whose perspective we’re seeing is important!\n\n Let’s say we’re filming a confrontation, two characters at odds with each other.\n\nWe could:\n a) See a big, towering man looking down at us.\n We’ll probably get nervous for the underdog. (“Oh no, he’s going to get slaughtered! I don’t want him\n to get hurt!”)\n\nOn the other hand, we could:\n b) See a small, nervous man looking up at us.\nMaybe then we feel annoyed or confident! (“That little pipsqueak is so arrogant! He’s going to have to\n deal with the consequences of picking a fight!”)\n\nSo ask yourself:\n- Does this shot need to convey information or feeling/logic or emotion/plot or theme?\n- Which character do you want your audience to empathize with in this scene?\n- Which character’s perspective will set up the next scene best?\n- How do the compositions support that intention?"
@@ -327,7 +353,8 @@
           337.8399963378906,
           219.42745971679688,
           419.10430908203125
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p09-02.webp",
@@ -337,7 +364,8 @@
           337.8399963378906,
           388.02996826171875,
           419.33258056640625
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p09-03.webp",
@@ -347,7 +375,8 @@
           337.8399963378906,
           556.6324462890625,
           419.6401062011719
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p09-04.webp",
@@ -357,7 +386,8 @@
           425.924072265625,
           219.42747497558594,
           508.104736328125
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p09-05.webp",
@@ -367,7 +397,8 @@
           425.9240417480469,
           388.0299377441406,
           507.8385314941406
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p09-06.webp",
@@ -377,7 +408,8 @@
           425.924072265625,
           556.6324462890625,
           508.22320556640625
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p09-07.webp",
@@ -387,7 +419,8 @@
           514.008056640625,
           219.42745971679688,
           596.1500854492188
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p09-08.webp",
@@ -397,7 +430,8 @@
           514.008056640625,
           388.0299377441406,
           595.69580078125
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p09-09.webp",
@@ -407,7 +441,8 @@
           514.0081176757812,
           556.6324462890625,
           595.88330078125
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p09-10.webp",
@@ -417,7 +452,8 @@
           602.0921020507812,
           219.42745971679688,
           683.8524169921875
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p09-11.webp",
@@ -427,7 +463,8 @@
           602.0921630859375,
           388.02996826171875,
           683.58544921875
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p09-12.webp",
@@ -437,7 +474,8 @@
           602.0921630859375,
           556.6324462890625,
           684.4244384765625
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p09-13.webp",
@@ -447,7 +485,8 @@
           690.4555053710938,
           220.48147583007812,
           773.7880249023438
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p09-14.webp",
@@ -457,7 +496,8 @@
           688.3573608398438,
           394.4096374511719,
           779.9199829101562
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p09-15.webp",
@@ -467,7 +507,8 @@
           690.387451171875,
           558.9830322265625,
           776.5458984375
-        ]
+        ],
+        "fit": "cover; no added padding"
       }
     ],
     "originalEnglish": "\nexercises\n\n\n    1. scene analysis - practicing the 180 line\n\n  Review the following sequence from the John Hughes film, “The Breakfast Club”.\n\n  Use the overhead layout on the next page to draw a diagram of the\n   following items (in order):\n\n    1. Where you believe each camera setup was located for each still in the sequence.\n    2. Where you believe the director established each new 180 line within the scene.\n    3. Which direction each actor’s eye lines are facing throughout the scene."
@@ -484,7 +525,8 @@
           190.08001708984375,
           537.3768920898438,
           688.3200073242188
-        ]
+        ],
+        "fit": "cover; no added padding"
       }
     ],
     "originalEnglish": ""
@@ -501,7 +543,8 @@
           314.6000061035156,
           217.3466796875,
           386.6339416503906
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p11-02.webp",
@@ -511,7 +554,8 @@
           314.6000061035156,
           386.6648254394531,
           387.0182189941406
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p11-03.webp",
@@ -521,7 +565,8 @@
           314.6000061035156,
           555.9830322265625,
           387.6493225097656
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p11-04.webp",
@@ -531,7 +576,8 @@
           392.69146728515625,
           217.34666442871094,
           466.79766845703125
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p11-05.webp",
@@ -541,7 +587,8 @@
           392.6611328125,
           386.66485595703125,
           465.7415771484375
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p11-06.webp",
@@ -551,7 +598,8 @@
           392.61993408203125,
           557.0769653320312,
           466.8101806640625
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p11-07.webp",
@@ -561,7 +609,8 @@
           474.3868103027344,
           217.34666442871094,
           546.8594970703125
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p11-08.webp",
@@ -571,7 +620,8 @@
           474.3868103027344,
           386.66485595703125,
           546.282958984375
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p11-09.webp",
@@ -581,7 +631,8 @@
           474.3868408203125,
           555.9830322265625,
           547.4890747070312
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p11-10.webp",
@@ -591,7 +642,8 @@
           552.4158935546875,
           218.39404296875,
           626.595703125
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p11-11.webp",
@@ -601,7 +653,8 @@
           552.4629516601562,
           387.6731872558594,
           626.5599365234375
-        ]
+        ],
+        "fit": "cover; no added padding"
       },
       {
         "file": "p11-12.webp",
@@ -611,7 +664,8 @@
           553.4945068359375,
           555.9830322265625,
           626.559814453125
-        ]
+        ],
+        "fit": "cover; no added padding"
       }
     ],
     "originalEnglish": "\n\n\n2. shoot a scene on your phone\n\nWhen blocking a scene with your actors, shoot video of your intended shots on your phone.\nSend this material to your editor. They can try cutting the scene together and tell you if there\nare any errors. This can save you the hassle of potential reshoots!\n\nFor complex sequences (e.g., action scenes, sex scenes, musical numbers) be sure to account\nfor blocking adjustments in your production schedule. Even better, if you hold rehearsals with\nyour cast, shoot it then and practice cutting it ahead of time!"

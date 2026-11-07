@@ -54,3 +54,6 @@ These public references support scene/film identification only; the actual site 
 - 《楚门的世界》 / The Truman Show: https://www.salon.com/1998/05/30/review_120/
 - 《亡命驾驶》 / Drive: https://www.thepartwhere.com/m/cc8af304-5365-49ee-ad43-c62549d8f987
 - 《严肃的男人》 / A Serious Man: https://www.vulture.com/article/best-bar-bat-mitzvah-movies-tv.html
+
+## Current illustration policy
+All 22 course-generated `*-diagram.svg` sketches have been removed from this site's delivery directory. Only the PDF-extracted JPG stills remain here; their source-page manifest is unchanged. No invented replacement diagram was introduced. Generated SVG files were quarantined outside the site at `/workspace/film-learning-removed-generated-art/`, whose REMOVED-ASSETS.json lists every removed file. Source-PDF diagrams for the newer lessons are separately credited under assets/compositions, assets/chemistry and assets/composition-for-editing.

@@ -65,6 +65,14 @@ const directors=[
 [['阿方索·卡隆','Alfonso Cuarón'],['《人类之子》— Emmanuel Lubezki','Children of Men — Emmanuel Lubezki'],['长镜头让人物与社会环境保持同一时间与空间；复杂装置服务现场感。','Extended takes hold characters and social environment in shared time and space; complex rigs serve immediacy.'],['在一个镜头内安排主行动与背景事件，让观众在不中断空间中发现危险。','Stage foreground action and background events in one shot so danger emerges within unbroken space.'],['cuaron']],
 [['赵婷','Chloé Zhao'],['《无依之地》— Joshua James Richards','Nomadland — Joshua James Richards'],['自然光与实际场所、非职业表演者的生活经验共同构成观察性的质感。','Natural light, real locations, and nonprofessional performers’ lived experience contribute to an observational texture.'],['把拍摄计划围绕真正需要的光线时段安排，先观察人与地景关系，再决定移动方式。','Schedule around the light the scene needs; observe the person–landscape relation before choosing camera movement.'],['zhao']]
 ];
+// Small source-backed details formerly present only in the removed verification log.
+const addNote=(rows,index,z,e)=>{rows[index][3][0]+=' '+z;rows[index][3][1]+=' '+e};
+addNote(moods,1,'稳定器要按装好镜头、附件后的整套重量与重心试装，不能只看机身重量。','Test stabilizer capacity and balance with the lens and all accessories fitted, not the bare body.');
+addNote(moods,5,'胶片试拍应把曝光、冲洗和扫描一起看，不能只挑一个暖色预设。','Evaluate exposure, processing and scanning together in the film test, rather than choosing a warm preset.');
+directors[0][1][0]+='；《闪灵》斯坦尼康操作：Garrett Brown';directors[0][1][1]+='; The Shining Steadicam operator: Garrett Brown';
+directors[8][2][0]+=' 灯烛氛围不等于没有辅助照明，先看人物怎样被照亮。';directors[8][2][1]+=' A lamp-lit appearance does not mean no supplemental lighting; study how faces are actually illuminated.';
+addNote(cameras,8,'如果要拍更慢的动作，请与摄影师另核对较低分辨率的高速模式；8K 120 fps 不是所有模式的统一上限。','For slower motion, check the lower-resolution high-speed modes with the cinematographer; 8K 120 fps is not a universal ceiling across modes.');
+
 // Audit covers every row of the two supplied screenshots, separating factual specifications from aesthetic proposals.
 const audit=[
 ['A01','ARRI ALEXA 35','correct',['S35 4.6K、17 档；肤色自然、高光柔和；写实／古装烛火。','S35 4.6K, 17 stops; natural skin and gentle highlights; realism / period candlelight.'],['确认 S35、4608 × 3164 与厂家 17 档；肤色与高光属于厂家描述。题材适用性不是可验证的排他结论，保留为试拍建议。','Confirmed Super 35, 4608 × 3164, and manufacturer-rated 17 stops. Skin and highlights are manufacturer descriptions. Genre suitability is not an objectively exclusive fact and remains a test proposal.'],['a35']],

@@ -65,3 +65,74 @@ html:not([data-mode=bi]) .technique-pair{grid-template-columns:minmax(0,1fr)}
 html:not([data-mode=bi]) .pdf-course .pdf-outline>a>span{grid-template-columns:minmax(0,1fr)}
 .pdf-course[data-course] .example-grid,.pdf-course[data-course] .source-page-grid{grid-template-columns:repeat(var(--media-columns,1),minmax(0,1fr))}
 @media(max-width:700px){.pdf-course .pdf-outline>a>span{grid-template-columns:minmax(0,1fr);gap:6px}.pdf-course[data-course] .example-grid,.pdf-course[data-course] .source-page-grid{grid-template-columns:minmax(0,1fr)}}
+/* Junie's approved study hierarchy: two generous comparisons, three examples. */
+.pdf-course .study-media-grid{display:grid;grid-template-columns:repeat(var(--study-columns,3),minmax(0,1fr));gap:28px;align-items:stretch;margin:28px 0 36px}
+.pdf-course .study-media-grid>figure{margin:0;min-width:0;display:flex;flex-direction:column}
+.pdf-course .study-media-grid img{display:block;width:100%;height:auto;aspect-ratio:1000/563;object-fit:cover;background:#101010;border:1px solid var(--rule)}
+.pdf-course .study-media-grid figcaption{height:112px;flex:none;display:flex;flex-direction:column;padding:14px 0 0;font-size:15px;line-height:1.6;overflow-wrap:anywhere;color:var(--muted)}
+.pdf-course .study-media-grid figcaption>.en{margin-top:auto;font-size:14px!important}
+.pdf-course .composition-entry .example-triptych figcaption{height:190px}
+.pdf-course .study-media-grid .frame-film-credit{margin-top:auto;padding-top:12px}
+.pdf-course .study-media-grid.single-reference{width:calc((100% - 28px)/2);margin-inline:auto}
+.pdf-course .alternate-grid figcaption{height:112px}
+@media(max-width:700px){.pdf-course .study-media-grid{grid-template-columns:minmax(0,1fr);gap:24px}.pdf-course .study-media-grid.single-reference{width:100%}.pdf-course .study-media-grid figcaption{height:112px}.pdf-course .composition-entry .example-triptych figcaption{height:180px}}
+/* Read while looking: no screen-filling single images or decorative cover plates. */
+.pdf-course .composition-entry>.comparison-pair{width:min(100%,calc(60vh * 1000 / 563 + 28px));margin-inline:auto}
+.pdf-course .composition-entry>.comparison-pair figcaption{height:88px}
+.pdf-course .composition-entry>.example-triptych figcaption{height:240px}
+.frame-reading-cue{display:block;font-size:14px;line-height:1.5;margin-top:10px;color:var(--ink)}
+.frame-reading-cue .en{font-size:13px!important;margin-top:4px!important}
+.pdf-course .technique-row.has-study-media{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:36px;align-items:start}
+.pdf-course .has-study-media .technique-pair{column-gap:24px;font-size:18px}
+.pdf-course .has-study-media .technique-pair h3{font-size:20px}
+.technique-media{min-width:0}
+.pdf-course .technique-media .study-media-grid{margin-top:0;margin-bottom:24px;gap:20px}
+.pdf-course .technique-media .single-reference{width:100%}
+.pdf-course .technique-media figcaption{height:112px;font-size:14px}
+.pdf-course[data-course] .source-page-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:24px}
+.pdf-course[data-course] .source-page-grid>figure{flex:0 0 min(200px,42%);margin:0;min-width:0}
+.pdf-course[data-course] .source-page-grid img{width:100%;height:auto}
+@media(max-width:1000px){.pdf-course .technique-row.has-study-media{grid-template-columns:minmax(0,1fr);gap:22px}.pdf-course .technique-media .single-reference{width: min(100%,600px)}.pdf-course .has-study-media .technique-pair{font-size:18px}}
+@media(max-width:700px){.pdf-course .composition-entry>.comparison-pair{width:100%}.pdf-course .composition-entry>.example-triptych figcaption{height:auto;min-height:156px}.pdf-course .technique-media .study-media-grid{gap:24px}.pdf-course .technique-media figcaption{height:auto;min-height:88px}.pdf-course .technique-row.has-study-media{display:block}.pdf-course .technique-media{margin-top:24px}}
+/* Always-available two-line maximum chapter scroller, including mobile. */
+.pdf-course .topbar{position:sticky;top:0;z-index:60}
+.pdf-course .sticky-toc{position:sticky;top:var(--topbar-height,112px);z-index:55;display:flex;flex-wrap:nowrap;gap:10px;width:100%;max-width:100%;height:64px;padding:8px max(3vw,calc((100vw - 1760px)/2));margin:0;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scrollbar-width:thin;border-bottom:1px solid var(--rule);background:#0a0a0a;align-items:center;scroll-behavior:smooth}
+.pdf-course .toc-chip{display:block;flex:0 0 auto;max-width:220px;min-width:56px;padding:4px 10px;text-decoration:none;border:1px solid #444;border-radius:3px;font-size:13px;line-height:1.35}
+.pdf-course .toc-chip>span{display:block}
+.pdf-course .toc-chip .zh,.pdf-course .toc-chip .en{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:198px;margin:0;line-height:1.35;font-size:12px!important}
+.pdf-course .toc-chip[aria-current=location]{border-color:var(--accent);color:var(--accent);background:#211210}
+.pdf-course .lesson-section,.pdf-course section[id]{scroll-margin-top:var(--lesson-anchor-offset,200px)}
+.pdf-course .lesson-hero{padding-top:36px}
+@media(max-width:700px){.pdf-course .topbar{padding-block:9px;gap:8px}.pdf-course .site-nav{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;white-space:nowrap;padding-bottom:4px;gap:18px}.pdf-course .site-nav>a{flex-shrink:0}.pdf-course .site-nav .nav-books{flex-shrink:0}.pdf-course .site-nav .book-menu{position:fixed;top:var(--topbar-height);left:20px;z-index:90}.pdf-course .sticky-toc{height:60px;padding-inline:20px}.pdf-course .lesson-hero{padding-top:28px}}
+@media(prefers-reduced-motion:reduce){.pdf-course .sticky-toc{scroll-behavior:auto}}
+/* Whole-site reading audit: only PDF-derived illustrations, clean text reflow. */
+.pdf-course .replaced-by-sticky-toc{display:none!important}
+.pdf-course .text-only-row{display:block!important}
+.pdf-course .text-only-row>.row-copy{width:100%;max-width:none}
+.pdf-course .still-diagram-pair{grid-template-columns:minmax(0,1fr)}
+.pdf-course .expanded-reference{margin-block:32px;padding-block:24px;border-block:1px solid var(--rule)}
+.pdf-course .expanded-reference>h2{font-size:24px}
+.pdf-course .map-viewport{max-height:none!important;overflow:visible!important}
+.pdf-course .map-canvas{width:100%!important;min-width:0!important;transform:none!important}
+.pdf-course .map-connectors{display:none}
+.pdf-course .history-panel{scroll-margin-top:var(--lesson-anchor-offset,200px)}
+.pdf-course .paired-study img,.pdf-course .concept-visual img,.pdf-course .gallery-row img{max-height:36vh;object-fit:contain}
+.pdf-course .source-page-grid img{max-height:300px;object-fit:contain}
+.pdf-course main [id]{scroll-margin-top:var(--lesson-anchor-offset,200px)}
+.pdf-course main img{max-height:40vh;object-fit:contain}
+.pdf-course .study-media-grid img{object-fit:cover}
+.pdf-course #all-worked-beats article{padding:24px 0;border-bottom:1px solid var(--rule)}
+.pdf-course .course-layout{display:block!important}
+.pdf-course .course-layout>div{width:100%;min-width:0}
+.pdf-course .country-tabs{position:relative;top:auto}
+.pdf-course .comparison-scroll{max-height:none;overflow-x:auto}
+/* Review polish: fill frames, compact bilingual captions, full-width comparison pair. */
+.pdf-course .study-media-grid img{object-fit:cover}
+.pdf-course .study-media-grid figcaption{height:76px;justify-content:flex-start}
+.pdf-course figure figcaption>.en,.pdf-course .study-media-grid figcaption>.en{margin-top:2px!important}
+.pdf-course .composition-entry>.comparison-pair{width:100%;max-width:none;margin-inline:0}
+.pdf-course .composition-entry>.comparison-pair img{height:min(calc((94vw - 28px)/2 * 563 / 1000),40vh);max-height:40vh;aspect-ratio:auto;object-fit:cover}
+.pdf-course .composition-entry>.comparison-pair figcaption{height:76px}
+.pdf-course .composition-entry>.example-triptych figcaption{height:200px}
+@media(max-width:700px){.pdf-course .composition-entry>.comparison-pair img{height:auto;aspect-ratio:1000/563;max-height:40vh}.pdf-course .composition-entry>.example-triptych figcaption{height:auto;min-height:156px}}
+.pdf-course .technique-media figcaption>.zh,.pdf-course .technique-media figcaption>.en{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.5}
