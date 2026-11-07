@@ -5,6 +5,7 @@ Plain static HTML/CSS/JS. No build step, backend, analytics, external font reque
 ## Entry points
 - `index.html`: eight-chapter Save the Cat! teaching course, interactive 15-beat explorer with runtime scaling, one quiz per chapter, local logline worksheet, and source notes.
 - `cinematography.html`: 17 camera / imaging-system entries, 13 lens families, 12 mood-oriented test proposals, 12 director / cinematographer studies, and a 30-row audit of the two supplied screenshots.
+- `composition.html` + `composition.js`: two-chapter Film Reframed study guide, five compositional intentions, character-association and relationship tools, original SVG diagrams, director checklists, and two quizzes.
 - `fact-check.md`: complete bilingual source-table audit, also downloadable on page 2.
 - `style.css`, `app.js`, `cinematography-data.js`, `cinematography.js`: supporting assets.
 
@@ -22,3 +23,8 @@ Language defaults to bilingual. Language choice, quiz progress, and the logline 
 - Audit labels: 8 confirmed, 16 corrected/qualified, 6 not objectively verifiable. Each original row is covered, with facts separated from aesthetic judgments and source URLs supplied.
 
 Headless Chromium QA: both pages at 1440×1000 and 390×844 in all three modes (12 cases). Tested language persistence, unique IDs, no page-width overflow, every quiz, logline storage and checklist, beat selection/scaling, table filters, and horizontal table scrolling. No JavaScript errors. Screenshots and detailed test results are in `/workspace/film-learning-shots/` (not needed for deployment).
+
+## Volume 03 source and QA note
+Both supplied Film Reframed guides were read in full (8 + 7 pages), with every page rendered for visual review. The site paraphrases the framework and credits the source; it includes no original PDF files or reproduced source images. The schematics, director checklists, exercises, and quizzes are original teaching additions, clearly distinguished from the source framework. Named viewing suggestions are drawn only from the PDFs; uncaptioned stills are not assigned speculative film titles. Symbolic and psychological readings are presented as context-dependent hypotheses rather than universal rules.
+
+Page 3 passed all three modes at desktop (1440×1000) and mobile (390×844), plus all-page/all-language 320px overflow checks. Quizzes, language persistence, shared navigation, unique IDs, and file:// loading passed with no JavaScript errors. Composition screenshots and `composition-qa-results.json` are in `/workspace/film-learning-shots/`.
