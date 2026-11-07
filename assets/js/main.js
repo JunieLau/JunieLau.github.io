@@ -30,6 +30,18 @@
   const pTitle = p => ZH() ? (p.title_zh || p.title) : p.title;
   const pRole = p => ZH() ? (p.role_zh || p.role) : p.role;
   const pNote = p => ZH() ? (p.note_zh || p.note) : p.note;
+  /* same film, two listed videos: full film stays first; the original trailer entry stays beside it */
+  function videoEntries(list) {
+    const out = [];
+    list.forEach(p => {
+      if (p.trailerImg) {
+        out.push({ p, img: p.img, href: "work-" + p.id + ".html#film", kind: "film" });
+        out.push({ p, img: p.trailerImg, href: "work-" + p.id + ".html#trailer", kind: "trailer" });
+      } else out.push({ p, img: p.img, href: "work-" + p.id + ".html", kind: "" });
+    });
+    return out;
+  }
+  const kindLabel = e => e.kind === "film" ? T("Full Film", "正片") : e.kind === "trailer" ? T("Trailer", "预告片") : "";
   const stillsOf = id => (JL.frames || []).filter(f => f.pid === id);
   const clipsOf = id => (JL.clips || []).filter(f => f.pid === id);
   /* ---------- lightbox ---------- */
@@ -134,10 +146,10 @@
       bgTop ? (bgD = setTimeout(go, 140)) : go();                  /* fast spins skip the works flying past */
     };
     const ACC = ["#ff4f8b", "#ffc531", "#13c8a4", "#ff3dd2", "#ff8a00", "#7b5cff"];
-    const W = P.map((p, o) => ({ p, o })).sort((a, b) => (parseInt(b.p.year) || 0) - (parseInt(a.p.year) || 0) || a.o - b.o).map(({ p }, i) => ({ p, img: BASE + p.img, col: ACC[i % ACC.length] })); /* newest → oldest */
+    const W = videoEntries(P).map((e, i) => ({ p: e.p, href: e.href, kind: e.kind, img: BASE + e.img, col: ACC[i % ACC.length] })); /* newest → oldest; trailer keeps its own cover */
     const N = W.length, STEP = 360 / N;
     const cards = W.map((w, i) => {
-      const a = document.createElement("a"); a.className = "rc"; a.href = "work-" + w.p.id + ".html";
+      const a = document.createElement("a"); a.className = "rc"; a.href = w.href;
       a.style.setProperty("--c", w.col);
       a.innerHTML = '<img src="' + w.img + '" alt="" draggable="false" width="1280" height="720"><b class="no">' + String(i + 1).padStart(2, "0") + '</b><span class="dm"></span><span class="lb2"><i></i><em>' + w.p.year + '</em></span>';
       a.addEventListener("pointerdown", e => { ptype = e.pointerType; });
@@ -151,7 +163,7 @@
       ringEl.appendChild(a);
       return { el: a, dm: $(".dm", a), i, ang0: i * STEP, k: 1 };
     });
-    function labels(){ cards.forEach(c => { $("i", c.el).textContent = pTitle(W[c.i].p); }); }
+    function labels(){ cards.forEach(c => { const w = W[c.i], k = kindLabel(w); $("i", c.el).textContent = pTitle(w.p) + (k ? " — " + k : ""); }); }
     const ENL = 1.7, DPR = Math.max(1, window.devicePixelRatio || 1), SRCW = 1280;   // official maxres covers are 1280 px wide
     let ew = 0, eh = 0, ptype = "mouse";
     let cw = 0, R = 0, PERSP = 0, cx = 0, cy = 0, TILT = 0;
@@ -184,10 +196,10 @@
     let rot = 0, pend = 0, vel = 0, target = null, dragging = false, lx = 0, moved = 0, hover = -1, idle = performance.now(), front = -1;
     const nowEl = $(".now", fold), rail = $(".rail", fold);
     function setNow(k){
-      const w = W[k], p = w.p, href = "work-" + p.id + ".html";
+      const w = W[k], p = w.p, href = w.href, extra = kindLabel(w) || (pNote(p) ? pNote(p).split("·")[0].trim() : "");
       $(".idx", nowEl).textContent = String(k + 1).padStart(2, "0") + " / " + String(N).padStart(2, "0");
       const t = $(".ttl", nowEl); t.textContent = pTitle(p); t.href = href;
-      $(".meta", nowEl).textContent = p.year + "  ·  " + pRole(p) + (pNote(p) ? "  ·  " + pNote(p).split("·")[0].trim() : "");
+      $(".meta", nowEl).textContent = p.year + "  ·  " + pRole(p) + (extra ? "  ·  " + extra : "");
       $(".go", nowEl).href = href;
       fold.style.setProperty("--acc", w.col);
       BGX(w);
@@ -195,7 +207,7 @@
       nowEl.classList.remove("in"); requestAnimationFrame(() => requestAnimationFrame(() => nowEl.classList.add("in")));   /* no forced reflow mid-rotation */
     }
     function renderRail(){
-      rail.innerHTML = W.map((w, j) => '<li style="--c:' + w.col + '"><a href="work-' + w.p.id + '.html" data-k="' + j + '"><b>' + String(j + 1).padStart(2, "0") + '</b><span>' + esc(pTitle(w.p)) + '</span><i>' + w.p.year + '</i></a></li>').join("");
+      rail.innerHTML = W.map((w, j) => '<li style="--c:' + w.col + '"><a href="' + w.href + '" data-k="' + j + '"><b>' + String(j + 1).padStart(2, "0") + '</b><span>' + esc(pTitle(w.p)) + '</span><i>' + esc(kindLabel(w) || w.p.year) + '</i></a></li>').join("");
       labels(); if (front >= 0) setNow(front);
     }
     hooks.push(renderRail);
@@ -305,18 +317,19 @@
   const wall = $(".wall");
   if (wall) {
     function renderWall(){
-      wall.innerHTML = P.map((p, i) => {
-        const st = stillsOf(p.id)[0];
-        return '<a class="wt wt3" href="work-' + p.id + '.html"><span class="fr"><span class="c" style="background-image:url(&quot;' + BASE + p.img + '&quot;)"></span>' +
+      wall.innerHTML = videoEntries(P).map((e, i) => {
+        const st = stillsOf(e.p.id)[0];
+        const mark = kindLabel(e) || e.p.year;
+        return '<a class="wt wt3" href="' + e.href + '"><span class="fr"><span class="c" style="background-image:url(&quot;' + BASE + e.img + '&quot;)"></span>' +
           (st ? '<span class="s" style="background-image:url(&quot;' + BASE + st.thumb + '&quot;)"></span>' : '') + '</span>' +
-          '<span class="cap"><b>' + String(i + 1).padStart(2, "0") + '</b><span class="t">' + esc(pTitle(p)) + '</span><i>' + p.year + '</i></span></a>';
+          '<span class="cap"><b>' + String(i + 1).padStart(2, "0") + '</b><span class="t">' + esc(pTitle(e.p)) + '</span><i>' + esc(mark) + '</i></span></a>';
       }).join("");
     }
     hooks.push(renderWall);
   }
   const il = $(".ilist");
   if (il) {
-    const render = () => { il.innerHTML = P.map(p => '<li><a href="work-' + p.id + '.html"><span class="y">' + p.year + ',</span><span class="t">' + esc(pTitle(p)) + '</span><span class="r">' + esc(pRole(p)) + '</span></a></li>').join(""); };
+    const render = () => { il.innerHTML = videoEntries(P).map(e => { const k = kindLabel(e); return '<li><a href="' + e.href + '"><span class="y">' + e.p.year + ',</span><span class="t">' + esc(pTitle(e.p)) + '</span><span class="r">' + esc(k ? pRole(e.p) + " · " + k : pRole(e.p)) + '</span></a></li>'; }).join(""); };
     hooks.push(render);
   }
   /* =========================================================

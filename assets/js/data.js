@@ -13,7 +13,8 @@ window.JL = {
    "note": "Full film · Cantonese cyberpunk action-comedy short. Official trailer remains on this page.",
    "yt": "8R4hEVX46fA",
    "trailer": "N3ZfYhO8cBY",
-   "img": "yt/8R4hEVX46fA.jpg"
+   "img": "yt/8R4hEVX46fA.jpg",
+   "trailerImg": "yt/N3ZfYhO8cBY.jpg"
   },
   {
    "id": "dear",
@@ -901,8 +902,15 @@ window.JL = {
    "yt": "8R4hEVX46fA",
    "pid": "goldfish",
    "img": "yt/8R4hEVX46fA.jpg",
-   "cap": "Goldfish Mayhem — 2026",
-   "cap_zh": "金鱼街大乱斗 — 2026"
+   "cap": "Goldfish Mayhem — Full Film — 2026",
+   "cap_zh": "金鱼街大乱斗 — 正片 — 2026"
+  },
+  {
+   "yt": "N3ZfYhO8cBY",
+   "pid": "goldfish",
+   "img": "yt/N3ZfYhO8cBY.jpg",
+   "cap": "Goldfish Mayhem — Trailer — 2026",
+   "cap_zh": "金鱼街大乱斗 — 预告片 — 2026"
   },
   {
    "yt": "UCiSWcHSdYE",

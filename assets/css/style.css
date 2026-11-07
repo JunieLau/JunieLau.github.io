@@ -158,12 +158,10 @@ main{padding-top:var(--tb)}
 .player.on .pbtn,.player.on img{visibility:hidden}
 .pbar{display:flex;gap:18px;max-width:1600px;margin:0 auto;padding:10px 0;border-bottom:1px solid #3a2626;font:500 12px/1 var(--mono);text-transform:uppercase}
 .pbar .tc,.pbar .pk{color:var(--red)}.pbar .pt{flex:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.pbar a:hover{color:var(--red)}
-.trailer{max-width:1600px;margin:0 auto 28px;display:grid;grid-template-columns:1.6fr 1fr;gap:40px}
-.trailer .k{font:500 11px/1 var(--mono);text-transform:uppercase;color:var(--red);margin:0 0 10px}
-.trailer .player,.trailer .pbar{max-width:none}
-.trailer .tnote{font:400 14px/1.45 var(--sans);margin-top:10px}
-.trailer .pbtn{padding:12px 14px 12px 12px;gap:10px}
-.trailer .pbtn i{border-left-width:12px;border-top-width:8px;border-bottom-width:8px}
+.plays{display:grid;grid-template-columns:1fr 1fr;gap:22px 18px;max-width:1600px;margin:0 auto;align-items:start}
+.plays .player,.plays .pbar{max-width:none}
+.play{scroll-margin-top:calc(var(--tb) + 12px)}
+.tnote{font:400 14px/1.45 var(--sans);margin-top:10px}
 .spec{display:grid;grid-template-columns:1.6fr 1fr;gap:40px;max-width:1600px;margin:0 auto;padding:clamp(28px,4vw,56px) 0}
 .wtitle{font:400 clamp(48px,7vw,120px)/.92 var(--serif)}
 .wtitle i{display:block;font:400 .4em/1.2 var(--serif);font-style:italic;color:var(--red);margin-top:12px}
@@ -277,7 +275,7 @@ main{padding-top:var(--tb)}
   .vgrid,.vgrid.two{grid-template-columns:1fr}.vgrid.stag .vc:nth-child(n){margin-top:0}
   .campaign-top{grid-template-columns:1fr}.xpc{grid-template-columns:repeat(2,1fr)}
   .gal{columns:2}.gal.photo{columns:2}
-  .spec,.trailer{grid-template-columns:1fr;gap:24px}.sg{grid-template-columns:1fr 1fr}.cg,.cg.n1,.cg.n2{grid-template-columns:1fr;max-width:none}
+  .spec,.plays{grid-template-columns:1fr;gap:24px}.sg{grid-template-columns:1fr 1fr}.cg,.cg.n1,.cg.n2{grid-template-columns:1fr;max-width:none}
   .pbar{flex-wrap:wrap;row-gap:8px}.pbar .pt{min-width:0}
   .pn{grid-template-columns:1fr}.pn a{aspect-ratio:16/8}
   .hero-about,.bio2{grid-template-columns:1fr}
