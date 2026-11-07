@@ -5,10 +5,10 @@ const dual=(z,e,tag='span',cls='')=>`<${tag} class="${cls}"><span class="zh" lan
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const stills=window.filmLearningStills||[];
 const page=document.body.dataset.volume|| (document.querySelector('#composition-main')?'composition':document.querySelector('#cine-main')?'image':'story');
-const titles={story:['救猫咪','save the cat!'],image:['摄影与镜头','cameras, lenses & intention'],composition:['构图','composition & character']};
-Object.assign(titles,{books:['书单与结构','books & story structures'],hero:['英雄之旅','the hero’s journey'],three:['诗学与三幕结构','poetics & three acts'],freytag:['五部结构金字塔','freytag’s pyramid'],modern:['现代单一神话','modern monomyth'],films:['导演的片单','films for a director'],history:['电影史','histories of cinema']});
+const titles={story:['救猫咪','Save the Cat!'],image:['摄影与镜头','Cameras, Lenses & Intention'],composition:['构图','Composition & Character']};
+Object.assign(titles,{books:['书单与结构','Books & Story Structures'],hero:['英雄之旅','The Hero’s Journey'],three:['诗学与三幕结构','Poetics & Three Acts'],freytag:['五部结构金字塔','Freytag’s Pyramid'],modern:['现代单一神话','Modern Monomyth'],films:['导演的片单','Films for a Director'],history:['电影史','Histories of Cinema']});
 const main=document.querySelector('main');
-main.insertAdjacentHTML('afterbegin',`<div class="editorial-masthead">${dual('电影学习','film learning','p','masthead-kicker')}${dual(...titles[page],'p','masthead-title')}</div>`);
+main.insertAdjacentHTML('afterbegin',`<div class="editorial-masthead">${dual('电影学习','Film Learning','p','masthead-kicker')}${dual(...titles[page],'p','masthead-title')}</div>`);
 function study(index){
  const d=stills[index];if(!d)return '';
  const g=d.guide==='intention'?['构图与意图','Composition & Intention']:['为人物构图','Composing for Character'];
@@ -63,11 +63,35 @@ if(page==='composition'){
  first.querySelector('.intention-grid').insertAdjacentHTML('beforebegin',legend);
  const source=document.querySelector('#composition-sources');source.insertAdjacentHTML('beforeend',dual('替换与来源清单','Replacement & provenance manifest','h3','source-heading')+dual('图片及逐张来源清单保存在 img/；README 说明了命名、替换和版权边界。公开上线前，请自行确认剧照使用所需的权利或适用例外。','Images and a per-frame source manifest are in img/; the README explains naming, replacement, and copyright boundaries. Before public deployment, independently confirm the required rights or applicable exceptions for still use.','p','small muted'));
 }
+// Put overview diagrams in the same media/copy tracks as the following rows.
+main.querySelectorAll('.wide-diagram').forEach(el=>{
+ const row=document.createElement('article');row.className='editorial-row library-row overview-row';
+ const fig=document.createElement('figure');fig.className='concept-visual';while(el.firstChild)fig.appendChild(el.firstChild);
+ fig.insertAdjacentHTML('beforeend',dual('原创结构示意','Original structural schematic','figcaption'));
+ const copy=document.createElement('div');copy.className='row-copy';
+ const circle=el.closest('#story-circle');
+ copy.innerHTML=dual('先看整体，再读每一步','Read the whole before the steps','h3')+dual(circle?'先看需求、出发、代价与返回怎样连成循环；下方八步把这个循环拆成可拍的行动，不是固定时长或强制顺序。':'先看出发、历险、归返的关系；下方逐项说明如何把变化落实到行动与人物关系。图形不规定固定时长。',circle?'See how need, departure, cost and return connect. The eight steps below turn this cycle into filmable actions, not compulsory timing or order.':'See the relation between departure, initiation and return, then read how change becomes action and relationships. The diagram does not prescribe timing.','p');
+ row.append(fig,copy);el.replaceWith(row);
+});
+// Use the available width for every translated prose block, including nested intros.
+main.querySelectorAll('p').forEach(el=>{
+ if(el.closest('table,figure,.map-node,.lens-wide-lightbox'))return;
+ if(el.querySelector(':scope > .zh')&&el.querySelector(':scope > .en')){
+  el.classList.add('reading-pair');el.parentElement.classList.add('reading-container');
+ }
+});
+// A one-digit numbered teaching heading uses the same 01–09 format site-wide.
+main.querySelectorAll('h2 .zh,h2 .en,h3 .zh,h3 .en,h4 .zh,h4 .en').forEach(el=>{
+ const first=el.firstChild;if(first?.nodeType===Node.TEXT_NODE)first.textContent=first.textContent.replace(/^([1-9])(?=\s*·)/,'0$1');
+});
+main.querySelectorAll('.index,.beat-num,.nav-num').forEach(el=>{
+ if(/^[1-9]$/.test(el.textContent.trim()))el.textContent=el.textContent.trim().padStart(2,'0');
+});
 // Language changes alter the sticky bars' heights; keep anchors clear in every mode.
 function updateStickyMetrics(){
  const top=document.querySelector('.topbar').getBoundingClientRect().height;
  const nav=document.querySelector('.cine-nav');
- const extra=nav&&innerWidth>640?nav.getBoundingClientRect().height:0;
+ const extra=nav&&getComputedStyle(nav).position==='sticky'&&innerWidth>760?nav.getBoundingClientRect().height:0;
  document.documentElement.style.setProperty('--topbar-height',top+'px');
  document.documentElement.style.setProperty('--chapter-nav-height',extra+'px');
 }
@@ -76,4 +100,10 @@ stickyResize.observe(document.querySelector('.topbar'));
 if(document.querySelector('.cine-nav'))stickyResize.observe(document.querySelector('.cine-nav'));
 window.addEventListener('resize',updateStickyMetrics,{passive:true});
 updateStickyMetrics();
+// Generated sections may appear after the browser's first hash pass. Align once,
+// after the actual sticky-header height is available, using shared scroll margins.
+if(location.hash)requestAnimationFrame(()=>{
+ let target;try{target=document.getElementById(decodeURIComponent(location.hash.slice(1)))}catch(e){}
+ if(target&&main.contains(target)&&typeof target.scrollIntoView==='function')target.scrollIntoView({block:'start',behavior:'auto'});
+});
 })();

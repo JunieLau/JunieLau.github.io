@@ -1,0 +1,250 @@
+[
+  {
+    "file": "hidden.webp",
+    "label": "12mm",
+    "film": "A Hidden Life",
+    "year": 2019,
+    "cinematographer": "Jörg Widmer",
+    "source": "https://film-grab.com/wp-content/uploads/photo-gallery/A_Hidden_Life_002.jpg?bwg=1598512351",
+    "gallery": "https://film-grab.com/2020/09/07/a-hidden-life/",
+    "originalResolution": [
+      1280,
+      536
+    ],
+    "resolution": [
+      1000,
+      419
+    ],
+    "match": [
+      "视觉构图匹配",
+      "Composition matched"
+    ],
+    "bytes": 85852,
+    "fullFile": "hidden-full.webp",
+    "filmZh": "隐秘的生活",
+    "displayCropSource": [
+      0,
+      0,
+      1280,
+      536
+    ],
+    "cropFocus": "center"
+  },
+  {
+    "file": "birdman.webp",
+    "label": "18mm",
+    "film": "Birdman",
+    "year": 2014,
+    "cinematographer": "Emmanuel Lubezki",
+    "source": "https://film-grab.com/wp-content/uploads/photo-gallery/05 (147).jpg?bwg=1547150414",
+    "gallery": "https://film-grab.com/2015/05/08/birdman/",
+    "originalResolution": [
+      1280,
+      690
+    ],
+    "resolution": [
+      1000,
+      419
+    ],
+    "match": [
+      "同片替代；非原板同帧",
+      "Same-film alternative; not the board frame"
+    ],
+    "bytes": 22494,
+    "fullFile": "birdman-full.webp",
+    "filmZh": "鸟人",
+    "displayCropSource": [
+      0,
+      0,
+      1280,
+      690
+    ],
+    "cropFocus": "center"
+  },
+  {
+    "file": "wrestler.webp",
+    "label": "24mm (Equiv)",
+    "film": "The Wrestler",
+    "year": 2008,
+    "cinematographer": "Maryse Alberti",
+    "source": "https://film-grab.com/wp-content/uploads/photo-gallery/38 (1219).jpg?bwg=1547475552",
+    "gallery": "https://film-grab.com/2010/08/24/the-wrestler/",
+    "originalResolution": [
+      1024,
+      426
+    ],
+    "resolution": [
+      1000,
+      419
+    ],
+    "match": [
+      "遮挡图替代；该帧焦段未核实",
+      "Replacement for covered image; exact focal length unverified"
+    ],
+    "bytes": 43754,
+    "fullFile": "wrestler-full.webp",
+    "filmZh": "摔角王",
+    "displayCropSource": [
+      0,
+      0,
+      1024,
+      426
+    ],
+    "cropFocus": "center"
+  },
+  {
+    "file": "toni.webp",
+    "label": "32mm",
+    "film": "Toni Erdmann",
+    "year": 2016,
+    "cinematographer": "Patrick Orth",
+    "source": "https://film-grab.com/wp-content/uploads/photo-gallery/Toni_Erdmann_021.jpg?bwg=1569844321",
+    "gallery": "https://film-grab.com/2020/05/12/toni-erdmann/",
+    "originalResolution": [
+      1280,
+      696
+    ],
+    "resolution": [
+      1000,
+      419
+    ],
+    "match": [
+      "视觉构图匹配",
+      "Composition matched"
+    ],
+    "bytes": 111076,
+    "fullFile": "toni-full.webp",
+    "filmZh": "托尼·厄德曼",
+    "displayCropSource": [
+      0,
+      0,
+      1280,
+      696
+    ],
+    "cropFocus": "bottom: preserve bench/person"
+  },
+  {
+    "file": "1917.webp",
+    "label": "40mm",
+    "film": "1917",
+    "year": 2019,
+    "cinematographer": "Roger Deakins",
+    "source": "https://film-grab.com/wp-content/uploads/photo-gallery/1917_005.jpg?bwg=1598511562",
+    "gallery": "https://film-grab.com/2020/09/01/1917/",
+    "originalResolution": [
+      1280,
+      533
+    ],
+    "resolution": [
+      1000,
+      419
+    ],
+    "match": [
+      "视觉构图匹配",
+      "Composition matched"
+    ],
+    "bytes": 82494,
+    "fullFile": "1917-full.webp",
+    "filmZh": "1917",
+    "displayCropSource": [
+      0,
+      0,
+      1280,
+      533
+    ],
+    "cropFocus": "center"
+  },
+  {
+    "file": "psycho.webp",
+    "label": "50mm",
+    "film": "Psycho",
+    "year": 1960,
+    "cinematographer": "John L. Russell",
+    "source": "https://film-grab.com/wp-content/uploads/photo-gallery/15 (844).jpg?bwg=1547297037",
+    "gallery": "https://film-grab.com/2012/12/28/psycho/",
+    "originalResolution": [
+      1022,
+      556
+    ],
+    "resolution": [
+      1000,
+      419
+    ],
+    "match": [
+      "同片贝茨宅夜景替代；非原板同帧",
+      "Alternative night view of Bates house; not the board frame"
+    ],
+    "bytes": 19542,
+    "fullFile": "psycho-full.webp",
+    "filmZh": "惊魂记",
+    "displayCropSource": [
+      0,
+      0,
+      1022,
+      556
+    ],
+    "cropFocus": "top: preserve roof/windows"
+  },
+  {
+    "file": "alienhd.webp",
+    "label": "75mm",
+    "film": "Alien",
+    "year": 1979,
+    "cinematographer": "Derek Vanlint",
+    "source": "https://www.bluscreens.net/uploads/1/4/8/9/14897402/alien3_orig.jpg",
+    "gallery": "https://www.bluscreens.net/alien.html",
+    "originalResolution": [
+      1100,
+      619
+    ],
+    "resolution": [
+      1000,
+      419
+    ],
+    "match": [
+      "视觉构图匹配",
+      "Composition matched"
+    ],
+    "bytes": 65734,
+    "fullFile": "alienhd-full.webp",
+    "filmZh": "异形",
+    "displayCropSource": [
+      0,
+      74,
+      1100,
+      544
+    ],
+    "cropFocus": "center"
+  },
+  {
+    "file": "gems.webp",
+    "label": "Above 85mm",
+    "film": "Uncut Gems",
+    "year": 2019,
+    "cinematographer": "Darius Khondji",
+    "source": "https://film-grab.com/wp-content/uploads/photo-gallery/Uncut_Gems_047.jpg?bwg=1601639366",
+    "gallery": "https://film-grab.com/2020/12/11/uncut-gems/",
+    "originalResolution": [
+      1280,
+      536
+    ],
+    "resolution": [
+      1000,
+      419
+    ],
+    "match": [
+      "视觉构图匹配",
+      "Composition matched"
+    ],
+    "bytes": 116320,
+    "fullFile": "gems-full.webp",
+    "filmZh": "原钻",
+    "displayCropSource": [
+      0,
+      0,
+      1280,
+      536
+    ],
+    "cropFocus": "center"
+  }
+]
