@@ -396,13 +396,13 @@ body .director-guide .cine-section{margin-bottom:48px;padding-bottom:36px}
 body .director-guide .cine-section>h2{margin-bottom:20px}
 body .director-guide .cine-section>p{margin-bottom:28px}
 body .technical-appendix{border-top:1px solid #696960;margin:48px 0 72px}
-body .technical-appendix>summary{padding:24px 0;font-size:24px;font-weight:600}
+
 body .technical-appendix>p{max-width:940px;margin-top:24px}
 body .technical-content{padding-top:24px}
 body .technical-content .cine-intro h1{font-size:30px}
 @media(max-width:1100px){body .director-twin{gap:32px}body .director-simple th:first-child{width:30%;padding-right:16px}}
 @media(max-width:900px){body .director-twin{grid-template-columns:minmax(0,1fr);gap:24px}body .director-simple th:first-child{width:29%}}
-@media(max-width:760px){body .director-simple{font-size:17px}body .director-simple tbody th{font-size:17px}body .director-simple th:first-child{width:31%;padding-right:14px}body .director-simple th,body .director-simple td{padding-block:16px}body .technical-appendix>summary{font-size:21px}body .director-nav{gap:16px 24px}}
+@media(max-width:760px){body .director-simple{font-size:17px}body .director-simple tbody th{font-size:17px}body .director-simple th:first-child{width:31%;padding-right:14px}body .director-simple th,body .director-simple td{padding-block:16px}body .director-nav{gap:16px 24px}}
 /* Wide-shot board and Film Reframed narrative-quality matrix. */
 body .lens-wide-section>p{max-width:960px}
 body .lens-wide-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:36px 24px;margin:36px 0}
@@ -588,3 +588,7 @@ body .lens-wide-grid figcaption{align-self:stretch;min-height:0;box-sizing:borde
  body .director-recipe-table .recipe-copy,body .director-recipe-table tr>:nth-child(4){padding-left:0;padding-right:0}
 }
 @media(max-width:760px){html body main[id],html body main [id]{scroll-margin-top:20px}body[data-volume=films] .library-row>.concept-visual{position:static}}
+
+/* Extra director lessons: navigation must wrap instead of shrinking or overflowing. */
+html body .site-nav{flex-wrap:wrap;row-gap:12px}
+@media(min-width:1101px) and (max-width:1600px){html body .topbar{flex-wrap:wrap}html body .site-nav{order:3;flex-basis:100%;margin:0;justify-content:flex-start}html body .language{margin-left:auto}}
