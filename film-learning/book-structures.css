@@ -1,0 +1,5 @@
+/* Identical drawing boxes on the reading list and its subject pages. */
+body .concept-visual svg.book-structure-art,body svg.book-structure-art{display:block;width:100%;height:auto;aspect-ratio:360/203;max-height:34vh;color:#e6e6e6;background:#111;stroke:currentColor;object-fit:contain}
+body .concept-visual svg.book-structure-art [fill="none"]{fill:none}
+body .concept-visual svg.book-structure-art circle[fill="#111"]{fill:#111}
+body svg.book-structure-art text{font-family:sans-serif;font-size:11px;fill:currentColor;stroke:none;transform:none}
