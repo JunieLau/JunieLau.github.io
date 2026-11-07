@@ -10,6 +10,8 @@ window.JL = {
    "zh": "",
    "year": "2026",
    "role": "Director",
+   "credit": "Wonder Studios",
+   "credit_zh": "Wonder Studios",
    "note": "Full film · Cantonese cyberpunk action-comedy short. Official trailer remains on this page.",
    "yt": "8R4hEVX46fA",
    "trailer": "N3ZfYhO8cBY",
@@ -90,6 +92,8 @@ window.JL = {
    "zh": "Chanel · spec",
    "year": "2025",
    "role": "Director · Gen-AI spec commercial",
+   "credit": "Chanel",
+   "credit_zh": "Chanel",
    "note": "Chanel collaboration · Jury Award, Project Odyssey · Screened at NVIDIA GTC Paris",
    "yt": "DLuP2XE5P4A",
    "img": "yt/DLuP2XE5P4A.jpg"
@@ -116,6 +120,8 @@ window.JL = {
    "zh": "",
    "year": "2024",
    "role": "Director · AI spec ad",
+   "credit": "Curious Refuge × Vica",
+   "credit_zh": "Curious Refuge × Vica",
    "note": "Curious Refuge × Vica",
    "yt": "-UzSIT-Zmbs",
    "img": "yt/-UzSIT-Zmbs.jpg"
@@ -142,6 +148,8 @@ window.JL = {
    "zh": "New Year AI short film",
    "year": "2026",
    "role": "Director · AI short",
+   "credit": "ByteDance",
+   "credit_zh": "字节跳动",
    "note": "In collaboration with ByteDance",
    "yt": "nTVLeH2ALNM",
    "img": "yt/nTVLeH2ALNM.jpg"
@@ -902,7 +910,7 @@ window.JL = {
    "yt": "8R4hEVX46fA",
    "pid": "goldfish",
    "img": "yt/8R4hEVX46fA.jpg",
-   "cap": "Goldfish Mayhem — Full Film — 2026",
+   "cap": "Goldfish Mayhem — Official Film — 2026",
    "cap_zh": "金鱼街大乱斗 — 正片 — 2026"
   },
   {

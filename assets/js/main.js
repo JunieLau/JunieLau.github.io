@@ -41,7 +41,8 @@
     });
     return out;
   }
-  const kindLabel = e => e.kind === "film" ? T("Full Film", "正片") : e.kind === "trailer" ? T("Trailer", "预告片") : "";
+  const kindLabel = e => e.kind === "film" ? T("Official Film", "正片") : e.kind === "trailer" ? T("Trailer", "预告片") : "";
+  const creditLine = p => { const c = ZH() ? (p.credit_zh || p.credit || "") : (p.credit || ""); return c ? c + " · " + p.year : (p.year || ""); };
   const stillsOf = id => (JL.frames || []).filter(f => f.pid === id);
   const clipsOf = id => (JL.clips || []).filter(f => f.pid === id);
   /* ---------- lightbox ---------- */
@@ -333,10 +334,12 @@
     function renderWall(){
       wall.innerHTML = videoEntries(P).map((e, i) => {
         const st = stillsOf(e.p.id)[0];
-        const mark = kindLabel(e) || e.p.year;
+        const kind = kindLabel(e);
         return '<a class="wt wt3" href="' + e.href + '"><span class="fr"><span class="c" style="background-image:url(&quot;' + BASE + e.img + '&quot;)"></span>' +
           (st ? '<span class="s" style="background-image:url(&quot;' + BASE + st.thumb + '&quot;)"></span>' : '') + '</span>' +
-          '<span class="cap"><b>' + String(i + 1).padStart(2, "0") + '</b><span class="t">' + esc(pTitle(e.p)) + '</span><i>' + esc(mark) + '</i></span></a>';
+          '<span class="cap"><b>' + String(i + 1).padStart(2, "0") + '</b><span class="cap-tx"><span class="t">' + esc(pTitle(e.p)) + '</span>' +
+          (kind ? '<span class="knd">' + esc(kind) + '</span>' : '') +
+          '<span class="sub">' + esc(creditLine(e.p)) + '</span></span></span></a>';
       }).join("");
     }
     hooks.push(renderWall);
