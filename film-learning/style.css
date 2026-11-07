@@ -299,3 +299,81 @@ body .reading-note,body .editorial-note,body .credits-legend,body .small,body .b
 /* Preserve open line drawings: recoloring must never turn fill="none" into solid geometry. */
 body :is(.concept-visual,.composition-comparison,.pyramid-study) svg :is(rect,path,polyline,polygon,circle,g)[fill='none']{fill:none}
 @media(max-width:760px){body .pyramid-study svg text{font-size:40px;dominant-baseline:middle;transform:translateY(-5px)}}
+
+/* Wide editorial canvas — Junie's comparison-first revision, 7 Nov 2026. */
+:root{--measure:1600px}
+body main,body footer{width:min(1600px,calc(100% - 112px));margin-inline:auto}
+body .topbar{padding-inline:max(56px,calc((100vw - 1600px)/2))}
+body .hero-content,body .hero-description,body .cine-intro>p,body .cine-intro .lede,body .chapter>p,body .cine-section>p,body .history-panel>p{max-width:940px}
+body .course-layout{grid-template-columns:230px minmax(0,1fr);gap:64px}
+body .course-content .chapter>p,body .callout>p,body .scene-example>p{max-width:940px}
+body .cine-principles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px}
+body .cine-principles .card{margin-bottom:0}
+body .cine-nav{position:relative;top:auto;margin-bottom:56px}
+body .compare-tools{display:flex;flex-wrap:wrap;align-items:flex-end;gap:16px 24px;margin:30px 0 14px}
+body .compare-tools label{font-size:15px;line-height:1.5;display:block;min-width:160px}
+body .compare-tools label:first-child{flex:1 1 340px;max-width:560px}
+body .compare-tools input,body .compare-tools select{display:block;width:100%;margin-top:8px;padding:10px 12px;font-size:16px;line-height:1.5;background:#161616;border:1px solid #696960;border-radius:2px;color:#f2f2ee}
+body .compare-tools button{font-size:15px;color:#f2f2ee;border-bottom:1px solid #696960;padding:10px 0;text-align:left}
+body .compare-tools output{font-size:15px;white-space:nowrap;padding-block:10px}
+body .comparison-scroll{max-height:76vh;overflow:auto;position:relative;border-block:1px solid #55554d;isolation:isolate}
+body .compact-compare{font-size:16px;line-height:1.6;min-width:1120px;border-collapse:separate;border-spacing:0;color:#f2f2ee;background:#0a0a0a}
+body .camera-compare{min-width:1280px}
+body .compact-compare th,body .compact-compare td{padding:14px 14px;border:0;border-bottom:1px solid #343432;font-size:16px;font-weight:400;line-height:1.6;overflow-wrap:break-word}
+body .compact-compare .row-heading{font-size:16px;font-weight:600}
+body .compact-compare tr>:first-child{padding-left:14px}
+body .compact-compare tr>:last-child{padding-right:14px}
+body .compact-compare thead th{position:sticky;top:0;z-index:4;background:#20201e;color:#f2f2ee;font-size:15px;padding:12px 14px;border-bottom:1px solid #75756b;font-weight:600}
+body .compact-compare thead th:first-child{left:0;z-index:6}
+body .compact-compare thead button{display:block;width:100%;padding:0;text-align:left;font-size:15px;color:#f2f2ee;line-height:1.5}
+body .compact-compare .sort-arrow{font-size:14px;color:#f06552}
+body .compact-compare .compare-entry>th{position:sticky;left:0;z-index:2;box-shadow:1px 0 #45453e}
+body .compact-compare .compare-entry>*{background:#0a0a0a}
+body .compact-compare .compare-entry:nth-of-type(even)>*{background:#151514}
+body .compact-compare .compare-entry:hover>*{background:#242420}
+body .compact-compare .compare-group th{padding:9px 14px;background:#252522;color:#f2f2ee;font-size:15px;font-weight:600}
+body .compact-compare .group-count{margin-left:12px;color:#c3c3bd;font-variant-numeric:tabular-nums}
+body .compact-compare .numeric{font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+body .compact-compare .entry-toggle{padding:0;font-size:15px;line-height:1.6;color:#f2f2ee;text-align:left;text-decoration:underline;text-underline-offset:4px}
+html[data-mode=bi] body .compact-compare .en{font-size:15px!important;line-height:1.6;color:#deded7}
+body .compact-compare .entry-detail{padding:16px 18px;max-width:940px;position:relative}
+body .entry-detail h3{font-size:20px;margin-bottom:20px}
+body .entry-detail dl{margin:0}
+body .entry-detail dl>div{display:grid;grid-template-columns:190px minmax(0,1fr);gap:24px;margin-bottom:20px}
+body .entry-detail dt{font-weight:600;color:#f2f2ee}
+body .entry-detail dd{margin:0;color:#f2f2ee}
+body .entry-detail .entry-sources{display:flex;flex-wrap:wrap;gap:20px}
+body .entry-detail .source-link{font-size:15px}
+body .compact-compare .compare-detail>td{background:#1a1a18;padding:12px 14px}
+body .table-hint{max-width:940px;font-size:15px;line-height:1.65}
+body main,body .cine-body,body .table-wrap,body .cine-section{min-width:0}
+@media(max-width:1100px){body .course-layout{display:block}body .cine-principles{gap:24px}body .topbar{padding-inline:48px}body main,body footer{width:calc(100% - 96px)}}
+@media(max-width:760px){
+ body main,body footer{width:calc(100% - 40px)}
+ body .topbar{padding-inline:20px}
+ body .cine-principles{display:block}body .cine-principles .card{margin-bottom:32px}
+ body .compare-tools{gap:16px;align-items:stretch}
+ body .compare-tools label,body .compare-tools label:first-child{flex:1 1 100%;max-width:none;min-width:0}
+ body .compare-tools button{max-width:45%;padding:7px 0}
+ body .compare-tools output{margin-left:auto}
+ body .compact-compare{min-width:1080px}
+ body .camera-compare{min-width:1250px}
+ body .compact-compare col:first-child{width:155px!important}
+ body .compact-compare th,body .compact-compare td{padding:12px 10px;font-size:15px}
+ body .compact-compare .row-heading{font-size:15px}
+ body .comparison-scroll{max-height:72vh}
+ body .entry-detail{width:calc(100vw - 68px);padding:12px 2px!important}
+ body .entry-detail dl>div{display:block}
+ body .entry-detail dt{margin-bottom:8px}
+ body .compact-compare .compare-detail>td{padding-left:10px}
+}
+@media print{body main,body footer{width:100%}body .comparison-scroll{max-height:none;overflow:visible}body .compare-detail[hidden]{display:table-row!important}body .compare-tools{display:none}}
+body .cine-principles .editorial-row{display:block}
+body .cine-principles .concept-visual{max-width:210px;margin:0 0 22px}
+body .compact-compare .compare-group th>span:first-child{display:inline-block}
+body .compact-compare .compare-group th .en{display:inline-block;margin-top:0;margin-left:12px}
+@media(max-width:760px){body .cine-principles .concept-visual{max-width:180px}}
+
+/* Quiet inactive sort affordances; accent identifies only the active sort. */
+body .compact-compare .sort-arrow{color:#b3b3aa}
+body .compact-compare th:is([aria-sort="ascending"],[aria-sort="descending"]) .sort-arrow{color:var(--accent)}

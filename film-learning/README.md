@@ -98,3 +98,10 @@ Additional final checks: 36 sticky-anchor clearance tests across all languages a
 ## Current black-edition QA
 
 All ten pages were rechecked in bilingual, Chinese and English at 1440×1100 and 390×844, including overflow, JavaScript errors, image loading, local links and all learning interactions. Additional 320 px, direct-file, language-persistence, keyboard-tab, full-frame still/diagram and reduced-motion tests are included. Every visible text node was also checked for minimum 14 px size and 4.5:1 text contrast in all 60 main combinations. Final results, scripts and `black-*.png` screenshots are under `/workspace/film-learning-shots/`; the current delivery details are in `black-redesign.md`. All HTML, JavaScript, data, supplied stills and diagram files are unchanged by this visual-only redesign. Nothing has been committed, pushed or published.
+
+
+## Current expanded mind-map revision
+
+`film-history.html` now loads dedicated `film-history.css` and `history-supplement.js` alongside the preserved `history-data.js` and rewritten `film-history.js`. The seven PDFs’ left-root / vertical-spine / rightward-branch topology is recreated with selectable HTML nodes and measured SVG connectors. Desktop maps have internal scrolling and 100–150% zoom; mobile uses nested collapsible trees without an oversized canvas. Country hashes, keyboard tab navigation, all original topic accounts, source-record downloads and the shared language preference remain. Added teaching nodes have a small dot and source links. Full corrections and the complete added-film manifest are in `history-notes.md`.
+
+Current regression evidence is **DOM-only**: 42 combinations (seven countries × three modes × desktop/mobile logic) pass state, expansion, hash, parent/child, source-link and content-preservation checks. The cinematography DOM suite also passes again. No current real-browser geometry/overflow/image check or new mindmap-/wide- screenshot is claimed; those remain pending in this revision. Historical screenshot/QA claims above refer to previous editions only.

@@ -12,6 +12,7 @@ composition.js
 delivery-report.md
 editorial.js
 fact-check.md
+film-history.css
 film-history.html
 film-history.js
 films.html
@@ -19,6 +20,7 @@ freytag.html
 hero-journey.html
 history-data.js
 history-notes.md
+history-supplement.js
 img/README.md
 img/character-association-baby-driver-diagram.svg
 img/character-association-baby-driver.jpg

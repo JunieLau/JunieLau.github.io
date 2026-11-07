@@ -99,3 +99,42 @@ const audit=[
 ['D09','侯孝贤 / Hou Hsiao-hsien','corrected',['固定长镜、远观、自然光。','Locked-off long takes, distant observation, natural light.'],['“固定、远景、自然光”不是统一规则。《海上花》（李屏宾）有持续的缓慢移动与灯烛／辅助照明；改为长时段、空间关系与注意力转移的研究。','These are not universal rules. Flowers of Shanghai (Mark Lee Ping-Bing) uses sustained slow movement and lamp / supplemental lighting. Reframed around duration, spatial relations, and shifts of attention.'],['hou','houlight']]
 ];
 if(typeof module!=='undefined')module.exports={S,cameras,lenses,moods,directors,audit};
+
+// Compact comparison values extracted from the full, sourced rows above.
+// No missing specifications are inferred: see the complete row for conditions.
+const cameraCompare=[
+['ARRI','17',['75 @ 4.6K 3:2 · 120 @ 4K 16:9','75 @ 4.6K 3:2 · 120 @ 4K 16:9'],['高反差试拍','High-contrast tests']],
+['ARRI','14+',['30 @ 3.4K RAW · 200 @ HD','30 @ 3.4K RAW · 200 @ HD'],['手持／车内／稳定器','Handheld / vehicle / gimbal']],
+['ARRI','14+',['40 @ 4.5K 3:2（Mini LF）','40 @ 4.5K 3:2 (Mini LF)'],['大画幅；Mini LF 机动','Large format; mobile Mini LF']],
+['ARRI','>14',['60 @ 6.5K Open Gate','60 @ 6.5K Open Gate'],['65 格式；确认覆盖','65 format; test coverage']],
+['ARRI','15',['60（最高）','60 (maximum)'],['65 格式；轻量机身','65 format; lighter body']],
+['Sony','16',['30 @ 8.6K 3:2 · 60 @ 8.2K 17:9','30 @ 8.6K 3:2 · 60 @ 8.2K 17:9'],['双基础 ISO 800 / 3200','Dual base ISO 800 / 3200']],
+['Sony','16',['原表未列；见官方模式表','Not listed; see official modes'],['小团队；防抖／可变 ND','Small crew; IBIS / variable ND']],
+['Sony','15+',['原表未列；见官方模式表','Not listed; see official modes'],['纪实；ISO 800 / 4000','Documentary; ISO 800 / 4000']],
+['RED','—',['120 @ 8K 17:9 · 150 @ 8K 2.4:1','120 @ 8K 17:9 · 150 @ 8K 2.4:1'],['高速；全局快门','High speed; global shutter']],
+['RED','—',['60 @ 8K 17:9 · 75 @ 8K 2.4:1','60 @ 8K 17:9 · 75 @ 8K 2.4:1'],['全局快门；非 [X] 帧率','Global shutter; not [X] rates']],
+['RED','—',['40 / 80 @ 6K；60 / 120 @ 4K','40 / 80 @ 6K; 60 / 120 @ 4K'],['动作；型号与裁切须核对','Action; check model / crop']],
+['Blackmagic','16',['80 @ 12K 3:2 · 120 @ 12K 2.4:1','80 @ 12K 3:2 · 120 @ 12K 2.4:1'],['重构图／视效；数据量大','Reframing / VFX; high data load']],
+['Blackmagic','16',['60 @ 17K 2.2:1','60 @ 17K 2.2:1'],['65 格式；检查像场','65 format; check image circle']],
+['Film / 胶片','—',['依机身与流程','Camera / workflow dependent'],['500T 钨丝灯；250D / 50D 日光','500T tungsten; 250D / 50D daylight']],
+['Film / 胶片','—',['依机身与流程','Camera / workflow dependent'],['小底片；颗粒与亲密感测试','Smaller negative; grain / intimacy tests']],
+['Film / 胶片','—',['依机身与流程','Camera / workflow dependent'],['5 齿孔；供应／扫描先行','5-perf; plan stock / scan']],
+['Film / 胶片','—',['依机身与流程','Camera / workflow dependent'],['15/65；大底片近摄亦可','15/65; intimate close-ups possible']]
+];
+const directorCompare=[
+['空间与秩序','Space & order',['轴线跟随；绘画构图；缓慢变焦','Axial tracking; painterly frames; slow zooms']],
+['空间与秩序','Space & order',['大画幅尺度与私密近摄','Large-format scale and intimate close-ups']],
+['空间与秩序','Space & order',['对称；正面空间；横移；快速摇摄','Symmetry; frontal space; lateral moves; swish pans']],
+['控制与信息','Control & information',['克制运动；低调照明；信息隐藏','Restrained moves; low-key light; withheld information']],
+['空间与秩序','Space & order',['人物／建筑比例；体积光；留白','Human / architecture scale; volumetric light; negative space']],
+['时间与观察','Time & observation',['遮挡；框中框；慢动作；色彩','Occlusion; frames within frames; slow motion; color']],
+['时间与观察','Time & observation',['Super 16；自然光；日常时间','Super 16; natural light; everyday duration']],
+['控制与信息','Control & information',['分段色域；群体队形；叙述层次','Sequence palettes; formations; narrative layers']],
+['时间与观察','Time & observation',['长时段；完整空间；缓慢移动','Duration; complete spaces; slow moves']],
+['连续运动','Continuous movement',['排练；器械交接；隐藏剪辑','Rehearsal; rig handoffs; hidden cuts']],
+['连续运动','Continuous movement',['长镜头；前景与背景事件','Extended takes; foreground and background events']],
+['时间与观察','Time & observation',['自然光；实景；非职业表演者','Natural light; locations; nonprofessional performers']]
+];
+
+const cameraRecording=[null,null,null,null,null,['8.6K · 8640 × 5760','8.6K · 8640 × 5760'],['8.6K','8.6K'],['6K 采样 → 4K 记录','6K sampling → 4K recording'],null,null,null,null,null,['5219 500T · 5207 250D · 5203 50D','5219 500T · 5207 250D · 5203 50D'],['7219 500T · 7207 250D · 7203 50D','7219 500T · 7207 250D · 7203 50D'],['65 mm · 5-perf','65 mm · 5-perf'],['65 mm · 15-perf','65 mm · 15-perf']];
+const cameraFormatOverride={5:['全画幅','Full frame'],6:['全画幅 · 35.9 × 24.0 mm','Full frame · 35.9 × 24.0 mm'],7:['全画幅','Full frame'],13:['35 mm 胶片','35 mm film'],14:['16 mm / Super 16 胶片','16 mm / Super 16 film'],15:['竖走片','Vertical transport'],16:['横走片','Horizontal transport']};

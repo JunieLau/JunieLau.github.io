@@ -38,10 +38,12 @@ if(page==='story'){
 if(page==='image'){
  document.querySelectorAll('.cine-principles>.card').forEach((el,i)=>makeRow(el,lineVisual(...headingText(el),i)));
  const table=document.querySelector('#director-table'),rows=[...table.tBodies[0].rows],headers=[...table.tHead.rows[0].cells];
+ if(!table.classList.contains('compact-compare')){
  const container=document.createElement('div');container.className='director-rows';
  rows.forEach((tr,i)=>{const cells=[...tr.cells],article=document.createElement('article');article.className='editorial-row';const z=cells[0].querySelector('.zh')?.textContent||cells[0].textContent,e=cells[0].querySelector('.en')?.textContent||cells[0].textContent;
  article.innerHTML=lineVisual(z,e,i)+`<div class="row-copy"><span class="index">${String(i+1).padStart(2,'0')}</span><h3>${cells[0].innerHTML}</h3>${cells.slice(1).map((c,n)=>`<div><h4>${headers[n+1].innerHTML}</h4>${c.innerHTML}</div>`).join('')}</div>`;container.appendChild(article);});
  const wrap=table.closest('.table-wrap'),hint=wrap.previousElementSibling;if(hint?.classList.contains('table-hint'))hint.remove();wrap.replaceWith(container);
+ }
 }
 if(page==='composition'){
  const first=document.querySelector('#intention');
