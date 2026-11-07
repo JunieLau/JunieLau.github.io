@@ -4,8 +4,9 @@
 const dual=(z,e,tag='span',cls='')=>`<${tag} class="${cls}"><span class="zh" lang="zh-CN">${z}</span><span class="en" lang="en">${e}</span></${tag}>`;
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const stills=window.filmLearningStills||[];
-const page=document.querySelector('#composition-main')?'composition':document.querySelector('#cine-main')?'image':'story';
+const page=document.body.dataset.volume|| (document.querySelector('#composition-main')?'composition':document.querySelector('#cine-main')?'image':'story');
 const titles={story:['救猫咪','save the cat!'],image:['摄影与镜头','cameras, lenses & intention'],composition:['构图','composition & character']};
+Object.assign(titles,{books:['书单与结构','books & story structures'],hero:['英雄之旅','the hero’s journey'],three:['诗学与三幕结构','poetics & three acts'],freytag:['五部结构金字塔','freytag’s pyramid'],modern:['现代单一神话','modern monomyth'],films:['导演的片单','films for a director'],history:['电影史','histories of cinema']});
 const main=document.querySelector('main');
 main.insertAdjacentHTML('afterbegin',`<div class="editorial-masthead">${dual('电影学习','film learning','p','masthead-kicker')}${dual(...titles[page],'p','masthead-title')}</div>`);
 function study(index){
