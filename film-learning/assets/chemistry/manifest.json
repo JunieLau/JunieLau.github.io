@@ -12,7 +12,7 @@
           461.9834899902344,
           762.860107421875
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       }
     ],
     "originalEnglish": ""
@@ -30,7 +30,7 @@
           346.0389709472656,
           603.0224609375
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p02-02.webp",
@@ -41,7 +41,7 @@
           346.0389709472656,
           780.5513916015625
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       }
     ],
     "originalEnglish": "creating chemistry\nChemistry is the perceptible, energetic relationship between two or more individuals on screen. Chemistry is a valuable\nasset to building authenticity and believability, increasing the emotional impact of a film.\nEnergy isn’t a token deliverable like image or sound, so it is tricky to convey and carry through to the audience.\nMagical moments between actors are fleeting. Rhythm is delicate and difficult to maintain in the edit. Small details can\nsubliminally impact audiences, breaking the illusion. The subtlety of human expression is tricky to capture.\n\nSo, how do we preserve chemistry?\ngenre\nRomance films fall into 3 categories: classic, tragedy & comedy. We’ll speak in terms of romantic relationships, but the\nsame tools can be used for any type of relationship.\n\nClassic romance: Two soulmates are challenged by an exterior force that keep them apart, but they defeat it and end\nup together in the end. Films with platonic or familial soulmates often take the form of adventure, sports drama or\ntriumphant character study.\n\nTragic romance: Two soulmates are challenged by an exterior force that ultimately tears them apart. Films with\nplatonic or familial soulmates often take the form of thriller, bittersweet character study or family drama.\n\nRomantic comedy: Two soulmates are kept apart by their own personal, internal conflicts that keep them at odds\nuntil they grow and change. When the two soulmates are platonic, we call it a buddy comedy.\nKnowing this, we can intentionally create cinematic moments that communicate connectedness or disharmony\ndepending on the moment in the story we are in.\n\n\n                                             A classic romance has 3 distinct peaks\n                                                       and valleys of connectivity, the height\n                                                                      of their connection peaking at the end\n                                                                      of the film.\n\n\n\n\n\n                                                              In a tragic romance, the height of\n                                                                    connectivity typically peaks in the first\n                                                                             half, and certainly before the 3rd act.\n                                                     Deep valleys create a dysfunctional,\n                                                                       rollercoaster effect. A steady build\n                                                              with a sharp drop off will focus the\n                                                            impact on the tragic separation."
@@ -59,7 +59,7 @@
           208.9066162109375,
           310.1360168457031
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p03-02.webp",
@@ -70,7 +70,7 @@
           389.7674865722656,
           310.1131286621094
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p03-03.webp",
@@ -81,7 +81,7 @@
           572.516357421875,
           310.1548767089844
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p03-04.webp",
@@ -92,7 +92,7 @@
           300.4501953125,
           533.007080078125
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p03-05.webp",
@@ -103,7 +103,7 @@
           573.7791748046875,
           533.0071411132812
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p03-06.webp",
@@ -114,7 +114,7 @@
           301.47979736328125,
           732.9599609375
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p03-07.webp",
@@ -125,7 +125,7 @@
           573.8929443359375,
           733.9114990234375
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       }
     ],
     "originalEnglish": "chemistry visualizing techniques\nconnect the dots\nTo strengthen a connection, use elements in the background of your composition to draw a line from\none character to the other.\n\n\n\n\nunified framing\nTo unify two or more characters, use a single background element to frame them together.\n\n\n\n\n\ndivided framing\nTo disconnect two characters, use background elements to divide the composition, framing them\napart from each other."
@@ -143,7 +143,7 @@
           298.23114013671875,
           280.8067932128906
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p04-02.webp",
@@ -154,7 +154,7 @@
           572.0504760742188,
           281.8194885253906
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p04-03.webp",
@@ -165,7 +165,7 @@
           299.3026428222656,
           523.426025390625
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p04-04.webp",
@@ -176,7 +176,7 @@
           573.0706787109375,
           524.0956420898438
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p04-05.webp",
@@ -187,7 +187,7 @@
           299.3701477050781,
           762.7649536132812
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p04-06.webp",
@@ -198,7 +198,7 @@
           574.1997680664062,
           762.809814453125
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       }
     ],
     "originalEnglish": "eyelines\nCharacters looking in the same direction communicate a sense of unified purpose or intention.\nCharacters looking in different directions communicate differing intentions, creating disconnection\nor a sense of going seperate ways.\n\n\n\n\n\n unity                                       tension\neye level\nThe more aligned the characters eye level, the more we see them on the same page. This literally\nconveys they see each other, are connected, and share a unified state of mind. Disperate eye levels\ncommunicates different perspectives, create a feeling of tension or disharmony.\n\n\n\n\n\n unity                                       tension\n\ngrouping\nCharacters together in a singe unit imply implicit connection. Separating groups show an audience each\ncharacter’s subliminal or explicit relationships to one another."
@@ -216,7 +216,7 @@
           299.35546875,
           272.077880859375
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p05-02.webp",
@@ -227,7 +227,7 @@
           572.0504760742188,
           272.1302490234375
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p05-03.webp",
@@ -238,7 +238,7 @@
           299.31732177734375,
           578.1918334960938
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p05-04.webp",
@@ -249,7 +249,7 @@
           572.4688720703125,
           577.0999755859375
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p05-05.webp",
@@ -260,7 +260,7 @@
           573.1061401367188,
           753.827880859375
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       }
     ],
     "originalEnglish": "overlapping\nOverlapping two or more characters causes your audience to take them in as a singular unit.\nDistancing two or more chararacters will accentuate the space between them.\n\n\n\n\n\n unity                                       tension\n\nproximity vs spacing\n\nProximity is the perceivable physical distance between two actors in the 3-dimensional space.\n\nSpacing is the 2-dimensional distance between two figures in a composition.\n\nWhere you place the camera will either accentuate or deemphasize the physical proximity\nbetween two characters.\n\nCharacters who are physically distant can be visually connected with close compositional\nspacing.\n\n\n\n\n\n proximity                                 spacing\n\nshape language\nCreating a 2-dimensional shape with your\ncharacters will reinforce the closeness of\ntheir relationship. Additionally, you can\nemploy the symbolic meaning the shapes\ncommunicate."
@@ -278,7 +278,7 @@
           299.07781982421875,
           350.3707580566406
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p06-02.webp",
@@ -289,7 +289,7 @@
           572.050537109375,
           350.4781188964844
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p06-03.webp",
@@ -300,7 +300,7 @@
           299.21051025390625,
           553.6434326171875
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p06-04.webp",
@@ -311,7 +311,7 @@
           572.050537109375,
           553.6434326171875
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p06-05.webp",
@@ -322,7 +322,7 @@
           300.22149658203125,
           762.7003173828125
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p06-06.webp",
@@ -333,7 +333,7 @@
           573.0806884765625,
           762.7555541992188
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       }
     ],
     "originalEnglish": "together, apart\nCharacters can’t be together all the time, but chemistry between characters is still communicated\nwhen shot individually. Here are techniques to maintain the connectivity of characters throughout\nthe duration of a movie.\nrepeated postures\nFilming characters in similar postures suggests a connection or relationship between them.\n\n\n\n\n\nrepeated framing\nFilming characters in the same exact composition suggests a thematic connection between them.\n\n\n\n\n\nup close and personal\nExtreme closeups can denote a personal connection by showcasing details that only intimate partners\ncould observe, strengthening the audiences connection to them.\n\n\n\n\n\n proximity                                 spacing"
@@ -351,7 +351,7 @@
           212.3999786376953,
           348.07501220703125
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p07-02.webp",
@@ -362,7 +362,7 @@
           212.3999786376953,
           451.0298767089844
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p07-03.webp",
@@ -373,7 +373,7 @@
           212.3999786376953,
           554.78955078125
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p07-04.webp",
@@ -384,7 +384,7 @@
           213.51837158203125,
           660.2042236328125
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p07-05.webp",
@@ -395,7 +395,7 @@
           127.16568756103516,
           764.4917602539062
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p07-06.webp",
@@ -406,7 +406,7 @@
           215.01651000976562,
           764.4917602539062
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       }
     ],
     "originalEnglish": "mise en scène\nCostumes, set design, and lighting affect how your characters and their relationships are percieved.\ncostuming\nCostumes communicate a great deal about your character’s habits and frame of mind. Color, pattern,\nsilhouette, style, attention to detail, and signature identifiers are some of the qualities that present a\ncharacter, and compare them to others in their world.\n\n                        color & pattern\n                                           Differences in color, pattern & texture invite direct comparison. Sameness\n                                    communicates a reflection or connection. Difference communicates\n                                         opposition or disconnection. See how in Call Me By Your Name, both\n                                           characters wear a blue, striped, collared short-sleeved shirt to convey that\n                                            Elio sees himself in Oliver.\n\n                          unified styling\n                                  You can communicate that characters belong together by unifying their\n                                      costumes and styling. Think of a partnership wearing clothes from the same\n                                                 closet, with a unified color pallette and compatible textures. In The Birdcage\n                                we easily read that Albert & Armand are a married couple. Conversely,\n                                           characters who don’t belong together might look like they shop at different\n                                            stores entirely.\n                     group identifiers\n                                   Keep characters connected with subtle or explicit identifiers. Think of them\n                                       having a shared uniform that sets them apart from all the other characters.\n                                        In Jurassic Park we stay aware that Dr. Grant & Dr. Sattler are partners with\n                                           saturate colors, rolled cuffs, and defined waistlines.\n\n                          silhouettes\n                                            Silhouettes have a strong impact on your composition. They communicate\n                                       a great deal about time, place & lifestyle, and will have a part in\n                                     communicating similarities or differences between characters. In Bill & Ted’s\n                                           Excellent Adventure, Bill & Ted maintain very similar silhouettes, keeping\n                                  them connected to each other and distinct from Socrates, Sigmund Freud,\n                                      Genghis Khan and Beethoven.\n                       repeated choices\n                                          Just like in your compositions, you can keep characters connected with\n                                         repeated motifs. Here in Little Women, Jo wears an outfit of similar color\n                                   and styling to something her mother wore in her own way in a previous\n                                           scene.\n\n\n proximity                                 spacing"
@@ -424,7 +424,7 @@
           296.5617370605469,
           355.34674072265625
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p08-02.webp",
@@ -435,7 +435,7 @@
           574.2024536132812,
           355.1588134765625
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p08-03.webp",
@@ -446,7 +446,7 @@
           297.6601867675781,
           539.075927734375
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p08-04.webp",
@@ -457,7 +457,7 @@
           574.2024536132812,
           538.9271850585938
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p08-05.webp",
@@ -468,7 +468,7 @@
           297.6803283691406,
           749.025146484375
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p08-06.webp",
@@ -479,7 +479,7 @@
           575.423095703125,
           749.1102294921875
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       }
     ],
     "originalEnglish": "environment\nEnvironments shape our subliminal perception of the characters that occupy them. Use the\nfollowing techniques to communicate aspects of yur character’s relationship through location\nand production design.\n\norganic shapes\nRounded, natural lines and shapes suggest intimacy, humanity, ease and safety.\n\n\n\n\n\nhard lines\nLinear shapes, angles, and hard edges suggest coldness, removal, and impartiality.\n\n\n\n\n\nlighting\nCharacters which share a single light source often feel connected to each other. Characters lit in\ndifferent or opposing lighting patterns are suggested to be at odds with each other.\n\n\n\n\n\n unity                                        tension\n                                           spacing\n proximity"
@@ -497,7 +497,7 @@
           220.9817377726237,
           396.4945068359375
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p09-02.webp",
@@ -508,7 +508,7 @@
           393.0183041890462,
           396.4945068359375
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p09-03.webp",
@@ -519,7 +519,7 @@
           565.0548706054688,
           396.4945068359375
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p09-04.webp",
@@ -530,7 +530,7 @@
           220.9817377726237,
           524.0922546386719
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p09-05.webp",
@@ -541,7 +541,7 @@
           393.0183041890462,
           524.0922546386719
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p09-06.webp",
@@ -552,7 +552,7 @@
           565.0548706054688,
           524.0922546386719
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p09-07.webp",
@@ -563,7 +563,7 @@
           220.9817377726237,
           651.6900024414062
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p09-08.webp",
@@ -574,7 +574,7 @@
           393.0183041890462,
           651.6900024414062
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p09-09.webp",
@@ -585,7 +585,7 @@
           565.0548706054688,
           651.6900024414062
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       }
     ],
     "originalEnglish": "\nexercises\n\n\n  1A. scene analysis - identifying techniques\n\n  Review the following sequence from the Michael Curtiz’s Casablanca.\n\n   Identify which techniques they use to communicate chemistry or lack thereof.\n\n\n      1.                               2.                                3.\n\n\n\n\n\n    4.                               5.                              6.\n\n\n\n\n\n     7.                                8.                               9.\n\n\n\n\n\n   Based on your findings, make a conclusion about which character Ilsa (Ingrid Bergman) is most\n   deeply connected to: Rick Blaine (Humphrey Bogart) or Victor Laszlo (Paul Henreid)"
@@ -603,7 +603,7 @@
           316.0126647949219,
           397.0062255859375
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p10-02.webp",
@@ -614,7 +614,7 @@
           314.9978332519531,
           538.2410888671875
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       }
     ],
     "originalEnglish": "\n\n\n\n1B. film analysis - implicit soulmates\nTwo notorious movie couples:\nWe are never explicitly informed that these are romantic partners, but we come away from the\nmovie with a deep belief that they are. How does this happen?\n\n                                    Jurassic Park (1993)\n                                                   Director: Steven Speilberg\n                                         DP: Dean Cundey\n                                                  Casting: Janet Hershinson, Jane Jenkins\n                                                   Editor: Michael Kahn\n                                              Production Design: Rick Carter\n                                            Costumes: Mitchell Ray Kenney, Sue\n                                           Moore, Eric H. Sandberg\n\n                             Mary Poppins (1964)\n                                                   Director: Robert Stevenson\n                                         DP: Edward Colman\n                                                   Editor: Cotton Warburton\n                                                Art Direction: Carroll Clark, William H.\n                                            Tuntke\n                                            Costumes: Gertrude Casey, Chuck\n                                             Keehne, Luster Bayless\n\n\nGo back and watch these movies. See if you can identify what choices the director made that\nintentionally or unintentionally imply a deeper connection than the screenplay communicates."
@@ -632,7 +632,7 @@
           316.04937744140625,
           416.53680419921875
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       },
       {
         "file": "p11-02.webp",
@@ -643,7 +643,7 @@
           314.9978332519531,
           563.9190063476562
         ],
-        "fit": "cover; no added padding"
+        "fit": "contain; full source rectangle; no crop"
       }
     ],
     "originalEnglish": "\n\n\n\n1C. film analysis - who’s the soulmate?\n\nTwo relationships, two potential soulmates.\nIn A Place in the Sun, George Eastman begins the movie by dating 2 different women: Alice\n& Angela. In Broadcast News, Jane Craig finds she has a connection to 2 colleagues: Aaron &\nTom. How do we know if they end up with the right mate?\n\n                          A Place in the Sun (1951)\n                                                   Director: George Stevens\n                                         DP: William C. Mellor, John F. Seitz\n                                                   Editor: William Hornbeck\n                                                Art Direction: Hans Drier, Walter H. Tyler,\n                                            Emile Kuri\n                                            Costumes: Edith Head\n\n\n                                  Broadcast News (1987)\n                                                   Director: James L. Brooks\n                                         DP: Michael Ballhaus\n                                                  Casting: Ellen Chenoweth\n                                                   Editor: Richard Marks\n                                              Production Design: Charles Rosen\n                                            Costumes: Molly Maginnis\n\n\n\n\nGo back and watch these movies. See if you can identify what choices the director is making to\nbuild each chemistry dynamic. Which couple has a deeper connection? How quickly can you\npredict which relationship will survive and which relationship will fail?"

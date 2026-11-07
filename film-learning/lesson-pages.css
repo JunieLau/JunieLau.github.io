@@ -208,3 +208,6 @@ html[data-mode=bi] .pdf-course .lesson-section>h2>.en{margin-top:0!important}
 
 /* Native and scripted anchors clear the measured fixed header and wrapping TOC. */
 html body main [id],html body section[id],html body [id]:target{scroll-margin-top:var(--lesson-anchor-offset,240px)!important}
+
+/* Never trim labels or diagram edges to fill a frame. */
+html body main img{object-fit:contain!important}

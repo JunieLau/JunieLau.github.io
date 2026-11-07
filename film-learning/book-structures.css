@@ -15,3 +15,12 @@ body .book-structure-visual svg.book-structure-art [stroke="#888"]{stroke:#888}
 body .book-structure-visual svg.book-structure-art [stroke="#555"]{stroke:#555}
 body .book-structure-visual svg.book-structure-art [stroke="#eee"]{stroke:#eee}
 body .book-structure-visual svg.book-structure-art circle[fill="#111"]{fill:#111}
+
+body svg.book-structure-art .diagram-label{font-size:12px!important;font-weight:400;letter-spacing:0;fill:#eee;stroke:none}
+html[data-mode=bi] .book-structure-art .diagram-label.en{display:none!important}
+body[data-volume=story] .act-strip{grid-template-columns:20fr 60fr 20fr}
+
+.freytag-crisis-key{display:grid;gap:5px;margin-top:9px;font-size:13px;line-height:1.4}
+html[data-mode=bi] .freytag-crisis-key .en{display:none!important}
+
+body svg.book-structure-art .freytag-transitions circle{fill:#f5d266}

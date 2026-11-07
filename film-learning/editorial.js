@@ -18,8 +18,8 @@ function study(index){
 function lineVisual(z,e,i=0){
  if(page!=='story'||typeof beats==='undefined')return '';
  const j=beats.findIndex(b=>e.endsWith(' · '+b[1]));if(j<0)return '';
- const beat=beats[j],a=Math.round(beat[2]/110*100),b=Math.round(beat[3]/110*100),position=a===b?`${a}%`:`${a}–${b}%`;
- return `<figure class="concept-visual">${window.BookStructureArt('beats',{model:'beats',focus:[j],heading:[beat[0],beat[1]],caption:[`第 ${beat[2]}${beat[3]!==beat[2]?'–'+beat[3]:''} / 110 页 · ${position}`,`Page ${beat[2]}${beat[3]!==beat[2]?'–'+beat[3]:''} / 110 · ${position}`]})}</figure>`;
+ const beat=beats[j],[a,b]=window.StcOfficialPercent[j],position=a===b?`${a}%`:`${a}–${b}%`;
+ return `<figure class="concept-visual">${window.BookStructureArt('beats',{model:'beats',focus:[j],heading:[beat[0],beat[1]],caption:[`官网节拍 ${position} · 原版 110 页剧本：第 ${beat[2]}${beat[3]!==beat[2]?'–'+beat[3]:''} 页`,`Current official ${position} · Original 110-page screenplay: p. ${beat[2]}${beat[3]!==beat[2]?'–'+beat[3]:''}`]})}</figure>`;
 }
 function makeRow(el,visual){
  const body=document.createElement('div');body.className='row-copy';while(el.firstChild)body.appendChild(el.firstChild);el.appendChild(body);el.insertAdjacentHTML('afterbegin',visual);el.classList.add('editorial-row');if(visual.includes('paired-study'))el.classList.add('has-still');
@@ -33,7 +33,7 @@ if(page==='story'){
  function decorateBeat(){/* Every beat is illustrated in the named overview below. */}
  decorateBeat();new MutationObserver(decorateBeat).observe(detail,{childList:true});
  // A scannable editorial index complements (rather than replaces) the interactive timeline.
- const overview=document.createElement('div');overview.className='beat-overview';overview.innerHTML=dual('十五个节拍，一次看清','Fifteen beats at a glance','h3')+dual('先浏览功能，再回到上方互动节拍表读完整片例。页位仍按 110 页模型换算。','Scan the functions, then return to the interactive beat sheet for the complete worked examples. Page targets still follow the 110-page model.','p','small muted')+beats.map((b,i)=>`<article class="editorial-row">${lineVisual('《海底总动员》 · '+String(i+1).padStart(2,'0'),'Finding Nemo · '+b[1],i)}<div class="row-copy"><span class="index">${String(i+1).padStart(2,'0')} · ${b[2]}${b[2]!==b[3]?'–'+b[3]:''} / 110 · ${Math.round(b[2]/110*100)}${b[2]!==b[3]?'–'+Math.round(b[3]/110*100):''}%</span>${dual(b[0],b[1],'h3')}${dual(b[4],b[5],'p')}</div></article>`).join('');
+ const overview=document.createElement('div');overview.className='beat-overview';overview.innerHTML=dual('十五个节拍，一次看清','Fifteen beats at a glance','h3')+dual('先看每个节拍的功能，再观察人物的行动与改变。','Read each beat’s function, then observe the character’s actions and change.','p','small muted')+beats.map((b,i)=>`<article class="editorial-row">${lineVisual('《海底总动员》 · '+String(i+1).padStart(2,'0'),'Finding Nemo · '+b[1],i)}<div class="row-copy"><span class="index">${String(i+1).padStart(2,'0')} · ${percentText(i)}</span>${dual(b[0],b[1],'h3')}${dual(b[4],b[5],'p')}</div></article>`).join('');
  document.querySelector('#beats details').insertAdjacentElement('afterend',overview);
 }
 if(page==='image'){
