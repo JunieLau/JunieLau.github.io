@@ -326,11 +326,19 @@
   if (work) {
     const P = PA; /* work pages: unchanged prev/next across all films */
     const id = work.dataset.pid, i = P.findIndex(p => p.id === id), p = P[i];
-    const pl = $(".player", work);
-    pl.addEventListener("click", () => {
-      if (pl.classList.contains("on")) return;
-      pl.classList.add("on");
-      pl.insertAdjacentHTML("beforeend", '<iframe src="' + ytURL(pl.dataset.yt) + '" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>');
+    const players = $$(".player", work);
+    players.forEach(pl => {
+      pl.addEventListener("click", () => {
+        if (pl.classList.contains("on")) return;
+        players.forEach(other => {
+          if (other === pl) return;
+          other.classList.remove("on");
+          const fr = $("iframe", other);
+          if (fr) fr.remove();
+        });
+        pl.classList.add("on");
+        pl.insertAdjacentHTML("beforeend", '<iframe src="' + ytURL(pl.dataset.yt) + '" title="' + esc(pl.dataset.t || "") + '" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>');
+      });
     });
     const ws = $(".wstills", work);
     function renderStills(){
