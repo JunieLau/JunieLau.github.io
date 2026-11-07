@@ -1,4 +1,4 @@
-/* 电影史：七张思维导图，按 PDF 原样的层级、顺序与分支逐节点呈现。 */
+/* 电影史：八张思维导图；中国为研究整理，其余七国按 PDF 原样的层级、顺序与分支逐节点呈现。 */
 (()=>{'use strict';
 const maps=window.historyMaps||[],main=document.querySelector('#history-main');if(!main||!maps.length)return;
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
