@@ -2,9 +2,10 @@
 .pdf-pages>h2{font-size:clamp(22px,2.2vw,32px);margin:0 0 8px;color:#fff}
 .pdf-pages .pdf-doc{margin:28px 0 40px}
 .pdf-pages .pdf-doc>h3{font-size:18px;margin:0 0 16px;color:#ddd;font-weight:600}
-.pdf-pages .pdf-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}
-.pdf-pages figure{margin:0;background:#0b0b0b;border:1px solid #2a2a2a;padding:10px;box-sizing:border-box}
+.pdf-pages .pdf-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;align-items:start}
+.pdf-pages figure{margin:0;min-width:0;background:#0b0b0b;border:1px solid #2a2a2a;padding:10px;box-sizing:border-box}
 .pdf-pages figure a{display:block}
-.pdf-pages img{display:block;width:100%;height:auto;object-fit:contain;background:#111}
-.pdf-pages figcaption{margin-top:8px;font-size:14px;color:#bbb;text-align:center}
-@media (max-width:760px){.pdf-pages .pdf-grid{grid-template-columns:1fr}}
+.pdf-pages img{display:block;width:100%;max-width:100%;height:auto;object-fit:contain;background:#111}
+.pdf-pages figcaption{margin-top:8px;font-size:14px;line-height:1.45;color:#bbb;text-align:center;overflow-wrap:anywhere}
+@media (max-width:1100px){.pdf-pages .pdf-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:700px){.pdf-pages .pdf-grid{grid-template-columns:minmax(0,1fr);gap:16px}}
