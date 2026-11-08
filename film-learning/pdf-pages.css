@@ -1,4 +1,3 @@
-/* Republish: replace the stale 2-column Pages copy with this 4-up grid. */
 .pdf-pages{background:#000;color:#f2f2f2;width:94vw;max-width:94vw;margin:64px auto 32px;padding:32px 0 0;border-top:1px solid #333;box-sizing:border-box}
 .pdf-pages>h2{font-size:clamp(22px,2.2vw,32px);margin:0 0 8px;color:#fff}
 .pdf-pages .pdf-doc{margin:28px 0 40px}
