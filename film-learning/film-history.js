@@ -32,7 +32,7 @@ function country(d){
   const trunk=items(kids.map(k=>({...k,k:k.k==='float'?'milestone':k.k})),t.g||[],0,kids.length-1);
   return `<section class="hm-country" id="history-${d.id}" aria-labelledby="history-${d.id}-title"><h2 id="history-${d.id}-title" class="hm-title"${style(t)}><span class="hm-title-zh">${esc(t.t)}</span><span class="en" lang="en">${esc(d.en)} · film history</span></h2><div class="hm-fit"><div class="hm-tree"><ul class="hm-trunk"${(kids.find(k=>k.k==='era')||{}).f?` style="--trunk:${kids.find(k=>k.k==='era').f}"`:''}>${trunk}</ul></div></div></section>`;
 }
-main.innerHTML=`<section class="hm-intro"><h1><span class="zh" lang="zh-CN">电影史</span><span class="en" lang="en">Film history</span></h1></section>`+maps.map(country).join('');
+main.innerHTML=`<section class="hm-intro"><h1><span class="zh" lang="zh-CN">顺着时间往下读。</span><span class="en" lang="en">Read downward through time.</span></h1><p class="lede"><span class="zh" lang="zh-CN">每个国家一条竖线：时代在主干，作品与运动在旁边。</span><span class="en" lang="en">One vertical line per country — eras on the spine, films and movements beside them.</span></p></section>`+maps.map(country).join('');
 /* connector spines: from the first to the last connected child, measured after layout */
 const small=matchMedia('(max-width:760px)');
 function spines(){
@@ -53,9 +53,8 @@ function fit(){
     const cw=box.clientWidth;
     box.querySelectorAll('.hm-trunk>li').forEach(li=>{
       const w=()=>li.firstElementChild.getBoundingClientRect().width;let nw=320;li.style.setProperty('--nw',nw+'px');
-      while(w()>cw+1&&nw>230){nw-=10;li.style.setProperty('--nw',nw+'px')}
-      while(w()>cw/.82&&nw>170){nw-=10;li.style.setProperty('--nw',nw+'px')}
-      const ww=w();if(ww>cw+1)li.style.zoom=String(Math.max(.5,Math.floor(cw/ww*1000)/1000));
+      while(w()>cw+8&&nw>260){nw-=10;li.style.setProperty('--nw',nw+'px')}
+      /* Keep type at full size. A wide era scrolls inside .hm-fit instead of shrinking the tree. */
     });
   });
   spines();

@@ -6,9 +6,16 @@ bar.classList.add('full-width-sitebar');
 if(!document.querySelector('link[data-site-nav-style]')){
   const css=document.createElement('link');
   css.rel='stylesheet';
-  css.href='./site-nav.css?v=20261108s';
+  css.href='./site-nav.css?v=20261108u';
   css.dataset.siteNavStyle='';
   document.head.appendChild(css);
+}
+if(!document.querySelector('link[data-readability-style]')){
+  const read=document.createElement('link');
+  read.rel='stylesheet';
+  read.href='./readability.css?v=20261108u';
+  read.dataset.readabilityStyle='';
+  document.head.appendChild(read);
 }
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const label=(z,e)=>`<span class="nav-label"><span class="zh" lang="zh-CN">${esc(z)}</span><span class="en" lang="en">${esc(e)}</span></span>`;

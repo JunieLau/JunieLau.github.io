@@ -1,0 +1,338 @@
+/* Readability fusion: IMDb scannable skeleton, Criterion measure, A24 stills.
+   Black field, one coral accent, thin rules. Prose stacks. Grids keep their air.
+   Loaded after the shared sheets. PDF appendix columns are re-asserted at the end. */
+
+:root{--accent:#f06552;--read:66ch;--quiet:#a39f95;--line:#2a2a28;--paper:#0a0a0a;--ink:#f4f1ea}
+
+html{overflow-x:hidden}
+html body{background:var(--paper);color:var(--ink);font-size:18px;line-height:1.75}
+html body h1,
+html body .hero h1,
+html body .cine-intro h1,
+html body .lesson-hero h1,
+html body .masthead-title{
+  font-size:clamp(32px,3.2vw,46px);
+  font-weight:560;
+  letter-spacing:-.02em;
+  line-height:1.15;
+  color:var(--ink);
+  max-width:18em;
+  margin-bottom:14px;
+}
+html body h2,
+html body .cine-section>h2,
+html body .lesson-section h2{
+  font-size:clamp(22px,2vw,28px);
+  font-weight:600;
+  line-height:1.3;
+  color:var(--ink);
+  max-width:22em;
+  margin:0 0 18px;
+}
+html body h3{font-size:20px;font-weight:600;color:var(--ink)}
+html[data-mode=bi] body h1 .en,
+html[data-mode=bi] body .cine-intro h1 .en,
+html[data-mode=bi] body .lesson-hero h1 .en{
+  display:block;
+  margin-top:8px;
+  font-size:.58em;
+  font-weight:450;
+  letter-spacing:0;
+  line-height:1.35;
+  color:var(--quiet);
+}
+html[data-mode=bi] body h2 .en,
+html[data-mode=bi] body h3 .en{
+  display:block;
+  margin-top:4px;
+  font-size:.72em;
+  font-weight:450;
+  color:var(--quiet);
+}
+
+/* Longform stacks. Narrow CN|EN columns were reading as a syllabus. */
+html[data-mode=bi] body main p.reading-pair,
+html[data-mode=bi] .pdf-course .lesson-section>h2,
+html[data-mode=bi] .lesson-pair,
+html[data-mode=bi] .technique-pair{
+  display:block!important;
+  grid-template-columns:none!important;
+  max-width:var(--read);
+  gap:0;
+}
+html[data-mode=bi] body main p.reading-pair>.en,
+html[data-mode=bi] .lesson-pair>.en,
+html[data-mode=bi] .technique-pair>.en,
+html[data-mode=bi] .pdf-course .lesson-section>h2>.en{
+  display:block!important;
+  margin-top:6px!important;
+  font-size:.9em!important;
+  line-height:1.6!important;
+  color:var(--quiet)!important;
+}
+html body .lede,
+html body .editorial-lead,
+html body .cine-intro,
+html body .site-hero-copy,
+html body .chapter>p,
+html body .cine-section>p,
+html body .hero-description,
+html body .lesson-section>.lesson-pair,
+html body .lesson-section>p,
+html body main p.reading-pair,
+html body .callout,
+html body .workshop,
+html body .quiz{
+  max-width:var(--read)!important;
+}
+html body:has(.sticky-toc) .library-chapters{display:none!important}
+html body .table-wrap,
+html body .expanded-reference,
+html body .comparison-scroll{max-width:100%;overflow-x:auto}
+html body table.beat-table,
+html body table.reference-table{width:max-content;max-width:none}
+html body .editorial-lead{padding:36px 0 8px}
+html body .editorial-lead .lede,
+html body .cine-intro .lede,
+html body .hm-intro .lede{margin:0;font-size:18px;line-height:1.55;color:#d8d4cc}
+html[data-mode=bi] body .editorial-lead .lede .en,
+html[data-mode=bi] body .cine-intro .lede .en,
+html[data-mode=bi] body .hm-intro .lede .en{display:block;margin-top:4px;font-size:.9em;color:var(--quiet)}
+
+html body main a{color:#f3f0e8;text-decoration-color:#6a534c}
+html body main a:hover{color:#fff;text-decoration-color:var(--accent)}
+
+/* Exercises: a hairline and a slightly lifted ground, not a color block. */
+html body .callout,
+html body .workshop,
+html body .quiz,
+html body .scene-example{
+  background:#121211;
+  border:0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  box-shadow:none;
+  padding:28px 0 22px;
+}
+html .director-course .director-worksheet>label,
+html .director-wordbank>section,
+html .director-wordbank>ul,
+html .reframed-intents article{
+  border:0;
+  border-top:1px solid var(--line);
+  background:transparent;
+  border-radius:0;
+  box-shadow:none;
+}
+html body .progress-track{height:1px;background:#2a2a28}
+html body #progress-bar{height:1px;background:var(--accent)}
+html body .progress-label{font-size:12px;color:#8f8c84;letter-spacing:.03em}
+
+/* Lesson index: text, current mark is a thin rule. */
+html .pdf-course .sticky-toc{
+  border-bottom:1px solid var(--line);
+  background:#0a0a0a;
+  gap:4px 16px;
+}
+html .pdf-course .sticky-toc .toc-chip{
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  color:rgba(242,242,238,.62);
+  height:auto;
+  min-height:40px;
+}
+html .pdf-course .sticky-toc .toc-chip[aria-current=location]{
+  color:#f7f4ee!important;
+  background:transparent!important;
+  box-shadow:inset 0 -1px 0 var(--accent)!important;
+}
+html .pdf-course .lesson-index{border:0}
+html .pdf-course .lesson-index a{border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+html .pdf-course .lesson-index a:hover{border-bottom-color:var(--accent)}
+
+/* Home: one still, one thesis, then the paths. */
+.site-hero{padding:0 0 8px}
+.site-hero-still{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100vw;
+  max-width:100vw;
+  margin-left:calc(50% - 50vw);
+  background:#050505;
+}
+.site-hero-still img{
+  display:block;
+  width:min(100%,calc(38vh * 1280 / 688));
+  height:auto;
+  max-height:38vh!important;
+  object-fit:contain!important;
+  object-position:center;
+}
+.site-hero-still::after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:0;
+  height:22%;
+  background:linear-gradient(to bottom,transparent,#0a0a0a);
+  pointer-events:none;
+}
+.site-hero-copy{position:relative;z-index:1;max-width:var(--read);margin-top:-4px;padding:18px 0 4px}
+.site-hero .eyebrow{margin:0 0 12px;font-size:12px;letter-spacing:.08em;text-transform:none;color:#8f8c84}
+.site-hero h1{margin:0 0 12px}
+.site-hero .lede{margin:0;font-size:18px;line-height:1.55;color:#d8d4cc}
+.path-entries{
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:0 28px;
+  margin:28px 0 64px;
+  padding:0;
+  border-top:1px solid var(--line);
+}
+.path-entries a{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-height:76px;
+  padding:16px 0 14px;
+  border-bottom:1px solid var(--line);
+  color:var(--ink);
+  text-decoration:none;
+}
+.path-entries a .zh{font-size:16px;font-weight:600;line-height:1.3}
+.path-entries a .en{margin-top:3px;font-size:12px;line-height:1.3;color:var(--quiet)}
+.path-entries a:hover{border-bottom-color:#6a6560;color:#fff}
+.path-entries a[aria-current=page]{box-shadow:inset 0 -1px 0 var(--accent)}
+@media(max-width:900px){.path-entries{grid-template-columns:repeat(3,minmax(0,1fr));gap:0 20px}}
+@media(max-width:560px){.path-entries{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 16px}.site-hero-still{width:100%;margin-left:0;margin-right:0}.site-hero-still img{width:100%;max-height:28vh!important}}
+
+/* Books and films: titles, a short lead, then a grid with room to breathe. */
+html body[data-volume=books] .books-grid{
+  gap:48px 44px;
+  margin:12px 0 64px;
+}
+html body[data-volume=books] .book-card,
+html body[data-volume=books] .book-card.is-selected{
+  border:0;
+  border-top:1px solid var(--line);
+  background:transparent;
+  box-shadow:none;
+  padding:22px 4px 4px;
+}
+html body[data-volume=books] .book-card.is-selected{box-shadow:inset 0 -2px 0 var(--accent)}
+html body[data-volume=books] .book-card-panel{
+  border:0;
+  background:#12110f;
+  box-shadow:none;
+  padding:28px 8px 32px;
+}
+html body[data-volume=books] .library-chapters,
+html body[data-volume=films] .library-chapters,
+html body[data-volume=hero] .library-chapters,
+html body[data-volume=three] .library-chapters,
+html body[data-volume=freytag] .library-chapters,
+html body[data-volume=modern] .library-chapters{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  gap:6px 22px!important;
+  align-items:baseline!important;
+  margin:4px 0 36px!important;
+  padding:0 0 12px!important;
+  border:0!important;
+  border-bottom:1px solid var(--line)!important;
+  background:transparent!important;
+}
+html body[data-volume] .library-chapters a{
+  display:inline-flex!important;
+  flex-direction:row!important;
+  flex-wrap:wrap!important;
+  align-items:baseline!important;
+  gap:0 6px!important;
+  min-height:0!important;
+  max-width:none!important;
+  margin:0!important;
+  padding:4px 0!important;
+  border:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  color:rgba(242,242,238,.72)!important;
+  text-decoration:none!important;
+}
+html body[data-volume] .library-chapters a .zh{font-size:14px!important;font-weight:600;color:inherit!important}
+html[data-mode=bi] body[data-volume] .library-chapters a .en{
+  display:inline!important;
+  margin:0!important;
+  font-size:11px!important;
+  font-weight:400!important;
+  color:rgba(242,242,238,.42)!important;
+}
+html body[data-volume] .library-chapters a.is-current,
+html body[data-volume] .library-chapters a[aria-current=true]{
+  color:#fff!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:inset 0 -1px 0 var(--accent)!important;
+}
+
+.poster-grid{
+  gap:48px 40px;
+  justify-content:flex-start;
+  margin:8px 0 56px;
+}
+.poster-card{padding-bottom:0}
+.pdf-course main .poster-card>img{border:0;background:#111}
+html .reframed-course .reframed-posters{gap:48px 40px}
+html .reframed-course main .reframed-posters img{border-color:#2a2a28}
+
+html[data-mode=bi] .reframed-table td{display:table-cell!important}
+html[data-mode=bi] .reframed-table td>.en,
+html[data-mode=bi] .reframed-table .en{display:block;margin-top:4px;font-size:.9em;color:var(--quiet)}
+
+/* Appendix: original PDF pages stay four-up on a wide screen, two, then one.
+   Frames stay complete. */
+html body .pdf-pages{
+  width:94vw;
+  max-width:94vw;
+  margin:72px auto 40px;
+  border-top:1px solid var(--line);
+  background:#000;
+}
+html body .pdf-pages>h2{font-size:clamp(22px,2vw,28px);font-weight:600;color:#f4f1ea}
+html body .source-page-grid,
+html body .pdf-course[data-course] .source-page-grid,
+html body .pdf-pages .pdf-grid{
+  display:grid!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  gap:28px!important;
+  align-items:start;
+}
+html body .pdf-pages figure{
+  border:1px solid #242422;
+  background:#0a0a0a;
+  padding:8px;
+}
+html body .source-page-grid img,
+html body .pdf-pages img,
+html body .pdf-course .source-page-grid img,
+html body .pdf-course main .source-page-grid img{
+  display:block;
+  width:100%;
+  height:auto!important;
+  max-height:none!important;
+  object-fit:contain!important;
+}
+@media(max-width:1100px){
+  html body .source-page-grid,
+  html body .pdf-course[data-course] .source-page-grid,
+  html body .pdf-pages .pdf-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:700px){
+  html body .source-page-grid,
+  html body .pdf-course[data-course] .source-page-grid,
+  html body .pdf-pages .pdf-grid{grid-template-columns:minmax(0,1fr)!important;gap:16px!important}
+  html body main,html body footer{width:calc(100% - 36px)}
+  html body[data-volume=books] .books-grid,.poster-grid,html .reframed-course .reframed-posters{gap:28px 16px}
+}
