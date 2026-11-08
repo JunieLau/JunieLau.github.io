@@ -1,8 +1,0 @@
-/* Only Director’s Voice: preserve full source stills without artificial 5:3 mattes. */
-html body[data-course="directors-voice"] main .director-figure:not(.native-figure) img{aspect-ratio:var(--voice-frame-ratio,5/3);object-fit:contain!important;background:#101010}
-body[data-course="directors-voice"] .director-gallery+.director-gallery{margin-top:16px}
-/* Exact equal integer-pixel gallery tracks */
-@supports(width:round(down,100%,1px)){
- body[data-course="directors-voice"] .director-gallery{--equal-columns:var(--image-columns,3);--equal-gap:16px;grid-template-columns:repeat(var(--equal-columns),round(down,calc((100% - var(--equal-gap) * (var(--equal-columns) - 1)) / var(--equal-columns)),1px));gap:var(--equal-gap);justify-content:start}
- @media(max-width:700px){body[data-course="directors-voice"] .director-gallery{--equal-columns:2;--equal-gap:12px}}
-}
