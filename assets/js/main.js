@@ -365,6 +365,20 @@
         pl.insertAdjacentHTML("beforeend", '<iframe src="' + ytURL(pl.dataset.yt) + '" title="' + esc(pl.dataset.t || "") + '" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>');
       });
     });
+    /* #film / #trailer choose that poster. They do not start playback. */
+    function showHashedPlay(){
+      const id = (location.hash || "").slice(1);
+      if (id !== "film" && id !== "trailer") return;
+      const sec = document.getElementById(id);
+      if (!sec || !work.contains(sec)) return;
+      sec.scrollIntoView({ block: "start" });
+      const btn = $(".pbtn", sec);
+      if (btn) btn.focus({ preventScroll: true });
+    }
+    hooks.push(showHashedPlay);
+    addEventListener("hashchange", showHashedPlay);
+    addEventListener("load", showHashedPlay);
+    if (document.readyState === "complete") showHashedPlay();
     const ws = $(".wstills", work);
     function renderStills(){
       const S = stillsOf(id), C = clipsOf(id);

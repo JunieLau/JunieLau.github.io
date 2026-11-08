@@ -165,6 +165,7 @@ main{padding-top:var(--tb)}
 .plays{display:grid;grid-template-columns:1fr 1fr;gap:22px 18px;max-width:1600px;margin:0 auto;align-items:start}
 .plays .player,.plays .pbar{max-width:none}
 .play{scroll-margin-top:calc(var(--tb) + 12px)}
+.play:target .player{box-shadow:0 0 0 2px var(--red)}
 .tnote{font:400 14px/1.45 var(--sans);margin-top:10px}
 .spec{display:grid;grid-template-columns:1.6fr 1fr;gap:40px;max-width:1600px;margin:0 auto;padding:clamp(28px,4vw,56px) 0}
 .wtitle{font:400 clamp(48px,7vw,120px)/.92 var(--serif)}
