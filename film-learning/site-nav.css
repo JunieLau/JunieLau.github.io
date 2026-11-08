@@ -1,4 +1,4 @@
-/* Republish marker. Flat lesson index: wrapping chips, Chinese primary, English secondary. No shrink-to-fit. */
+/* Flat lesson index: wrapping chips, Chinese primary, English secondary. No shrink-to-fit. */
 html body .topbar.full-width-sitebar{
   display:grid!important;
   grid-template-columns:minmax(0,1fr) max-content!important;
