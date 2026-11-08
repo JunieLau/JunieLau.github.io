@@ -1,0 +1,180 @@
+/* Identical drawing boxes with readable, responsive bilingual labels. */
+body svg.book-structure-art{display:block;width:100%;height:auto;aspect-ratio:360/203;max-height:34vh;color:#e6e6e6;background:#111;stroke:currentColor;object-fit:contain}
+body .concept-visual svg.book-structure-art [fill="none"]{fill:none}
+body .concept-visual svg.book-structure-art circle[fill="#111"]{fill:#111}
+body svg.book-structure-art text{font-family:sans-serif;font-size:11px;fill:#eee;stroke:none;transform:none}
+.book-model-name,.book-focus-heading,.book-highlight-caption{display:block;font-size:14px;line-height:1.45;margin:0 0 8px}.book-focus-heading{font-weight:700;color:#f5d266}.book-highlight-caption{margin-top:10px}.book-stage-labels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px 12px;list-style:none;padding:0;margin:10px 0}.book-stage-labels li{display:flex;gap:7px;font-size:13px;line-height:1.4;margin:0;min-width:0}.book-stage-labels li>b{flex:0 0 19px}.book-stage-labels li.is-focus{color:#f5d266;font-weight:600}.book-stage-labels li.is-dim{color:#999}.book-phase-key{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0;font-size:13px}.book-phase-key>span{border-bottom:3px solid var(--phase-color);padding:2px 5px}.book-phase-key .is-dim{opacity:.45}.book-structure-visual .zh+.en{margin-top:2px}html[data-mode=bi] .book-stage-labels .en,html[data-mode=bi] .book-phase-key .en{display:none!important}.book-stage-labels .zh,.book-stage-labels .en{font-size:13px!important;line-height:1.4!important}body .editorial-row.text-only-row{display:block}.book-structure-visual{min-width:0}body .beat-overview .concept-visual{max-width:none}
+
+/* Preserve semantic phase/highlight colors against legacy SVG-wide overrides. */
+body .book-structure-visual svg.book-structure-art [stroke="#5dc9c6"]{stroke:#5dc9c6}
+body .book-structure-visual svg.book-structure-art [stroke="#ec9dbb"]{stroke:#ec9dbb}
+body .book-structure-visual svg.book-structure-art [stroke="#bea4ec"]{stroke:#bea4ec}
+body .book-structure-visual svg.book-structure-art [stroke="#f5d266"]{stroke:#f5d266}
+body .book-structure-visual svg.book-structure-art [stroke="#aaa"]{stroke:#aaa}
+body .book-structure-visual svg.book-structure-art [stroke="#888"]{stroke:#888}
+body .book-structure-visual svg.book-structure-art [stroke="#555"]{stroke:#555}
+body .book-structure-visual svg.book-structure-art [stroke="#eee"]{stroke:#eee}
+body .book-structure-visual svg.book-structure-art circle[fill="#111"]{fill:#111}
+
+body svg.book-structure-art .diagram-label{font-size:12px!important;font-weight:400;letter-spacing:0;fill:#eee;stroke:none}
+html[data-mode=bi] .book-structure-art .diagram-label.en{display:none!important}
+body[data-volume=story] .act-strip{grid-template-columns:20fr 60fr 20fr}
+
+.freytag-crisis-key{display:grid;gap:5px;margin-top:9px;font-size:13px;line-height:1.4}
+html[data-mode=bi] .freytag-crisis-key .en{display:none!important}
+
+body svg.book-structure-art .freytag-transitions circle{fill:#f5d266}
+
+/* Books hub: equal cards, one structure panel aligned to the grid. */
+body[data-volume=books] .books-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:20px;
+  align-items:stretch;
+  margin:8px 0 28px;
+}
+body[data-volume=books] .book-card{
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  height:100%;
+  margin:0;
+  padding:18px;
+  border:1px solid #2c2c2a;
+  background:#101010;
+  box-sizing:border-box;
+  cursor:pointer;
+}
+body[data-volume=books] .book-card.is-selected{
+  border-color:#f06552;
+  background:#1a1210;
+  box-shadow:inset 0 0 0 1px #f06552;
+}
+body[data-volume=books] .book-card-title,
+body[data-volume=books] .book-card h3.book-card-title{
+  margin:0 0 12px;
+  font-size:17px;
+  font-weight:650;
+  line-height:1.3;
+  color:#f7f4ee;
+}
+body[data-volume=books] .book-card-title a{color:inherit;text-decoration:none}
+body[data-volume=books] .book-card-title .zh,
+body[data-volume=books] .book-card-byline>.zh,
+body[data-volume=books] .book-card-copy .zh{
+  display:block;
+  color:#f7f4ee;
+  font-weight:650;
+  line-height:1.3;
+}
+body[data-volume=books] .book-card-title .zh{font-size:17px}
+body[data-volume=books] .book-card-byline,
+body[data-volume=books] .book-card-copy p{margin:0 0 12px}
+body[data-volume=books] .book-card-byline>.zh,
+body[data-volume=books] .book-card-copy .zh{
+  font-size:15px;
+  font-weight:500;
+  line-height:1.45;
+  color:#e8e6e1;
+}
+body[data-volume=books] .book-card-byline>.zh{font-size:13px;letter-spacing:.01em;color:#d4d0c8;font-weight:600}
+html[data-mode=bi] body[data-volume=books] .book-card .en,
+html[data-mode=bi] body[data-volume=books] .book-card p.reading-pair>.en,
+html[data-mode=bi] body[data-volume=books] .book-card-title .en{
+  display:block!important;
+  margin-top:3px!important;
+  font-size:12.5px!important;
+  font-weight:400!important;
+  line-height:1.35!important;
+  color:rgba(242,242,238,.66)!important;
+}
+html[data-mode=bi] body[data-volume=books] .book-card p.reading-pair,
+html[data-mode=bi] body[data-volume=books] main .book-card p.reading-pair{
+  display:block!important;
+  grid-template-columns:none!important;
+  gap:0!important;
+}
+body[data-volume=books] .book-card-panel{
+  grid-column:1 / -1;
+  min-width:0;
+  margin:0;
+  padding:18px 20px 20px;
+  border:1px solid #f06552;
+  background:#161210;
+  box-sizing:border-box;
+}
+body[data-volume=books] .book-card-panel[hidden]{display:none!important}
+body[data-volume=books] .book-card-panel .book-structure-visual{width:min(100%,720px);margin:0}
+body[data-volume=books] .book-card-panel .book-model-name{color:#f7f4ee;font-size:15px;font-weight:650;line-height:1.3}
+body[data-volume=books] .book-card-panel .book-focus-heading{font-size:13px;font-weight:500;line-height:1.35}
+html[data-mode=bi] body[data-volume=books] .book-card-panel .book-model-name .en,
+html[data-mode=bi] body[data-volume=books] .book-card-panel .book-focus-heading .en{
+  display:block!important;
+  font-size:12px!important;
+  font-weight:400!important;
+  line-height:1.3!important;
+  color:rgba(242,242,238,.66)!important;
+}
+
+body[data-volume=books] .library-chapters{
+  display:grid!important;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:16px!important;
+  align-items:stretch!important;
+  justify-content:stretch!important;
+  position:relative!important;
+  top:auto!important;
+  margin:0 0 48px!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  font-size:16px!important;
+}
+body[data-volume=books] .library-chapters a{
+  display:flex!important;
+  flex-direction:column;
+  justify-content:center;
+  max-width:none!important;
+  min-height:76px;
+  margin:0!important;
+  padding:16px 18px!important;
+  border:1px solid #2c2c2a;
+  background:#101010;
+  color:#f7f4ee!important;
+  text-decoration:none!important;
+  box-sizing:border-box;
+}
+body[data-volume=books] .library-chapters a .zh{
+  display:block;
+  font-size:16px!important;
+  font-weight:650;
+  line-height:1.3;
+  color:#f7f4ee!important;
+}
+body[data-volume=books] .library-chapters a .en,
+html[data-mode=bi] body[data-volume=books] .library-chapters a .en{
+  display:block!important;
+  margin:4px 0 0!important;
+  font-size:12.5px!important;
+  font-weight:400!important;
+  line-height:1.3!important;
+  color:rgba(242,242,238,.66)!important;
+}
+body[data-volume=books] .library-chapters a.is-current,
+body[data-volume=books] .library-chapters a[aria-current="true"]{
+  border-color:#f06552;
+  background:#1a1210;
+  box-shadow:inset 0 0 0 1px #f06552;
+  color:#fff!important;
+}
+@media(max-width:1279px){
+  body[data-volume=books] .books-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+  body[data-volume=books] .library-chapters{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:899px){
+  body[data-volume=books] .books-grid{grid-template-columns:minmax(0,1fr);gap:16px}
+  body[data-volume=books] .library-chapters{grid-template-columns:minmax(0,1fr)!important}
+  body[data-volume=books] .book-card,
+  body[data-volume=books] .book-card-panel,
+  body[data-volume=books] .library-chapters a{padding:16px}
+}

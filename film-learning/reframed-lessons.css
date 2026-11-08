@@ -1,0 +1,49 @@
+/* Film Reframed handouts — scoped to the three new lessons. */
+html .reframed-course{background:#080808;color:#f5f5f2}
+html .reframed-course main{width:94vw;max-width:none;margin-inline:auto}
+.reframed-course .reframed-cover{display:grid;grid-template-columns:minmax(0,38%) minmax(0,1fr);gap:36px;align-items:center}
+.reframed-cover figure{margin:0}
+.reframed-cover h1{min-width:0}
+.reframed-course .reframed-media{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
+.reframed-course .reframed-media figure{min-width:0;margin:0}
+html .reframed-course main .reframed-media img,html .reframed-course main .reframed-cover img{display:block;width:100%;height:auto;aspect-ratio:5/3;max-height:none;object-fit:contain!important;background:#fff;border:1px solid #444}
+.reframed-course figcaption{font-size:14px;line-height:1.4;padding:8px 0 0;color:#ddd;min-height:48px}
+.reframed-course figcaption .en{font-size:13px!important;margin:3px 0 0!important}
+.reframed-course .technique-row.has-study-media{grid-template-columns:minmax(0,42%) minmax(0,1fr);gap:32px}
+.reframed-course .has-study-media .technique-pair{grid-template-columns:minmax(0,1fr);gap:18px;font-size:18px}
+.reframed-course .lesson-section{padding-bottom:36px;margin-bottom:40px}
+.reframed-course .lesson-section h2{font-size:27px;line-height:1.45}
+.reframed-course .reframed-sequence{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.reframed-course .reframed-sequence figcaption{font-size:12px;min-height:38px;padding:4px 0 0}
+.reframed-course .reframed-sequence figcaption .en{font-size:11px!important}
+.reframed-intents{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}
+.reframed-intents article{min-width:0;border:1px solid #555;padding:16px}
+.reframed-intents .lesson-pair{grid-template-columns:minmax(0,1fr);gap:12px;margin-bottom:0;font-size:17px}
+.reframed-intents h3{margin-top:0!important}
+.reframed-table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:18px}
+.reframed-table th{width:56px;vertical-align:top;color:var(--accent);text-align:left}
+.reframed-table th,.reframed-table td{border-bottom:1px solid #444;padding:12px 10px}
+.reframed-table td>span{display:block;overflow-wrap:anywhere}
+html[data-mode=bi] .reframed-table td{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px}
+html[data-mode=bi] .reframed-table .en{margin:0;font-size:1em;color:#ccc}
+.reframed-course .reframed-posters{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px 22px;align-items:stretch}
+.reframed-course .reframed-posters .poster-card{display:grid;grid-template-rows:auto 1fr;min-width:0;margin:0;padding:0;background:transparent;border:0}
+html .reframed-course main .reframed-posters img{display:block;width:100%;height:auto;max-height:none;aspect-ratio:2/3;object-fit:contain!important;background:#101010;border:1px solid #444}
+.reframed-course .reframed-posters h3{font-size:18px;margin:12px 0 6px;line-height:1.5}
+.reframed-posters h3 .en{font-size:15px!important}
+.reframed-posters p,.reframed-posters time{font-size:14px!important;line-height:1.6}
+.reframed-posters p{margin:6px 0!important}
+.reframed-course .toc-chip{height:auto;min-height:48px;overflow:visible;padding:5px 8px}
+.reframed-course .toc-chip .zh,.reframed-course .toc-chip .en{font-size:13px!important;overflow-wrap:anywhere}
+.reframed-course .topbar{gap:12px}
+@media(max-width:1100px){.reframed-intents{grid-template-columns:repeat(3,minmax(0,1fr))}.reframed-course .reframed-posters{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:1000px){.reframed-course .technique-row.has-study-media{grid-template-columns:minmax(0,1fr)!important}.reframed-course .technique-media{max-width:650px}.reframed-course .reframed-cover{grid-template-columns:minmax(0,42%) minmax(0,1fr)}.reframed-course .technique-pair{gap:18px}}
+@media(max-width:700px){.reframed-course main{width:94vw!important}.reframed-course .topbar{padding:8px 3vw}.reframed-course .site-nav{gap:5px 10px!important}.reframed-course .site-nav a,.reframed-course .site-nav summary{font-size:12px!important;line-height:1.25}.reframed-course .site-nav a .en,.reframed-course .site-nav summary .en{font-size:10px!important}.reframed-course .toc-chip .en{display:none!important}html[data-mode=en] .reframed-course .toc-chip .en{display:block!important}.reframed-course .toc-chip{min-height:36px;padding:4px}.reframed-course .toc-chip .zh,.reframed-course .toc-chip .en{font-size:11px!important;line-height:1.2!important}.reframed-course .reframed-cover{grid-template-columns:minmax(0,1fr);gap:20px}.reframed-course .reframed-cover figure{max-width:100%}.reframed-course .lesson-hero h1{font-size:30px}.reframed-intents{grid-template-columns:minmax(0,1fr)}.reframed-intents article{padding:14px}.reframed-intents .lesson-pair{font-size:18px}.reframed-course .reframed-posters{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 14px}.reframed-posters h3{font-size:16px!important}.reframed-course .reframed-table{font-size:17px}.reframed-table th{width:34px;padding-left:0}.reframed-table th,.reframed-table td{padding-block:12px}html[data-mode=bi] .reframed-table td{grid-template-columns:minmax(0,1fr);gap:8px}.reframed-course .reframed-sequence{gap:8px}.reframed-course .reframed-sequence figcaption{font-size:10px}.reframed-course .reframed-sequence figcaption .en{font-size:10px!important}.reframed-course .lesson-section h2{font-size:25px}}
+/* Browser-QA corrections: equal TOC tracks, left-aligned incomplete rows. */
+html .reframed-course .sticky-toc{display:grid;grid-template-columns:repeat(var(--toc-columns,6),minmax(0,1fr));justify-content:start;align-items:stretch}
+html .reframed-course .sticky-toc .toc-chip{width:100%;min-width:0;max-width:none;flex:none;height:auto;margin:0;justify-self:stretch}
+/* Full three-panel axis reference: its frame follows the complete figure, not a still. */
+html .reframed-course main .reframed-wide-diagram img{aspect-ratio:1200/389;height:auto;width:100%;max-height:none;background:#fff}
+html .reframed-course main .reframed-axis-diagram{width:min(100%,420px);margin-inline:auto}
+html .reframed-course main .reframed-axis-diagram img{aspect-ratio:1;height:auto;width:100%;max-height:none}
+html .reframed-course .sticky-toc{grid-auto-rows:1fr}

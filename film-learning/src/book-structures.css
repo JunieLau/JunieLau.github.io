@@ -1,0 +1,17 @@
+/* Identical drawing boxes with readable, responsive bilingual labels. */
+body svg.book-structure-art{display:block;width:100%;height:auto;aspect-ratio:360/203;max-height:34vh;color:#e6e6e6;background:#111;stroke:currentColor;object-fit:contain}
+body .concept-visual svg.book-structure-art [fill="none"]{fill:none}
+body .concept-visual svg.book-structure-art circle[fill="#111"]{fill:#111}
+body svg.book-structure-art text{font-family:sans-serif;font-size:11px;fill:#eee;stroke:none;transform:none}
+.book-model-name,.book-focus-heading,.book-highlight-caption{display:block;font-size:14px;line-height:1.45;margin:0 0 8px}.book-focus-heading{font-weight:700;color:#f5d266}.book-highlight-caption{margin-top:10px}.book-stage-labels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px 12px;list-style:none;padding:0;margin:10px 0}.book-stage-labels li{display:flex;gap:7px;font-size:13px;line-height:1.4;margin:0;min-width:0}.book-stage-labels li>b{flex:0 0 19px}.book-stage-labels li.is-focus{color:#f5d266;font-weight:600}.book-stage-labels li.is-dim{color:#999}.book-phase-key{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0;font-size:13px}.book-phase-key>span{border-bottom:3px solid var(--phase-color);padding:2px 5px}.book-phase-key .is-dim{opacity:.45}.book-structure-visual .zh+.en{margin-top:2px}html[data-mode=bi] .book-stage-labels .en,html[data-mode=bi] .book-phase-key .en{display:none!important}.book-stage-labels .zh,.book-stage-labels .en{font-size:13px!important;line-height:1.4!important}body .editorial-row.text-only-row{display:block}.book-structure-visual{min-width:0}body .beat-overview .concept-visual{max-width:none}
+
+/* Preserve semantic phase/highlight colors against legacy SVG-wide overrides. */
+body .book-structure-visual svg.book-structure-art [stroke="#5dc9c6"]{stroke:#5dc9c6}
+body .book-structure-visual svg.book-structure-art [stroke="#ec9dbb"]{stroke:#ec9dbb}
+body .book-structure-visual svg.book-structure-art [stroke="#bea4ec"]{stroke:#bea4ec}
+body .book-structure-visual svg.book-structure-art [stroke="#f5d266"]{stroke:#f5d266}
+body .book-structure-visual svg.book-structure-art [stroke="#aaa"]{stroke:#aaa}
+body .book-structure-visual svg.book-structure-art [stroke="#888"]{stroke:#888}
+body .book-structure-visual svg.book-structure-art [stroke="#555"]{stroke:#555}
+body .book-structure-visual svg.book-structure-art [stroke="#eee"]{stroke:#eee}
+body .book-structure-visual svg.book-structure-art circle[fill="#111"]{fill:#111}
