@@ -1,14 +1,15 @@
-/* Scheme A: brand, five primary groups, language. Black editorial bar. */
+/* Flat lesson index: wrapping chips, Chinese primary, English secondary. No shrink-to-fit. */
 html body .topbar.full-width-sitebar{
   display:grid!important;
-  grid-template-columns:max-content minmax(0,1fr) max-content!important;
+  grid-template-columns:minmax(0,1fr) max-content!important;
+  grid-template-areas:"brand language" "nav nav"!important;
   align-items:center!important;
-  column-gap:28px!important;
-  row-gap:10px!important;
+  column-gap:24px!important;
+  row-gap:12px!important;
   width:100%!important;
   max-width:none!important;
   margin-inline:0!important;
-  padding:12px 28px!important;
+  padding:14px 28px 16px!important;
   overflow:visible!important;
   background:#0a0a0a!important;
   border-bottom:1px solid #2a2a28!important;
@@ -17,8 +18,7 @@ html body .topbar.full-width-sitebar{
   letter-spacing:0!important;
 }
 html body .topbar.full-width-sitebar>.brand{
-  grid-column:1;
-  grid-row:1;
+  grid-area:brand;
   justify-self:start;
   margin:0!important;
   min-width:0;
@@ -55,8 +55,7 @@ html[data-mode="zh"] body .topbar.full-width-sitebar .brand-name .en,
 html[data-mode="en"] body .topbar.full-width-sitebar .brand-name .zh{display:none!important}
 
 html body .topbar.full-width-sitebar>.language{
-  grid-column:3;
-  grid-row:1;
+  grid-area:language;
   justify-self:end;
   align-self:center;
   display:flex!important;
@@ -89,68 +88,66 @@ html body .topbar.full-width-sitebar .language button[aria-pressed="true"]{
 }
 
 html body .topbar.full-width-sitebar>.site-nav{
-  grid-column:2;
-  grid-row:1;
+  grid-area:nav;
   display:flex!important;
-  flex-wrap:nowrap!important;
-  align-items:center!important;
-  justify-content:center!important;
-  gap:6px 22px!important;
+  flex-wrap:wrap!important;
+  align-items:stretch!important;
+  justify-content:flex-start!important;
+  gap:8px!important;
   order:initial!important;
   flex-basis:auto!important;
   margin:0!important;
-  padding:0!important;
+  padding:2px 0 0!important;
   width:100%!important;
   min-width:0!important;
   max-width:none!important;
   overflow:visible!important;
   white-space:normal!important;
 }
-html body .topbar.full-width-sitebar .site-nav>a,
-html body .topbar.full-width-sitebar .nav-group{
-  flex:0 0 auto!important;
-  position:relative!important;
-  margin:0!important;
-  min-width:0!important;
-}
-html body .topbar.full-width-sitebar .site-nav>a,
-html body .topbar.full-width-sitebar .nav-group>summary{
+html body .topbar.full-width-sitebar .site-nav>a{
   display:flex!important;
-  align-items:center!important;
-  gap:8px!important;
-  position:relative!important;
+  flex:0 0 auto!important;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  min-width:0!important;
   margin:0!important;
-  padding:8px 2px 10px!important;
-  border:0!important;
-  background:transparent!important;
-  color:#f3f1ec!important;
+  padding:8px 12px!important;
+  border:1px solid #2c2c2a!important;
+  background:#101010!important;
+  color:#f7f4ee!important;
   font-family:inherit!important;
-  font-weight:600!important;
+  font-weight:650!important;
   letter-spacing:0!important;
   line-height:1.3!important;
   text-align:left!important;
   text-decoration:none!important;
-  white-space:nowrap!important;
-  cursor:pointer;
-  list-style:none!important;
+  white-space:normal!important;
+  box-shadow:none!important;
 }
-html body .topbar.full-width-sitebar .nav-group>summary::-webkit-details-marker{display:none}
-html body .topbar.full-width-sitebar .nav-label{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+html body .topbar.full-width-sitebar .nav-label{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  min-width:0;
+}
 html body .topbar.full-width-sitebar .nav-label>.zh{
   display:block!important;
-  font-size:17px!important;
+  font-size:16px!important;
   font-weight:650!important;
-  line-height:1.28!important;
+  line-height:1.3!important;
   color:#f7f4ee!important;
+  white-space:nowrap!important;
 }
 html body .topbar.full-width-sitebar .nav-label>.en{
   display:block!important;
   margin:2px 0 0!important;
-  font-size:12.5px!important;
+  font-size:12px!important;
   font-weight:400!important;
   line-height:1.3!important;
   color:rgba(242,242,238,.64)!important;
   text-transform:none!important;
+  white-space:nowrap!important;
 }
 html[data-mode="zh"] body .topbar.full-width-sitebar .nav-label>.en,
 html[data-mode="en"] body .topbar.full-width-sitebar .nav-label>.zh{display:none!important}
@@ -158,120 +155,34 @@ html[data-mode="en"] body .topbar.full-width-sitebar .nav-label>.en{
   margin-top:0!important;
   font-size:16px!important;
   font-weight:650!important;
-  line-height:1.28!important;
-  color:#f7f4ee!important;
-}
-html[data-mode="zh"] body .topbar.full-width-sitebar .nav-label>.zh{font-size:17px!important}
-
-html body .topbar.full-width-sitebar .nav-group>summary::after{
-  content:""!important;
-  position:static!important;
-  top:auto!important;
-  right:auto!important;
-  flex:0 0 auto;
-  width:7px;
-  height:7px;
-  margin:0 0 2px!important;
-  border-right:1.5px solid rgba(242,242,238,.7)!important;
-  border-bottom:1.5px solid rgba(242,242,238,.7)!important;
-  background:none!important;
-  font-size:0!important;
-  transform:rotate(45deg);
-}
-html body .topbar.full-width-sitebar .nav-group[open]>summary::after{transform:rotate(225deg);margin-bottom:0!important}
-
-html body .topbar.full-width-sitebar .site-nav>a[aria-current="page"],
-html body .topbar.full-width-sitebar .nav-group.is-current>summary,
-html body .topbar.full-width-sitebar .nav-group .current-group{
-  background:rgba(240,101,82,.14)!important;
-  box-shadow:inset 0 -2px 0 #f06552!important;
-  color:#fff!important;
-}
-html body .topbar.full-width-sitebar .site-nav>a[aria-current="page"] .nav-label>.zh,
-html body .topbar.full-width-sitebar .nav-group.is-current>summary .nav-label>.zh,
-html[data-mode="en"] body .topbar.full-width-sitebar .site-nav>a[aria-current="page"] .nav-label>.en,
-html[data-mode="en"] body .topbar.full-width-sitebar .nav-group.is-current>summary .nav-label>.en{
-  color:#fff!important;
-  font-weight:700!important;
-}
-html body .topbar.full-width-sitebar .site-nav>a:hover,
-html body .topbar.full-width-sitebar .nav-group>summary:hover{color:#fff!important}
-
-html body .topbar.full-width-sitebar .book-menu{
-  position:absolute!important;
-  top:calc(100% + 8px)!important;
-  left:0!important;
-  right:auto!important;
-  width:min(320px,calc(100vw - 24px))!important;
-  max-width:calc(100vw - 24px)!important;
-  max-height:min(70vh,calc(100dvh - var(--topbar-height,80px) - 24px));
-  overflow:auto;
-  z-index:80;
-  margin:0!important;
-  padding:8px!important;
-  background:#121211!important;
-  border:1px solid #3a3a36!important;
-  box-shadow:0 18px 40px rgba(0,0,0,.55)!important;
-}
-html body .topbar.full-width-sitebar .book-menu a{
-  display:block!important;
-  padding:10px 12px!important;
-  border:0!important;
-  border-bottom:0!important;
-  background:transparent!important;
-  color:#f4f2ec!important;
-  text-decoration:none!important;
-  white-space:normal!important;
-}
-html body .topbar.full-width-sitebar .book-menu a+a{border-top:1px solid #2a2a28!important}
-html body .topbar.full-width-sitebar .book-menu a:hover{background:#1c1c1a!important}
-html body .topbar.full-width-sitebar .book-menu a[aria-current="page"]{
-  background:#2a1411!important;
-  box-shadow:inset 3px 0 0 #f06552!important;
-}
-html body .topbar.full-width-sitebar .book-menu .nav-label>.zh{
-  font-size:15px!important;
-  font-weight:650!important;
   line-height:1.3!important;
-  color:#f7f4ee!important;
-}
-html body .topbar.full-width-sitebar .book-menu .nav-label>.en{
-  font-size:12px!important;
-  font-weight:400!important;
-  line-height:1.3!important;
-  color:rgba(242,242,238,.66)!important;
-}
-html[data-mode="en"] body .topbar.full-width-sitebar .book-menu .nav-label>.en{
-  font-size:15px!important;
-  font-weight:650!important;
   color:#f7f4ee!important;
 }
 html[data-mode="bi"] body .topbar.full-width-sitebar .nav-label>.zh,
 html[data-mode="bi"] body .topbar.full-width-sitebar .nav-label>.en{display:block!important}
 
-@media(max-width:1100px){
-  html body .topbar.full-width-sitebar{
-    grid-template-columns:minmax(0,1fr) max-content!important;
-    padding:12px 16px!important;
-  }
-  html body .topbar.full-width-sitebar>.language{grid-column:2;grid-row:1;padding-left:0!important}
-  html body .topbar.full-width-sitebar>.site-nav{
-    grid-column:1 / -1;
-    grid-row:2;
-    flex-wrap:wrap!important;
-    justify-content:flex-start!important;
-    gap:4px 18px!important;
-  }
-  html body .topbar.full-width-sitebar .nav-label>.zh,
-  html[data-mode="zh"] body .topbar.full-width-sitebar .nav-label>.zh{font-size:16px!important}
-  html[data-mode="en"] body .topbar.full-width-sitebar .nav-label>.en{font-size:15px!important}
+html body .topbar.full-width-sitebar .site-nav>a:hover{
+  border-color:#5a403c!important;
+  background:#161311!important;
+  color:#fff!important;
 }
-@media(max-width:700px){
-  html body .topbar.full-width-sitebar .book-menu{
-    position:fixed!important;
-    left:12px!important;
-    right:12px!important;
-    top:calc(var(--topbar-height, 96px) + 8px)!important;
-    width:auto!important;
-  }
+html body .topbar.full-width-sitebar .site-nav>a[aria-current="page"]{
+  border-color:#f06552!important;
+  background:#1c1210!important;
+  box-shadow:inset 0 -2px 0 #f06552!important;
+  color:#fff!important;
+}
+html body .topbar.full-width-sitebar .site-nav>a[aria-current="page"] .nav-label>.zh,
+html[data-mode="en"] body .topbar.full-width-sitebar .site-nav>a[aria-current="page"] .nav-label>.en{
+  color:#fff!important;
+  font-weight:700!important;
+}
+
+@media(max-width:760px){
+  html body .topbar.full-width-sitebar{padding:12px 14px 14px!important;row-gap:10px!important}
+  html body .topbar.full-width-sitebar .site-nav>a{padding:7px 10px!important}
+  html body .topbar.full-width-sitebar .nav-label>.zh,
+  html[data-mode="zh"] body .topbar.full-width-sitebar .nav-label>.zh{font-size:15px!important}
+  html[data-mode="en"] body .topbar.full-width-sitebar .nav-label>.en{font-size:15px!important}
+  html body .topbar.full-width-sitebar .nav-label>.en{font-size:12px!important}
 }
